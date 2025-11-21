@@ -24,7 +24,13 @@ mkdocs serve
 
 ### 2. Trocar de idioma
 
-Quando o site estiver rodando, você verá um **seletor de idioma** no topo da página. Clique para alternar entre inglês e português.
+Quando o site estiver rodando, você verá um **seletor de idioma no canto superior direito** da página:
+
+```
+🌐 🇺🇸 EN 🇧🇷 PT
+```
+
+Clique no idioma desejado para alternar entre inglês e português. A página recarregará automaticamente no idioma escolhido.
 
 ### 3. Build para produção
 
