@@ -421,6 +421,135 @@
 
 {% endif %}
 
+{# Count researcher participation (coordinators + researchers) #}
+{% set researcher_projects = {} %}
+
+{% for proj_index, project in original_projects.iterrows() %}
+{# Add coordinator #}
+{% if project.coordinator and project.coordinator.strip() %}
+{% set coordinator_name = project.coordinator.strip() %}
+{% if coordinator_name not in researcher_projects %}
+{% set _ = researcher_projects.__setitem__(coordinator_name, []) %}
+{% endif %}
+{% set _ = researcher_projects[coordinator_name].append(project.title) %}
+{% endif %}
+
+{# Add researchers #}
+{% if project.researchers and project.researchers|length > 0 %}
+{% for researcher in project.researchers %}
+{% set researcher_name = researcher.strip() %}
+{% if researcher_name %}
+{% if researcher_name not in researcher_projects %}
+{% set _ = researcher_projects.__setitem__(researcher_name, []) %}
+{% endif %}
+{% set _ = researcher_projects[researcher_name].append(project.title) %}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+{# Count how many projects each researcher participated in #}
+{% set researcher_participation_distribution = {} %}
+{% for researcher_name, projects_list in researcher_projects.items() %}
+{% set count = projects_list|length %}
+{% if count in researcher_participation_distribution %}
+{% set _ = researcher_participation_distribution.__setitem__(count, researcher_participation_distribution[count] + 1) %}
+{% else %}
+{% set _ = researcher_participation_distribution.__setitem__(count, 1) %}
+{% endif %}
+{% endfor %}
+
+{# Create bar chart for researcher participation distribution #}
+{% if researcher_participation_distribution|length > 0 %}
+{% set sorted_researcher_participation = researcher_participation_distribution.keys()|list|sort %}
+{% set researcher_counts = [] %}
+
+{% for num_projects in sorted_researcher_participation %}
+{% set _ = researcher_counts.append(researcher_participation_distribution[num_projects]) %}
+{% endfor %}
+
+### Researcher Participation Distribution
+
+This bar chart shows how many researchers (coordinators and researchers) participated in multiple projects within this research group. Each bar represents a participation level: for example, if the bar at position "1" shows 5 researchers, it means 5 researchers participated in exactly one project. This distribution helps understand researcher engagement patterns and identifies researchers with sustained involvement across multiple projects.
+
+<div id="chart-researcher-participation-{{ group_index }}" style="width:100%;height:450px;margin-bottom:30px;"></div>
+
+<script>
+(function() {
+  var data = [{
+    x: {{ sorted_researcher_participation|tojson }},
+    y: {{ researcher_counts|tojson }},
+    text: {{ researcher_counts|tojson }},
+    type: 'bar',
+    marker: {
+      color: '#2ca02c',
+      line: {
+        color: '#1e7d1e',
+        width: 1.5
+      }
+    },
+    textposition: 'outside',
+    textfont: {size: 12, color: '#2ca02c'},
+    hovertemplate: '<b>%{x} project(s)</b><br>%{y} researchers<extra></extra>'
+  }];
+  
+  var layout = {
+    title: 'Researcher Participation Distribution (Total: {{ researcher_projects|length }} unique researchers)',
+    xaxis: {
+      title: 'Number of Projects per Researcher',
+      dtick: 1,
+      tickmode: 'linear'
+    },
+    yaxis: {
+      title: 'Number of Researchers'
+    },
+    hovermode: 'closest'
+  };
+  
+  Plotly.newPlot('chart-researcher-participation-{{ group_index }}', data, layout);
+})();
+</script>
+
+{# List highly engaged researchers (3 or more projects) #}
+{% set highly_engaged_researchers = [] %}
+{% for researcher_name, projects_list in researcher_projects.items() %}
+{% set count = projects_list|length %}
+{% if count >= 3 %}
+{% set _ = highly_engaged_researchers.append((researcher_name, count)) %}
+{% endif %}
+{% endfor %}
+
+{% if highly_engaged_researchers|length > 0 %}
+{% set highly_engaged_researchers = highly_engaged_researchers|sort(attribute='1', reverse=True) %}
+
+<div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+  <h4 style="margin-top: 0;">Highly Engaged Researchers (3+ Projects)</h4>
+  <p>The following researchers have demonstrated exceptional commitment by participating in 3 or more research projects within this group:</p>
+  <table style="width:100%; border-collapse: collapse;">
+    <thead>
+      <tr style="background-color: #e9ecef;">
+        <th style="padding: 10px; text-align: left; border: 1px solid #dee2e6;">Researcher Name</th>
+        <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">Number of Projects</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for researcher_name, count in highly_engaged_researchers %}
+      <tr>
+        <td style="padding: 8px; border: 1px solid #dee2e6;">{{ researcher_name }}</td>
+        <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;"><strong>{{ count }}</strong></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p style="margin-bottom: 0; margin-top: 15px; font-size: 0.9em; color: #6c757d;">
+    <strong>Total:</strong> {{ highly_engaged_researchers|length }} researcher(s) with sustained research involvement
+  </p>
+</div>
+
+{% endif %}
+
+{% endif %}
+
 {# Load network statistics from pre-generated file #}
 {% set network_stats_all = pd_read_json("../data/network_stats.json") %}
 {% set stats_dict = network_stats_all.to_dict() if not network_stats_all.empty else {} %}

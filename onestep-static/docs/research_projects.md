@@ -1340,6 +1340,135 @@ This bar chart reveals how many students participated in multiple research proje
 
 {% endif %}
 
+{# Count researcher participation (coordinators + researchers) across all projects #}
+{% set researcher_project_count = {} %}
+
+{% for index, row in df.iterrows() %}
+{# Add coordinator #}
+{% if row.coordinator and row.coordinator.strip() %}
+{% set coordinator_name = row.coordinator.strip() %}
+{% if coordinator_name in researcher_project_count %}
+{% set _ = researcher_project_count.__setitem__(coordinator_name, researcher_project_count[coordinator_name] + 1) %}
+{% else %}
+{% set _ = researcher_project_count.__setitem__(coordinator_name, 1) %}
+{% endif %}
+{% endif %}
+
+{# Add researchers #}
+{% if row.researchers and row.researchers|length > 0 %}
+{% for researcher in row.researchers %}
+{% set researcher_name = researcher.strip() %}
+{% if researcher_name %}
+{% if researcher_name in researcher_project_count %}
+{% set _ = researcher_project_count.__setitem__(researcher_name, researcher_project_count[researcher_name] + 1) %}
+{% else %}
+{% set _ = researcher_project_count.__setitem__(researcher_name, 1) %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+{# Count how many researchers participated in X projects #}
+{% set researcher_participation_distribution = {} %}
+{% for researcher_name, count in researcher_project_count.items() %}
+{% if count in researcher_participation_distribution %}
+{% set _ = researcher_participation_distribution.__setitem__(count, researcher_participation_distribution[count] + 1) %}
+{% else %}
+{% set _ = researcher_participation_distribution.__setitem__(count, 1) %}
+{% endif %}
+{% endfor %}
+
+{# Create bar chart for researcher participation distribution #}
+{% if researcher_participation_distribution|length > 0 %}
+{% set sorted_researcher_participation = researcher_participation_distribution.keys()|list|sort %}
+{% set researcher_counts = [] %}
+
+{% for num_projects in sorted_researcher_participation %}
+{% set _ = researcher_counts.append(researcher_participation_distribution[num_projects]) %}
+{% endfor %}
+
+### Researcher Participation Distribution
+
+This bar chart shows how many researchers (coordinators and researchers) participated in multiple research projects. Each bar represents a participation level: for example, if the bar at position "1" shows 50 researchers, it means 50 researchers participated in exactly one project. This distribution helps understand researcher engagement patterns and identifies researchers with sustained involvement across multiple projects.
+
+<div id="chart-researcher-participation-all" style="width:100%;height:450px;margin-bottom:30px;"></div>
+
+<script>
+(function() {
+  var data = [{
+    x: {{ sorted_researcher_participation|tojson }},
+    y: {{ researcher_counts|tojson }},
+    text: {{ researcher_counts|tojson }},
+    type: 'bar',
+    marker: {
+      color: '#2ca02c',
+      line: {
+        color: '#1e7d1e',
+        width: 1.5
+      }
+    },
+    textposition: 'outside',
+    textfont: {size: 12, color: '#2ca02c'},
+    hovertemplate: '<b>%{x} project(s)</b><br>%{y} researchers<extra></extra>'
+  }];
+  
+  var layout = {
+    title: 'Researcher Participation Distribution (Total: {{ researcher_project_count|length }} unique researchers)',
+    xaxis: {
+      title: 'Number of Projects per Researcher',
+      dtick: 1,
+      tickmode: 'linear'
+    },
+    yaxis: {
+      title: 'Number of Researchers'
+    },
+    hovermode: 'closest'
+  };
+  
+  Plotly.newPlot('chart-researcher-participation-all', data, layout);
+})();
+</script>
+
+{# List researchers with 3 or more projects #}
+{% set highly_engaged_researchers = [] %}
+{% for researcher_name, count in researcher_project_count.items() %}
+{% if count >= 3 %}
+{% set _ = highly_engaged_researchers.append((researcher_name, count)) %}
+{% endif %}
+{% endfor %}
+
+{% if highly_engaged_researchers|length > 0 %}
+{% set highly_engaged_researchers = highly_engaged_researchers|sort(attribute='1', reverse=True) %}
+
+<div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+  <h4 style="margin-top: 0;">Highly Engaged Researchers (3+ Projects)</h4>
+  <p>The following researchers have demonstrated exceptional commitment by participating in 3 or more research projects:</p>
+  <table style="width:100%; border-collapse: collapse;">
+    <thead>
+      <tr style="background-color: #e9ecef;">
+        <th style="padding: 10px; text-align: left; border: 1px solid #dee2e6;">Researcher Name</th>
+        <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">Number of Projects</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for researcher_name, count in highly_engaged_researchers %}
+      <tr>
+        <td style="padding: 8px; border: 1px solid #dee2e6;">{{ researcher_name }}</td>
+        <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;"><strong>{{ count }}</strong></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p style="margin-bottom: 0; margin-top: 15px; font-size: 0.9em; color: #6c757d;">
+    <strong>Total:</strong> {{ highly_engaged_researchers|length }} researcher(s) with sustained research involvement
+  </p>
+</div>
+
+{% endif %}
+
+{% endif %}
+
 ---
 
 {% for year in unique_years %}
