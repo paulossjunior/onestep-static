@@ -254,6 +254,8 @@ class SupervisorDataAggregator:
                     else:
                         researchers = []
                     
+                    project_id = project.get('id', '')
+                    
                     # Add each researcher as a collaborator
                     for researcher in researchers:
                         if researcher and researcher != supervisor_name:
@@ -261,14 +263,18 @@ class SupervisorDataAggregator:
                                 collaborators[researcher] = {
                                     'count': 0,
                                     'projects': [],
-                                    'roles': []
+                                    'project_ids': set()  # Track unique project IDs
                                 }
-                            collaborators[researcher]['count'] += 1
-                            collaborators[researcher]['projects'].append({
-                                'title': project.get('title', ''),
-                                'id': project.get('id', ''),
-                                'role': 'coordinator'  # supervisor was coordinator
-                            })
+                            
+                            # Only add if not already added (check by project ID)
+                            if project_id not in collaborators[researcher]['project_ids']:
+                                collaborators[researcher]['count'] += 1
+                                collaborators[researcher]['projects'].append({
+                                    'title': project.get('title', ''),
+                                    'id': project_id,
+                                    'role': 'coordinator'  # supervisor was coordinator
+                                })
+                                collaborators[researcher]['project_ids'].add(project_id)
             
             # Find projects where this supervisor is a researcher
             for project in projects:
@@ -279,6 +285,8 @@ class SupervisorDataAggregator:
                     researcher_names = []
                 
                 if supervisor_name in researcher_names:
+                    project_id = project.get('id', '')
+                    
                     # Get coordinator
                     coordinator = project.get('coordinator', '').strip()
                     if coordinator and coordinator != supervisor_name:
@@ -286,14 +294,18 @@ class SupervisorDataAggregator:
                             collaborators[coordinator] = {
                                 'count': 0,
                                 'projects': [],
-                                'roles': []
+                                'project_ids': set()
                             }
-                        collaborators[coordinator]['count'] += 1
-                        collaborators[coordinator]['projects'].append({
-                            'title': project.get('title', ''),
-                            'id': project.get('id', ''),
-                            'role': 'researcher'  # supervisor was researcher
-                        })
+                        
+                        # Only add if not already added
+                        if project_id not in collaborators[coordinator]['project_ids']:
+                            collaborators[coordinator]['count'] += 1
+                            collaborators[coordinator]['projects'].append({
+                                'title': project.get('title', ''),
+                                'id': project_id,
+                                'role': 'researcher'  # supervisor was researcher
+                            })
+                            collaborators[coordinator]['project_ids'].add(project_id)
                     
                     # Get other researchers on the same project
                     for researcher in researcher_names:
@@ -302,14 +314,22 @@ class SupervisorDataAggregator:
                                 collaborators[researcher] = {
                                     'count': 0,
                                     'projects': [],
-                                    'roles': []
-                            }
-                            collaborators[researcher]['count'] += 1
-                            collaborators[researcher]['projects'].append({
-                                'title': project.get('title', ''),
-                                'id': project.get('id', ''),
-                                'role': 'co-researcher'  # both were researchers
-                            })
+                                    'project_ids': set()
+                                }
+                            
+                            # Only add if not already added
+                            if project_id not in collaborators[researcher]['project_ids']:
+                                collaborators[researcher]['count'] += 1
+                                collaborators[researcher]['projects'].append({
+                                    'title': project.get('title', ''),
+                                    'id': project_id,
+                                    'role': 'co-researcher'  # both were researchers
+                                })
+                                collaborators[researcher]['project_ids'].add(project_id)
+            
+            # Remove project_ids set before storing (not JSON serializable)
+            for collab_data in collaborators.values():
+                del collab_data['project_ids']
             
             # Store collaborations sorted by count
             self.supervisors[supervisor_name]['collaborations'] = dict(

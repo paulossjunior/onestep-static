@@ -1,5 +1,8 @@
 # Pesquisadores - Campus Serra
 
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
 {% set data = load_supervisors_data() %}
 {% set all_supervisors = data['supervisors'] %}
 {% set metadata = data['metadata'] %}
@@ -20,13 +23,24 @@
 {% set serra_with_projects = supervisors|selectattr('research_projects')|list|length %}
 {% set serra_with_supervisions = supervisors|selectattr('ic_supervisions')|list|length %}
 {% set serra_with_both = 0 %}
+{% set serra_with_collabs = 0 %}
+{% set total_serra_collabs = 0 %}
+{% set total_serra_collab_instances = 0 %}
+
 {% for sup in supervisors %}
   {% if sup['research_projects'] and sup['ic_supervisions'] %}
     {% set serra_with_both = serra_with_both + 1 %}
   {% endif %}
+  {% if sup.get('collaborations') %}
+    {% set serra_with_collabs = serra_with_collabs + 1 %}
+    {% set total_serra_collabs = total_serra_collabs + sup['collaborations']|length %}
+    {% for collab_name, collab_data in sup['collaborations'].items() %}
+      {% set total_serra_collab_instances = total_serra_collab_instances + collab_data['count'] %}
+    {% endfor %}
+  {% endif %}
 {% endfor %}
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 30px;">
   <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px; text-align: center;">
     <div style="font-size: 32px; font-weight: bold;">{{ serra_with_projects }}</div>
     <div style="font-size: 14px; margin-top: 5px;">Com Projetos de Pesquisa</div>
@@ -39,7 +53,117 @@
     <div style="font-size: 32px; font-weight: bold;">{{ serra_with_both }}</div>
     <div style="font-size: 14px; margin-top: 5px;">Com Ambos</div>
   </div>
+  <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; padding: 20px; border-radius: 8px; text-align: center;">
+    <div style="font-size: 32px; font-weight: bold;">{{ serra_with_collabs }}</div>
+    <div style="font-size: 14px; margin-top: 5px;">Com Colaborações</div>
+  </div>
 </div>
+
+### Estatísticas da Rede de Colaboração
+
+<div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+    <div style="text-align: center;">
+      <div style="font-size: 36px; font-weight: bold; color: #333;">{{ total_serra_collabs }}</div>
+      <div style="font-size: 14px; color: #555; margin-top: 5px;">Colaborações Únicas</div>
+      <div style="font-size: 11px; color: #777; margin-top: 3px;">Total de pares únicos</div>
+    </div>
+    <div style="text-align: center;">
+      <div style="font-size: 36px; font-weight: bold; color: #333;">{{ total_serra_collab_instances }}</div>
+      <div style="font-size: 14px; color: #555; margin-top: 5px;">Instâncias de Colaboração</div>
+      <div style="font-size: 11px; color: #777; margin-top: 3px;">Total de projetos compartilhados</div>
+    </div>
+    <div style="text-align: center;">
+      <div style="font-size: 36px; font-weight: bold; color: #333;">
+        {{ "%.1f"|format(total_serra_collab_instances / serra_with_collabs) if serra_with_collabs > 0 else 0 }}
+      </div>
+      <div style="font-size: 14px; color: #555; margin-top: 5px;">Média de Colaborações</div>
+      <div style="font-size: 11px; color: #777; margin-top: 3px;">Por pesquisador ativo</div>
+    </div>
+    <div style="text-align: center;">
+      <div style="font-size: 36px; font-weight: bold; color: #333;">
+        {{ "%.1f"|format(total_serra_collabs / serra_with_collabs) if serra_with_collabs > 0 else 0 }}
+      </div>
+      <div style="font-size: 14px; color: #555; margin-top: 5px;">Densidade da Rede</div>
+      <div style="font-size: 11px; color: #777; margin-top: 3px;">Média de parceiros únicos</div>
+    </div>
+  </div>
+</div>
+
+### Rede dos Principais Colaboradores
+
+<div id="top-collaborators-chart" style="width:100%;height:500px;margin-bottom:30px;"></div>
+
+<script>
+(function() {
+  var supervisors = {{ supervisors|tojson }};
+  
+  // Calculate top collaborators across all Serra researchers
+  var collabCounts = {};
+  supervisors.forEach(function(sup) {
+    if (sup.collaborations) {
+      Object.keys(sup.collaborations).forEach(function(collabName) {
+        if (!collabCounts[collabName]) {
+          collabCounts[collabName] = 0;
+        }
+        collabCounts[collabName] += sup.collaborations[collabName].count;
+      });
+    }
+  });
+  
+  // Sort and get top 20
+  var topCollabs = Object.keys(collabCounts)
+    .map(function(name) {
+      return {name: name, count: collabCounts[name]};
+    })
+    .sort(function(a, b) { return b.count - a.count; })
+    .slice(0, 20);
+  
+  var names = topCollabs.map(function(c) { return c.name; });
+  var counts = topCollabs.map(function(c) { return c.count; });
+  
+  var data = [{
+    x: counts,
+    y: names,
+    type: 'bar',
+    orientation: 'h',
+    marker: {
+      color: counts,
+      colorscale: [
+        [0, '#e3f2fd'],
+        [0.3, '#64b5f6'],
+        [0.6, '#2196f3'],
+        [1, '#0d47a1']
+      ],
+      line: {color: '#1565c0', width: 1}
+    },
+    text: counts.map(function(c) { return c + ' projeto' + (c > 1 ? 's' : ''); }),
+    textposition: 'outside',
+    hovertemplate: '<b>%{y}</b><br>%{x} colaborações totais<extra></extra>'
+  }];
+  
+  var layout = {
+    title: {
+      text: 'Top 20 Colaboradores Mais Ativos (Campus Serra)',
+      font: {size: 18, family: 'Arial, sans-serif', color: '#222'}
+    },
+    xaxis: {
+      title: 'Total de Instâncias de Colaboração',
+      gridcolor: '#f0f0f0'
+    },
+    yaxis: {
+      automargin: true,
+      tickfont: {size: 11}
+    },
+    plot_bgcolor: '#fafafa',
+    paper_bgcolor: 'white',
+    margin: {t: 60, b: 50, l: 220, r: 80},
+    height: 500
+  };
+  
+  Plotly.newPlot('top-collaborators-chart', data, layout);
+})();
+</script>
 
 ---
 
@@ -313,7 +437,6 @@ function sortTable(columnIndex) {
 {% set sorted_years = years_data.keys()|list|sort %}
 <div id="chart-{{ loop.index }}" style="width:100%;height:350px;margin-bottom:20px;"></div>
 
-<script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
 <script>
 (function() {
   var years = {{ sorted_years|tojson }};
@@ -420,32 +543,229 @@ function sortTable(columnIndex) {
 </script>
 {% endif %}
 
-{# Build collaboration network #}
-{% set collaborators = {} %}
-{% for project in supervisor['research_projects'] %}
-  {% if project['participants'] %}
-    {% for participant in project['participants'] %}
-      {% set participant_name = participant.strip() %}
-      {% if participant_name and participant_name != supervisor['name'] %}
-        {% if participant_name not in collaborators %}
-          {% set _ = collaborators.__setitem__(participant_name, {'count': 0, 'projects': []}) %}
-        {% endif %}
-        {% set _ = collaborators[participant_name].__setitem__('count', collaborators[participant_name]['count'] + 1) %}
-        {% set _ = collaborators[participant_name]['projects'].append(project['title'][:50]) %}
-      {% endif %}
-    {% endfor %}
-  {% endif %}
-{% endfor %}
+{# Get collaboration data from supervisor #}
+{% set collaborators = supervisor.get('collaborations', {}) %}
 
 {% if collaborators %}
 #### Rede de Colaboração ({{ collaborators|length }} colaboradores)
 
-<div id="network-{{ loop.index }}" style="width:100%;height:400px;border:1px solid #ddd;margin-bottom:20px;"></div>
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+  <h4 style="margin: 0 0 15px 0; color: white;">🤝 Visão Geral da Colaboração</h4>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
+    <div style="text-align: center;">
+      <div style="font-size: 32px; font-weight: bold;">{{ collaborators|length }}</div>
+      <div style="font-size: 13px; opacity: 0.9;">Total de Colaboradores</div>
+    </div>
+    <div style="text-align: center;">
+      <div style="font-size: 32px; font-weight: bold;">
+        {% set total_collabs = 0 %}
+        {% for name, data in collaborators.items() %}
+          {% set total_collabs = total_collabs + data['count'] %}
+        {% endfor %}
+        {{ total_collabs }}
+      </div>
+      <div style="font-size: 13px; opacity: 0.9;">Projetos Compartilhados</div>
+    </div>
+    <div style="text-align: center;">
+      <div style="font-size: 32px; font-weight: bold;">
+        {{ "%.1f"|format(total_collabs / collaborators|length) if collaborators|length > 0 else 0 }}
+      </div>
+      <div style="font-size: 13px; opacity: 0.9;">Média Proj./Colaborador</div>
+    </div>
+  </div>
+</div>
 
-<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+{# Top Collaborators Bar Chart #}
+<div id="collab-chart-{{ loop.index }}" style="width:100%;height:400px;margin-bottom:20px;"></div>
+
 <script>
 (function() {
   var collaborators = {{ collaborators|tojson }};
+  
+  // Sort collaborators by count and get top 15
+  var collabArray = Object.keys(collaborators).map(function(name) {
+    return {
+      name: name,
+      count: collaborators[name].count,
+      projects: collaborators[name].projects
+    };
+  }).sort(function(a, b) {
+    return b.count - a.count;
+  }).slice(0, 15);
+  
+  var names = collabArray.map(function(c) { return c.name; });
+  var counts = collabArray.map(function(c) { return c.count; });
+  
+  var data = [{
+    x: counts,
+    y: names,
+    type: 'bar',
+    orientation: 'h',
+    marker: {
+      color: counts,
+      colorscale: [
+        [0, '#e3f2fd'],
+        [0.5, '#4facfe'],
+        [1, '#667eea']
+      ],
+      line: {color: '#0088cc', width: 1}
+    },
+    text: counts.map(function(c) { return c + ' projeto' + (c > 1 ? 's' : ''); }),
+    textposition: 'outside',
+    hovertemplate: '<b>%{y}</b><br>%{x} projeto(s) compartilhado(s)<extra></extra>'
+  }];
+  
+  var layout = {
+    title: {
+      text: 'Top 15 Colaboradores por Projetos Compartilhados',
+      font: {size: 16, family: 'Arial, sans-serif', color: '#222'}
+    },
+    xaxis: {
+      title: 'Número de Projetos Compartilhados',
+      gridcolor: '#f0f0f0'
+    },
+    yaxis: {
+      automargin: true,
+      tickfont: {size: 11}
+    },
+    plot_bgcolor: '#fafafa',
+    paper_bgcolor: 'white',
+    margin: {t: 50, b: 50, l: 200, r: 50},
+    height: 400
+  };
+  
+  Plotly.newPlot('collab-chart-{{ loop.index }}', data, layout);
+})();
+</script>
+
+{# Collaboration Timeline Graph #}
+<div id="collab-timeline-{{ loop.index }}" style="width:100%;height:400px;margin-bottom:20px;"></div>
+
+<script>
+(function() {
+  var collaborators = {{ collaborators|tojson }};
+  var researchProjects = {{ supervisor['research_projects']|tojson }};
+  
+  // Extract years from projects and count collaborations per year
+  var yearCollabs = {};
+  var yearRoles = {};
+  
+  Object.keys(collaborators).forEach(function(collabName) {
+    var collab = collaborators[collabName];
+    
+    collab.projects.forEach(function(proj) {
+      // Find the project in research_projects to get the year
+      var matchingProject = researchProjects.find(function(rp) {
+        return rp.id === proj.id || rp.title === proj.title;
+      });
+      
+      if (matchingProject && matchingProject.start_date && matchingProject.start_date.length >= 8) {
+        var year = parseInt('20' + matchingProject.start_date.slice(-2));
+        
+        if (!yearCollabs[year]) {
+          yearCollabs[year] = 0;
+          yearRoles[year] = {coordinator: 0, researcher: 0, coResearcher: 0};
+        }
+        
+        yearCollabs[year]++;
+        
+        if (proj.role === 'coordinator') yearRoles[year].coordinator++;
+        else if (proj.role === 'researcher') yearRoles[year].researcher++;
+        else if (proj.role === 'co-researcher') yearRoles[year].coResearcher++;
+      }
+    });
+  });
+  
+  var years = Object.keys(yearCollabs).map(Number).sort();
+  var coordinatorCounts = years.map(function(y) { return yearRoles[y].coordinator; });
+  var researcherCounts = years.map(function(y) { return yearRoles[y].researcher; });
+  var coResearcherCounts = years.map(function(y) { return yearRoles[y].coResearcher; });
+  
+  var data = [
+    {
+      x: years,
+      y: coordinatorCounts,
+      name: 'Como Coordenador',
+      type: 'scatter',
+      mode: 'lines+markers',
+      stackgroup: 'one',
+      line: {width: 2, color: '#28a745'},
+      marker: {size: 6},
+      hovertemplate: '<b>Como Coordenador</b><br>Ano: %{x}<br>%{y} colaborações<extra></extra>'
+    },
+    {
+      x: years,
+      y: researcherCounts,
+      name: 'Como Pesquisador',
+      type: 'scatter',
+      mode: 'lines+markers',
+      stackgroup: 'one',
+      line: {width: 2, color: '#007bff'},
+      marker: {size: 6},
+      hovertemplate: '<b>Como Pesquisador</b><br>Ano: %{x}<br>%{y} colaborações<extra></extra>'
+    },
+    {
+      x: years,
+      y: coResearcherCounts,
+      name: 'Como Co-Pesquisador',
+      type: 'scatter',
+      mode: 'lines+markers',
+      stackgroup: 'one',
+      line: {width: 2, color: '#ffc107'},
+      marker: {size: 6},
+      hovertemplate: '<b>Como Co-Pesquisador</b><br>Ano: %{x}<br>%{y} colaborações<extra></extra>'
+    }
+  ];
+  
+  var layout = {
+    title: {
+      text: 'Linha do Tempo de Colaborações por Papel',
+      font: {size: 16, family: 'Arial, sans-serif', color: '#222'}
+    },
+    xaxis: {
+      title: 'Ano',
+      dtick: 1,
+      gridcolor: '#e5e5e5'
+    },
+    yaxis: {
+      title: 'Número de Colaborações',
+      gridcolor: '#f0f0f0',
+      rangemode: 'tozero'
+    },
+    plot_bgcolor: '#fafafa',
+    paper_bgcolor: 'white',
+    hovermode: 'x unified',
+    legend: {
+      x: 0.02,
+      y: 0.98,
+      bgcolor: 'rgba(255,255,255,0.9)',
+      bordercolor: '#ccc',
+      borderwidth: 1
+    },
+    margin: {t: 50, b: 50, l: 50, r: 20}
+  };
+  
+  Plotly.newPlot('collab-timeline-{{ loop.index }}', data, layout);
+})();
+</script>
+
+{# Interactive Network Visualization #}
+<div id="network-{{ loop.index }}" style="width:100%;height:500px;border:1px solid #ddd;border-radius:8px;margin-bottom:20px;background:#fff;"></div>
+
+<script>
+(function() {
+  if (typeof vis === 'undefined') {
+    console.error('vis-network library not loaded');
+    return;
+  }
+  
+  var collaborators = {{ collaborators|tojson }};
+  
+  if (!collaborators || Object.keys(collaborators).length === 0) {
+    document.getElementById('network-{{ loop.index }}').innerHTML = 
+      '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#999;">Sem dados de colaboração disponíveis</div>';
+    return;
+  }
   
   // Create nodes
   var nodes = [
@@ -454,8 +774,9 @@ function sortTable(columnIndex) {
       label: '{{ supervisor["name"][:20] }}',
       color: {background: '#667eea', border: '#4a5fc1'},
       font: {color: 'white', size: 14, bold: true},
-      size: 30,
-      title: '{{ supervisor["name"] }}<br>Coordenador Principal'
+      size: 35,
+      title: '<b>{{ supervisor["name"] }}</b><br>Pesquisador Principal<br>' + 
+             Object.keys(collaborators).length + ' colaboradores'
     }
   ];
   
@@ -465,85 +786,191 @@ function sortTable(columnIndex) {
   // Add collaborator nodes and edges
   Object.keys(collaborators).forEach(function(name) {
     var collab = collaborators[name];
-    var size = 15 + (collab.count * 3);
+    var size = 15 + Math.min(collab.count * 2, 30);
+    
+    // Count role types
+    var roles = {coordinator: 0, researcher: 0, coResearcher: 0};
+    collab.projects.forEach(function(p) {
+      if (p.role === 'coordinator') roles.coordinator++;
+      else if (p.role === 'researcher') roles.researcher++;
+      else if (p.role === 'co-researcher') roles.coResearcher++;
+    });
+    
+    var roleText = '';
+    if (roles.coordinator > 0) roleText += roles.coordinator + ' como coordenador<br>';
+    if (roles.researcher > 0) roleText += roles.researcher + ' como pesquisador<br>';
+    if (roles.coResearcher > 0) roleText += roles.coResearcher + ' como co-pesquisador';
+    
+    // Color based on primary role
+    var color = '#4facfe';
+    if (roles.coordinator > roles.researcher && roles.coordinator > roles.coResearcher) {
+      color = '#28a745'; // Green for coordinator
+    } else if (roles.researcher > roles.coResearcher) {
+      color = '#007bff'; // Blue for researcher
+    } else {
+      color = '#ffc107'; // Yellow for co-researcher
+    }
     
     nodes.push({
       id: nodeId,
-      label: name.substring(0, 15) + (name.length > 15 ? '...' : ''),
-      color: {background: '#4facfe', border: '#0088cc'},
+      label: name.substring(0, 18) + (name.length > 18 ? '...' : ''),
+      color: {background: color, border: '#333'},
       size: size,
-      title: name + '<br>' + collab.count + ' projeto(s) em comum'
+      title: '<b>' + name + '</b><br>' + collab.count + ' projeto(s) compartilhado(s)<br>' + roleText
     });
     
     edges.push({
       from: 0,
       to: nodeId,
       value: collab.count,
-      title: collab.count + ' projeto(s)',
-      color: {color: '#999', opacity: 0.6}
+      title: collab.count + ' projeto(s) compartilhado(s)',
+      color: {color: '#999', opacity: 0.5},
+      width: Math.min(collab.count / 2, 5)
     });
     
     nodeId++;
   });
   
   var container = document.getElementById('network-{{ loop.index }}');
-  var data = {nodes: new vis.DataSet(nodes), edges: new vis.DataSet(edges)};
   
-  var options = {
-    physics: {
-      enabled: true,
-      stabilization: {iterations: 100},
-      barnesHut: {
-        gravitationalConstant: -8000,
-        springConstant: 0.04,
-        springLength: 150
+  if (!container) {
+    console.error('Container network-{{ loop.index }} not found');
+    return;
+  }
+  
+  try {
+    var data = {
+      nodes: new vis.DataSet(nodes), 
+      edges: new vis.DataSet(edges)
+    };
+    
+    var options = {
+      physics: {
+        enabled: true,
+        stabilization: {iterations: 150},
+        barnesHut: {
+          gravitationalConstant: -10000,
+          springConstant: 0.04,
+          springLength: 180,
+          avoidOverlap: 0.5
+        }
+      },
+      interaction: {
+        hover: true,
+        tooltipDelay: 100,
+        navigationButtons: true,
+        keyboard: true
+      },
+      nodes: {
+        shape: 'dot',
+        font: {size: 11, face: 'Arial'}
+      },
+      edges: {
+        smooth: {type: 'continuous'}
       }
-    },
-    interaction: {
-      hover: true,
-      tooltipDelay: 100
-    },
-    nodes: {
-      shape: 'dot',
-      font: {size: 12}
-    },
-    edges: {
-      smooth: {type: 'continuous'},
-      width: 2
-    }
-  };
-  
-  var network = new vis.Network(container, data, options);
+    };
+    
+    var network = new vis.Network(container, data, options);
+    
+    network.on('stabilizationIterationsDone', function() {
+      network.setOptions({physics: false});
+    });
+    
+  } catch (error) {
+    console.error('Error creating network visualization:', error);
+    container.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#dc3545;">Erro ao carregar visualização da rede</div>';
+  }
 })();
 </script>
 
 <div style="background-color: #f8f9fa; padding: 15px; border-radius: 6px; margin-bottom: 20px;">
   <p style="margin: 5px 0; font-size: 14px;">
-    <strong>📊 Estatísticas da Rede:</strong>
+    <strong>📊 Distribuição de Papéis na Colaboração:</strong>
   </p>
+  <div style="display: flex; gap: 15px; margin: 10px 0; flex-wrap: wrap;">
+    <div style="display: flex; align-items: center; gap: 5px;">
+      <div style="width: 16px; height: 16px; background: #28a745; border-radius: 50%;"></div>
+      <span style="font-size: 13px;">Como Coordenador</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 5px;">
+      <div style="width: 16px; height: 16px; background: #007bff; border-radius: 50%;"></div>
+      <span style="font-size: 13px;">Como Pesquisador</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 5px;">
+      <div style="width: 16px; height: 16px; background: #ffc107; border-radius: 50%;"></div>
+      <span style="font-size: 13px;">Como Co-Pesquisador</span>
+    </div>
+  </div>
+  
+  {% set top_collab = collaborators.items()|sort(attribute='1.count', reverse=True)|first %}
   <ul style="margin: 10px 0; font-size: 13px; color: #555;">
-    <li><strong>Total de colaboradores:</strong> {{ collaborators|length }}</li>
     <li><strong>Colaborador mais frequente:</strong> 
-      {% set top_collab = collaborators.items()|sort(attribute='1.count', reverse=True)|first %}
       {{ top_collab[0] }} ({{ top_collab[1]['count'] }} projeto{{ 's' if top_collab[1]['count'] > 1 else '' }})
     </li>
-    <li><strong>Total de colaborações:</strong> 
-      {% set total_collabs = 0 %}
-      {% for name, data in collaborators.items() %}
-        {% set total_collabs = total_collabs + data['count'] %}
-      {% endfor %}
-      {{ total_collabs }} conexões
-    </li>
-    <li><strong>Média de projetos por colaborador:</strong> 
-      {{ "%.1f"|format(total_collabs / collaborators|length) }}
+    <li><strong>Intensidade de colaboração:</strong>
+      {% if (total_collabs / collaborators|length) >= 5 %}
+        <span style="color: #28a745; font-weight: bold;">● Alta</span> - Parcerias recorrentes fortes
+      {% elif (total_collabs / collaborators|length) >= 2 %}
+        <span style="color: #ffc107; font-weight: bold;">● Média</span> - Colaborações regulares
+      {% else %}
+        <span style="color: #6c757d;">● Baixa</span> - Rede diversificada
+      {% endif %}
     </li>
   </ul>
+  
   <p style="margin: 5px 0; font-size: 12px; color: #666; font-style: italic;">
     💡 <strong>Como interpretar:</strong> O nó central (roxo) representa o pesquisador. 
-    Os nós azuis são colaboradores, com tamanho proporcional ao número de projetos compartilhados. 
-    Passe o mouse sobre os nós para ver detalhes. Você pode arrastar os nós para reorganizar a visualização.
+    As cores dos nós indicam o papel principal na colaboração. O tamanho reflete o número de projetos compartilhados. 
+    Você pode arrastar nós, dar zoom e passar o mouse para ver detalhes.
   </p>
 </div>
+
+{# Detailed Collaborators Table #}
+<details style="margin-bottom: 20px;">
+  <summary style="cursor: pointer; padding: 10px; background: #e9ecef; border-radius: 4px; font-weight: bold;">
+    📋 Ver Lista Detalhada de Colaboradores ({{ collaborators|length }} total)
+  </summary>
+  <div style="margin-top: 10px;">
+    <table style="width:100%; border-collapse: collapse; font-size: 13px;">
+      <thead>
+        <tr style="background-color: #e9ecef;">
+          <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6;">Colaborador</th>
+          <th style="padding: 8px; text-align: center; border: 1px solid #dee2e6; width: 100px;">Projetos</th>
+          <th style="padding: 8px; text-align: center; border: 1px solid #dee2e6; width: 150px;">Papéis</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for name, data in collaborators.items()|sort(attribute='1.count', reverse=True) %}
+        <tr>
+          <td style="padding: 8px; border: 1px solid #dee2e6;">{{ name }}</td>
+          <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6; font-weight: bold;">
+            {{ data['count'] }}
+          </td>
+          <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">
+            {% set roles = {'coordinator': 0, 'researcher': 0, 'co-researcher': 0} %}
+            {% for project in data['projects'] %}
+              {% if project['role'] in roles %}
+                {% set _ = roles.__setitem__(project['role'], roles[project['role']] + 1) %}
+              {% endif %}
+            {% endfor %}
+            <small>
+              {% if roles['coordinator'] > 0 %}
+                <span style="color: #28a745;">●{{ roles['coordinator'] }} coord</span>
+              {% endif %}
+              {% if roles['researcher'] > 0 %}
+                <span style="color: #007bff;">●{{ roles['researcher'] }} pesq</span>
+              {% endif %}
+              {% if roles['co-researcher'] > 0 %}
+                <span style="color: #ffc107;">●{{ roles['co-researcher'] }} co-pesq</span>
+              {% endif %}
+            </small>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</details>
 {% endif %}
 
 {% if supervisor['research_projects'] %}
