@@ -62,15 +62,68 @@
 
 {% block content %}
   <!-- Language Switcher -->
-  <div class="language-switcher">
-    {% if page.url.startswith('pt/') %}
-      <a href="{{ page.url | replace('pt/', '') }}">🇺🇸 EN</a>
-      <a href="{{ page.url }}" class="active">🇧🇷 PT</a>
-    {% else %}
-      <a href="{{ page.url }}" class="active">🇺🇸 EN</a>
-      <a href="pt/{{ page.url }}">🇧🇷 PT</a>
-    {% endif %}
+  <div class="language-switcher" id="language-switcher-custom">
+    <a href="#" id="lang-en" onclick="switchLanguage('en'); return false;">🇺🇸 EN</a>
+    <a href="#" id="lang-pt" onclick="switchLanguage('pt'); return false;">🇧🇷 PT</a>
   </div>
+  
+  <script>
+    // Language switcher logic
+    function switchLanguage(targetLang) {
+      const currentPath = window.location.pathname;
+      let newPath;
+      
+      if (targetLang === 'pt') {
+        // Switch to Portuguese
+        if (currentPath.startsWith('/pt/')) {
+          // Already in Portuguese
+          return;
+        } else if (currentPath === '/' || currentPath === '/index.html') {
+          newPath = '/pt/';
+        } else {
+          newPath = '/pt' + currentPath;
+        }
+      } else {
+        // Switch to English
+        if (currentPath.startsWith('/pt/')) {
+          // Remove /pt/ prefix
+          newPath = currentPath.replace('/pt/', '/').replace('/pt', '/');
+          if (newPath === '/') {
+            newPath = '/';
+          }
+        } else {
+          // Already in English
+          return;
+        }
+      }
+      
+      window.location.href = newPath;
+    }
+    
+    // Highlight active language
+    function updateActiveLanguage() {
+      const currentPath = window.location.pathname;
+      const enLink = document.getElementById('lang-en');
+      const ptLink = document.getElementById('lang-pt');
+      
+      if (currentPath.startsWith('/pt/') || currentPath === '/pt') {
+        // Portuguese is active
+        enLink.classList.remove('active');
+        ptLink.classList.add('active');
+      } else {
+        // English is active
+        enLink.classList.add('active');
+        ptLink.classList.remove('active');
+      }
+    }
+    
+    // Run on page load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updateActiveLanguage);
+    } else {
+      updateActiveLanguage();
+    }
+  </script>
   
   {{ super() }}
 {% endblock %}
