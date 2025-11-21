@@ -109,15 +109,40 @@
 (function() {
   var supervisors = {{ supervisors|tojson }};
   
-  // Calculate top collaborators across all Serra researchers
+  // Calculate unique collaborations (count each pair only once)
+  var collabPairs = {};  // Track unique pairs to avoid double counting
   var collabCounts = {};
+  
   supervisors.forEach(function(sup) {
+    var supName = sup.name;
+    
     if (sup.collaborations) {
       Object.keys(sup.collaborations).forEach(function(collabName) {
-        if (!collabCounts[collabName]) {
-          collabCounts[collabName] = 0;
+        // Skip self-collaborations
+        if (supName === collabName) {
+          return;
         }
-        collabCounts[collabName] += sup.collaborations[collabName].count;
+        
+        // Create a unique key for this pair (sorted alphabetically to avoid A-B vs B-A)
+        var pairKey = [supName, collabName].sort().join('|||');
+        
+        // Only count each unique pair once
+        if (!collabPairs[pairKey]) {
+          collabPairs[pairKey] = true;
+          
+          // Add to both collaborators' counts
+          if (!collabCounts[supName]) {
+            collabCounts[supName] = 0;
+          }
+          if (!collabCounts[collabName]) {
+            collabCounts[collabName] = 0;
+          }
+          
+          // Count the number of projects for this collaboration
+          var projectCount = sup.collaborations[collabName].count;
+          collabCounts[supName] += projectCount;
+          collabCounts[collabName] += projectCount;
+        }
       });
     }
   });
