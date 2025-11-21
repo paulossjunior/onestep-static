@@ -68,34 +68,61 @@
   </div>
   
   <script>
-    // Language switcher logic
+    // Language switcher logic for GitHub Pages
     function switchLanguage(targetLang) {
       const currentPath = window.location.pathname;
+      
+      // Detect base path (e.g., /onestep-static/ for GitHub Pages)
+      const basePath = currentPath.match(/^\/[^\/]+\//)?.[0] || '/';
+      
+      // Get the page path without base and language prefix
+      let pagePath = currentPath;
+      
+      // Remove base path if present
+      if (basePath !== '/' && pagePath.startsWith(basePath)) {
+        pagePath = pagePath.substring(basePath.length - 1); // Keep leading /
+      }
+      
+      // Check if currently in Portuguese
+      const isInPt = pagePath.includes('/pt/') || pagePath === '/pt' || pagePath === '/pt/';
+      
       let newPath;
       
       if (targetLang === 'pt') {
         // Switch to Portuguese
-        if (currentPath.startsWith('/pt/')) {
+        if (isInPt) {
           // Already in Portuguese
           return;
-        } else if (currentPath === '/' || currentPath === '/index.html') {
-          newPath = '/pt/';
+        }
+        
+        // Add /pt/ after base path
+        if (pagePath === '/' || pagePath === '' || pagePath === '/index.html') {
+          newPath = basePath + 'pt/';
         } else {
-          newPath = '/pt' + currentPath;
+          // Remove leading / from pagePath if present
+          const cleanPath = pagePath.startsWith('/') ? pagePath.substring(1) : pagePath;
+          newPath = basePath + 'pt/' + cleanPath;
         }
       } else {
         // Switch to English
-        if (currentPath.startsWith('/pt/')) {
-          // Remove /pt/ prefix
-          newPath = currentPath.replace('/pt/', '/').replace('/pt', '/');
-          if (newPath === '/') {
-            newPath = '/';
-          }
-        } else {
+        if (!isInPt) {
           // Already in English
           return;
         }
+        
+        // Remove /pt/ from path
+        pagePath = pagePath.replace('/pt/', '/').replace('/pt', '/');
+        
+        if (pagePath === '/' || pagePath === '') {
+          newPath = basePath;
+        } else {
+          const cleanPath = pagePath.startsWith('/') ? pagePath.substring(1) : pagePath;
+          newPath = basePath + cleanPath;
+        }
       }
+      
+      // Ensure path doesn't have double slashes
+      newPath = newPath.replace(/\/+/g, '/');
       
       window.location.href = newPath;
     }
@@ -106,7 +133,10 @@
       const enLink = document.getElementById('lang-en');
       const ptLink = document.getElementById('lang-pt');
       
-      if (currentPath.startsWith('/pt/') || currentPath === '/pt') {
+      // Check if in Portuguese (works for both local and GitHub Pages)
+      const isInPt = currentPath.includes('/pt/') || currentPath.endsWith('/pt');
+      
+      if (isInPt) {
         // Portuguese is active
         enLink.classList.remove('active');
         ptLink.classList.add('active');
