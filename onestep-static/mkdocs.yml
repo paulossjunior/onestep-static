@@ -1,4 +1,5 @@
 site_name: OneStep - Static Report
+site_url: https://paulossjunior.github.io/onestep-static/
 theme:
   name: readthedocs
   language: en
