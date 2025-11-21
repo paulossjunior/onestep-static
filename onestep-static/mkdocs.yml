@@ -1,0 +1,10 @@
+site_name: OneStep - Static Report
+theme:
+  name: readthedocs
+dev_addr: 0.0.0.0:8001
+plugins:
+  - search
+  - macros
+  - table-reader
+extra_css:
+  - css/extra.css
