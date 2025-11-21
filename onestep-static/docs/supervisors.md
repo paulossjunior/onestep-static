@@ -22,20 +22,18 @@
 {# Calculate statistics for Serra campus only #}
 {% set serra_with_projects = supervisors|selectattr('research_projects')|list|length %}
 {% set serra_with_supervisions = supervisors|selectattr('ic_supervisions')|list|length %}
-{% set serra_with_both = 0 %}
-{% set serra_with_collabs = 0 %}
-{% set total_serra_collabs = 0 %}
-{% set total_serra_collab_instances = 0 %}
+
+{% set ns = namespace(serra_with_both=0, serra_with_collabs=0, total_serra_collabs=0, total_serra_collab_instances=0) %}
 
 {% for sup in supervisors %}
   {% if sup['research_projects'] and sup['ic_supervisions'] %}
-    {% set serra_with_both = serra_with_both + 1 %}
+    {% set ns.serra_with_both = ns.serra_with_both + 1 %}
   {% endif %}
   {% if sup.get('collaborations') %}
-    {% set serra_with_collabs = serra_with_collabs + 1 %}
-    {% set total_serra_collabs = total_serra_collabs + sup['collaborations']|length %}
+    {% set ns.serra_with_collabs = ns.serra_with_collabs + 1 %}
+    {% set ns.total_serra_collabs = ns.total_serra_collabs + sup['collaborations']|length %}
     {% for collab_name, collab_data in sup['collaborations'].items() %}
-      {% set total_serra_collab_instances = total_serra_collab_instances + collab_data['count'] %}
+      {% set ns.total_serra_collab_instances = ns.total_serra_collab_instances + collab_data['count'] %}
     {% endfor %}
   {% endif %}
 {% endfor %}
@@ -50,11 +48,11 @@
     <div style="font-size: 14px; margin-top: 5px;">With IC Supervisions</div>
   </div>
   <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 20px; border-radius: 8px; text-align: center;">
-    <div style="font-size: 32px; font-weight: bold;">{{ serra_with_both }}</div>
+    <div style="font-size: 32px; font-weight: bold;">{{ ns.serra_with_both }}</div>
     <div style="font-size: 14px; margin-top: 5px;">With Both</div>
   </div>
   <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; padding: 20px; border-radius: 8px; text-align: center;">
-    <div style="font-size: 32px; font-weight: bold;">{{ serra_with_collabs }}</div>
+    <div style="font-size: 32px; font-weight: bold;">{{ ns.serra_with_collabs }}</div>
     <div style="font-size: 14px; margin-top: 5px;">With Collaborations</div>
   </div>
 </div>
@@ -64,25 +62,25 @@
 <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 20px; border-radius: 8px; margin-bottom: 30px;">
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
     <div style="text-align: center;">
-      <div style="font-size: 36px; font-weight: bold; color: #333;">{{ total_serra_collabs }}</div>
+      <div style="font-size: 36px; font-weight: bold; color: #333;">{{ ns.total_serra_collabs }}</div>
       <div style="font-size: 14px; color: #555; margin-top: 5px;">Unique Collaborations</div>
       <div style="font-size: 11px; color: #777; margin-top: 3px;">Total unique researcher pairs</div>
     </div>
     <div style="text-align: center;">
-      <div style="font-size: 36px; font-weight: bold; color: #333;">{{ total_serra_collab_instances }}</div>
+      <div style="font-size: 36px; font-weight: bold; color: #333;">{{ ns.total_serra_collab_instances }}</div>
       <div style="font-size: 14px; color: #555; margin-top: 5px;">Collaboration Instances</div>
       <div style="font-size: 11px; color: #777; margin-top: 3px;">Total shared projects</div>
     </div>
     <div style="text-align: center;">
       <div style="font-size: 36px; font-weight: bold; color: #333;">
-        {{ "%.1f"|format(total_serra_collab_instances / serra_with_collabs) if serra_with_collabs > 0 else 0 }}
+        {{ "%.1f"|format(ns.total_serra_collab_instances / ns.serra_with_collabs) if ns.serra_with_collabs > 0 else 0 }}
       </div>
       <div style="font-size: 14px; color: #555; margin-top: 5px;">Avg. Collaborations</div>
       <div style="font-size: 11px; color: #777; margin-top: 3px;">Per active researcher</div>
     </div>
     <div style="text-align: center;">
       <div style="font-size: 36px; font-weight: bold; color: #333;">
-        {{ "%.1f"|format(total_serra_collabs / serra_with_collabs) if serra_with_collabs > 0 else 0 }}
+        {{ "%.1f"|format(ns.total_serra_collabs / ns.serra_with_collabs) if ns.serra_with_collabs > 0 else 0 }}
       </div>
       <div style="font-size: 14px; color: #555; margin-top: 5px;">Network Density</div>
       <div style="font-size: 11px; color: #777; margin-top: 3px;">Avg. unique partners</div>
