@@ -1069,6 +1069,185 @@
 
 ---
 
+## Financial Investment by Funding Agency Over Time
+
+{# Calculate financial values by year and agency #}
+{% set year_agency_values = {} %}
+
+{% for s in ic_scholarships %}
+  {% set year = s['year'] %}
+  {% set agency = s['funding_agency'] if s['funding_agency'] and s['funding_agency'].strip() else 'No Agency' %}
+  {% set value = s['value'] if s['value'] else 0 %}
+  
+  {% if year not in year_agency_values %}
+    {% set _ = year_agency_values.__setitem__(year, {}) %}
+  {% endif %}
+  
+  {% if agency not in year_agency_values[year] %}
+    {% set _ = year_agency_values[year].__setitem__(agency, 0) %}
+  {% endif %}
+  
+  {% set _ = year_agency_values[year].__setitem__(agency, year_agency_values[year][agency] + value) %}
+{% endfor %}
+
+{% set financial_agency_years = year_agency_values.keys()|list|sort %}
+
+<div id="chart-financial-by-agency" style="width:100%;height:500px;margin-bottom:10px;"></div>
+
+<p style="font-size: 14px; color: #555; font-style: italic; margin-bottom: 30px; padding: 10px; background-color: #f8f9fa; border-left: 4px solid #ff7f0e;">
+  <strong>Legend:</strong> This stacked area chart shows the financial investment in IC scholarships broken down by funding agency over time. Each colored area represents a different funding source (Ifes, Fapes, CNPq, Voluntário). The total height of the stacked areas represents the total investment per year. This visualization helps understand which agencies have contributed most to research funding and how their participation has evolved over time.
+</p>
+
+<script>
+(function() {
+  var years = {{ financial_agency_years|tojson }};
+  var agencies = {{ all_agencies|tojson }};
+  var yearAgencyValues = {{ year_agency_values|tojson }};
+  
+  var data = [];
+  
+  // Define colors for each agency
+  var agencyColors = {
+    'Ifes': '#1f77b4',
+    'Fapes': '#ff7f0e',
+    'CNPq': '#2ca02c',
+    'Voluntário': '#d62728',
+    'No Agency': '#999999'
+  };
+  
+  // Add stacked area for each agency
+  agencies.forEach(function(agency) {
+    var values = [];
+    years.forEach(function(year) {
+      var yearStr = String(year);
+      var value = yearAgencyValues[yearStr] && yearAgencyValues[yearStr][agency] ? yearAgencyValues[yearStr][agency] : 0;
+      values.push(value);
+    });
+    
+    var color = agencyColors[agency] || '#9467bd';
+    
+    // Format values for text display
+    var textValues = values.map(function(v) {
+      if (v > 0) {
+        return 'R$ ' + (v / 1000).toFixed(1) + 'k';
+      }
+      return '';
+    });
+    
+    data.push({
+      x: years,
+      y: values,
+      text: textValues,
+      name: agency,
+      type: 'scatter',
+      mode: 'lines+text',
+      stackgroup: 'one',
+      fillcolor: color,
+      line: {width: 0.5, color: color},
+      textposition: 'inside',
+      textfont: {size: 9, color: 'white'},
+      hovertemplate: '<b>' + agency + '</b><br>Year: %{x}<br>Investment: R$ %{y:,.2f}<extra></extra>'
+    });
+  });
+  
+  var layout = {
+    title: {
+      text: 'Financial Investment by Funding Agency Over Time (Campus Serra)',
+      font: {size: 18, family: 'Arial, sans-serif', color: '#222'}
+    },
+    xaxis: {
+      title: 'Year',
+      dtick: 1,
+      gridcolor: '#e5e5e5'
+    },
+    yaxis: {
+      title: 'Total Investment (R$)',
+      gridcolor: '#f0f0f0',
+      tickformat: ',.2f',
+      rangemode: 'tozero'
+    },
+    plot_bgcolor: '#fafafa',
+    paper_bgcolor: 'white',
+    hovermode: 'x unified',
+    legend: {
+      x: 0.02,
+      y: 0.98,
+      bgcolor: 'rgba(255,255,255,0.9)',
+      bordercolor: '#ccc',
+      borderwidth: 1
+    }
+  };
+  
+  Plotly.newPlot('chart-financial-by-agency', data, layout);
+})();
+</script>
+
+### Financial Investment Summary by Year and Agency
+
+<table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+  <thead>
+    <tr style="background-color: #e9ecef;">
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">Year</th>
+      {% for agency in all_agencies %}
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">{{ agency }}</th>
+      {% endfor %}
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; background-color: #d1d1d1;"><strong>TOTAL</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for year in financial_agency_years %}
+    <tr>
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6; font-weight: bold;">{{ year }}</td>
+      {% for agency in all_agencies %}
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">
+        {% if year in year_agency_values and agency in year_agency_values[year] %}
+          R$ {{ "%.2f"|format(year_agency_values[year][agency]) }}
+        {% else %}
+          -
+        {% endif %}
+      </td>
+      {% endfor %}
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6; background-color: #f0f0f0; font-weight: bold;">
+        {% set year_total = 0 %}
+        {% for agency in all_agencies %}
+          {% if year in year_agency_values and agency in year_agency_values[year] %}
+            {% set year_total = year_total + year_agency_values[year][agency] %}
+          {% endif %}
+        {% endfor %}
+        R$ {{ "%.2f"|format(year_total) }}
+      </td>
+    </tr>
+    {% endfor %}
+    <tr style="background-color: #d1d1d1; font-weight: bold;">
+      <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">TOTAL</td>
+      {% for agency in all_agencies %}
+      <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">
+        {% set agency_total = 0 %}
+        {% for year in financial_agency_years %}
+          {% if year in year_agency_values and agency in year_agency_values[year] %}
+            {% set agency_total = agency_total + year_agency_values[year][agency] %}
+          {% endif %}
+        {% endfor %}
+        R$ {{ "%.2f"|format(agency_total) }}
+      </td>
+      {% endfor %}
+      <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6; background-color: #c0c0c0;">
+        {% set grand_total = 0 %}
+        {% for year in financial_agency_years %}
+          {% for agency in all_agencies %}
+            {% if year in year_agency_values and agency in year_agency_values[year] %}
+              {% set grand_total = grand_total + year_agency_values[year][agency] %}
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+        R$ {{ "%.2f"|format(grand_total) }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
 {% for year in sorted_years %}
 
 ## {{ year }}

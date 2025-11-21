@@ -1,5 +1,18 @@
 # Researchers - Campus Serra
 
+<style>
+  .md-content {
+    max-width: 100% !important;
+  }
+  .md-content__inner {
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+  article {
+    max-width: 100% !important;
+  }
+</style>
+
 <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
 <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 
@@ -109,13 +122,13 @@
     }
   });
   
-  // Sort and get top 20
+  // Sort and get top 20 (reverse order so most collaborative is at top)
   var topCollabs = Object.keys(collabCounts)
     .map(function(name) {
       return {name: name, count: collabCounts[name]};
     })
-    .sort(function(a, b) { return b.count - a.count; })
-    .slice(0, 20);
+    .sort(function(a, b) { return a.count - b.count; })  // Ascending order
+    .slice(-20);  // Get last 20 (which are the highest)
   
   var names = topCollabs.map(function(c) { return c.name; });
   var counts = topCollabs.map(function(c) { return c.count; });
@@ -580,7 +593,7 @@ function sortTable(columnIndex) {
 (function() {
   var collaborators = {{ collaborators|tojson }};
   
-  // Sort collaborators by count and get top 15
+  // Sort collaborators by count and get top 15 (reverse order so most collaborative is at top)
   var collabArray = Object.keys(collaborators).map(function(name) {
     return {
       name: name,
@@ -588,8 +601,8 @@ function sortTable(columnIndex) {
       projects: collaborators[name].projects
     };
   }).sort(function(a, b) {
-    return b.count - a.count;
-  }).slice(0, 15);
+    return a.count - b.count;  // Ascending order
+  }).slice(-15);  // Get last 15 (which are the highest)
   
   var names = collabArray.map(function(c) { return c.name; });
   var counts = collabArray.map(function(c) { return c.count; });
