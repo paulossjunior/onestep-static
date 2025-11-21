@@ -10,6 +10,12 @@ if [ ! -f "onestep-static/mkdocs.yml" ]; then
     exit 1
 fi
 
+# Verificar se workflow está correto
+if ! grep -q "cd onestep-static" .github/workflows/deploy-pages.yml; then
+    echo "⚠️  Aviso: Workflow pode estar desatualizado"
+    echo "   Verifique se o workflow usa 'cd onestep-static'"
+fi
+
 # Adicionar todos os arquivos
 echo "📦 Adicionando arquivos..."
 git add .

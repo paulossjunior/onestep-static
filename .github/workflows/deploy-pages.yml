@@ -66,12 +66,13 @@ jobs:
       - name: Build with MkDocs
         run: |
           echo "Building documentation with MkDocs..."
+          cd onestep-static
           mkdocs build --clean --strict
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./site
+          path: ./onestep-static/site
 
   # Deployment job
   deploy:
