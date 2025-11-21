@@ -4,7 +4,7 @@ Welcome to **OneStep**, the research observatory for Campus Serra. This portal p
 
 ## Overview
 
-This documentation is organized into three main sections, each offering different perspectives on our research ecosystem:
+This documentation is organized into four main sections, each offering different perspectives on our research ecosystem:
 
 ### [Research Groups](research_groups.md)
 
@@ -42,6 +42,29 @@ The Research Projects section provides a **project-centric view** of all researc
 
 This section is perfect for exploring individual projects, tracking research trends over time, and identifying students with sustained research involvement.
 
+### [Researchers](supervisors.md)
+
+The Researchers section provides a **researcher-centric view** of research activities at Campus Serra. Here you'll find:
+
+- **Complete researcher profiles** with comprehensive activity tracking
+- **Collaboration network analysis** showing:
+  - Interactive network visualizations of research partnerships
+  - Collaboration timeline by role (coordinator, researcher, co-researcher)
+  - Top collaborators and collaboration intensity metrics
+  - Network statistics including unique collaborations and collaboration instances
+- **Individual researcher profiles** featuring:
+  - Research projects coordinated and participated in
+  - IC (Scientific Initiation) supervisions (scholarship holders and volunteers)
+  - Activity timeline showing evolution of projects and supervisions over time
+  - Detailed collaboration networks with role distribution
+- **Campus-wide statistics** including:
+  - Total researchers with research projects and IC supervisions
+  - Collaboration network metrics (unique collaborations, instances, density)
+  - Top 20 most active collaborators across the campus
+  - Top 10 researchers by projects and supervisions
+
+This section is perfect for understanding individual researcher contributions, identifying collaboration opportunities, and analyzing the research network structure at Campus Serra.
+
 ### [Scholarships](scholarship.md)
 
 The Scholarships section provides comprehensive information about research scholarships and student support. Here you'll find:
@@ -64,11 +87,13 @@ This section is ideal for understanding scholarship trends, identifying funding 
 ## How to Use This Documentation
 
 - **Exploring by research area?** Start with [Research Groups](research_groups.md) to see which groups work in your area of interest
+- **Looking for specific researchers?** Browse [Researchers](supervisors.md) to see individual profiles and collaboration networks
 - **Looking for specific projects?** Browse [Research Projects](research_projects.md) organized by year
 - **Researching scholarships?** Check [Scholarships](scholarship.md) for funding trends and opportunities
 - **Analyzing trends?** All sections include interactive charts showing evolution over time
-- **Studying collaborations?** Check the collaboration networks in [Research Groups](research_groups.md)
+- **Studying collaborations?** Check the collaboration networks in [Research Groups](research_groups.md) and [Researchers](supervisors.md)
 - **Identifying engaged students?** See the participation distribution in [Research Projects](research_projects.md) and scholarship data in [Scholarships](scholarship.md)
+- **Finding research partners?** Explore the collaboration networks in [Researchers](supervisors.md) to identify potential collaborators
 
 ## Data Scope
 
