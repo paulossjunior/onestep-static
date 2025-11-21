@@ -6,6 +6,10 @@ theme:
   locale: en
   custom_dir: overrides
 dev_addr: 0.0.0.0:8001
+nav:
+  - Home: index.md
+  - Research Groups: research_groups.md
+  - Research Projects: research_projects.md
 plugins:
   - search
   - i18n:
@@ -22,6 +26,7 @@ plugins:
           name: Português (Brasil)
           build: true
           nav_translations:
+            Home: Início
             Research Groups: Grupos de Pesquisa
             Research Projects: Projetos de Pesquisa
   - macros

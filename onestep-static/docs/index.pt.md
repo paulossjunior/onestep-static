@@ -1,6 +1,6 @@
 # Documentação de Pesquisa - Campus Serra
 
-Bem-vindo ao portal de documentação de pesquisa do Campus Serra. Este portal fornece informações abrangentes sobre atividades de pesquisa, grupos e projetos realizados em nosso campus.
+Bem-vindo ao **OneStep**, o observatório de pesquisa do Campus Serra. Este portal fornece informações abrangentes sobre atividades de pesquisa, grupos e projetos realizados em nosso campus, servindo como uma plataforma centralizada para monitoramento e análise do ecossistema de pesquisa do IFES Campus Serra.
 
 ## Visão Geral
 
@@ -53,6 +53,16 @@ Esta seção é perfeita para explorar projetos individuais, rastrear tendência
 ## Escopo dos Dados
 
 Todos os dados apresentados nesta documentação são filtrados para incluir apenas atividades de pesquisa do **Campus Serra**. As informações abrangem projetos de 2014 a 2025, fornecendo mais de uma década de história e insights de pesquisa.
+
+## Sobre o OneStep
+
+O **OneStep** é o observatório de pesquisa do Campus Serra, projetado para fornecer transparência, insights e análises sobre as atividades de pesquisa do IFES Campus Serra. Como observatório, o OneStep:
+
+- **Monitora** tendências e padrões de pesquisa ao longo do tempo
+- **Analisa** redes de colaboração e padrões de participação
+- **Visualiza** dados de pesquisa através de gráficos e visualizações interativas
+- **Destaca** estudantes altamente engajados e grupos de pesquisa ativos
+- **Rastreia** fontes de financiamento e relacionamentos de parceria
 
 ## Fonte dos Dados
 

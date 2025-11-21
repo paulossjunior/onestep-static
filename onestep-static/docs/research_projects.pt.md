@@ -1261,7 +1261,18 @@ Este gráfico ilustra a participação de estudantes em projetos de pesquisa ao 
 
 ### Distribuição de Participação de Estudantes
 
-Este gráfico de barras revela quantos estudantes participaram de múltiplos projetos de pesquisa. Cada barra representa um nível de participação: por exemplo, se a barra na posição "1" shows 150 students, it means 150 students participated in exactly one project. Similarly, a bar at position "2" with 100 students indicates 100 students participated in two projects. Esta distribuição ajuda a entender padrões de engajamento estudantil e identifica estudantes com envolvimento sustentado em pesquisa através de múltiplos projetos.
+Este gráfico de barras revela quantos estudantes participaram de múltiplos projetos de pesquisa. Cada barra representa um nível de participação: por exemplo, se a barra na posição "1" mostra 150 estudantes, significa que 150 estudantes participaram de exatamente um projeto. Da mesma forma, uma barra na posição "2" com 100 estudantes indica que 100 estudantes participaram de dois projetos. Esta distribuição ajuda a entender padrões de engajamento estudantil e identifica estudantes com envolvimento sustentado em pesquisa através de múltiplos projetos.
+
+{# Calculate average projects per student #}
+{% set total_students = student_project_count|length %}
+{% set participation_counts = [] %}
+{% for student_name, count in student_project_count.items() %}
+{% set _ = participation_counts.append(count) %}
+{% endfor %}
+{% set total_student_participations = participation_counts|sum %}
+{% set avg_projects_per_student = (total_student_participations / total_students)|round(2) if total_students > 0 else 0 %}
+
+**Média de projetos por estudante:** {{ avg_projects_per_student }} projetos
 
 <div id="chart-student-participation" style="width:100%;height:450px;margin-bottom:30px;"></div>
 
@@ -1391,6 +1402,17 @@ Este gráfico de barras revela quantos estudantes participaram de múltiplos pro
 ### Distribuição de Participação de Pesquisadores
 
 Este gráfico de barras mostra quantos pesquisadores (coordenadores e pesquisadores) participaram de múltiplos projetos de pesquisa. Cada barra representa um nível de participação: por exemplo, se a barra na posição "1" mostra 50 pesquisadores, significa que 50 pesquisadores participaram de exatamente um projeto. Esta distribuição ajuda a entender padrões de engajamento de pesquisadores e identifica pesquisadores com envolvimento sustentado em múltiplos projetos.
+
+{# Calculate average projects per researcher #}
+{% set total_researchers = researcher_project_count|length %}
+{% set researcher_participation_counts = [] %}
+{% for researcher_name, count in researcher_project_count.items() %}
+{% set _ = researcher_participation_counts.append(count) %}
+{% endfor %}
+{% set total_researcher_participations = researcher_participation_counts|sum %}
+{% set avg_projects_per_researcher = (total_researcher_participations / total_researchers)|round(2) if total_researchers > 0 else 0 %}
+
+**Média de projetos por pesquisador:** {{ avg_projects_per_researcher }} projetos
 
 <div id="chart-researcher-participation-all" style="width:100%;height:450px;margin-bottom:30px;"></div>
 

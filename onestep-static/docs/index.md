@@ -1,6 +1,6 @@
 # Research Documentation - Campus Serra
 
-Welcome to the research documentation portal for Campus Serra. This portal provides comprehensive information about research activities, groups, and projects conducted at our campus.
+Welcome to **OneStep**, the research observatory for Campus Serra. This portal provides comprehensive information about research activities, groups, and projects conducted at our campus, serving as a centralized platform for monitoring and analyzing the research ecosystem of IFES Campus Serra.
 
 ## Overview
 
@@ -53,6 +53,16 @@ This section is perfect for exploring individual projects, tracking research tre
 ## Data Scope
 
 All data presented in this documentation is filtered to include only research activities from **Campus Serra**. The information encompasses projects from 2014 to 2025, providing over a decade of research history and insights.
+
+## About OneStep
+
+**OneStep** is the research observatory of Campus Serra, designed to provide transparency, insights, and analytics about research activities at IFES Campus Serra. As an observatory, OneStep:
+
+- **Monitors** research trends and patterns over time
+- **Analyzes** collaboration networks and participation patterns
+- **Visualizes** research data through interactive charts and graphs
+- **Highlights** highly engaged students and active research groups
+- **Tracks** funding sources and partnership relationships
 
 ## Data Source
 

@@ -1263,6 +1263,17 @@ This chart illustrates student participation in research projects throughout the
 
 This bar chart reveals how many students participated in multiple research projects. Each bar represents a participation level: for example, if the bar at position "1" shows 150 students, it means 150 students participated in exactly one project. Similarly, a bar at position "2" with 100 students indicates 100 students participated in two projects. This distribution helps understand student engagement patterns and identifies students with sustained research involvement across multiple projects.
 
+{# Calculate average projects per student #}
+{% set total_students = student_project_count|length %}
+{% set participation_counts = [] %}
+{% for student_name, count in student_project_count.items() %}
+{% set _ = participation_counts.append(count) %}
+{% endfor %}
+{% set total_student_participations = participation_counts|sum %}
+{% set avg_projects_per_student = (total_student_participations / total_students)|round(2) if total_students > 0 else 0 %}
+
+**Average projects per student:** {{ avg_projects_per_student }} projects
+
 <div id="chart-student-participation" style="width:100%;height:450px;margin-bottom:30px;"></div>
 
 <script>
@@ -1391,6 +1402,17 @@ This bar chart reveals how many students participated in multiple research proje
 ### Researcher Participation Distribution
 
 This bar chart shows how many researchers (coordinators and researchers) participated in multiple research projects. Each bar represents a participation level: for example, if the bar at position "1" shows 50 researchers, it means 50 researchers participated in exactly one project. This distribution helps understand researcher engagement patterns and identifies researchers with sustained involvement across multiple projects.
+
+{# Calculate average projects per researcher #}
+{% set total_researchers = researcher_project_count|length %}
+{% set researcher_participation_counts = [] %}
+{% for researcher_name, count in researcher_project_count.items() %}
+{% set _ = researcher_participation_counts.append(count) %}
+{% endfor %}
+{% set total_researcher_participations = researcher_participation_counts|sum %}
+{% set avg_projects_per_researcher = (total_researcher_participations / total_researchers)|round(2) if total_researchers > 0 else 0 %}
+
+**Average projects per researcher:** {{ avg_projects_per_researcher }} projects
 
 <div id="chart-researcher-participation-all" style="width:100%;height:450px;margin-bottom:30px;"></div>
 
