@@ -4,7 +4,7 @@ Bem-vindo ao **OneStep**, o observatório de pesquisa do Campus Serra. Este port
 
 ## Visão Geral
 
-Esta documentação está organizada em três seções principais, cada uma oferecendo diferentes perspectivas sobre nosso ecossistema de pesquisa:
+Esta documentação está organizada em quatro seções principais, cada uma oferecendo diferentes perspectivas sobre nosso ecossistema de pesquisa:
 
 ### [Grupos de Pesquisa](research_groups.pt.md)
 
@@ -42,6 +42,29 @@ A seção de Projetos de Pesquisa fornece uma **visão centrada em projetos** de
 
 Esta seção é perfeita para explorar projetos individuais, rastrear tendências de pesquisa ao longo do tempo e identificar estudantes com envolvimento sustentado em pesquisa.
 
+### [Pesquisadores](supervisors.pt.md)
+
+A seção de Pesquisadores fornece uma **visão centrada em pesquisadores** das atividades de pesquisa no Campus Serra. Aqui você encontrará:
+
+- **Perfis completos de pesquisadores** com acompanhamento abrangente de atividades
+- **Análise de rede de colaboração** mostrando:
+  - Visualizações interativas de rede de parcerias de pesquisa
+  - Linha do tempo de colaborações por papel (coordenador, pesquisador, co-pesquisador)
+  - Principais colaboradores e métricas de intensidade de colaboração
+  - Estatísticas de rede incluindo colaborações únicas e instâncias de colaboração
+- **Perfis individuais de pesquisadores** apresentando:
+  - Projetos de pesquisa coordenados e participados
+  - Orientações de IC (Iniciação Científica) - bolsistas e voluntários
+  - Linha do tempo de atividades mostrando evolução de projetos e orientações ao longo do tempo
+  - Redes de colaboração detalhadas com distribuição de papéis
+- **Estatísticas do campus** incluindo:
+  - Total de pesquisadores com projetos de pesquisa e orientações de IC
+  - Métricas de rede de colaboração (colaborações únicas, instâncias, densidade)
+  - Top 20 colaboradores mais ativos em todo o campus
+  - Top 10 pesquisadores por projetos e orientações
+
+Esta seção é perfeita para entender as contribuições individuais dos pesquisadores, identificar oportunidades de colaboração e analisar a estrutura da rede de pesquisa no Campus Serra.
+
 ### [Bolsas](scholarship.pt.md)
 
 A seção de Bolsas fornece informações abrangentes sobre bolsas de pesquisa e apoio estudantil. Aqui você encontrará:
@@ -64,11 +87,13 @@ Esta seção é ideal para entender tendências de bolsas, identificar oportunid
 ## Como Usar Esta Documentação
 
 - **Explorando por área de pesquisa?** Comece com [Grupos de Pesquisa](research_groups.pt.md) para ver quais grupos trabalham em sua área de interesse
+- **Procurando pesquisadores específicos?** Navegue pelos [Pesquisadores](supervisors.pt.md) para ver perfis individuais e redes de colaboração
 - **Procurando projetos específicos?** Navegue pelos [Projetos de Pesquisa](research_projects.pt.md) organizados por ano
 - **Pesquisando bolsas?** Confira [Bolsas](scholarship.pt.md) para tendências de financiamento e oportunidades
 - **Analisando tendências?** Todas as seções incluem gráficos interativos mostrando evolução ao longo do tempo
-- **Estudando colaborações?** Confira as redes de colaboração em [Grupos de Pesquisa](research_groups.pt.md)
+- **Estudando colaborações?** Confira as redes de colaboração em [Grupos de Pesquisa](research_groups.pt.md) e [Pesquisadores](supervisors.pt.md)
 - **Identificando estudantes engajados?** Veja a distribuição de participação em [Projetos de Pesquisa](research_projects.pt.md) e dados de bolsas em [Bolsas](scholarship.pt.md)
+- **Procurando parceiros de pesquisa?** Explore as redes de colaboração em [Pesquisadores](supervisors.pt.md) para identificar potenciais colaboradores
 
 ## Escopo dos Dados
 
