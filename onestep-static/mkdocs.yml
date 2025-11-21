@@ -10,6 +10,8 @@ nav:
   - Home: index.md
   - Research Groups: research_groups.md
   - Research Projects: research_projects.md
+  - Researchers: supervisors.md
+  - Scholarships: scholarship.md
 plugins:
   - search
   - i18n:
@@ -29,6 +31,8 @@ plugins:
             Home: Início
             Research Groups: Grupos de Pesquisa
             Research Projects: Projetos de Pesquisa
+            Researchers: Pesquisadores
+            Scholarships: Bolsas
   - macros
   - table-reader
 extra:

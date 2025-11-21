@@ -1491,6 +1491,209 @@ This bar chart shows how many researchers (coordinators and researchers) partici
 
 {% endif %}
 
+### Partnership and External Collaboration Analysis
+
+This section analyzes the external partnerships and collaborations established through research projects, highlighting the main partner organizations and external research groups involved.
+
+{% set partnership_data = load_partnership_data() %}
+
+#### Key Statistics
+
+<div style="background-color: #e7f5ff; padding: 20px; border-radius: 8px; margin: 20px 0;">
+  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+    <div style="background-color: white; padding: 15px; border-radius: 5px; text-align: center;">
+      <h4 style="margin: 0; color: #1971c2;">{{ partnership_data['projects_with_partners'] }}</h4>
+      <p style="margin: 5px 0; color: #666;">Projects with Partners</p>
+      <small style="color: #999;">{{ partnership_data['partners_percentage'] }}% of total</small>
+    </div>
+    <div style="background-color: white; padding: 15px; border-radius: 5px; text-align: center;">
+      <h4 style="margin: 0; color: #2ca02c;">{{ partnership_data['unique_partners_count'] }}</h4>
+      <p style="margin: 5px 0; color: #666;">Unique Partners</p>
+      <small style="color: #999;">Organizations</small>
+    </div>
+    <div style="background-color: white; padding: 15px; border-radius: 5px; text-align: center;">
+      <h4 style="margin: 0; color: #d62728;">{{ partnership_data['projects_with_external_groups'] }}</h4>
+      <p style="margin: 5px 0; color: #666;">Projects with External Groups</p>
+      <small style="color: #999;">{{ partnership_data['external_groups_percentage'] }}% of total</small>
+    </div>
+    <div style="background-color: white; padding: 15px; border-radius: 5px; text-align: center;">
+      <h4 style="margin: 0; color: #ff7f0e;">{{ partnership_data['unique_external_groups_count'] }}</h4>
+      <p style="margin: 5px 0; color: #666;">Unique External Groups</p>
+      <small style="color: #999;">Research Groups</small>
+    </div>
+  </div>
+</div>
+
+#### Top Partners
+
+The following chart shows the top 20 partner organizations that have collaborated on research projects, ranked by number of projects.
+
+{% set partner_names = [] %}
+{% set partner_counts = [] %}
+{% for partner in partnership_data['partners'] %}
+{% set _ = partner_names.append(partner['name']) %}
+{% set _ = partner_counts.append(partner['project_count']) %}
+{% endfor %}
+
+<div id="chart-top-partners" style="width:100%;height:600px;margin-bottom:30px;"></div>
+
+<script>
+(function() {
+  var data = [{
+    y: {{ partner_names|tojson }},
+    x: {{ partner_counts|tojson }},
+    type: 'bar',
+    orientation: 'h',
+    marker: {
+      color: '#1f77b4',
+      line: {
+        color: '#0d47a1',
+        width: 1.5
+      }
+    },
+    text: {{ partner_counts|tojson }},
+    textposition: 'outside',
+    textfont: {size: 11, color: '#1f77b4'},
+    hovertemplate: '<b>%{y}</b><br>%{x} projects<extra></extra>'
+  }];
+  
+  var layout = {
+    title: 'Top 20 Partner Organizations',
+    xaxis: {
+      title: 'Number of Projects',
+      gridcolor: '#f0f0f0',
+      showgrid: true
+    },
+    yaxis: {
+      autorange: 'reversed',
+      tickfont: {size: 10}
+    },
+    margin: {
+      l: 250,
+      r: 50,
+      t: 60,
+      b: 60
+    },
+    plot_bgcolor: '#fafafa',
+    paper_bgcolor: 'white',
+    hovermode: 'closest'
+  };
+  
+  Plotly.newPlot('chart-top-partners', data, layout);
+})();
+</script>
+
+<details style="margin: 20px 0;">
+<summary style="cursor: pointer; font-weight: bold; padding: 10px; background-color: #e9ecef; border-radius: 5px;">
+  📋 View Complete List of Partners ({{ partnership_data['unique_partners_count'] }})
+</summary>
+<div style="margin-top: 15px;">
+<table style="width:100%; border-collapse: collapse;">
+  <thead>
+    <tr style="background-color: #e9ecef;">
+      <th style="padding: 10px; text-align: left; border: 1px solid #dee2e6;">Partner Organization</th>
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">Number of Projects</th>
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">Percentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for partner in partnership_data['partners'] %}
+    <tr>
+      <td style="padding: 8px; border: 1px solid #dee2e6;">{{ partner['name'] }}</td>
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;"><strong>{{ partner['project_count'] }}</strong></td>
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">{{ partner['percentage'] }}%</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+</details>
+
+#### Top External Research Groups
+
+This chart displays the top external research groups that have collaborated on projects, showing the strength of inter-institutional research connections.
+
+{% set group_names = [] %}
+{% set group_counts = [] %}
+{% for group in partnership_data['external_research_groups'] %}
+{% set _ = group_names.append(group['name']) %}
+{% set _ = group_counts.append(group['project_count']) %}
+{% endfor %}
+
+<div id="chart-external-groups" style="width:100%;height:500px;margin-bottom:30px;"></div>
+
+<script>
+(function() {
+  var data = [{
+    y: {{ group_names|tojson }},
+    x: {{ group_counts|tojson }},
+    type: 'bar',
+    orientation: 'h',
+    marker: {
+      color: '#2ca02c',
+      line: {
+        color: '#1e7d1e',
+        width: 1.5
+      }
+    },
+    text: {{ group_counts|tojson }},
+    textposition: 'outside',
+    textfont: {size: 11, color: '#2ca02c'},
+    hovertemplate: '<b>%{y}</b><br>%{x} projects<extra></extra>'
+  }];
+  
+  var layout = {
+    title: 'Top External Research Groups',
+    xaxis: {
+      title: 'Number of Projects',
+      gridcolor: '#f0f0f0',
+      showgrid: true
+    },
+    yaxis: {
+      autorange: 'reversed',
+      tickfont: {size: 10}
+    },
+    margin: {
+      l: 300,
+      r: 50,
+      t: 60,
+      b: 60
+    },
+    plot_bgcolor: '#fafafa',
+    paper_bgcolor: 'white',
+    hovermode: 'closest'
+  };
+  
+  Plotly.newPlot('chart-external-groups', data, layout);
+})();
+</script>
+
+<details style="margin: 20px 0;">
+<summary style="cursor: pointer; font-weight: bold; padding: 10px; background-color: #e9ecef; border-radius: 5px;">
+  📋 View Complete List of External Research Groups ({{ partnership_data['unique_external_groups_count'] }})
+</summary>
+<div style="margin-top: 15px;">
+<table style="width:100%; border-collapse: collapse;">
+  <thead>
+    <tr style="background-color: #e9ecef;">
+      <th style="padding: 10px; text-align: left; border: 1px solid #dee2e6;">External Research Group</th>
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">Number of Projects</th>
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">Percentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for group in partnership_data['external_research_groups'] %}
+    <tr>
+      <td style="padding: 8px; border: 1px solid #dee2e6;">{{ group['name'] }}</td>
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;"><strong>{{ group['project_count'] }}</strong></td>
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">{{ group['percentage'] }}%</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+</details>
+
 ---
 
 {% for year in unique_years %}

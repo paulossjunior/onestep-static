@@ -4,7 +4,7 @@ Welcome to **OneStep**, the research observatory for Campus Serra. This portal p
 
 ## Overview
 
-This documentation is organized into two main sections, each offering different perspectives on our research ecosystem:
+This documentation is organized into three main sections, each offering different perspectives on our research ecosystem:
 
 ### [Research Groups](research_groups.md)
 
@@ -42,13 +42,33 @@ The Research Projects section provides a **project-centric view** of all researc
 
 This section is perfect for exploring individual projects, tracking research trends over time, and identifying students with sustained research involvement.
 
+### [Scholarships](scholarship.md)
+
+The Scholarships section provides comprehensive information about research scholarships and student support. Here you'll find:
+
+- **Complete scholarship catalog** from 2015 to 2025
+- **Visual analytics** including:
+  - Scholarships over time showing trends in research support
+  - Distribution by campus revealing institutional engagement
+  - Distribution by program highlighting funding sources
+  - Distribution by modality showing scholarship types
+- **Detailed statistics** including:
+  - Total scholarships: 981 records
+  - Investment tracking: R$ 284,716.00 total value
+  - Campus distribution across 15 locations
+  - Program distribution across 9 research programs
+- **Year-by-year breakdown** with complete statistics and percentages
+
+This section is ideal for understanding scholarship trends, identifying funding opportunities, and analyzing student research support patterns.
+
 ## How to Use This Documentation
 
 - **Exploring by research area?** Start with [Research Groups](research_groups.md) to see which groups work in your area of interest
 - **Looking for specific projects?** Browse [Research Projects](research_projects.md) organized by year
-- **Analyzing trends?** Both sections include interactive charts showing evolution over time
+- **Researching scholarships?** Check [Scholarships](scholarship.md) for funding trends and opportunities
+- **Analyzing trends?** All sections include interactive charts showing evolution over time
 - **Studying collaborations?** Check the collaboration networks in [Research Groups](research_groups.md)
-- **Identifying engaged students?** See the participation distribution and highly engaged students list in [Research Projects](research_projects.md)
+- **Identifying engaged students?** See the participation distribution in [Research Projects](research_projects.md) and scholarship data in [Scholarships](scholarship.md)
 
 ## Data Scope
 

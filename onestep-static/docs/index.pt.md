@@ -4,7 +4,7 @@ Bem-vindo ao **OneStep**, o observatório de pesquisa do Campus Serra. Este port
 
 ## Visão Geral
 
-Esta documentação está organizada em duas seções principais, cada uma oferecendo diferentes perspectivas sobre nosso ecossistema de pesquisa:
+Esta documentação está organizada em três seções principais, cada uma oferecendo diferentes perspectivas sobre nosso ecossistema de pesquisa:
 
 ### [Grupos de Pesquisa](research_groups.pt.md)
 
@@ -42,13 +42,33 @@ A seção de Projetos de Pesquisa fornece uma **visão centrada em projetos** de
 
 Esta seção é perfeita para explorar projetos individuais, rastrear tendências de pesquisa ao longo do tempo e identificar estudantes com envolvimento sustentado em pesquisa.
 
+### [Bolsas](scholarship.pt.md)
+
+A seção de Bolsas fornece informações abrangentes sobre bolsas de pesquisa e apoio estudantil. Aqui você encontrará:
+
+- **Catálogo completo de bolsas** de 2015 a 2025
+- **Análises visuais** incluindo:
+  - Bolsas ao longo do tempo mostrando tendências no apoio à pesquisa
+  - Distribuição por campus revelando engajamento institucional
+  - Distribuição por programa destacando fontes de financiamento
+  - Distribuição por modalidade mostrando tipos de bolsa
+- **Estatísticas detalhadas** incluindo:
+  - Total de bolsas: 981 registros
+  - Acompanhamento de investimento: R$ 284.716,00 valor total
+  - Distribuição por campus em 15 locais
+  - Distribuição por programa em 9 programas de pesquisa
+- **Detalhamento ano a ano** com estatísticas completas e porcentagens
+
+Esta seção é ideal para entender tendências de bolsas, identificar oportunidades de financiamento e analisar padrões de apoio à pesquisa estudantil.
+
 ## Como Usar Esta Documentação
 
 - **Explorando por área de pesquisa?** Comece com [Grupos de Pesquisa](research_groups.pt.md) para ver quais grupos trabalham em sua área de interesse
 - **Procurando projetos específicos?** Navegue pelos [Projetos de Pesquisa](research_projects.pt.md) organizados por ano
-- **Analisando tendências?** Ambas as seções incluem gráficos interativos mostrando evolução ao longo do tempo
+- **Pesquisando bolsas?** Confira [Bolsas](scholarship.pt.md) para tendências de financiamento e oportunidades
+- **Analisando tendências?** Todas as seções incluem gráficos interativos mostrando evolução ao longo do tempo
 - **Estudando colaborações?** Confira as redes de colaboração em [Grupos de Pesquisa](research_groups.pt.md)
-- **Identificando estudantes engajados?** Veja a distribuição de participação e lista de estudantes altamente engajados em [Projetos de Pesquisa](research_projects.pt.md)
+- **Identificando estudantes engajados?** Veja a distribuição de participação em [Projetos de Pesquisa](research_projects.pt.md) e dados de bolsas em [Bolsas](scholarship.pt.md)
 
 ## Escopo dos Dados
 

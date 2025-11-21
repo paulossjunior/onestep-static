@@ -1,0 +1,198 @@
+{
+  "total_projects": 579,
+  "partners": [
+    {
+      "name": "Vale S.A.",
+      "project_count": 12,
+      "percentage": 2.07
+    },
+    {
+      "name": "Fapes",
+      "project_count": 11,
+      "percentage": 1.9
+    },
+    {
+      "name": "Arcelormittal Tubarão",
+      "project_count": 10,
+      "percentage": 1.73
+    },
+    {
+      "name": "Mogai Tecnologia Da Informação",
+      "project_count": 8,
+      "percentage": 1.38
+    },
+    {
+      "name": "Cnpq",
+      "project_count": 7,
+      "percentage": 1.21
+    },
+    {
+      "name": "Arcelormittal",
+      "project_count": 7,
+      "percentage": 1.21
+    },
+    {
+      "name": "Arcelor Mittal Tubarão",
+      "project_count": 6,
+      "percentage": 1.04
+    },
+    {
+      "name": "Vale",
+      "project_count": 6,
+      "percentage": 1.04
+    },
+    {
+      "name": "Diretoria De Articulação E Fortalecimento Da Educação Profissional E Tecnológica - Daf/Setec",
+      "project_count": 6,
+      "percentage": 1.04
+    },
+    {
+      "name": "Gaintech Tecnologia Ltda",
+      "project_count": 5,
+      "percentage": 0.86
+    },
+    {
+      "name": "Arcelormittal R&D Brazil",
+      "project_count": 4,
+      "percentage": 0.69
+    },
+    {
+      "name": "Mogai Tecnologia Da Informação; Allware E Sindirochas",
+      "project_count": 4,
+      "percentage": 0.69
+    },
+    {
+      "name": "Autvix",
+      "project_count": 4,
+      "percentage": 0.69
+    },
+    {
+      "name": "Coordenadoria Estadual De Proteção E Defesa Civil",
+      "project_count": 4,
+      "percentage": 0.69
+    },
+    {
+      "name": "Fapes - Fundação De Amparo À Pesquisa E Inovação Do Espírito Santo",
+      "project_count": 4,
+      "percentage": 0.69
+    },
+    {
+      "name": "Finep",
+      "project_count": 4,
+      "percentage": 0.69
+    },
+    {
+      "name": "Arcelor Mittal",
+      "project_count": 3,
+      "percentage": 0.52
+    },
+    {
+      "name": "Ufes, Rnp",
+      "project_count": 3,
+      "percentage": 0.52
+    },
+    {
+      "name": "Corpo De Bombeiros Do Es",
+      "project_count": 3,
+      "percentage": 0.52
+    },
+    {
+      "name": "Syu - Syu Empreendedorismo S/A",
+      "project_count": 3,
+      "percentage": 0.52
+    }
+  ],
+  "external_research_groups": [
+    {
+      "name": "Labcisne",
+      "project_count": 7,
+      "percentage": 1.21
+    },
+    {
+      "name": "Gain",
+      "project_count": 5,
+      "percentage": 0.86
+    },
+    {
+      "name": "Lcad",
+      "project_count": 4,
+      "percentage": 0.69
+    },
+    {
+      "name": "Pop-Es/Ufes",
+      "project_count": 3,
+      "percentage": 0.52
+    },
+    {
+      "name": "Lcad Da Ufes",
+      "project_count": 3,
+      "percentage": 0.52
+    },
+    {
+      "name": "Labtel",
+      "project_count": 3,
+      "percentage": 0.52
+    },
+    {
+      "name": "Aratu - Aratu Ltda Epp",
+      "project_count": 3,
+      "percentage": 0.52
+    },
+    {
+      "name": "Lepac - Ufes",
+      "project_count": 3,
+      "percentage": 0.52
+    },
+    {
+      "name": "Grupo De Pesquisa Em Redes De Comunicações - Ifes",
+      "project_count": 2,
+      "percentage": 0.35
+    },
+    {
+      "name": "Nu[Tec]² : Núcleo De Estudos Em Técnicas E Teoria Da Computação",
+      "project_count": 2,
+      "percentage": 0.35
+    },
+    {
+      "name": "Nutectec",
+      "project_count": 2,
+      "percentage": 0.35
+    },
+    {
+      "name": "Nemo - Núcleo De Estudo De Modelagem Conceitual E Ontologias",
+      "project_count": 2,
+      "percentage": 0.35
+    },
+    {
+      "name": "Propaganda Política Na Era Do Algoritmo: Estudo De Caso Das Eleições Municipais De Vitória E Serra",
+      "project_count": 2,
+      "percentage": 0.35
+    },
+    {
+      "name": "Nemo - Núcleo De Estudos Em Modelagem Conceitual E Ontologias",
+      "project_count": 2,
+      "percentage": 0.35
+    },
+    {
+      "name": "Luccar",
+      "project_count": 2,
+      "percentage": 0.35
+    },
+    {
+      "name": "Nees – Núcleo De Excelência Em Tecnologias Sociais (Ufal)",
+      "project_count": 2,
+      "percentage": 0.35
+    },
+    {
+      "name": "Laboratório De Caracterização Ambiental Do Centro De Pesquisa Inovação E Desenvolvimento Do Espírito Santo",
+      "project_count": 1,
+      "percentage": 0.17
+    }
+  ],
+  "projects_with_partners": 186,
+  "projects_with_external_groups": 48,
+  "unique_partners_count": 54,
+  "unique_external_groups_count": 17,
+  "partners_percentage": 32.12,
+  "external_groups_percentage": 8.29
+}
