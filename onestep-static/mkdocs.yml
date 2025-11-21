@@ -1,10 +1,39 @@
 site_name: OneStep - Static Report
 theme:
   name: readthedocs
+  language: en
+  locale: en
+  custom_dir: overrides
 dev_addr: 0.0.0.0:8001
 plugins:
   - search
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: pt
+          name: Português (Brasil)
+          build: true
+          nav_translations:
+            Research Groups: Grupos de Pesquisa
+            Research Projects: Projetos de Pesquisa
   - macros
   - table-reader
+extra:
+  alternate:
+    - name: English
+      link: /
+      lang: en
+    - name: Português (Brasil)
+      link: /pt/
+      lang: pt
 extra_css:
   - css/extra.css
+extra_javascript:
+  - js/language-selector.js

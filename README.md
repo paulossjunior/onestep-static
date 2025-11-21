@@ -34,6 +34,7 @@ This project automatically generates a static documentation website from researc
 - 📱 Responsive design
 - 🌐 Interactive charts with Plotly and vis-network
 - 📋 Expandable detailed tables
+- 🌍 Multilingual support (English and Portuguese)
 
 ## 📁 Project Structure
 
@@ -64,9 +65,12 @@ This project automatically generates a static documentation website from researc
 │
 ├── onestep-static/              # MkDocs documentation
 │   └── docs/
-│       ├── index.md             # Landing page
-│       ├── research_groups.md   # Research groups documentation
-│       └── research_projects.md # Research projects documentation
+│       ├── index.md             # Landing page (English)
+│       ├── index.pt.md          # Landing page (Portuguese)
+│       ├── research_groups.md   # Research groups documentation (English)
+│       ├── research_groups.pt.md # Research groups documentation (Portuguese)
+│       ├── research_projects.md # Research projects documentation (English)
+│       └── research_projects.pt.md # Research projects documentation (Portuguese)
 │
 ├── mkdocs.yml                   # MkDocs configuration
 ├── requirements.txt             # Python dependencies
@@ -132,6 +136,8 @@ mkdocs build --clean --strict
 # Preview locally
 mkdocs serve
 # Open http://127.0.0.1:8000
+# The site will be available in both English and Portuguese
+# Use the language selector in the top navigation bar
 ```
 
 ### Deploy to GitHub Pages

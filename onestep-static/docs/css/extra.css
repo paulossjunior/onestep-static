@@ -5,3 +5,49 @@
 .wy-body-for-nav {
     max-width: 100%;
 }
+
+/* Language Selector Styles */
+.language-selector {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+    background: white;
+    border: 2px solid #2980b9;
+    border-radius: 5px;
+    padding: 8px 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.language-selector select {
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2980b9;
+    cursor: pointer;
+    padding: 5px;
+    outline: none;
+}
+
+.language-selector select:hover {
+    color: #1a5a8a;
+}
+
+.language-selector::before {
+    content: "🌐 ";
+    font-size: 16px;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+    .language-selector {
+        top: 5px;
+        right: 10px;
+        padding: 5px 10px;
+    }
+    
+    .language-selector select {
+        font-size: 12px;
+    }
+}
