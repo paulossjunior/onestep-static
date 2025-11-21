@@ -42,8 +42,7 @@ This project automatically generates a static documentation website from researc
 .
 ├── .github/
 │   └── workflows/
-│       ├── deploy-pages.yml      # GitHub Actions deployment
-│       └── README.md             # Workflow documentation
+│       └── deploy-pages.yml      # GitHub Actions deployment
 │
 ├── source/                       # Source CSV files from SIGPESQ
 │   ├── research_groups/
@@ -54,9 +53,7 @@ This project automatically generates a static documentation website from researc
 ├── src/                          # Python processing scripts
 │   ├── process_research_groups.py      # Convert groups CSV to JSON
 │   ├── process_research_projects.py    # Convert projects CSV to JSON
-│   ├── generate_network_stats.py       # Generate collaboration networks
-│   ├── REFACTORING_SUMMARY.md          # Code refactoring details
-│   └── REFACTORING_COMPLETE_SUMMARY.md # Complete refactoring overview
+│   └── generate_network_stats.py       # Generate collaboration networks
 │
 ├── data/                         # Generated JSON files
 │   ├── research_group.json       # Processed research groups
@@ -64,17 +61,23 @@ This project automatically generates a static documentation website from researc
 │   └── network_stats.json        # Collaboration network statistics
 │
 ├── onestep-static/              # MkDocs documentation
+│   ├── mkdocs.yml               # MkDocs configuration
+│   ├── overrides/               # Custom templates
 │   └── docs/
 │       ├── index.md             # Landing page (English)
 │       ├── index.pt.md          # Landing page (Portuguese)
-│       ├── research_groups.md   # Research groups documentation (English)
-│       ├── research_groups.pt.md # Research groups documentation (Portuguese)
-│       ├── research_projects.md # Research projects documentation (English)
-│       └── research_projects.pt.md # Research projects documentation (Portuguese)
+│       ├── research_groups.md   # Research groups (English)
+│       ├── research_groups.pt.md # Research groups (Portuguese)
+│       ├── research_projects.md # Research projects (English)
+│       └── research_projects.pt.md # Research projects (Portuguese)
 │
-├── mkdocs.yml                   # MkDocs configuration
+├── docs-projeto/                # Technical documentation
+│   └── *.md                     # Detailed guides and references
+│
 ├── requirements.txt             # Python dependencies
-├── .gitignore                   # Git ignore rules
+├── GUIA_RAPIDO_PT.md           # Quick start guide (Portuguese)
+├── GUIA_PUBLICACAO_GITHUB.md   # GitHub Pages deployment guide
+├── PUBLICAR_AGORA.md           # Quick publish guide
 └── README.md                    # This file
 ```
 
@@ -235,15 +238,17 @@ mkdocs serve
 ## 📚 Documentation
 
 ### For Users
-- **Landing Page**: Overview and navigation guide
+- **Landing Page**: Overview and navigation guide (English and Portuguese)
 - **Research Groups**: Group-centric view with networks
 - **Research Projects**: Project-centric view with analytics
+- **Language Selector**: Switch between English and Portuguese
 
 ### For Developers
+- **Quick Start**: `GUIA_RAPIDO_PT.md` - Quick start guide in Portuguese
+- **Deployment**: `GUIA_PUBLICACAO_GITHUB.md` - Complete GitHub Pages guide
+- **Quick Publish**: `PUBLICAR_AGORA.md` - Fast deployment guide
+- **Technical Docs**: `docs-projeto/` - Detailed technical documentation
 - **Code Documentation**: Docstrings in all Python files
-- **Refactoring Summary**: `src/REFACTORING_COMPLETE_SUMMARY.md`
-- **Workflow Guide**: `.github/workflows/README.md`
-- **This README**: Project overview and setup
 
 ## 🤝 Contributing
 
