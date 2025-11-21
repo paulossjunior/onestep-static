@@ -121,7 +121,8 @@ class SupervisorDataAggregator:
                 'nature': project.get('nature', ''),
                 'partner': project.get('partner', ''),
                 'publications_count': project.get('publications_count', '0'),
-                'funding_count': project.get('funding_count', '0')
+                'funding_count': project.get('funding_count', '0'),
+                'coordinator': coordinator  # Add coordinator info
             }
             
             # Check for duplicates by id or title
@@ -147,8 +148,42 @@ class SupervisorDataAggregator:
             # Update campus if not set
             if not self.supervisors[coordinator]['campus'] and project.get('campus'):
                 self.supervisors[coordinator]['campus'] = project.get('campus')
+            
+            # NEW: Also process researchers as collaborators
+            # Add each researcher to the supervisors list even if they're not coordinators
+            for researcher in researchers:
+                if researcher and researcher != coordinator:
+                    # Initialize researcher data if not exists
+                    if not self.supervisors[researcher]['name']:
+                        self.supervisors[researcher]['name'] = researcher
+                    
+                    # Update campus based on project campus if not set
+                    if not self.supervisors[researcher]['campus'] and project.get('campus'):
+                        self.supervisors[researcher]['campus'] = project.get('campus')
+                    
+                    # Add this project to researcher's list (as a collaborator, not coordinator)
+                    # Create a modified project info showing they were a researcher
+                    researcher_project_info = project_info.copy()
+                    researcher_project_info['role_in_project'] = 'researcher'
+                    
+                    # Check for duplicates
+                    is_duplicate_for_researcher = False
+                    for existing_project in self.supervisors[researcher]['research_projects']:
+                        if project_info['id'] and existing_project['id']:
+                            if existing_project['id'] == project_info['id']:
+                                is_duplicate_for_researcher = True
+                                break
+                        elif project_info['title'] == existing_project['title']:
+                            if project_info['start_date'] == existing_project['start_date']:
+                                is_duplicate_for_researcher = True
+                                break
+                    
+                    # Add project to researcher's list if not duplicate
+                    if not is_duplicate_for_researcher:
+                        self.supervisors[researcher]['research_projects'].append(researcher_project_info)
+                        self.supervisors[researcher]['statistics']['total_projects'] += 1
         
-        print(f"✓ Processed projects for {len(self.supervisors)} coordinators")
+        print(f"✓ Processed projects for {len(self.supervisors)} researchers (coordinators + collaborators)")
     
     def process_ic_supervisions(self):
         """Process IC supervisions and group by advisor."""

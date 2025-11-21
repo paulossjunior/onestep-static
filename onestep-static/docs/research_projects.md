@@ -1137,6 +1137,113 @@ This chart shows the distribution of projects associated with research groups ve
 
 {% endif %}
 
+### Top 10 Research Lines
+
+This chart shows the top 10 most active research lines based on the number of projects, helping to identify the main research focus areas at Campus Serra.
+
+{# Count projects by research line #}
+{% set research_line_count = {} %}
+{% for index, row in df.iterrows() %}
+{% if row.research_line and row.research_line.strip() %}
+{% set line = row.research_line.strip() %}
+{% if line in research_line_count %}
+{% set _ = research_line_count.__setitem__(line, research_line_count[line] + 1) %}
+{% else %}
+{% set _ = research_line_count.__setitem__(line, 1) %}
+{% endif %}
+{% endif %}
+{% endfor %}
+
+{# Get top 10 research lines #}
+{% set sorted_lines = research_line_count.items()|sort(attribute='1', reverse=True) %}
+{% set top_10_lines = sorted_lines[:10] %}
+
+{% if top_10_lines|length > 0 %}
+{% set line_names = [] %}
+{% set line_counts = [] %}
+{% for line_name, count in top_10_lines %}
+{% set _ = line_names.append(line_name) %}
+{% set _ = line_counts.append(count) %}
+{% endfor %}
+
+<div id="chart-top-research-lines" style="width:100%;height:500px;margin-bottom:30px;"></div>
+
+<script>
+(function() {
+  var data = [{
+    y: {{ line_names|tojson }},
+    x: {{ line_counts|tojson }},
+    type: 'bar',
+    orientation: 'h',
+    marker: {
+      color: '#9467bd',
+      line: {
+        color: '#7b4397',
+        width: 1.5
+      }
+    },
+    text: {{ line_counts|tojson }},
+    textposition: 'outside',
+    textfont: {size: 11, color: '#9467bd'},
+    hovertemplate: '<b>%{y}</b><br>%{x} projects<extra></extra>'
+  }];
+  
+  var layout = {
+    title: 'Top 10 Research Lines by Number of Projects',
+    xaxis: {
+      title: 'Number of Projects',
+      gridcolor: '#f0f0f0',
+      showgrid: true
+    },
+    yaxis: {
+      autorange: 'reversed',
+      tickfont: {size: 10}
+    },
+    margin: {
+      l: 300,
+      r: 50,
+      t: 60,
+      b: 60
+    },
+    plot_bgcolor: '#fafafa',
+    paper_bgcolor: 'white',
+    hovermode: 'closest'
+  };
+  
+  Plotly.newPlot('chart-top-research-lines', data, layout);
+})();
+</script>
+
+<details style="margin: 20px 0;">
+<summary style="cursor: pointer; font-weight: bold; padding: 10px; background-color: #e9ecef; border-radius: 5px;">
+  📋 View Complete List of Research Lines ({{ research_line_count|length }})
+</summary>
+<div style="margin-top: 15px;">
+<table style="width:100%; border-collapse: collapse;">
+  <thead>
+    <tr style="background-color: #e9ecef;">
+      <th style="padding: 10px; text-align: left; border: 1px solid #dee2e6;">Research Line</th>
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">Number of Projects</th>
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">Percentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for line_name, count in sorted_lines %}
+    <tr>
+      <td style="padding: 8px; border: 1px solid #dee2e6;">{{ line_name }}</td>
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;"><strong>{{ count }}</strong></td>
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">
+        {{ "%.1f"|format(count / df|length * 100) }}%
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+</details>
+
+{% endif %}
+
 ### Student Involvement Over Time
 
 This chart illustrates student participation in research projects throughout the years. The **All Students** line shows the total number of students engaged annually, while the **With Funding** and **Without Funding** lines distinguish between students working on funded versus unfunded projects. This helps identify trends in student research opportunities and the impact of funding on student involvement.
