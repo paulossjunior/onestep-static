@@ -3,12 +3,26 @@ Custom macros for MkDocs
 """
 import json
 from pathlib import Path
+from datetime import datetime
 
 
 def define_env(env):
     """
     Define custom macros for MkDocs
     """
+    
+    @env.macro
+    def get_current_date():
+        """
+        Get current date information
+        """
+        now = datetime.now()
+        return {
+            'year': now.year,
+            'month': now.month,
+            'day': now.day,
+            'date_str': now.strftime('%Y-%m-%d')
+        }
     
     @env.macro
     def load_partnership_data():

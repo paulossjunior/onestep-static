@@ -17,6 +17,164 @@
 
 **Total de Bolsas de IC (Campus Serra):** {{ ic_scholarships|length }}
 
+---
+
+## Bolsas em Andamento
+
+{# Filter ongoing scholarships - end_date is in the future AND not cancelled #}
+{% set current_date = get_current_date() %}
+{% set current_year = current_date['year'] %}
+{% set current_month = current_date['month'] %}
+{% set ongoing_scholarships = [] %}
+{% set cancelled_scholarships = [] %}
+
+{% for s in ic_scholarships %}
+  {% if s['end_date'] %}
+    {# Extract date parts from end_date (format: DD-MM-YY or DD/MM/YYYY) #}
+    {% set end_date_parts = s['end_date'].split('-') if '-' in s['end_date'] else s['end_date'].split('/') %}
+    {% if end_date_parts|length >= 3 %}
+      {% set end_day = end_date_parts[0]|int %}
+      {% set end_month = end_date_parts[1]|int %}
+      {% set end_year = end_date_parts[2]|int %}
+      {# Handle 2-digit years #}
+      {% if end_year < 100 %}
+        {% set end_year = 2000 + end_year if end_year < 50 else 1900 + end_year %}
+      {% endif %}
+      {# Check if scholarship is still ongoing (year > current OR (year == current AND month >= current)) #}
+      {% set is_ongoing = (end_year > current_year) or (end_year == current_year and end_month >= current_month) %}
+      {% if is_ongoing %}
+        {% set is_cancelled = s.get('cancelled', 'FALSE')|upper == 'TRUE' %}
+        {% if is_cancelled %}
+          {% set _ = cancelled_scholarships.append(s) %}
+        {% else %}
+          {% set _ = ongoing_scholarships.append(s) %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% if ongoing_scholarships|length > 0 %}
+
+**Total de Bolsas em Andamento:** {{ ongoing_scholarships|length }}
+
+{# Sort by student name #}
+{% set sorted_ongoing = ongoing_scholarships|sort(attribute='student') %}
+
+<table style="width:100%; border-collapse: collapse; margin: 20px 0; font-size: 13px;">
+  <thead>
+    <tr style="background-color: #e9ecef;">
+      <th style="padding: 10px; text-align: left; border: 1px solid #dee2e6; width: 20%;">Estudante</th>
+      <th style="padding: 10px; text-align: left; border: 1px solid #dee2e6; width: 18%;">Orientador</th>
+      <th style="padding: 10px; text-align: left; border: 1px solid #dee2e6; width: 10%;">Programa</th>
+      <th style="padding: 10px; text-align: left; border: 1px solid #dee2e6; width: 25%;">Projeto</th>
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; width: 12%;">Período</th>
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; width: 8%;">Modalidade</th>
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; width: 7%;">Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for s in sorted_ongoing %}
+    <tr>
+      <td style="padding: 8px; border: 1px solid #dee2e6;">{{ s['student'] }}</td>
+      <td style="padding: 8px; border: 1px solid #dee2e6;">{{ s['advisor'] }}</td>
+      <td style="padding: 8px; border: 1px solid #dee2e6;">{{ s['program'] if s['program'] else '-' }}</td>
+      <td style="padding: 8px; border: 1px solid #dee2e6;">{{ s['project_title'] if s['project_title'] else 'N/A' }}</td>
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6; font-size: 11px;">{{ s['start_date'] }}<br>até<br>{{ s['end_date'] }}</td>
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">
+        {% if s['modality'] == 'Bolsista' %}
+          <span style="color: #1f77b4; font-weight: bold;">💰 Bolsista</span>
+        {% else %}
+          <span style="color: #ff7f0e; font-weight: bold;">🤝 Voluntário</span>
+        {% endif %}
+      </td>
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">
+        {% if s['value'] %}
+          R$ {{ "%.2f"|format(s['value']) }}
+        {% else %}
+          -
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% else %}
+
+<p style="color: #666; font-style: italic;">Nenhuma bolsa em andamento encontrada em {{ current_date['date_str'] }}.</p>
+
+{% endif %}
+
+{# Show cancelled scholarships if any #}
+{% if cancelled_scholarships|length > 0 %}
+
+### Bolsas Canceladas
+
+<div style="background-color: #f8d7da; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #dc3545;">
+  <strong>🚫 Canceladas:</strong> {{ cancelled_scholarships|length }} bolsa(s) que estariam ativas em {{ current_date['date_str'] }} foram canceladas e não estão incluídas na lista ativa acima.
+</div>
+
+{# Sort by student name #}
+{% set sorted_cancelled = cancelled_scholarships|sort(attribute='student') %}
+
+<details style="margin-bottom: 20px;">
+  <summary style="cursor: pointer; color: #dc3545; font-weight: bold; padding: 10px; background: #f8d7da; border-radius: 4px;">
+    Clique para ver bolsas canceladas ({{ cancelled_scholarships|length }})
+  </summary>
+  
+  <table style="width:100%; border-collapse: collapse; margin: 10px 0; font-size: 11px;">
+    <thead>
+      <tr style="background-color: #f8d7da;">
+        <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6; width: 15%;">Estudante</th>
+        <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6; width: 13%;">Orientador</th>
+        <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6; width: 12%;">Linha de Pesquisa</th>
+        <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6; width: 8%;">Programa</th>
+        <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6; width: 22%;">Projeto</th>
+        <th style="padding: 8px; text-align: center; border: 1px solid #dee2e6; width: 10%;">Período</th>
+        <th style="padding: 8px; text-align: center; border: 1px solid #dee2e6; width: 10%;">Modalidade</th>
+        <th style="padding: 8px; text-align: center; border: 1px solid #dee2e6; width: 10%;">Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for s in sorted_cancelled %}
+      <tr style="background-color: #fff5f5;">
+        <td style="padding: 6px; border: 1px solid #dee2e6; vertical-align: top;">{{ s['student'] }}</td>
+        <td style="padding: 6px; border: 1px solid #dee2e6; vertical-align: top;">{{ s['advisor'] }}</td>
+        <td style="padding: 6px; border: 1px solid #dee2e6; vertical-align: top;">
+          {% if s.get('knowledge_area') %}
+            {{ s['knowledge_area'] }}
+          {% else %}
+            -
+          {% endif %}
+        </td>
+        <td style="padding: 6px; border: 1px solid #dee2e6; vertical-align: top;">{{ s['program'] if s['program'] else '-' }}</td>
+        <td style="padding: 6px; border: 1px solid #dee2e6; vertical-align: top;">{{ s['project_title'] if s['project_title'] else 'N/A' }}</td>
+        <td style="padding: 6px; text-align: center; border: 1px solid #dee2e6; font-size: 10px; vertical-align: top;">{{ s['start_date'] }}<br>até<br>{{ s['end_date'] }}</td>
+        <td style="padding: 6px; text-align: center; border: 1px solid #dee2e6; vertical-align: top;">
+          {% if s['modality'] == 'Bolsista' %}
+            <span style="color: #1f77b4; font-weight: bold;">💰 Bolsista</span>
+          {% else %}
+            <span style="color: #ff7f0e; font-weight: bold;">🤝 Voluntário</span>
+          {% endif %}
+        </td>
+        <td style="padding: 6px; text-align: center; border: 1px solid #dee2e6; vertical-align: top;">
+          {% if s['value'] %}
+            R$ {{ "%.2f"|format(s['value']) }}
+          {% else %}
+            -
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</details>
+
+{% endif %}
+
+---
+
 {% if all_data.get('statistics') and all_data['statistics'].get('student_recurrence_serra') %}
 {% set recurrence = all_data['statistics']['student_recurrence_serra'] %}
 
@@ -1245,6 +1403,193 @@
     </tr>
   </tbody>
 </table>
+
+---
+
+## Bolsas em Andamento
+
+{# Filter ongoing scholarships - end_date is in the future or current year #}
+{% set current_year = 2025 %}
+{% set ongoing_scholarships = [] %}
+
+{% for s in ic_scholarships %}
+  {% if s['end_date'] %}
+    {# Extract year from end_date (format: DD-MM-YY or DD/MM/YYYY) #}
+    {% set end_date_parts = s['end_date'].split('-') if '-' in s['end_date'] else s['end_date'].split('/') %}
+    {% if end_date_parts|length >= 3 %}
+      {% set end_year = end_date_parts[2]|int %}
+      {# Handle 2-digit years #}
+      {% if end_year < 100 %}
+        {% set end_year = 2000 + end_year if end_year < 50 else 1900 + end_year %}
+      {% endif %}
+      {% if end_year >= current_year %}
+        {% set _ = ongoing_scholarships.append(s) %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% if ongoing_scholarships|length > 0 %}
+
+**Total de Bolsas em Andamento:** {{ ongoing_scholarships|length }}
+
+{# Sort by student name #}
+{% set sorted_ongoing = ongoing_scholarships|sort(attribute='student') %}
+
+<style>
+  #ongoingTablePt {
+    width: 100% !important;
+    table-layout: fixed !important;
+  }
+  #ongoingTablePt td {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+</style>
+
+<table id="ongoingTablePt" style="width:100%; border-collapse: collapse; margin: 20px 0; font-size: 11px;">
+  <thead>
+    <tr style="background-color: #e9ecef;">
+      <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6; width: 15%;">Estudante</th>
+      <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6; width: 13%;">Orientador</th>
+      <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6; width: 12%;">Linha de Pesquisa</th>
+      <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6; width: 8%;">Programa</th>
+      <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6; width: 22%;">Projeto</th>
+      <th style="padding: 8px; text-align: center; border: 1px solid #dee2e6; width: 10%;">Período</th>
+      <th style="padding: 8px; text-align: center; border: 1px solid #dee2e6; width: 10%;">Modalidade</th>
+      <th style="padding: 8px; text-align: center; border: 1px solid #dee2e6; width: 10%;">Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for s in sorted_ongoing %}
+    <tr>
+      <td style="padding: 6px; border: 1px solid #dee2e6; vertical-align: top;">{{ s['student'] }}</td>
+      <td style="padding: 6px; border: 1px solid #dee2e6; vertical-align: top;">{{ s['advisor'] }}</td>
+      <td style="padding: 6px; border: 1px solid #dee2e6; vertical-align: top;">
+        {% if s.get('knowledge_area') %}
+          {{ s['knowledge_area'] }}
+        {% else %}
+          -
+        {% endif %}
+      </td>
+      <td style="padding: 6px; border: 1px solid #dee2e6; vertical-align: top;">{{ s['program'] if s['program'] else '-' }}</td>
+      <td style="padding: 6px; border: 1px solid #dee2e6; vertical-align: top;">{{ s['project_title'] if s['project_title'] else 'N/A' }}</td>
+      <td style="padding: 6px; text-align: center; border: 1px solid #dee2e6; font-size: 10px; vertical-align: top;">{{ s['start_date'] }}<br>até<br>{{ s['end_date'] }}</td>
+      <td style="padding: 6px; text-align: center; border: 1px solid #dee2e6; vertical-align: top;">
+        {% if s['modality'] == 'Bolsista' %}
+          <span style="color: #1f77b4; font-weight: bold;">💰 Bolsista</span>
+        {% else %}
+          <span style="color: #ff7f0e; font-weight: bold;">🤝 Voluntário</span>
+        {% endif %}
+      </td>
+      <td style="padding: 6px; text-align: center; border: 1px solid #dee2e6; vertical-align: top;">
+        {% if s['value'] %}
+          R$ {{ "%.2f"|format(s['value']) }}
+        {% else %}
+          -
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% else %}
+
+<p style="color: #666; font-style: italic;">Nenhuma bolsa em andamento encontrada em {{ current_date['date_str'] }}.</p>
+
+{% endif %}
+
+---
+
+## Estudantes com Múltiplas Bolsas Ativas
+
+{# Count scholarships per student for ongoing scholarships #}
+{% set student_scholarship_count = {} %}
+
+{% for s in ongoing_scholarships %}
+  {% set student_name = s['student'] %}
+  {% if student_name not in student_scholarship_count %}
+    {% set _ = student_scholarship_count.__setitem__(student_name, []) %}
+  {% endif %}
+  {% set _ = student_scholarship_count[student_name].append(s) %}
+{% endfor %}
+
+{# Filter students with more than one scholarship #}
+{% set multiple_scholarships = [] %}
+{% for student_name, scholarships in student_scholarship_count.items() %}
+  {% if scholarships|length > 1 %}
+    {% set _ = multiple_scholarships.append({'name': student_name, 'scholarships': scholarships, 'count': scholarships|length}) %}
+  {% endif %}
+{% endfor %}
+
+{% if multiple_scholarships|length > 0 %}
+
+{# Sort by number of scholarships (descending) #}
+{% set sorted_multiple = multiple_scholarships|sort(attribute='count', reverse=True) %}
+
+**Total de Estudantes com Múltiplas Bolsas:** {{ sorted_multiple|length }}
+
+<div style="background-color: #fff3cd; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #ffc107;">
+  <strong>⚠️ Importante:</strong> Os estudantes listados abaixo possuem múltiplas bolsas ativas simultaneamente. Isso pode requerer verificação para garantir conformidade com as políticas institucionais sobre acúmulo de bolsas.
+</div>
+
+<style>
+  #multipleTablePt {
+    width: 100% !important;
+    table-layout: fixed !important;
+  }
+  #multipleTablePt td {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+</style>
+
+<table id="multipleTablePt" style="width:100%; border-collapse: collapse; margin: 20px 0; font-size: 11px;">
+  <thead>
+    <tr style="background-color: #fff3cd;">
+      <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6; width: 5%;">#</th>
+      <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6; width: 20%;">Estudante</th>
+      <th style="padding: 8px; text-align: center; border: 1px solid #dee2e6; width: 8%;">Total</th>
+      <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6; width: 67%;">Detalhes das Bolsas Ativas</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in sorted_multiple %}
+    <tr>
+      <td style="padding: 6px; text-align: center; border: 1px solid #dee2e6; font-weight: bold; vertical-align: top;">{{ loop.index }}</td>
+      <td style="padding: 6px; border: 1px solid #dee2e6; vertical-align: top;"><strong>{{ item['name'] }}</strong></td>
+      <td style="padding: 6px; text-align: center; border: 1px solid #dee2e6; font-weight: bold; color: #d62728; font-size: 14px; vertical-align: top;">{{ item['count'] }}</td>
+      <td style="padding: 6px; border: 1px solid #dee2e6; vertical-align: top;">
+        <div style="font-size: 10px;">
+          {% for s in item['scholarships'] %}
+          <div style="margin-bottom: 8px; padding: 8px; background: #f8f9fa; border-radius: 4px; {% if not loop.last %}margin-bottom: 10px;{% endif %}">
+            <strong style="color: #333;">{{ loop.index }}. {{ s['project_title'] if s['project_title'] else 'N/A' }}</strong>
+            <br><span style="color: #2e7d32;">👤 Orientador: {{ s['advisor'] }}</span>
+            {% if s.get('knowledge_area') %}
+            <br><span style="color: #1565c0;">🔬 {{ s['knowledge_area'] }}</span>
+            {% endif %}
+            <br><span style="color: #666;">📅 {{ s['start_date'] }} até {{ s['end_date'] }} | 📋 {{ s['program'] if s['program'] else '-' }}</span>
+            <br><span style="{% if s['modality'] == 'Bolsista' %}color: #1f77b4;{% else %}color: #ff7f0e;{% endif %} font-weight: bold;">
+              {% if s['modality'] == 'Bolsista' %}💰 Bolsista{% else %}🤝 Voluntário{% endif %}
+              {% if s['value'] %} - R$ {{ "%.2f"|format(s['value']) }}{% endif %}
+            </span>
+          </div>
+          {% endfor %}
+        </div>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% else %}
+
+<p style="color: #28a745; font-weight: bold;">✓ Nenhum estudante encontrado com múltiplas bolsas ativas.</p>
+
+{% endif %}
 
 ---
 

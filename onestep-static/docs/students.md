@@ -209,6 +209,9 @@
             {% for project in student['research_projects'] %}
               <div style="margin-bottom: 8px; {% if not loop.last %}border-bottom: 1px solid #eee; padding-bottom: 8px;{% endif %}">
                 <strong style="color: #333;">{{ project['title'] }}</strong>
+                {% if project.get('research_line') %}
+                <br><span style="color: #1565c0;">🔬 {{ project['research_line'] }}</span>
+                {% endif %}
                 {% if project.get('coordinator') %}
                 <br><span style="color: #2e7d32;">👤 {{ project['coordinator'] }}</span>
                 {% endif %}
@@ -330,6 +333,9 @@ function sortTable(columnIndex) {
             {% for project in student['research_projects'] %}
             <li style="margin: 3px 0;">
               <strong>{{ project['title'] }}</strong>
+              {% if project.get('research_line') %}
+              <br><span style="color: #1565c0;">🔬 {{ project['research_line'] }}</span>
+              {% endif %}
               {% if project.get('coordinator') %}
               <br><span style="color: #2e7d32;">👤 {{ project['coordinator'] }}</span>
               {% endif %}

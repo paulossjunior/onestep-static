@@ -1803,6 +1803,142 @@ This chart displays the top external research groups that have collaborated on p
 
 ---
 
+## Ongoing Projects
+
+{# Filter ongoing projects using current date and remove duplicates #}
+{% set current_date = get_current_date() %}
+{% set current_year = current_date['year'] %}
+{% set current_month = current_date['month'] %}
+{% set ongoing_projects_list = [] %}
+{% set seen_project_ids = [] %}
+
+{% for index, row in df.iterrows() %}
+  {% if row.end_date %}
+    {% set end_parts = row.end_date.split('-') %}
+    {% if end_parts|length >= 3 %}
+      {% set end_day = end_parts[0]|int %}
+      {% set end_month = end_parts[1]|int %}
+      {% set end_year = end_parts[2]|int %}
+      {# Handle 2-digit years #}
+      {% if end_year < 100 %}
+        {% set end_year = 2000 + end_year if end_year < 50 else 1900 + end_year %}
+      {% endif %}
+      {# Check if project is still ongoing and not duplicate #}
+      {% set is_ongoing = (end_year > current_year) or (end_year == current_year and end_month >= current_month) %}
+      {% if is_ongoing and row.id not in seen_project_ids %}
+        {% set _ = ongoing_projects_list.append(row) %}
+        {% set _ = seen_project_ids.append(row.id) %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% if ongoing_projects_list|length > 0 %}
+
+**Total Ongoing Projects:** {{ ongoing_projects_list|length }} (as of {{ current_date['date_str'] }})
+
+{# Sort by end date #}
+{% set ongoing_projects_list = ongoing_projects_list|sort(attribute='end_date') %}
+
+<style>
+  #ongoingProjectsTable {
+    width: 100% !important;
+    table-layout: fixed !important;
+    overflow-x: hidden !important;
+  }
+  #ongoingProjectsTable td, #ongoingProjectsTable th {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    hyphens: auto !important;
+  }
+  body {
+    overflow-x: hidden !important;
+  }
+</style>
+
+<table id="ongoingProjectsTable" style="width:100%; border-collapse: collapse; margin: 20px 0; font-size: 11px;">
+  <thead>
+    <tr style="background-color: #e9ecef;">
+      <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6; width: 22%;">Project Title</th>
+      <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6; width: 12%;">Coordinator</th>
+      <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6; width: 12%;">Research Line</th>
+      <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6; width: 14%;">Research Group</th>
+      <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6; width: 12%;">Students</th>
+      <th style="padding: 8px; text-align: center; border: 1px solid #dee2e6; width: 10%;">Period</th>
+      <th style="padding: 8px; text-align: center; border: 1px solid #dee2e6; width: 9%;">Funding</th>
+      <th style="padding: 8px; text-align: center; border: 1px solid #dee2e6; width: 9%;">Partner</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for project in ongoing_projects_list %}
+    <tr>
+      <td style="padding: 6px; border: 1px solid #dee2e6; vertical-align: top;">
+        <strong style="font-size: 10px;">{{ project.title }}</strong>
+      </td>
+      <td style="padding: 6px; border: 1px solid #dee2e6; vertical-align: top;">
+        {{ project.coordinator }}
+      </td>
+      <td style="padding: 6px; border: 1px solid #dee2e6; vertical-align: top;">
+        {% if project.research_line %}
+          {{ project.research_line }}
+        {% else %}
+          -
+        {% endif %}
+      </td>
+      <td style="padding: 6px; border: 1px solid #dee2e6; vertical-align: top;">
+        {% if project.research_group %}
+          {{ project.research_group }}
+        {% else %}
+          -
+        {% endif %}
+      </td>
+      <td style="padding: 6px; border: 1px solid #dee2e6; vertical-align: top;">
+        {% if project.students and project.students|length > 0 %}
+          <span style="font-weight: bold; color: #d62728;">{{ project.students|length }}</span> student(s)
+          <details style="margin-top: 5px;">
+            <summary style="cursor: pointer; color: #1565c0; font-size: 10px;">View</summary>
+            <ul style="margin: 5px 0; padding-left: 15px; font-size: 9px;">
+              {% for student in project.students %}
+              <li>{{ student }}</li>
+              {% endfor %}
+            </ul>
+          </details>
+        {% else %}
+          <span style="color: #999;">None</span>
+        {% endif %}
+      </td>
+      <td style="padding: 6px; text-align: center; border: 1px solid #dee2e6; font-size: 10px; vertical-align: top;">
+        <strong style="color: #2ca02c;">Start:</strong> {{ project.start_date }}<br>
+        <strong style="color: #d62728;">End:</strong> {{ project.end_date }}
+      </td>
+      <td style="padding: 6px; text-align: center; border: 1px solid #dee2e6; vertical-align: top;">
+        {% if project.funding_count and project.funding_count|int > 0 %}
+          <span style="color: #2ca02c; font-weight: bold;">✓ {{ project.funding_count }}</span>
+        {% else %}
+          <span style="color: #999;">✗</span>
+        {% endif %}
+      </td>
+      <td style="padding: 6px; text-align: center; border: 1px solid #dee2e6; vertical-align: top;">
+        {% if project.partner and project.partner.strip() %}
+          <span style="color: #1f77b4; font-weight: bold;">✓</span>
+        {% else %}
+          <span style="color: #999;">✗</span>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% else %}
+
+<p style="color: #666; font-style: italic;">No ongoing projects found as of {{ current_date['date_str'] }}.</p>
+
+{% endif %}
+
+---
+
 {% for year in unique_years %}
 {% if year > 0 %}
 
