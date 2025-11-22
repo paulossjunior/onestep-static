@@ -7,7 +7,7 @@ This page provides access to all research data files in JSON format. These datas
 ## Available Datasets
 
 ### 📊 Research Projects
-**File:** [research_projects.json](../data/research_projects.json)  
+**File:** [research_projects.json](data/research_projects.json)  
 **Format:** JSON  
 **Description:** Complete database of research projects at Campus Serra.
 
@@ -32,7 +32,7 @@ This page provides access to all research data files in JSON format. These datas
 ---
 
 ### 🎓 IC Scholarships
-**File:** [scholarships.json](../data/scholarships.json)  
+**File:** [scholarships.json](data/scholarships.json)  
 **Format:** JSON  
 **Description:** Database of Scientific Initiation (IC) scholarships awarded to students.
 
@@ -55,7 +55,7 @@ This page provides access to all research data files in JSON format. These datas
 ---
 
 ### 👥 Students
-**File:** [students.json](../data/students.json)  
+**File:** [students.json](data/students.json)  
 **Format:** JSON  
 **Description:** Aggregated data about students' research activities.
 
@@ -77,7 +77,7 @@ This page provides access to all research data files in JSON format. These datas
 ---
 
 ### 👨‍🏫 Supervisors
-**File:** [supervisors.json](../data/supervisors.json)  
+**File:** [supervisors.json](data/supervisors.json)  
 **Format:** JSON  
 **Description:** Aggregated data about supervisors' research activities.
 
@@ -99,7 +99,7 @@ This page provides access to all research data files in JSON format. These datas
 ---
 
 ### 🔬 Research Groups
-**File:** [research_group.json](../data/research_group.json)  
+**File:** [research_group.json](data/research_group.json)  
 **Format:** JSON  
 **Description:** Information about research groups and their activities.
 
@@ -120,7 +120,7 @@ This page provides access to all research data files in JSON format. These datas
 ---
 
 ### 🤝 Partnership Analysis
-**File:** [partnership_analysis.json](../data/partnership_analysis.json)  
+**File:** [partnership_analysis.json](data/partnership_analysis.json)  
 **Format:** JSON  
 **Description:** Analysis of external partnerships and collaborations.
 
@@ -140,7 +140,7 @@ This page provides access to all research data files in JSON format. These datas
 ---
 
 ### 🌐 Network Statistics
-**File:** [network_stats.json](../data/network_stats.json)  
+**File:** [network_stats.json](data/network_stats.json)  
 **Format:** JSON  
 **Description:** Network analysis metrics and statistics.
 
@@ -278,13 +278,13 @@ For questions, issues, or data requests:
 
 | File | Size | Records | Download |
 |------|------|---------|----------|
-| research_projects.json | ~500 KB | ~300 projects | [⬇️ Download](../data/research_projects.json) |
-| scholarships.json | ~800 KB | ~1000 scholarships | [⬇️ Download](../data/scholarships.json) |
-| students.json | ~600 KB | ~500 students | [⬇️ Download](../data/students.json) |
-| supervisors.json | ~400 KB | ~150 supervisors | [⬇️ Download](../data/supervisors.json) |
-| research_group.json | ~100 KB | ~30 groups | [⬇️ Download](../data/research_group.json) |
-| partnership_analysis.json | ~200 KB | Analysis data | [⬇️ Download](../data/partnership_analysis.json) |
-| network_stats.json | ~150 KB | Network metrics | [⬇️ Download](../data/network_stats.json) |
+| research_projects.json | ~500 KB | ~300 projects | [⬇️ Download](data/research_projects.json) |
+| scholarships.json | ~800 KB | ~1000 scholarships | [⬇️ Download](data/scholarships.json) |
+| students.json | ~600 KB | ~500 students | [⬇️ Download](data/students.json) |
+| supervisors.json | ~400 KB | ~150 supervisors | [⬇️ Download](data/supervisors.json) |
+| research_group.json | ~100 KB | ~30 groups | [⬇️ Download](data/research_group.json) |
+| partnership_analysis.json | ~200 KB | Analysis data | [⬇️ Download](data/partnership_analysis.json) |
+| network_stats.json | ~150 KB | Network metrics | [⬇️ Download](data/network_stats.json) |
 
 ---
 
