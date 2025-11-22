@@ -60,6 +60,16 @@ jobs:
           echo "Generating network statistics..."
           python src/generate_network_stats.py
       
+      - name: Group data by supervisor
+        run: |
+          echo "Grouping data by supervisor..."
+          python scripts/group_by_supervisor.py
+      
+      - name: Group data by student
+        run: |
+          echo "Grouping data by student..."
+          python scripts/group_by_student.py
+      
       - name: Setup Pages
         uses: actions/configure-pages@v4
       

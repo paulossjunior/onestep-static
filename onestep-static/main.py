@@ -84,3 +84,34 @@ def define_env(env):
             },
             'supervisors': []
         }
+    
+    @env.macro
+    def load_students_data():
+        """
+        Load students data from JSON file
+        """
+        # Try multiple paths
+        possible_paths = [
+            Path(__file__).parent.parent / 'data' / 'students.json',
+            Path('data/students.json'),
+            Path('../data/students.json')
+        ]
+        
+        for json_path in possible_paths:
+            if json_path.exists():
+                with open(json_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                return data
+        
+        # If no path works, return empty structure
+        return {
+            'metadata': {
+                'generated_at': '',
+                'total_students': 0,
+                'students_with_projects': 0,
+                'students_with_scholarships': 0,
+                'students_with_both': 0,
+                'students_with_collaborations': 0
+            },
+            'students': []
+        }
