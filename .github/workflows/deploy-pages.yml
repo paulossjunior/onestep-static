@@ -70,6 +70,12 @@ jobs:
           echo "Grouping data by student..."
           python scripts/group_by_student.py
       
+      - name: Copy data files to docs
+        run: |
+          echo "Copying data files for downloads..."
+          mkdir -p onestep-static/docs/data
+          cp data/*.json onestep-static/docs/data/
+      
       - name: Setup Pages
         uses: actions/configure-pages@v4
       

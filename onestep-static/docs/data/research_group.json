@@ -1,0 +1,4906 @@
+[
+  {
+    "short_name": "DIVIPOP",
+    "name": "Divulgação E Popularizaçao Da Ciência",
+    "campus": "Vila Velha",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4439471564090237",
+    "leaders": [
+      {
+        "name": "Carlos Roberto Pires Campos",
+        "email": "carlosr@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEPEME",
+    "name": "Grupo De Estudo E Pesquisa Em Modelagem Matemática E Educação Estatística",
+    "campus": "Vitória",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2808122552828098",
+    "leaders": [
+      {
+        "name": "Maria Alice Veiga Ferreira De Souza",
+        "email": "mariaalice@ifes.edu.br"
+      },
+      {
+        "name": "Luciano Lessa Lorenzoni",
+        "email": "lllorenzoni@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "TCA",
+    "name": "Agro Data Science E Tecnologias",
+    "campus": "Itapina",
+    "knowledge_area": "Interdisciplinar",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2279789551670727",
+    "leaders": [
+      {
+        "name": "Joao Marcos Louzada",
+        "email": "joao.louzada@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "AC",
+    "name": "Ambiente Construído",
+    "campus": "Colatina",
+    "knowledge_area": "Engenharia Civil",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8590356077541811",
+    "leaders": [
+      {
+        "name": "Alessandra Savazzini Dos Reis",
+        "email": "alessandrar@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "ADSMMC",
+    "name": "Análise E Desenvolvimento Em Sistemas Mecânicos E Métodos Computacionais",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia Mecânica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4068273134925019",
+    "leaders": [
+      {
+        "name": "Vinicius Erler De Sousa Ramos",
+        "email": "vinicius.ramos@ifes.edu.br"
+      },
+      {
+        "name": "Cristiano Severo Aiolfi",
+        "email": "cristiano.aiolfi@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "APHRODITE",
+    "name": "Aphrodite - Association For Researching Dwelling, Industrial, And Transportation Efficiency",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3312462517828264",
+    "leaders": [
+      {
+        "name": "Pablo Rodrigues Muniz",
+        "email": "pablorm@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "ASI",
+    "name": "Aplicações De Sistemas Inteligentes",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6149368643584449",
+    "leaders": [
+      {
+        "name": "Luis Eduardo Martins De Lima",
+        "email": "luisedu@ifes.edu.br"
+      },
+      {
+        "name": "Hans Rolf Kulitz",
+        "email": "hans@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Aracê",
+    "name": "Aracê - Grupo De Pesquisa Em Educação, Sociedade E História Ambiental",
+    "campus": "Vitória",
+    "knowledge_area": "Geografia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2169137198748042",
+    "leaders": [
+      {
+        "name": "Eduardo Fausto Kuster Cid",
+        "email": "eduardok@ifes.edu.br"
+      },
+      {
+        "name": "Sabrine Lino Pinto",
+        "email": "sabrine@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "ATUAR",
+    "name": "Atelier De Investigações Qualitativas E Processos Sustentáveis E Transversais Em Arquitetura E Urbanismo",
+    "campus": "Colatina",
+    "knowledge_area": "Arquitetura E Urbanismo",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8167537170652710",
+    "leaders": [
+      {
+        "name": "Ana Lucia Reis Melo Fernandes Da Costa",
+        "email": "analuciacosta@ifes.edu.br"
+      },
+      {
+        "name": "Renilson Luiz Teixeira",
+        "email": "renilson@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "ALMEC",
+    "name": "Audiovisual, Literatura, Música, Educação E Cultura: Estudos Comparatistas",
+    "campus": "Venda Nova Do Imigrante",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4099181037333209",
+    "leaders": [
+      {
+        "name": "Adrianna Machado Meneguelli",
+        "email": "adrianna.meneguelli@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "AML",
+    "name": "Automação E Mecanização Laboratorial",
+    "campus": "Vila Velha",
+    "knowledge_area": "Química",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8500755812666425",
+    "leaders": [
+      {
+        "name": "Ernesto Correa Ferreira",
+        "email": "ernesto.ferreira@ifes.edu.br"
+      },
+      {
+        "name": "Juliano Souza Ribeiro",
+        "email": "julianoribeiro@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "BU",
+    "name": "Biodiversidade Urbana",
+    "campus": "Vitória",
+    "knowledge_area": "Biologia Geral",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9203245146684136",
+    "leaders": [
+      {
+        "name": "Isabel De Conte Carvalho De Alencar",
+        "email": "idccalencar@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "BPC",
+    "name": "Bioensaios Em Produtos Cosméticos",
+    "campus": "Vila Velha",
+    "knowledge_area": "Farmácia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2388775375330180",
+    "leaders": [
+      {
+        "name": "Marcella  Porto Tavares",
+        "email": "marcela.porto@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "BAÀCA",
+    "name": "Biologia Aplicada Às Ciências Agrárias",
+    "campus": "Alegre",
+    "knowledge_area": "Ecologia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3098358179192733",
+    "leaders": [
+      {
+        "name": "Atanásio Alves Do Amaral",
+        "email": "atanasio@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "BASTET",
+    "name": "Biologia, Ambiente, Sociedade, Tecnologia, Educação E Transformação.",
+    "campus": "Guarapari",
+    "knowledge_area": "Biologia Geral",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8349317294562322",
+    "leaders": [
+      {
+        "name": "Daniele Alves Marinho",
+        "email": "daniele.marinho@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "BEMASS",
+    "name": "Biotecnologia E Educação Em Meio Ambiente, Saúde E Sustentabilidade",
+    "campus": "Vitória",
+    "knowledge_area": "Microbiologia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2023933365040389",
+    "leaders": [
+      {
+        "name": "Adriana Marcia Nicolau Korres",
+        "email": "akorres@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "BIOTEQ",
+    "name": "Biotecnologia E Química Dos Alimentos",
+    "campus": "Venda Nova Do Imigrante",
+    "knowledge_area": "Ciência E Tecnologia De Alimentos",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8692290278094103",
+    "leaders": [
+      {
+        "name": "Wilton Soares Cardoso",
+        "email": "wilton.cardoso@ifes.edu.br"
+      },
+      {
+        "name": "Flávia De Abreu Pinheiro",
+        "email": "flavia.pinheiro@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "CPFM",
+    "name": "Caracterização E Propriedades Físicas Dos Materiais",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia De Materiais E Metalúrgica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0417747439638744",
+    "leaders": [
+      {
+        "name": "Andre Itman Filho",
+        "email": "andrei@ifes.edu.br"
+      },
+      {
+        "name": "Rosana Vilarim Da Silva",
+        "email": "rosana@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "CEDET",
+    "name": "Centro De Estudos Em Desenvolvimento Turístico",
+    "campus": "Venda Nova Do Imigrante",
+    "knowledge_area": "Administração",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7218149099045946",
+    "leaders": [
+      {
+        "name": "Daniel Lanna Peixoto",
+        "email": "lannapeixoto@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "Conect",
+    "name": "Centro De Observação E Núcleo De Estudos Em Cidades E Transportes",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia De Transportes",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7019969277168189",
+    "leaders": [
+      {
+        "name": "Leivisgton Jansen Silvestre Leitao",
+        "email": "jansen@ifes.edu.br"
+      },
+      {
+        "name": "Deborah Valandro De Souza",
+        "email": "deborah@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "CTA",
+    "name": "Ciência E Tecnologia De Alimentos",
+    "campus": "Venda Nova Do Imigrante",
+    "knowledge_area": "Ciência E Tecnologia De Alimentos",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4424326413441389",
+    "leaders": [
+      {
+        "name": "Fabiana Carvalho Rodrigues",
+        "email": "fabiana.rodrigues@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "CTPOV",
+    "name": "Ciência E Tecnologia De Produtos De Origem Vegetal",
+    "campus": "Venda Nova Do Imigrante",
+    "knowledge_area": "Ciência E Tecnologia De Alimentos",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3357004621502741",
+    "leaders": [
+      {
+        "name": "Luiz Fernando Dias Ferreira",
+        "email": "luizfernando@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "CCRA",
+    "name": "Clínica, Cirurgia E Reprodução Animal",
+    "campus": "Itapina",
+    "knowledge_area": "Medicina Veterinária",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7225155333685649",
+    "leaders": [
+      {
+        "name": "Vitor Dalmazo Melotti",
+        "email": "vitor.melotti@ifes.edu.br"
+      },
+      {
+        "name": "Yuri Barbosa Guerson",
+        "email": "yuri.guerson@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Coffee Design",
+    "name": "Coffee Design",
+    "campus": "Venda Nova Do Imigrante",
+    "knowledge_area": "Engenharia De Produção",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5617656954660266",
+    "leaders": [
+      {
+        "name": "Lucas Louzada Pereira",
+        "email": "lucaslozada@hotmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "CCJPS",
+    "name": "Currículos, Culturas Juvenis E Processos De Subjetivação",
+    "campus": "Aracruz",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7816641339450214",
+    "leaders": [
+      {
+        "name": "Helder Januario Da Silva Gomes",
+        "email": "hgomes@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "D-Bio",
+    "name": "Desenvolvimento De Bioprodutos",
+    "campus": "Vila Velha",
+    "knowledge_area": "Química",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1109379126838680",
+    "leaders": [
+      {
+        "name": "Hildegardo Seibert França",
+        "email": "hildegardo.franca@ifes.edu.br"
+      },
+      {
+        "name": "Zanata Brandão Amorim",
+        "email": "zanata.amorim@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "DLIG",
+    "name": "Desenvolvimento De Ligas Metálicas",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia De Materiais E Metalúrgica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1814644924098044",
+    "leaders": [
+      {
+        "name": "Estefano Aparecido Vieira",
+        "email": "estefanovieira@ifes.edu.br"
+      },
+      {
+        "name": "Adonias Ribeiro Franco Junior",
+        "email": "adonias@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "DMARM",
+    "name": "Desenvolvimento De Materiais Alternativos E Resistência Dos Materiais",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Engenharia Mecânica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7574069492910531",
+    "leaders": [
+      {
+        "name": "Alexandre Vianna Bahiense",
+        "email": "abahiense@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "DNM",
+    "name": "Desenvolvimento De Novos Materiais",
+    "campus": "Vila Velha",
+    "knowledge_area": "Química",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5415096531345126",
+    "leaders": [
+      {
+        "name": "Mauro Cesar Dias",
+        "email": "maurocesar@ifes.edu.br"
+      },
+      {
+        "name": "Osmair Vital De Oliveira",
+        "email": "osmair@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "DPIQ",
+    "name": "Desenvolvimento De Projetos Para A Indústria Química",
+    "campus": "Vila Velha",
+    "knowledge_area": "Engenharia Química",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8666764683687434",
+    "leaders": [
+      {
+        "name": "Vitor Cezar Broetto Pegoretti",
+        "email": "vitor.pegoretti@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "DSMTMM",
+    "name": "Desenvolvimento De Sistemas E Modelagens Em Tecnologia Mecânica E De Materiais",
+    "campus": "Guarapari",
+    "knowledge_area": "Engenharia Mecânica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0072090883538018",
+    "leaders": [
+      {
+        "name": "Jean Pierre De Oliveira Bone",
+        "email": "jean.bone@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "DAAF",
+    "name": "Desenvolvimento E Avaliação De Alimentos Funcionais",
+    "campus": "Venda Nova Do Imigrante",
+    "knowledge_area": "Ciência E Tecnologia De Alimentos",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6541849040390078",
+    "leaders": [
+      {
+        "name": "Fabiana Carvalho Rodrigues",
+        "email": "fabiana.rodrigues@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "DMSPM",
+    "name": "Desenvolvimento Em Mecânica Dos Sólidos E Projeto Mecânico",
+    "campus": "São Mateus",
+    "knowledge_area": "Engenharia Mecânica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8553333367536961",
+    "leaders": [
+      {
+        "name": "Abraão Lemos Caldas Frossard",
+        "email": "abraao.frossard@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Design - TecEdu",
+    "name": "Design, Tecnologia E Educação",
+    "campus": "Cefor",
+    "knowledge_area": "Desenho Industrial",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4310586985626050",
+    "leaders": [
+      {
+        "name": "Andromeda Goretti De Menezes Campos",
+        "email": "andromeda.campos@ifes.edu.br"
+      },
+      {
+        "name": "Juliana Cristina Da Silva Cassaro",
+        "email": "julianacs@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "historiacapixaba.com",
+    "name": "Documentos Históricos Do Espírito Santo",
+    "campus": "São Mateus",
+    "knowledge_area": "História",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6464901095036577",
+    "leaders": [
+      {
+        "name": "Fabio Paiva Reis",
+        "email": "fabio.reis@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GETAMES",
+    "name": "Ecologia De Tartarugas Marinhas Do Espírito Santo",
+    "campus": "Piúma",
+    "knowledge_area": "Medicina Veterinária",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4207031991953418",
+    "leaders": [
+      {
+        "name": "Gabriel Domingos Carvalho",
+        "email": "gabriel.carvalho@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPEM Biotec",
+    "name": "Ecologia Microbiana E Biotecnologia",
+    "campus": "Piúma",
+    "knowledge_area": "Recursos Pesqueiros E Engenharia De Pesca",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6594532777855485",
+    "leaders": [
+      {
+        "name": "Flávia Regina Spago De Camargo Gonçalves",
+        "email": "flavia.goncalves@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPEAH",
+    "name": "Educação Antirracista E Humanidades",
+    "campus": "Viana",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7968375655530511",
+    "leaders": [
+      {
+        "name": "Geisa Lourenço Ribeiro",
+        "email": "geisa.ribeiro@ifes.edu.br"
+      },
+      {
+        "name": "Thalismar Matias Gonçalves",
+        "email": "thalismar.goncalves@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "ECI",
+    "name": "Educação Comparada Internacional",
+    "campus": "Linhares",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7959368316579556",
+    "leaders": [
+      {
+        "name": "Homero Alberto Gomes Da Silva (3243213)",
+        "email": "homero.silva@ifes.edu.br"
+      },
+      {
+        "name": "Marcio Vieira Rodrigues",
+        "email": "marcio.rodrigues@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEPES",
+    "name": "Educação E Sociedade",
+    "campus": "Santa Teresa",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5478542593002303",
+    "leaders": [
+      {
+        "name": "Charles Moreto",
+        "email": "charlesm@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "ET",
+    "name": "Educação E Tecnologia",
+    "campus": "Cefor",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1965726318911252",
+    "leaders": [
+      {
+        "name": "Vanessa Battestin",
+        "email": "vanessa@ifes.edu.br"
+      },
+      {
+        "name": "Márcia Gonçalves De Oliveira",
+        "email": "clickmarcia@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "EDUTEQ",
+    "name": "Educação E Tecnologia No Ensino De Química",
+    "campus": "Vila Velha",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4688550685551071",
+    "leaders": [
+      {
+        "name": "Roberto Pereira Santos",
+        "email": "roberto.santos@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "EMEP",
+    "name": "Educação Matemática E Educação Profissional",
+    "campus": "Vila Velha",
+    "knowledge_area": "Ensino",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6441789782213765",
+    "leaders": [
+      {
+        "name": "Lauro Chagas E Sá",
+        "email": "proflaurosa@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "GEPECH",
+    "name": "Educação Na Cidade E Humanidades",
+    "campus": "Vila Velha",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7552736269673699",
+    "leaders": [
+      {
+        "name": "Priscila De Souza Chisté Leite",
+        "email": "priscilachiste.ufes@gmail.com"
+      },
+      {
+        "name": "Dilza Coco",
+        "email": "dilzacoco@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "ECNMD",
+    "name": "Educação, Cultura & Natureza E Movimentos Descoloniais",
+    "campus": "Centro-Serrano",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4072723618765356",
+    "leaders": [
+      {
+        "name": "Katia Gonçalves Castor",
+        "email": "katia.castor@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPEHDi",
+    "name": "Educação, Diversidade E Diferença",
+    "campus": "Vitória",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0389564169596629",
+    "leaders": [
+      {
+        "name": "Davis Moreira Alvim",
+        "email": "davisalvim@hotmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "EFPPD",
+    "name": "Educação, Formação De Professores E Práticas Docentes.",
+    "campus": "Santa Teresa",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1658870952387621",
+    "leaders": [
+      {
+        "name": "Jaquelini Scalzer",
+        "email": "jaquelini.scalzer@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "ETCOEI",
+    "name": "Educação, Trabalho, Cultura E Organizações: Estudos Interdisciplinares",
+    "campus": "Serra",
+    "knowledge_area": "Filosofia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1645393002420957",
+    "leaders": [
+      {
+        "name": "Maikon Chaider Silva Scaldaferro",
+        "email": "maikon.scaldaferro@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "ETST",
+    "name": "Educação-Trabalho, Sociedade E Território",
+    "campus": "Alegre",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3565059331713526",
+    "leaders": [
+      {
+        "name": "Aldo Rezende",
+        "email": "aldorezendebh@gmail.com"
+      },
+      {
+        "name": "Maria Jose De Resende Ferreira",
+        "email": "mariaresende@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "EME",
+    "name": "Eficiência Em Metalurgia Extrativa",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia De Materiais E Metalúrgica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6203120970695734",
+    "leaders": [
+      {
+        "name": "Rodrigo De Oliveira Pezzin",
+        "email": "pezzin07@hotmail.com"
+      },
+      {
+        "name": "Simão Vervloet Ramos",
+        "email": "simao.ramos@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "EARH",
+    "name": "Engenharia Agrícola E Recursos Hídricos",
+    "campus": "Santa Teresa",
+    "knowledge_area": "Engenharia Agrícola",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7282833100008789",
+    "leaders": [
+      {
+        "name": "Elcio Das Graças Lacerda",
+        "email": "elciodgl@hotmail.com"
+      },
+      {
+        "name": "Ednaldo Miranda De Oliveira",
+        "email": "ednaldo.oliveira@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "ENGEAS",
+    "name": "Engenharia Aplicada E Sustentabilidade",
+    "campus": "Presidente Kennedy",
+    "knowledge_area": "Interdisciplinar",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5534910048028546",
+    "leaders": [
+      {
+        "name": "Alexandre Pereira Chahad",
+        "email": "alexchahad@gmail.com"
+      },
+      {
+        "name": "Geraldo Andrade De Oliveira",
+        "email": "gerandr@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "ETC",
+    "name": "Engenharia Térmica E Combustão",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia Mecânica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2397847734535005",
+    "leaders": [
+      {
+        "name": "Luis Roberto Castro",
+        "email": "lrcastro@ifes.edu.br"
+      },
+      {
+        "name": "Hermes Vazzoler Junior",
+        "email": "hermes@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "ECN",
+    "name": "Ensino De Ciências Da Natureza",
+    "campus": "Colatina",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6433318392253994",
+    "leaders": [
+      {
+        "name": "Silvana Goldner Moreira",
+        "email": "silvana.moreira@ifes.edu.br"
+      },
+      {
+        "name": "Mirella Guedes Lima De Castro",
+        "email": "mirellac@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "ECN",
+    "name": "Ensino De Ciências Naturais",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Ensino",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5503061050000355",
+    "leaders": [
+      {
+        "name": "Paulo Jose Pereira De Oliveira",
+        "email": "paulojoseo@ifes.edu.br"
+      },
+      {
+        "name": "Edmundo Rodrigues Junior",
+        "email": "edmundor@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "EHRÉ",
+    "name": "Ensino De Humanidades E Relações Étnico-Raciais",
+    "campus": "Vitória",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9497434586859380",
+    "leaders": [
+      {
+        "name": "Aldieris Braz Amorim Caprini",
+        "email": "acaprini@ifes.edu.br"
+      },
+      {
+        "name": "Mariluza Sartori Deorce",
+        "email": "mariluza@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "EAC",
+    "name": "Ensino E Aprendizagem Em Ciências",
+    "campus": "Vitória",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4527645662306390",
+    "leaders": [
+      {
+        "name": "Emanuel Jose Reis De Oliveira",
+        "email": "emanuel@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "EATBD",
+    "name": "Estudo E Aplicação De Técnicas Em Banco De Dados",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1855681140289327",
+    "leaders": [
+      {
+        "name": "Eros Estevão De Moura",
+        "email": "eros@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GECIMA",
+    "name": "Estudos De Ciências Dos Materiais Aplicados",
+    "campus": "Santa Teresa",
+    "knowledge_area": "Engenharia De Materiais E Metalúrgica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4585209478753072",
+    "leaders": [
+      {
+        "name": "Elvis Pantaleão Ferreira",
+        "email": "epf150@hotmail.com"
+      },
+      {
+        "name": "José Júlio Garcia De Freitas",
+        "email": "jose.freitas@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "EDSA",
+    "name": "Estudos Decolonias E Saberes Ancestrais",
+    "campus": "Alegre",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4533206050259912",
+    "leaders": [
+      {
+        "name": "Jacyara Conceição Rosa Mardgan",
+        "email": "jacyara.mardgan@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "ERPBMC",
+    "name": "Estudos Do Ritmo Na Poesia Brasileira Moderna E Contemporânea",
+    "campus": "Vitória",
+    "knowledge_area": "Letras",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0270922881925661",
+    "leaders": [
+      {
+        "name": "Lucas Dos Passos E Silva",
+        "email": "lucasdospassos@hotmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "EPAG",
+    "name": "Estudos E Pesquisas Aplicadas Em Geotecnia",
+    "campus": "Ibatiba",
+    "knowledge_area": "Engenharia Civil",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9021586752678774",
+    "leaders": [
+      {
+        "name": "Luiz Santiago Souza Do Nascimento De Lacerda",
+        "email": "luiz.lacerda@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "EE",
+    "name": "Estudos Em Educação",
+    "campus": "Itapina",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6641052850178241",
+    "leaders": [
+      {
+        "name": "Jenniffer Syreetta De Oliveira Spelta",
+        "email": "jenniffer.spelta@ifes.edu.br"
+      },
+      {
+        "name": "Majorie Mara Malacarne",
+        "email": "majorie.malacarne@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "EGI",
+    "name": "Estudos Em Geotecnia E Infraestrutura",
+    "campus": "Nova Venécia",
+    "knowledge_area": "Engenharia Civil",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2109462916242518",
+    "leaders": [
+      {
+        "name": "Morgana Moreschi",
+        "email": "morgana.moreschi@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "EICN",
+    "name": "Estudos Interdisciplinares Em Ciências Naturais",
+    "campus": "Guarapari",
+    "knowledge_area": "Geociências",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5850801090153902",
+    "leaders": [
+      {
+        "name": "Fabiola Chrystian Oliveira Martins",
+        "email": "fabiolac@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "ESLLC",
+    "name": "Estudos Sobre Língua, Linguagem E Cultura",
+    "campus": "Centro-Serrano",
+    "knowledge_area": "Linguística",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2827385874627670",
+    "leaders": [
+      {
+        "name": "Samine De Almeida Benfica",
+        "email": "samine.benfica@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "EX-ÓTICAS",
+    "name": "Ex-Óticas: Laboratório Experimental De Estudos Sobre Imagens E Corpos Insubmissos.",
+    "campus": "Alegre",
+    "knowledge_area": "Letras",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4076017380132017",
+    "leaders": [
+      {
+        "name": "Aline Prúcoli De Souza",
+        "email": "aline.prucoli@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "FAS",
+    "name": "Filosofia, Arte E Sociedade: Grupo De Estudos Interdisciplinares",
+    "campus": "Aracruz",
+    "knowledge_area": "Interdisciplinar",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4995533435744500",
+    "leaders": [
+      {
+        "name": "Márcia Rezende De Oliveira",
+        "email": "marcia.rezende@ifes.edu.br"
+      },
+      {
+        "name": "Rafael Cavalcanti Do Carmo",
+        "email": "rafael.carmo@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "FHERCSN",
+    "name": "Filosofia, História E Educação. Resistência Cultural E Subjetividades Não-Hegemônicas.",
+    "campus": "Itapina",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3196805325484361",
+    "leaders": [
+      {
+        "name": "Marcelo Durão Rodrigues Da Cunha",
+        "email": "marcelo.cunha@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "F",
+    "name": "Fitossanidade",
+    "campus": "Santa Teresa",
+    "knowledge_area": "Agronomia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0623459022389443",
+    "leaders": [
+      {
+        "name": "Marcio Adonis Miranda Rocha",
+        "email": "marcioam@ifes.edu.br"
+      },
+      {
+        "name": "Ednaldo Miranda De Oliveira",
+        "email": "ednaldo.oliveira@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "FC",
+    "name": "Fitossanidade Na Cafeicultura",
+    "campus": "Itapina",
+    "knowledge_area": "Agronomia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0119616542226814",
+    "leaders": [
+      {
+        "name": "Ronilda Lana Aguiar",
+        "email": "ronilda.aguiar@ifes.edu.br"
+      },
+      {
+        "name": "Anderson Mathias Holtz",
+        "email": "anderson.holtz@ifes.edu.br"
+      },
+      {
+        "name": "Antonio Fernando De Souza",
+        "email": "antoniofs@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPFITOTECNIA",
+    "name": "Fitotecnia",
+    "campus": "Alegre",
+    "knowledge_area": "Agronomia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2755556676774068",
+    "leaders": [
+      {
+        "name": "Joao Batista Esteves Peluzio",
+        "email": "jbpeluzio@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "FP",
+    "name": "Fruticultura E Propagação",
+    "campus": "Santa Teresa",
+    "knowledge_area": "Agronomia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4819365731963023",
+    "leaders": [
+      {
+        "name": "Marcus Vinicius Sandoval Paixão",
+        "email": "mvspaixao@gmail.com"
+      },
+      {
+        "name": "Antonio Resende Fernandes",
+        "email": "antoniorf@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GL",
+    "name": "Geotecnia E Lavra",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Engenharia De Minas",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0793248826685992",
+    "leaders": [
+      {
+        "name": "Antonio Luiz Pinheiro",
+        "email": "antoniol@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GA",
+    "name": "Gestão Agrária",
+    "campus": "Centro-Serrano",
+    "knowledge_area": "Engenharia De Produção",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5383542811821627",
+    "leaders": [
+      {
+        "name": "Thiago Mello Dos Reis",
+        "email": "thiago.mello@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEM",
+    "name": "Gestão De Energia, Máquinas E Manutenção",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6667530396085479",
+    "leaders": [
+      {
+        "name": "Clainer Bravin Donadel",
+        "email": "cdonadel@ifes.edu.br"
+      },
+      {
+        "name": "Marcelo Brunoro",
+        "email": "mbrunoro@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GODORG",
+    "name": "Gestão De Operações E Desempenho Organizacional",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia De Produção",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2954817945425319",
+    "leaders": [
+      {
+        "name": "Thalmo De Paiva Coelho Junior",
+        "email": "thalmo@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPPELPS",
+    "name": "Gestão De Politicas Públicas Do Esporte, Lazer E Promoção De Saúde",
+    "campus": "Piúma",
+    "knowledge_area": "Educação Física",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0100699084802601",
+    "leaders": [
+      {
+        "name": "Cristiano Meiga Belem",
+        "email": "indicadoresrmgv@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "GI",
+    "name": "Gestão E Inovação",
+    "campus": "Colatina",
+    "knowledge_area": "Administração",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5810885757857268",
+    "leaders": [
+      {
+        "name": "Joanita Araujo Espanhol",
+        "email": "joespanhol@hotmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "GCS",
+    "name": "Gestão, Cidadania E Sociedade",
+    "campus": "Colatina",
+    "knowledge_area": "Administração",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6110891358809104",
+    "leaders": [
+      {
+        "name": "Luiz Fernando Dalmonech",
+        "email": "luiz.dalmonech@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GP-ResAgro",
+    "name": "Gp Resagro - Grupo De Pesquisa Em Resíduos Para Agricultura",
+    "campus": "Alegre",
+    "knowledge_area": "Agronomia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0340733462157979",
+    "leaders": [
+      {
+        "name": "Sávio Da Silva Berilli",
+        "email": "berilli@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "GAEL",
+    "name": "Grupo De Análises Em Educação E Linguagens",
+    "campus": "Viana",
+    "knowledge_area": "Linguística",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9544900061075110",
+    "leaders": [
+      {
+        "name": "Rafael Da Silva Marques Ferreira",
+        "email": "rafael.ferreira@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GAEE",
+    "name": "Grupo De Apoio Ao Ensino De Eletrônica",
+    "campus": "Serra",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3708150385788812",
+    "leaders": [
+      {
+        "name": "Vinícius Secchin De Melo",
+        "email": "secchin@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GAMA",
+    "name": "Grupo De Aprendizado De Máquina E Automação",
+    "campus": "Serra",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9115112132091239",
+    "leaders": [
+      {
+        "name": "Luiz Alberto Pinto",
+        "email": "luiz.pt@ifes.edu.br"
+      },
+      {
+        "name": "Daniel Cruz Cavalieri",
+        "email": "daniel.cavalieri@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GAIn",
+    "name": "Grupo De Automação Industrial - Gain",
+    "campus": "Serra",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0809353261155112",
+    "leaders": [
+      {
+        "name": "Marco Antonio De Souza Leite Cuadros",
+        "email": "marcoantonio@ifes.edu.br"
+      },
+      {
+        "name": "Gustavo Maia De Almeida",
+        "email": "gmaia@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GAIA",
+    "name": "Grupo De Automação Inteligente E Tecnologia Aplicada",
+    "campus": "Guarapari",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2172533913211169",
+    "leaders": [
+      {
+        "name": "Leonardo De Assis Silva",
+        "email": "leonardo.assis@ifes.edu.br"
+      },
+      {
+        "name": "Bruno Neves Amigo",
+        "email": "bruno.amigo@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GBA",
+    "name": "Grupo De Bioquímica Ambiental",
+    "campus": "Vila Velha",
+    "knowledge_area": "Química",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2496562521648545",
+    "leaders": [
+      {
+        "name": "Araceli Veronica Flores Nardy Ribeiro",
+        "email": "araceli@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GCA-ST",
+    "name": "Grupo De Computação Aplicada",
+    "campus": "Santa Teresa",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9237823332380627",
+    "leaders": [
+      {
+        "name": "Milton Cesar Paes Santos",
+        "email": "miltoncps@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "GEEA",
+    "name": "Grupo De Eletroquímica E Eletroanalítica Aplicada",
+    "campus": "Aracruz",
+    "knowledge_area": "Química",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1123037050199573",
+    "leaders": [
+      {
+        "name": "Pedro Vitor Morbach Dixini",
+        "email": "pedrodixini@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "GERA",
+    "name": "Grupo De Energias Renováveis Para Automação",
+    "campus": "Serra",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2498090283444757",
+    "leaders": [
+      {
+        "name": "Flavio Barcelos Braz Da Silva",
+        "email": "flaviobarcelos@ifes.edu.br"
+      },
+      {
+        "name": "Danilo De Paula E Silva",
+        "email": "danilo.silva@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEPA",
+    "name": "Grupo De Estudo E Pesquisa Em Agroecologia",
+    "campus": "Alegre",
+    "knowledge_area": "Agronomia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2027190759412610",
+    "leaders": [
+      {
+        "name": "Aparecida De Fatima Madella De Oliveira",
+        "email": "amadella@ifes.edu.br"
+      },
+      {
+        "name": "Luciano Menini",
+        "email": "lmenini@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEPAC",
+    "name": "Grupo De Estudo E Pesquisa Em Alfabetização Científica E Espaços De Educação Não Formal",
+    "campus": "Vila Velha",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1424150001089948",
+    "leaders": [
+      {
+        "name": "Manuella Villar Amado",
+        "email": "manuella@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEPDVC",
+    "name": "Grupo De Estudo E Pesquisa Em Deficiência Visual E Cão-Guia",
+    "campus": "Alegre",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1613644050649656",
+    "leaders": [
+      {
+        "name": "Claudia Castro De Carvalho Nascimento",
+        "email": "claudia2n@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "CTSA - GEPEC",
+    "name": "Grupo De Estudo E Pesquisa Em Educação Científica E Movimento Ctsa - Gepec",
+    "campus": "Vila Velha",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1733835760306387",
+    "leaders": [
+      {
+        "name": "Antonio Donizetti Sgarbi",
+        "email": "donizettisgarbi@gmail.com"
+      },
+      {
+        "name": "Vilma Reis Terra",
+        "email": "terravilma@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "GEPEF",
+    "name": "Grupo De Estudo E Pesquisa Em Educação Física",
+    "campus": "Vitória",
+    "knowledge_area": "Educação Física",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0724427029474026",
+    "leaders": [
+      {
+        "name": "Mauro Sérgio Da Silva",
+        "email": "mauro.silva@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GRUPEMEM",
+    "name": "Grupo De Estudo E Pesquisa Em Educação Matemática E Ensino Médio",
+    "campus": "Vitória",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9204323858445012",
+    "leaders": []
+  },
+  {
+    "short_name": "GEPEMSAT",
+    "name": "Grupo De Estudo E Pesquisa Em Educação Matemática, Suas Aplicações E Tecnologias",
+    "campus": "Montanha",
+    "knowledge_area": "Matemática",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5540049018670841",
+    "leaders": [
+      {
+        "name": "Claudia Da Cunha Monte Oliveira",
+        "email": "claudiac@ifes.edu.br"
+      },
+      {
+        "name": "Filipe Ribeiro Carneiro",
+        "email": "filipe.carneiro@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Gepeti",
+    "name": "Grupo De Estudo E Pesquisa Em Educação, Tradução E Interpretação Em Libras",
+    "campus": "Vila Velha",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9215154393414333",
+    "leaders": [
+      {
+        "name": "Paulo Willian Brunelli Viçosi",
+        "email": "willian.brunelli@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "COLABORA",
+    "name": "Grupo De Estudo E Pesquisa Em Formação Colaborativa De Professores",
+    "campus": "Cefor",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3242716982202411",
+    "leaders": [
+      {
+        "name": "Maria Alice Veiga Ferreira De Souza",
+        "email": "mariaalice@ifes.edu.br"
+      },
+      {
+        "name": "Luciano Lessa Lorenzoni",
+        "email": "lllorenzoni@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEPFCP",
+    "name": "Grupo De Estudo E Pesquisa Em Formação Colaborativa De Professores",
+    "campus": "Cefor",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3242716982202411",
+    "leaders": [
+      {
+        "name": "Maria Alice Veiga Ferreira De Souza",
+        "email": "mariaalice@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "EduTec",
+    "name": "Grupo De Estudo E Pesquisa Em Tecnologias Educacionais",
+    "campus": "Vila Velha",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4728798315313409",
+    "leaders": [
+      {
+        "name": "Sergio Nicolau Serafim Martins",
+        "email": "serafim@ifes.edu.br"
+      },
+      {
+        "name": "Greice Sabadini Serafim Martins",
+        "email": "greice@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEEC",
+    "name": "Grupo De Estudo Em Escrita Criativa",
+    "campus": "Viana",
+    "knowledge_area": "Letras",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5995159562418250",
+    "leaders": [
+      {
+        "name": "Yan Patrick Brandemburg Siqueira",
+        "email": "yan.siqueira@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEMAD",
+    "name": "Grupo De Estudo Em Manufatura Digital",
+    "campus": "Cariacica",
+    "knowledge_area": "Engenharia De Produção",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5355592667807549",
+    "leaders": [
+      {
+        "name": "Rafael Buback Teixeira",
+        "email": "rafael.teixeira@ifes.edu.br"
+      },
+      {
+        "name": "Luiz Henrique Lima Faria",
+        "email": "lh2323@yahoo.com.br"
+      },
+      {
+        "name": "Rodrigo Loureiro Medeiros",
+        "email": "rodrigo.medeiros@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GETEC",
+    "name": "Grupo De Estudo Em Tecnologia, Ensino E Cultura Maker",
+    "campus": "Serra",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3808551130622600",
+    "leaders": [
+      {
+        "name": "Rosiane Ribeiro Rocha",
+        "email": "rosiane.rocha@ifes.edu.br"
+      },
+      {
+        "name": "Gabriel Tozatto Zago",
+        "email": "gabriel.zago@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GETEDI",
+    "name": "Grupo De Estudo Em Tecnologias Disruptivas",
+    "campus": "Cariacica",
+    "knowledge_area": "Interdisciplinar",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8995224248733932",
+    "leaders": [
+      {
+        "name": "Renan Carreiro Rocha",
+        "email": "renancarreiro@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEABI",
+    "name": "Grupo De Estudos Afro-Brasileiros E Indígenas",
+    "campus": "Itapina",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8795950133791849",
+    "leaders": [
+      {
+        "name": "Karla Percília Da Silva Fortes",
+        "email": "karla.fortes@ifes.edu.br"
+      },
+      {
+        "name": "Elisangela Madeira Coelho",
+        "email": "elisangela.coelho@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEC",
+    "name": "Grupo De Estudos Caparaó",
+    "campus": "Ibatiba",
+    "knowledge_area": "Geografia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3569048939740108",
+    "leaders": [
+      {
+        "name": "Aramis Cortes De Araujo Junior",
+        "email": "aramiscortes@ifes.edu.br"
+      },
+      {
+        "name": "Plínio Ferreira Guimarães",
+        "email": "plinio.guimaraes@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEAMEP",
+    "name": "Grupo De Estudos E Aplicações Em Matemática, Estatística E Probabilidade",
+    "campus": "Alegre",
+    "knowledge_area": "Probabilidade E Estatística",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6051161628514365",
+    "leaders": [
+      {
+        "name": "André Oliveira Souza",
+        "email": "andre.souza@ifes.edu.br"
+      },
+      {
+        "name": "Adriano Posse Senhorelo",
+        "email": "apsenhorelo@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEPAEP",
+    "name": "Grupo De Estudos E Pesquisa Em Administração E Educação Profissional",
+    "campus": "Cariacica",
+    "knowledge_area": "Administração",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8489349699351642",
+    "leaders": []
+  },
+  {
+    "short_name": "GEPAEP",
+    "name": "Grupo De Estudos E Pesquisa Em Administração E Educação Profissional",
+    "campus": "Cariacica",
+    "knowledge_area": "Administração",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8489349699351642",
+    "leaders": []
+  },
+  {
+    "short_name": "GEPACE",
+    "name": "Grupo De Estudos E Pesquisa Em Administração, Ciências Contábeis E Economia",
+    "campus": "Linhares",
+    "knowledge_area": "Administração",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1043149317009916",
+    "leaders": [
+      {
+        "name": "Osmar José Bertholini Pianca",
+        "email": "osmarpianca@hotmail.com"
+      },
+      {
+        "name": "Tiago José Pessotti",
+        "email": "tiago.pessotti@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GP-Agrossilvicultura",
+    "name": "Grupo De Estudos E Pesquisa Em Agrossilvicultura",
+    "campus": "Ibatiba",
+    "knowledge_area": "Agronomia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4796036097690778",
+    "leaders": [
+      {
+        "name": "Natiélia Oliveira Nogueira",
+        "email": "natielia.nogueira@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEPPI-Ifes Aracruz",
+    "name": "Grupo De Estudos E Pesquisa Em Práticas Pedagógicas Inclusivas",
+    "campus": "Aracruz",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2472980068615590",
+    "leaders": [
+      {
+        "name": "Katiuscia Aparecida Moreira De Oliveira Mendes",
+        "email": "katiuscia.mendes@ifes.edu.br"
+      },
+      {
+        "name": "Nádia Ribeiro Amorim Aiolfi",
+        "email": "nadia666ra@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "GEPEL",
+    "name": "Grupo De Estudos E Pesquisas Educação E Linguagens",
+    "campus": "Piúma",
+    "knowledge_area": "Linguística",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9028079977618876",
+    "leaders": [
+      {
+        "name": "Priscilla Gevigi De Andrade Majoni",
+        "email": "priscilla.majoni@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Gespae",
+    "name": "Grupo De Estudos E Pesquisas Em Alfabetização Escolar",
+    "campus": "Vila Velha",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3818286439433134",
+    "leaders": [
+      {
+        "name": "Fernanda Zanetti Becalli",
+        "email": "fernanda.becalli@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Cefor",
+    "name": "Grupo De Estudos E Pesquisas Em Educação Especial E Educação Inclusiva Na Educação Profissional E Tecnológica",
+    "campus": "Cefor",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8511875868515266",
+    "leaders": [
+      {
+        "name": "Larissy Alves Cotonhoto",
+        "email": "larissy.cotonhoto@ifes.edu.br"
+      },
+      {
+        "name": "Josiane Beltrame Milanesi",
+        "email": "josiane.milanesi@ifes.edu.br"
+      },
+      {
+        "name": "Sanandreia Torezani Perinni",
+        "email": "sanandreia@ifes.edu.br"
+      },
+      {
+        "name": "Emilene  Coco Dos Santos",
+        "email": "emilenecoco@hotmail.com"
+      },
+      {
+        "name": "Sirley Trugilho Da Silva",
+        "email": "strugilho@ifes.edu.br"
+      },
+      {
+        "name": "Yvina Pavan Baldo",
+        "email": "yvina@ifes.edu.br"
+      },
+      {
+        "name": "Mariella Berger Andrade",
+        "email": "mariella.andrade@ifes.edu.br"
+      },
+      {
+        "name": "Gabriel Domingos Carvalho",
+        "email": "gabriel.carvalho@ifes.edu.br"
+      },
+      {
+        "name": "Lidiane Leite Vasconcelos",
+        "email": "lidianeleite@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "Gepemcel",
+    "name": "Grupo De Estudos E Pesquisas Em Educação Matemática Crítica E Educação Libertadora",
+    "campus": "Vitória",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5172588343815150",
+    "leaders": [
+      {
+        "name": "Mariana Dos Santos Cezar",
+        "email": "mariana.cezar@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEPEM-ES",
+    "name": "Grupo De Estudos E Pesquisas Em Educação Matemática Do Espírito Santo",
+    "campus": "Vitória",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4376065762334921",
+    "leaders": [
+      {
+        "name": "Maria Auxiliadora Vilela Paiva",
+        "email": "dora@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEPEMEM",
+    "name": "Grupo De Estudos E Pesquisas Em Educação Matemática E Ensino Médio",
+    "campus": "Vitória",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9204323858445012",
+    "leaders": [
+      {
+        "name": "Michel Guerra De Souza",
+        "email": "michel.souza@ifes.edu.br"
+      },
+      {
+        "name": "Douglas Araujo Victor",
+        "email": "douglas.araujo@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GRUESP-EPT",
+    "name": "Grupo De Estudos E Pesquisas Em Educação Profissional E Tecnológica",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Interdisciplinar",
+    "repository": "",
+    "leaders": [
+      {
+        "name": "Edson Maciel Peixoto",
+        "email": "edsonpeixoto@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEPE GESEDI",
+    "name": "Grupo De Estudos E Pesquisas Em Educação, Gênero, Sexualidades E Diversidades",
+    "campus": "Itapina",
+    "knowledge_area": "Linguística",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5651828229751427",
+    "leaders": [
+      {
+        "name": "Raquelli Natale",
+        "email": "raquellinatale@gmail.com"
+      },
+      {
+        "name": "Dayane Santos De Souza",
+        "email": "dayane.souza@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Kultur",
+    "name": "Grupo De Estudos E Pesquisas Em Filosofias, Educações, Ciências, Culturas E Sexualidades",
+    "campus": "São Mateus",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4026250774176029",
+    "leaders": [
+      {
+        "name": "Alexandre Luiz Polizel",
+        "email": "alexandre.polizel@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "FOPEC",
+    "name": "Grupo De Estudos E Pesquisas Em Formação De Professores Em Educação Em Ciências",
+    "campus": "Vila Velha",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9707981522566573",
+    "leaders": [
+      {
+        "name": "Fabiana Da Silva Kauark",
+        "email": "fabianak@ifes.edu.br"
+      },
+      {
+        "name": "Cynthia Torres Daher",
+        "email": "cynthia.daher@ifes.edu.br"
+      },
+      {
+        "name": "Chrystian Carletti",
+        "email": "chrystian.carletti@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Gepemem",
+    "name": "Grupo De Estudos E Pesquisas Em Modelo Dos Campos Semânticos E Educação Matemática",
+    "campus": "Vitória",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3997687047031532",
+    "leaders": [
+      {
+        "name": "Rodolfo Chaves",
+        "email": "rodolfochaves20@gmail.com"
+      },
+      {
+        "name": "Ligia Arantes Sad",
+        "email": "aransadli@gmail.com"
+      },
+      {
+        "name": "Mariana Dos Santos Cezar",
+        "email": "mariana.cezar@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEPIEASA",
+    "name": "Grupo De Estudos E Pesquisas Interdisciplinares Em Educação Ambiental, Sustentabilidade E Agroecologia",
+    "campus": "Itapina",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1140125022913191",
+    "leaders": [
+      {
+        "name": "Flávia Nascimento Ribeiro",
+        "email": "flavia.ribeiro@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEPIDi",
+    "name": "Grupo De Estudos E Pesquisas Sobre Interculturalidade E Diversidade",
+    "campus": "Piúma",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7108119627785075",
+    "leaders": [
+      {
+        "name": "Ivan Almeida Rozario Júnior",
+        "email": "ivan.rozario@ifes.edu.br"
+      },
+      {
+        "name": "Tatiana Aparecida Moreira",
+        "email": "tatiana.moreira@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GECAM",
+    "name": "Grupo De Estudos Em Cerâmicas Avançadas E Materiais Vítreos",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia De Materiais E Metalúrgica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1528092134731446",
+    "leaders": [
+      {
+        "name": "Lorena Raphael Rodrigues",
+        "email": "lorena.raphael92@gmail.com"
+      },
+      {
+        "name": "Lumena Glória De Souza Nunes",
+        "email": "lumenag@yahoo.com.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GREEN",
+    "name": "Grupo De Estudos Em Energia",
+    "campus": "Linhares",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7892575946525228",
+    "leaders": [
+      {
+        "name": "Alysson Augusto Pereira Machado",
+        "email": "alysson.machado@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GECOF",
+    "name": "Grupo De Estudos Em Gestão, Contabilidade E Finanças",
+    "campus": "Centro-Serrano",
+    "knowledge_area": "Administração",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7314745721614707",
+    "leaders": [
+      {
+        "name": "Isaac Gezer Silva De Oliveira",
+        "email": "isaac@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "LIA",
+    "name": "Grupo De Estudos Em Informática Aplicada",
+    "campus": "Colatina",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3389965362422646",
+    "leaders": [
+      {
+        "name": "Igor Carlos Pulini",
+        "email": "igor.pulini@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEMA",
+    "name": "Grupo De Estudos Em Modelagem Ambiental E Sustentabilidade",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia Sanitária",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8245519123521752",
+    "leaders": [
+      {
+        "name": "Jacqueline Rogeria Bringhenti",
+        "email": "jacquelineb@ifes.edu.br"
+      },
+      {
+        "name": "Adriana Marcia Nicolau Korres",
+        "email": "akorres@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "GEPEC",
+    "name": "Grupo De Estudos Em Pesca E Conservação",
+    "campus": "Piúma",
+    "knowledge_area": "Recursos Pesqueiros E Engenharia De Pesca",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9714915303655859",
+    "leaders": [
+      {
+        "name": "Jones Santander Neto",
+        "email": "jones.santander@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GePP",
+    "name": "Grupo De Estudos Em Processamento De Pescado",
+    "campus": "Piúma",
+    "knowledge_area": "Recursos Pesqueiros E Engenharia De Pesca",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9531356994765516",
+    "leaders": [
+      {
+        "name": "Marcelo Giordani Minozzo",
+        "email": "marcelogm@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GERA",
+    "name": "Grupo De Estudos Em Robótica Assistiva",
+    "campus": "São Mateus",
+    "knowledge_area": "Engenharia Biomédica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5042833628451319",
+    "leaders": [
+      {
+        "name": "Alan Afif Helal",
+        "email": "alan.helal@ifes.edu.br"
+      },
+      {
+        "name": "Jose Roberto Goncalves De Abreu",
+        "email": "jrgoncalves@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GERMINA",
+    "name": "Grupo De Estudos Em Robótica, Metaverso E Inteligência Artificial",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1617370079351763",
+    "leaders": [
+      {
+        "name": "Ricardo Maroquio Bernardo",
+        "email": "ricardo.maroquio@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GETEC",
+    "name": "Grupo De Estudos Em Tecnologia Educacional",
+    "campus": "Aracruz",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1077705289663982",
+    "leaders": [
+      {
+        "name": "Tiago Pulce Bertelli",
+        "email": "tiago.bertelli@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GETAP",
+    "name": "Grupo De Estudos Territoriais E A Atividade Pesqueira",
+    "campus": "Piúma",
+    "knowledge_area": "Geografia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6066002379109047",
+    "leaders": [
+      {
+        "name": "Eduardo Rodrigues Gomes",
+        "email": "eduardo.gomes@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEAGA",
+    "name": "Grupo De Estudos, Avaliação E Gestão Ambiental",
+    "campus": "Nova Venécia",
+    "knowledge_area": "Ciências Ambientais",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2795814291934525",
+    "leaders": [
+      {
+        "name": "Ediu Carlos Lopes Lemos",
+        "email": "ediu.lemos@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEPESE",
+    "name": "Grupo De Estudos, Pesquisa E Extensão Em Sociedade E Emancipação",
+    "campus": "Vitória",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8265935302213456",
+    "leaders": [
+      {
+        "name": "Wander Luiz Pereira Dos Santos",
+        "email": "wpereira@ifes.edu.br"
+      },
+      {
+        "name": "Leonardo Bis Dos Santos",
+        "email": "leonardo.bis@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GFTA",
+    "name": "Grupo De Fisica Teorica E Aplicada",
+    "campus": "Vitória",
+    "knowledge_area": "Física",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1284983444769900",
+    "leaders": [
+      {
+        "name": "Gilmar De Souza Dias",
+        "email": "gilmar@ifes.edu.br"
+      },
+      {
+        "name": "Celio Marques",
+        "email": "celiom@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GFÍTEMA",
+    "name": "Grupo De Física Teórica E Matemática Abstrata",
+    "campus": "Vitória",
+    "knowledge_area": "Física",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0711267200002176",
+    "leaders": [
+      {
+        "name": "Cesar Turczyn Campos",
+        "email": "cesar.turczyn@ifes.edu.br"
+      },
+      {
+        "name": "Douglas Araujo Victor",
+        "email": "douglas.araujo@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GIACNTEC",
+    "name": "Grupo De Investigação E Aplicação Em Ciências Naturais E Tecnológicas",
+    "campus": "Linhares",
+    "knowledge_area": "Biologia Geral",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8024667215471481",
+    "leaders": [
+      {
+        "name": "César Silva Xavier",
+        "email": "cesar.xavier@ifes.edu.br"
+      },
+      {
+        "name": "Claudio Sergio Marinato",
+        "email": "claudio.marinato@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GMCE",
+    "name": "Grupo De Métodos Computacionais Em Engenharia",
+    "campus": "São Mateus",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5453040389798481",
+    "leaders": [
+      {
+        "name": "Werley Gomes Facco",
+        "email": "werleyfacco@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GMCM",
+    "name": "Grupo De Modelagem Do Comportamento Dos Materiais",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia Civil",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1483355113510608",
+    "leaders": [
+      {
+        "name": "Rodolfo Giacomim Mendes De Andrade",
+        "email": "rodolfo.andrade@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPAE",
+    "name": "Grupo De Pesquisa Arte & Experimentação",
+    "campus": "Montanha",
+    "knowledge_area": "Artes",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3353915425792631",
+    "leaders": [
+      {
+        "name": "Ana Claudia Fehelberg Pinto Braga",
+        "email": "ana.fehelberg@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPPAEM",
+    "name": "Grupo De Pesquisa De Práticas Ativas De Ensino Em Matemática",
+    "campus": "Cariacica",
+    "knowledge_area": "Matemática",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2608120902661403",
+    "leaders": [
+      {
+        "name": "Mateus Mendes Magela",
+        "email": "mateus.magela@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "LATASEL",
+    "name": "Grupo De Pesquisa De Tecnologia Assistiva, Saúde, Esporte E Lazer",
+    "campus": "Vitória",
+    "knowledge_area": "Zoologia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3126596017951971",
+    "leaders": [
+      {
+        "name": "Luis Antonio Da Silva",
+        "email": "lasilva@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPES",
+    "name": "Grupo De Pesquisa Educação E Sociedade",
+    "campus": "Santa Teresa",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5478542593002303",
+    "leaders": []
+  },
+  {
+    "short_name": "GPAD",
+    "name": "Grupo De Pesquisa Em Agricultura Digital",
+    "campus": "Alegre",
+    "knowledge_area": "Agronomia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4454351932279084",
+    "leaders": [
+      {
+        "name": "João Paulo Bestete De Oliveira",
+        "email": "jpboliveira@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPCBB",
+    "name": "Grupo De Pesquisa Em Ciências Biomédicas E Biotecnológicas",
+    "campus": "Vila Velha",
+    "knowledge_area": "Bioquímica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5394120082925600",
+    "leaders": [
+      {
+        "name": "Marcella  Porto Tavares",
+        "email": "marcela.porto@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPCA",
+    "name": "Grupo De Pesquisa Em Computação Aplicada",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9290296163106046",
+    "leaders": [
+      {
+        "name": "Rafael Vargas Mesquita Dos Santos",
+        "email": "rafaelv@ifes.edu.br"
+      },
+      {
+        "name": "Eros Estevão De Moura",
+        "email": "eros@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Divergen",
+    "name": "Grupo De Pesquisa Em Diversidades E Gênero",
+    "campus": "Colatina",
+    "knowledge_area": "História",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2045083226462569",
+    "leaders": [
+      {
+        "name": "Francesco Suanno Neto",
+        "email": "francesco.suanno@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPEFIN",
+    "name": "Grupo De Pesquisa Em Educação Financeira",
+    "campus": "Venda Nova Do Imigrante",
+    "knowledge_area": "Administração",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4462016413695508",
+    "leaders": [
+      {
+        "name": "Lucas Marin Bessa",
+        "email": "lucas.bessa@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "EMaTeD",
+    "name": "Grupo De Pesquisa Em Educação Matemática E Tecnologias Digitais",
+    "campus": "Vitória",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9193060677772817",
+    "leaders": [
+      {
+        "name": "Alex Jordane De Oliveira",
+        "email": "alex.jordane@gmail.com"
+      },
+      {
+        "name": "Rony Claudio De Oliveira Freitas",
+        "email": "ronyfreitas@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPEMI",
+    "name": "Grupo De Pesquisa Em Educação Matemática Inclusiva",
+    "campus": "Vila Velha",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9689413274150724",
+    "leaders": [
+      {
+        "name": "Thamires Belo De Jesus",
+        "email": "thamiresb@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "DEVIRES",
+    "name": "Grupo De Pesquisa Em Educação Matemática, Diferença E Inclusão",
+    "campus": "Vitória",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8939662794089556",
+    "leaders": [
+      {
+        "name": "Edmar Reis Thiengo",
+        "email": "thiengo@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPEMMPA",
+    "name": "Grupo De Pesquisa Em Educação Matemática, Matemática Pura E Aplicada",
+    "campus": "Aracruz",
+    "knowledge_area": "Matemática",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2123719070474287",
+    "leaders": [
+      {
+        "name": "Leonardo Muniz De Lima",
+        "email": "lmuniz@ifes.edu.br"
+      },
+      {
+        "name": "Jose Carlos Thompson Da Silva",
+        "email": "jose.thompson@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Educin",
+    "name": "Grupo De Pesquisa Em Educação, Cidadania E Informação",
+    "campus": "Vitória",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0474662924779267",
+    "leaders": [
+      {
+        "name": "Sabrine Lino Pinto",
+        "email": "sabrine@ifes.edu.br"
+      },
+      {
+        "name": "Eduardo Fausto Kuster Cid",
+        "email": "eduardok@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPER",
+    "name": "Grupo De Pesquisa Em Energias Renováveis",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9287043256622916",
+    "leaders": [
+      {
+        "name": "Julio Cesar Madureira Silva",
+        "email": "jmadureira@ifes.edu.br"
+      },
+      {
+        "name": "Fabielle Castelan Marques",
+        "email": "fabiellec@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPEC",
+    "name": "Grupo De Pesquisa Em Ensino De Ciências",
+    "campus": "Piúma",
+    "knowledge_area": "Química",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6285110876500335",
+    "leaders": [
+      {
+        "name": "Laís Jubini Callegario",
+        "email": "lcallegario@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GpenFis",
+    "name": "Grupo De Pesquisa Em Ensino De Física",
+    "campus": "Cariacica",
+    "knowledge_area": "Física",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7250671542350841",
+    "leaders": [
+      {
+        "name": "Ramon Teodoro Do Prado",
+        "email": "ramontp05@gmail.com"
+      },
+      {
+        "name": "Jardel Da Costa Brozeguini",
+        "email": "jardel.brozeguini@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPEMES",
+    "name": "Grupo De Pesquisa Em Ensino De Matemática Do Espírito Santo",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8059781197709830",
+    "leaders": [
+      {
+        "name": "Jorge Henrique Gualandi",
+        "email": "jhgualandi@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "PHRÓNESIS",
+    "name": "Grupo De Pesquisa Em Ética E Teoria Política",
+    "campus": "Viana",
+    "knowledge_area": "Filosofia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4506860063479352",
+    "leaders": [
+      {
+        "name": "Weriquison Simer Corbani",
+        "email": "weriquison.corbani@ifes.edu.br"
+      },
+      {
+        "name": "André Luiz Bis Pirola",
+        "email": "andrepirola@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPEE",
+    "name": "Grupo De Pesquisa Em Exercício E Esporte",
+    "campus": "Piúma",
+    "knowledge_area": "Educação Física",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7859867050963917",
+    "leaders": [
+      {
+        "name": "Sandro Dos Santos Ferreira",
+        "email": "sandroferreiraef@hotmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "GPFEGI",
+    "name": "Grupo De Pesquisa Em Física Experimental (Gpfe - Ifes)",
+    "campus": "Cariacica",
+    "knowledge_area": "Física",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3494270499518652",
+    "leaders": [
+      {
+        "name": "Emmanuela Melo De Andrade Sternberg",
+        "email": "emmanuela.sternberg@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPFT - IFES",
+    "name": "Grupo De Pesquisa Em Física Teórica",
+    "campus": "Cariacica",
+    "knowledge_area": "Física",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2922260591585066",
+    "leaders": [
+      {
+        "name": "Wesley Spalenza",
+        "email": "wesley.spalenza@ifes.edu.br"
+      },
+      {
+        "name": "Filipe Leôncio Braga",
+        "email": "filipe.braga@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPFSO",
+    "name": "Grupo De Pesquisa Em Fitoquímica E Síntese Orgânica",
+    "campus": "Aracruz",
+    "knowledge_area": "Química",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6592340159079020",
+    "leaders": [
+      {
+        "name": "Almir Andreao",
+        "email": "andreao@ifes.edu.br"
+      },
+      {
+        "name": "Patricia Silvana Silva Andreao",
+        "email": "patriciaandreao@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GeoIfes",
+    "name": "Grupo De Pesquisa Em Geoprocessamento Do Ifes Vitória",
+    "campus": "Vitória",
+    "knowledge_area": "Geociências",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0104949923524505",
+    "leaders": [
+      {
+        "name": "Salomão Martins De Carvalho Júnior",
+        "email": "salomao.junior@ifes.edu.br"
+      },
+      {
+        "name": "Wimerson Sanches Bazan",
+        "email": "wimerson.bazan@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPIAG",
+    "name": "Grupo De Pesquisa Em Informática Aplicada - Gpia",
+    "campus": "Alegre",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4641511028006732",
+    "leaders": [
+      {
+        "name": "Carlos Alexandre Siqueira Da Silva",
+        "email": "cassilva@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPMAC",
+    "name": "Grupo De Pesquisa Em Matemática Aplicada E Computacional",
+    "campus": "Vitória",
+    "knowledge_area": "Matemática",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0712463873433593",
+    "leaders": [
+      {
+        "name": "Guilbert De Arruda Souza",
+        "email": "guilbert@ifes.edu.br"
+      },
+      {
+        "name": "Luana De Oliveira Justo",
+        "email": "ljusto@ifes.edu.br"
+      },
+      {
+        "name": "Elvira Padua Lovate",
+        "email": "elvirapl@ifes.edu.br"
+      },
+      {
+        "name": "Douglas Araujo Victor",
+        "email": "douglas.araujo@ifes.edu.br"
+      },
+      {
+        "name": "Michel Guerra De Souza",
+        "email": "michel.souza@ifes.edu.br"
+      },
+      {
+        "name": "Maria Clara Schuwartz Ferreira Caliman",
+        "email": "mcaliman@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPMAR",
+    "name": "Grupo De Pesquisa Em Materiais De Aracruz",
+    "campus": "Aracruz",
+    "knowledge_area": "Engenharia De Materiais E Metalúrgica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6194523515701328",
+    "leaders": [
+      {
+        "name": "Luiz Antonio Coco",
+        "email": "lacoco@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "ModEM-ARA",
+    "name": "Grupo De Pesquisa Em Modelagem Físico-Matemática E Computacional Para Soluções De Problemas De Engenharia Mecânica",
+    "campus": "Aracruz",
+    "knowledge_area": "Engenharia Mecânica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8129694673273009",
+    "leaders": [
+      {
+        "name": "Leonardo Muniz De Lima",
+        "email": "lmuniz@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPPE",
+    "name": "Grupo De Pesquisa Em Práticas Educacionais",
+    "campus": "São Mateus",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8549342100576291",
+    "leaders": [
+      {
+        "name": "Mara Cristina Ramos Quartezani",
+        "email": "marac@ifes.edu.br"
+      },
+      {
+        "name": "Fernanda Capucho Cezana",
+        "email": "fecezana@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Grupem",
+    "name": "Grupo De Pesquisa Em Práticas Pedagógicas De Matemática",
+    "campus": "Vitória",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6023201540436394",
+    "leaders": [
+      {
+        "name": "Dilza Coco",
+        "email": "dilzacoco@gmail.com"
+      },
+      {
+        "name": "Sandra Aparecida Fraga Da Silva",
+        "email": "sfraga@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPPTR",
+    "name": "Grupo De Pesquisa Em Processos Térmicos Reativos",
+    "campus": "Aracruz",
+    "knowledge_area": "Engenharia Mecânica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5425941912650825",
+    "leaders": [
+      {
+        "name": "Filipe Arthur Firmino Monhol",
+        "email": "filipe.monhol@ifes.edu.br"
+      },
+      {
+        "name": "Alan Patrick Da Silva Siqueira",
+        "email": "alan.siqueira@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "PRO-INOVA",
+    "name": "Grupo De Pesquisa Em Promoção E Gestão Da Inovação",
+    "campus": "Colatina",
+    "knowledge_area": "Administração",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8862070741218901",
+    "leaders": [
+      {
+        "name": "Alextian Bartholomeu Liberato",
+        "email": "alextian@ifes.edu.br"
+      },
+      {
+        "name": "Julio Cesar Nardi",
+        "email": "julionardi@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPPAR",
+    "name": "Grupo De Pesquisa Em Prototipagem E Automação Residencial",
+    "campus": "Nova Venécia",
+    "knowledge_area": "Planejamento Urbano E Regional",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5413552501919633",
+    "leaders": [
+      {
+        "name": "Raphael Melo Borges",
+        "email": "raphael.borges@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPRO",
+    "name": "Grupo De Pesquisa Em Redes E Otimização",
+    "campus": "Serra",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2060704831588381",
+    "leaders": [
+      {
+        "name": "Leandro Colombi Resendo",
+        "email": "leandro@ifes.edu.br"
+      },
+      {
+        "name": "Cristina Klippel Dominicini",
+        "email": "cristina.dominicini@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Geted",
+    "name": "Grupo De Pesquisa Em Tecnologias Educacionais",
+    "campus": "Guarapari",
+    "knowledge_area": "Interdisciplinar",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9235167436150239",
+    "leaders": [
+      {
+        "name": "Walber Antonio Ramos Beltrame",
+        "email": "walber.beltrame@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPES",
+    "name": "Grupo De Pesquisa Espaço E Saber",
+    "campus": "Venda Nova Do Imigrante",
+    "knowledge_area": "Geociências",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2011896170720981",
+    "leaders": [
+      {
+        "name": "Ernandes De Oliveira Pereira",
+        "email": "ernandesopgeo@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "GPAAS",
+    "name": "Grupo De Pesquisas Aplicadas Em Água E Solo",
+    "campus": "Alegre",
+    "knowledge_area": "Agronomia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0343404635555454",
+    "leaders": [
+      {
+        "name": "Otacilio Jose Passos Rangel",
+        "email": "ojprangel@ifes.edu.br"
+      },
+      {
+        "name": "Júlio Cezar Machado Baptestini",
+        "email": "julio.baptestini@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPAAS",
+    "name": "Grupo De Pesquisas Aplicadas Em Água E Solo - Gpaas",
+    "campus": "Alegre",
+    "knowledge_area": "Agronomia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo//0343404635555454",
+    "leaders": [
+      {
+        "name": "Júlio Cezar Machado Baptestini",
+        "email": "julio.baptestini@ifes.edu.br"
+      },
+      {
+        "name": "Otacilio Jose Passos Rangel",
+        "email": "ojprangel@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPAFAS",
+    "name": "Grupo De Pesquisas Em Agricultura Familiar & Sustentabilidade",
+    "campus": "Centro-Serrano",
+    "knowledge_area": "Interdisciplinar",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4581719948847384",
+    "leaders": [
+      {
+        "name": "Mariana Petri Da Silva",
+        "email": "mariana.silva@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GHMat",
+    "name": "Grupo De Pesquisas Em História Da Matemática E Saberes Tradicionais",
+    "campus": "Vitória",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5001244654733523",
+    "leaders": [
+      {
+        "name": "Claudia Alessandra Costa De Araujo Lorenzoni",
+        "email": "claudia.araujo@ifes.edu.br"
+      },
+      {
+        "name": "Ligia Arantes Sad",
+        "email": "aransadli@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "GPMF",
+    "name": "Grupo De Pesquisas Em Mecânica Dos Fluidos",
+    "campus": "São Mateus",
+    "knowledge_area": "Engenharia Mecânica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2840185219853617",
+    "leaders": [
+      {
+        "name": "Renato Do Nascimento Siqueira",
+        "email": "renatons@ifes.edu.br"
+      },
+      {
+        "name": "Michel De Oliveira Dos Santos",
+        "email": "michel.santos@ifes.edu.br"
+      },
+      {
+        "name": "Joao Paulo Barbosa",
+        "email": "jpbarbosa@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPPSA",
+    "name": "Grupo De Pesquisas Em Precisão E Sustentabilidade Na Agricultura",
+    "campus": "Santa Teresa",
+    "knowledge_area": "Agronomia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9408629216345074",
+    "leaders": [
+      {
+        "name": "Ednaldo Miranda De Oliveira",
+        "email": "ednaldo.oliveira@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPRO",
+    "name": "Grupo De Pesquisas Em Rochas Ornamentais",
+    "campus": "Nova Venécia",
+    "knowledge_area": "Engenharia De Minas",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0871165069138979",
+    "leaders": [
+      {
+        "name": "Rômulo Furtado Faria",
+        "email": "romulo.faria@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GST",
+    "name": "Grupo De Sistemas Térmicos",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia Mecânica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3951962077066654",
+    "leaders": [
+      {
+        "name": "Leonardo Rodrigues De Araujo",
+        "email": "leoaraujo@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GTFN",
+    "name": "Grupo De Terapia Fotodinâmica E Nanotecnologia",
+    "campus": "Aracruz",
+    "knowledge_area": "Química",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1856058038933409",
+    "leaders": [
+      {
+        "name": "André Romero Da Silva",
+        "email": "aromero@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GFA",
+    "name": "Grupo Física Aplicada - Gfa",
+    "campus": "Alegre",
+    "knowledge_area": "Física",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5926514670388299",
+    "leaders": [
+      {
+        "name": "Marcio De Sousa Bolzan",
+        "email": "mbolzan@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GIPMA",
+    "name": "Grupo Interdisciplinar De Pesquisa Em Meio Ambiente",
+    "campus": "Vila Velha",
+    "knowledge_area": "Geociências",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3810044434733240",
+    "leaders": [
+      {
+        "name": "Miquelina Aparecida Deina",
+        "email": "miquelina.deina@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GIPEAA",
+    "name": "Grupo Interdisciplinar De Pesquisas Em Educação, Agricultura E Administração",
+    "campus": "Barra De São Francisco",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4862416602064690",
+    "leaders": [
+      {
+        "name": "Alexandre Fraga De Araújo",
+        "email": "alexandref@ifes.edu.br"
+      },
+      {
+        "name": "Lívia De Azevedo Silveira Rangel",
+        "email": "liviaasrangel@gmail.com"
+      },
+      {
+        "name": "Wellington Machado Lucena",
+        "email": "wellington.lucena@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "HEP",
+    "name": "História Da Educação Profissional",
+    "campus": "Vitória",
+    "knowledge_area": "História",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4062942358531202",
+    "leaders": [
+      {
+        "name": "Jose Candido Rifan Sueth",
+        "email": "candido@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "ECES História",
+    "name": "História Das Interações Políticas, Culturais, Econômicas E Sociais",
+    "campus": "Serra",
+    "knowledge_area": "História",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6166271948718112",
+    "leaders": [
+      {
+        "name": "Amarildo Mendes Lemos",
+        "email": "amarildo.lemos@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "HISTOFIC",
+    "name": "História E Filosofia Da Ciência",
+    "campus": "Vila Velha",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0159494320519451",
+    "leaders": [
+      {
+        "name": "Antonio Donizetti Sgarbi",
+        "email": "donizettisgarbi@gmail.com"
+      },
+      {
+        "name": "Sabrine Lino Pinto",
+        "email": "sabrine@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "HMETPTES",
+    "name": "História, Memória, Educação Tecnológica E Práticas De Turismo No Espírito Santo",
+    "campus": "Vitória",
+    "knowledge_area": "História",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7936602052434212",
+    "leaders": [
+      {
+        "name": "Bruno Dos Santos Prado Moura",
+        "email": "bruno.moura@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "HE",
+    "name": "Humor E Ensino",
+    "campus": "Venda Nova Do Imigrante",
+    "knowledge_area": "Letras",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1515779991598424",
+    "leaders": [
+      {
+        "name": "Karine Silveira",
+        "email": "karine.silveira@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Ifes Maker",
+    "name": "Ifes Maker",
+    "campus": "Cariacica",
+    "knowledge_area": "Outros",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2595568347092944",
+    "leaders": [
+      {
+        "name": "Flavio Parreiras Marques",
+        "email": "flaviom@ifes.edu.br"
+      },
+      {
+        "name": "Michel Bruno Taffner",
+        "email": "michel@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "INOCRIE",
+    "name": "Inovação E Criatividade Na Educação",
+    "campus": "Cefor",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7917165835591861",
+    "leaders": [
+      {
+        "name": "Marize Lyra Silva Passos",
+        "email": "marize@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "ID",
+    "name": "Inovação E Desenvolvimento",
+    "campus": "Cariacica",
+    "knowledge_area": "Engenharia De Produção",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3101317550775043",
+    "leaders": [
+      {
+        "name": "Erika De Andrade Silva Leal",
+        "email": "erikaleal@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "IRAC",
+    "name": "Instituições E Representações: Analíticas E Críticas",
+    "campus": "Guarapari",
+    "knowledge_area": "Filosofia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0974089294606200",
+    "leaders": [
+      {
+        "name": "Marcelo Serute",
+        "email": "marcelo.serute@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Irrifes",
+    "name": "Irrifes",
+    "campus": "Santa Teresa",
+    "knowledge_area": "Engenharia Agrícola",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5605541150428022",
+    "leaders": [
+      {
+        "name": "Gustavo Haddad Souza Vieira",
+        "email": "ghsv@ifes.edu.br"
+      },
+      {
+        "name": "Paola Alfonsa Vieira Lo Monaco",
+        "email": "paolalm@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Lacemp",
+    "name": "Laboratório De Análise De Cervejas E Matérias Primas",
+    "campus": "Vila Velha",
+    "knowledge_area": "Química",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8596774888896922",
+    "leaders": [
+      {
+        "name": "Juliano Souza Ribeiro",
+        "email": "julianoribeiro@ifes.edu.br"
+      },
+      {
+        "name": "Juliana Gomes Rosa",
+        "email": "juliana.rosa@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "LAMEQUI",
+    "name": "Laboratório De Analítica, Metabolômica E Quimiometria",
+    "campus": "Alegre",
+    "knowledge_area": "Química",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0653304089025296",
+    "leaders": [
+      {
+        "name": "Murilo De Oliveira Souza",
+        "email": "murilo.souza@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "LAIR",
+    "name": "Laboratório De Automação E Inovação Em Rochas",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4359404866502493",
+    "leaders": [
+      {
+        "name": "Igor Henrique Beloti Pizetta",
+        "email": "igor.pizetta@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "LEPEEDHT",
+    "name": "Laboratório De Ensino, Pesquisa E Extensão Em Educação Em Direitos Humanos E Tecnologia",
+    "campus": "Aracruz",
+    "knowledge_area": "Sociologia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5934028158785191",
+    "leaders": [
+      {
+        "name": "Wilson Camerino Dos Santos Junior",
+        "email": "wilson.santos@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "LEMATEC",
+    "name": "Laboratório De Estudos E Pesquisas Em Metodologias Ativas E Tecnologias Sociais",
+    "campus": "Serra",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5268097066450891",
+    "leaders": [
+      {
+        "name": "Bruno Ramos Gonzaga",
+        "email": "bgonzaga@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "LabTEC",
+    "name": "Laboratório De Estudos E Pesquisas Em Tecnologia Social, Trabalho E Educação No Contemporâneo",
+    "campus": "Vitória",
+    "knowledge_area": "Educação",
+    "repository": "",
+    "leaders": [
+      {
+        "name": "Raoni Schimitt Huapaya",
+        "email": "raoni.huapaya@ifes.edu.br"
+      },
+      {
+        "name": "Angélica Nogueira De Souza Tedesco",
+        "email": "angelica.tedesco@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Scientia Lab",
+    "name": "Laboratório De Estudos Em Ciência, Tecnologia E Inovação",
+    "campus": "Centro-Serrano",
+    "knowledge_area": "Ciência Da Informação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1891486420768989",
+    "leaders": [
+      {
+        "name": "Felipe Ferreira Barros Carneiro",
+        "email": "felipe.carneiro@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "LHIPU",
+    "name": "Laboratório De História Pública",
+    "campus": "Vitória",
+    "knowledge_area": "História",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7730102663814437",
+    "leaders": [
+      {
+        "name": "Bruno Dos Santos Prado Moura",
+        "email": "bruno.moura@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Labir",
+    "name": "Laboratório De História Regional, Relações Étnico-Raciais E Cultura Pomerana",
+    "campus": "Centro-Serrano",
+    "knowledge_area": "História",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7367495027179203",
+    "leaders": [
+      {
+        "name": "Diones Augusto Ribeiro",
+        "email": "diones.ribeiro@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "LAICSI",
+    "name": "Laboratório De Inteligência Computacional E Sistemas De Informação",
+    "campus": "Serra",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5492811131024993",
+    "leaders": [
+      {
+        "name": "Hilário Tomaz Alves De Oliveira",
+        "email": "hilario.oliveira@ifes.edu.br"
+      },
+      {
+        "name": "Bruno Cardoso Coutinho",
+        "email": "bccout@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "LICS",
+    "name": "Laboratório De Inteligência Computacional Na Saúde",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9367837608897047",
+    "leaders": [
+      {
+        "name": "Cristiano Da Silveira Colombo",
+        "email": "cristianos@ifes.edu.br"
+      },
+      {
+        "name": "Rafael Silva Guimarães",
+        "email": "rafaelg@ifes.edu.br"
+      },
+      {
+        "name": "Igor Henrique Beloti Pizetta",
+        "email": "igor.pizetta@ifes.edu.br"
+      },
+      {
+        "name": "Lucas Poubel Timm Do Carmo",
+        "email": "lucas.carmo@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "LAPRAGEES",
+    "name": "Laboratório De Práticas E Gestão Da Educação Do Espírito Santo (Lapragees)",
+    "campus": "Cariacica",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1959065633072415",
+    "leaders": [
+      {
+        "name": "Rodrigo Ferreira Rodrigues",
+        "email": "rodrigo.rodrigues@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Lass",
+    "name": "Laboratório De Soluções Sustentáveis",
+    "campus": "Cariacica",
+    "knowledge_area": "Engenharia De Produção",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4320921666912973",
+    "leaders": [
+      {
+        "name": "Danieli Soares De Oliveira",
+        "email": "danieli@ifes.edu.br"
+      },
+      {
+        "name": "Andromeda Goretti De Menezes Campos",
+        "email": "andromeda.campos@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Lexicorpas",
+    "name": "Laboratório Experimental De Investigação Sobre Corpos, Afetos E Subjetividades",
+    "campus": "Vitória",
+    "knowledge_area": "Interdisciplinar",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2415962384558138",
+    "leaders": [
+      {
+        "name": "Breno Lima Rodriguez",
+        "email": "breno@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "LTLLCST",
+    "name": "Letras Em Trânsito: Línguas, Literaturas, Culturas E Suas Tecnologias",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Letras",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8158381557780686",
+    "leaders": [
+      {
+        "name": "Guilherme Augusto Dos Santos Póvoa",
+        "email": "guilherme.povoa@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "LIEN",
+    "name": "Lingua(Gem) E Ensino",
+    "campus": "Vitória",
+    "knowledge_area": "Letras",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0904211391466819",
+    "leaders": [
+      {
+        "name": "Antonio Carlos Gomes",
+        "email": "antoniocarlos@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "LT",
+    "name": "Linguagens E Tecnologias",
+    "campus": "Colatina",
+    "knowledge_area": "Linguística",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9412030189748497",
+    "leaders": [
+      {
+        "name": "Josiane Brunetti Cani",
+        "email": "josicani@ifes.edu.br"
+      },
+      {
+        "name": "Elizabete Gerlânia Caron Sandrini",
+        "email": "egerlania@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "LEFE",
+    "name": "Literatura, Educação E Formação Estética",
+    "campus": "Venda Nova Do Imigrante",
+    "knowledge_area": "Letras",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9415035726495435",
+    "leaders": [
+      {
+        "name": "Mariana Passos Ramalhete",
+        "email": "mariana.ramalhete@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "LAC",
+    "name": "Logística E Administração Contemporânea",
+    "campus": "Viana",
+    "knowledge_area": "Administração",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1571750186295829",
+    "leaders": [
+      {
+        "name": "Robson Malacarne",
+        "email": "robson.malacarne@ifes.edu.br"
+      },
+      {
+        "name": "Adonai Jose Lacruz",
+        "email": "adonai.lacruz@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "MRHA",
+    "name": "Manejo De Recursos Hídricos E Ambientais",
+    "campus": "Santa Teresa",
+    "knowledge_area": "Agronomia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3240069924962679",
+    "leaders": [
+      {
+        "name": "Luciano De Oliveira Toledo",
+        "email": "ltoledo@ifes.edu.br"
+      },
+      {
+        "name": "Gustavo Haddad Souza Vieira",
+        "email": "ghsv@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "MRP",
+    "name": "Maricultura E Recursos Pesqueiros",
+    "campus": "Piúma",
+    "knowledge_area": "Recursos Pesqueiros E Engenharia De Pesca",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3396540352053958",
+    "leaders": [
+      {
+        "name": "Henrique David Lavander",
+        "email": "henrique.lavander@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "MAEM",
+    "name": "Mátemática, Matemática Aplicada E Ensino De Matemática",
+    "campus": "Cariacica",
+    "knowledge_area": "Matemática",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0130265559347093",
+    "leaders": [
+      {
+        "name": "Jocélia Abreu Barcellos Vargas",
+        "email": "joceliab@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "MCC",
+    "name": "Materiais De Construção Civil",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia Civil",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5313285925417331",
+    "leaders": [
+      {
+        "name": "André Gustavo De Sousa Galdino",
+        "email": "andregsg@ifes.edu.br"
+      },
+      {
+        "name": "Georgia Serafim Araujo",
+        "email": "georgia@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "MPF",
+    "name": "Materiais E Processos De Fabricação",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia De Materiais E Metalúrgica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2447268411163085",
+    "leaders": [
+      {
+        "name": "André Gustavo De Sousa Galdino",
+        "email": "andregsg@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "MPFM",
+    "name": "Materiais E Processos De Fabricação Mecânica",
+    "campus": "São Mateus",
+    "knowledge_area": "Engenharia Mecânica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8854736452789413",
+    "leaders": [
+      {
+        "name": "Bruno Corveto Bragança",
+        "email": "bruno.braganca@ifes.edu.br"
+      },
+      {
+        "name": "Rodrigo Soares Dos Santos",
+        "email": "rodrigo.santos@ifes.edu.br"
+      },
+      {
+        "name": "Davi Pereira Garcia",
+        "email": "davi.garcia@ifes.edu.br"
+      },
+      {
+        "name": "Renan Valter Magnol",
+        "email": "renan.magnol2@ifes.edu.br"
+      },
+      {
+        "name": "Antonio Carlos Barbosa Zancanella",
+        "email": "antonio.zancanella@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "MIRG",
+    "name": "Mechanical And Mobility Innovation Research Group",
+    "campus": "São Mateus",
+    "knowledge_area": "Engenharia Mecânica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2581921278209916",
+    "leaders": [
+      {
+        "name": "Paulo Vitor Vidal Aguiar",
+        "email": "paulovidal@ifes.edu.br"
+      },
+      {
+        "name": "Huarley Pratte Lemke",
+        "email": "huarley@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GMGV",
+    "name": "Melhoramento Genético Vegetal",
+    "campus": "Alegre",
+    "knowledge_area": "Agronomia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6237528148822062",
+    "leaders": [
+      {
+        "name": "Ana Paula Candido Gabriel Berilli",
+        "email": "ana.berilli@ifes.edu.br"
+      },
+      {
+        "name": "Monique Moreira Moulin",
+        "email": "mmmoulin@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "MEPEIFES",
+    "name": "Metodologias E Práticas De Ensino (Epe)",
+    "campus": "São Mateus",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8360653221997144",
+    "leaders": [
+      {
+        "name": "Adriana Pin",
+        "email": "adriana.pin@ifes.edu.br"
+      },
+      {
+        "name": "Carolina Lomando Canete",
+        "email": "carolcanete@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "MECSOL IFES",
+    "name": "Métodos Computacionais Em Mecânica Dos Sólidos - Ifes",
+    "campus": "Aracruz",
+    "knowledge_area": "Engenharia Mecânica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6140038379168358",
+    "leaders": [
+      {
+        "name": "Rafael Marin Ferro",
+        "email": "rafael.ferro@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "MCA",
+    "name": "Microscopia: Ciência E Aplicações",
+    "campus": "Vila Velha",
+    "knowledge_area": "Biologia Geral",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4630294207191019",
+    "leaders": [
+      {
+        "name": "Debora Santos De Andrade Dutra",
+        "email": "deborasad@ifes.edu.br"
+      },
+      {
+        "name": "Gloria Maria De Farias Viegas Aquije",
+        "email": "gloriaviegas@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "MOSEF",
+    "name": "Modelagem E Simulação Computacionais No Ensino De Física",
+    "campus": "Ibatiba",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3924390588843321",
+    "leaders": [
+      {
+        "name": "José Monsair De Almeida Martucheli Junior",
+        "email": "juniormartuchelli@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "POIEIN",
+    "name": "Núcleo Acadêmico De Desconstrução, Extensão E Pesquisa Em Economia Criativa E Sustentabilidade",
+    "campus": "Viana",
+    "knowledge_area": "Administração",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5269607181905153",
+    "leaders": [
+      {
+        "name": "Robson Malacarne",
+        "email": "robson.malacarne@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NBPL",
+    "name": "Núcleo Bakhtiniano De Pesquisas Em Leitura",
+    "campus": "Vitória",
+    "knowledge_area": "Letras",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7037555933513828",
+    "leaders": [
+      {
+        "name": "Letícia Queiroz De Carvalho",
+        "email": "leticia.carvalho@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Nucela",
+    "name": "Núcleo Capixaba De Estudos Em Linguística Aplicada",
+    "campus": "Vitória",
+    "knowledge_area": "Linguística",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4403428191779306",
+    "leaders": [
+      {
+        "name": "André Effgen De Aguiar",
+        "email": "aeffgen@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "NuCAE",
+    "name": "Núcleo De Cálculo Avançado Em Estruturas",
+    "campus": "Nova Venécia",
+    "knowledge_area": "Engenharia Civil",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1517447035341302",
+    "leaders": [
+      {
+        "name": "Alexandre Luís Cardoso Bissoli",
+        "email": "alexandre.bissoli@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NECTSA",
+    "name": "Núcleo De Educação Ctsa Em Ensino De Ciências",
+    "campus": "Vila Velha",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9258471337751633",
+    "leaders": [
+      {
+        "name": "Ana Raquel Santos De Medeiros Garcia",
+        "email": "anamedeiros@ifes.edu.br"
+      },
+      {
+        "name": "Denise Rocco De Sena",
+        "email": "derocco@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "NEEF",
+    "name": "Núcleo De Estruturação Do Ensino De Física Do Ifes",
+    "campus": "Cariacica",
+    "knowledge_area": "Física",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0584582648981738",
+    "leaders": [
+      {
+        "name": "Luiz Otavio Buffon",
+        "email": "buffon@ifes.edu.br"
+      },
+      {
+        "name": "Robson Leone Evangelista",
+        "email": "robson.leone@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NEMATEST",
+    "name": "Núcleo De Estudo Em Materiais De Construção E Estruturas",
+    "campus": "Nova Venécia",
+    "knowledge_area": "Engenharia Civil",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8201303236197609",
+    "leaders": [
+      {
+        "name": "Rodolpho Medeiros Frossard",
+        "email": "rodolpho.frossard@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NEECNI",
+    "name": "Núcleo De Estudos De Estruturas",
+    "campus": "Nova Venécia",
+    "knowledge_area": "Engenharia Civil",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8484214804490231",
+    "leaders": [
+      {
+        "name": "Isis Cler Depolli",
+        "email": "isis.depolli@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NEPE",
+    "name": "Núcleo De Estudos E Pesquisa Em Energia",
+    "campus": "São Mateus",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1508119498437374",
+    "leaders": [
+      {
+        "name": "Carlos Roberto Coutinho",
+        "email": "crcoutinho@ifes.edu.br"
+      },
+      {
+        "name": "Arthur Eduardo Alves Amorim",
+        "email": "arthur.amorim@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NEPGEST",
+    "name": "Núcleo De Estudos E Pesquisas Em Gestão",
+    "campus": "Cariacica",
+    "knowledge_area": "Administração",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6497161386656480",
+    "leaders": [
+      {
+        "name": "Luiz Henrique Lima Faria",
+        "email": "lh2323@yahoo.com.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NEPHEH",
+    "name": "Núcleo De Estudos E Pesquisas Em Hermenêutica, Educação E Humanidades.",
+    "campus": "Vitória",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2500154026904930",
+    "leaders": [
+      {
+        "name": "Weksley Pinheiro Gama",
+        "email": "weksley.gama@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NEPSO",
+    "name": "Núcleo De Estudos E Pesquisas Em Política E Sociedade",
+    "campus": "Colatina",
+    "knowledge_area": "Outros",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6107887245518262",
+    "leaders": [
+      {
+        "name": "Isaias Alves",
+        "email": "isaias.alves@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NEPP",
+    "name": "Núcleo De Estudos E Pesquisas Em Portos",
+    "campus": "Cariacica",
+    "knowledge_area": "Administração",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7352550665614412",
+    "leaders": [
+      {
+        "name": "Erivelto Fioresi De Sousa",
+        "email": "erivelto.sousa@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Nepsos",
+    "name": "Núcleo De Estudos E Pesquisas Em Práticas Sociais, Saúde E Ensino De Ciências (Nepsos)",
+    "campus": "Vila Velha",
+    "knowledge_area": "Psicologia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7097508396286633",
+    "leaders": [
+      {
+        "name": "Diemerson Da Costa Sacchetto",
+        "email": "saquettto@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "NEPRO",
+    "name": "Núcleo De Estudos E Pesquisas Em Rochas Ornamentais",
+    "campus": "Barra De São Francisco",
+    "knowledge_area": "Administração",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/nepro",
+    "leaders": [
+      {
+        "name": "Angelo Roberto Fiorio Custodio",
+        "email": "angelo.custodio@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NEAD",
+    "name": "Núcleo De Estudos Em Apoio À Decisão",
+    "campus": "Cariacica",
+    "knowledge_area": "Engenharia De Produção",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9907291695604247",
+    "leaders": [
+      {
+        "name": "Tiago José Menezes Gonçalves",
+        "email": "tiago.goncalves@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NEECM",
+    "name": "Núcleo De Estudos Em Ensino De Ciências E Matemática",
+    "campus": "Nova Venécia",
+    "knowledge_area": "Ensino",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9425354180491980",
+    "leaders": [
+      {
+        "name": "Andre Oakes De Oliveira Goncalves",
+        "email": "andre.goncalves@ifes.edu.br"
+      },
+      {
+        "name": "Ádila Motta Leite Seferin",
+        "email": "adila@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NEEF",
+    "name": "Nucleo De Estudos Em Ensino De Fisica",
+    "campus": "Serra",
+    "knowledge_area": "Física",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8963769597678950",
+    "leaders": [
+      {
+        "name": "Leandro Melo De Sa",
+        "email": "leandro.melo@ifes.edu.br"
+      },
+      {
+        "name": "Rosilene De Sa Ribeiro",
+        "email": "rosilene@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "IF-Analytica",
+    "name": "Núcleo De Estudos Em Filosofia, Educação E Sociedade",
+    "campus": "Itapina",
+    "knowledge_area": "Filosofia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5594666768458737",
+    "leaders": [
+      {
+        "name": "Filicio Mulinari E Silva",
+        "email": "filicio@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "NELE",
+    "name": "Núcleo De Estudos Em Literatura E Ensino",
+    "campus": "Vitória",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4907167177619472",
+    "leaders": [
+      {
+        "name": "Letícia Queiroz De Carvalho",
+        "email": "leticia.carvalho@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NERA",
+    "name": "Núcleo De Estudos Em Robótica E Automação",
+    "campus": "Serra",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0885492618252118",
+    "leaders": [
+      {
+        "name": "Richard Junior Manuel Godinez Tello",
+        "email": "richard@ifes.edu.br"
+      },
+      {
+        "name": "Marta Talitha Carvalho Freire Mendes",
+        "email": "martatcfa@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "NESC",
+    "name": "Núcleo De Estudos Em Sistemas Ciberfísicos",
+    "campus": "Serra",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7313036179451336",
+    "leaders": [
+      {
+        "name": "Flávio Garcia Pereira",
+        "email": "flavio.garcia@ifes.edu.br"
+      },
+      {
+        "name": "Wagner Teixeira Da Costa",
+        "email": "wagnercosta@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Nu(TeC)²",
+    "name": "Núcleo De Estudos Em Teoria Da Computação E Técnicas De Computação",
+    "campus": "Serra",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4201359100034312",
+    "leaders": [
+      {
+        "name": "Jefferson O. Andrade",
+        "email": "jefferson.andrade@ifes.edu.br"
+      },
+      {
+        "name": "Karin Satie Komati",
+        "email": "profkarin@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "NETRA",
+    "name": "Núcleo De Estudos Em Tratamento E Reúso De Águas E Efluentes",
+    "campus": "Cariacica",
+    "knowledge_area": "Engenharia Sanitária",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6360830222724795",
+    "leaders": [
+      {
+        "name": "Danieli Soares De Oliveira",
+        "email": "danieli@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NEIECT",
+    "name": "Núcleo De Estudos Interdisciplinares Em Educação, Ciência E Tecnologia (Neiect)",
+    "campus": "Montanha",
+    "knowledge_area": "Interdisciplinar",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1312508434397769",
+    "leaders": [
+      {
+        "name": "Renato Pereira Aurélio",
+        "email": "renato.aurelio@ifes.edu.br"
+      },
+      {
+        "name": "Patrick Ribeiro Do Val",
+        "email": "patrick.val@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NEAPE",
+    "name": "Núcleo De Estudos Sobre Acesso, Permanência E Êxito",
+    "campus": "Cariacica",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4437628762266847",
+    "leaders": [
+      {
+        "name": "Cintia Tavares Do Carmo",
+        "email": "cintiata@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Nepto",
+    "name": "Núcleo De Estudos Sobre Povos Tradicionais E Originários",
+    "campus": "Aracruz",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2692465660161529",
+    "leaders": [
+      {
+        "name": "Thalismar Matias Gonçalves",
+        "email": "thalismar.goncalves@ifes.edu.br"
+      },
+      {
+        "name": "Glaudertone Andrade De Barcellos",
+        "email": "glaudertone@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NEPES",
+    "name": "Núcleo De Estudos Sobre Produção Enxuta E Sustentável",
+    "campus": "Cariacica",
+    "knowledge_area": "Engenharia De Produção",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6643472865355655",
+    "leaders": [
+      {
+        "name": "Cintia Tavares Do Carmo",
+        "email": "cintiata@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NETEC",
+    "name": "Núcleo De Estudos Tecnológicos",
+    "campus": "Piúma",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9088860635355330",
+    "leaders": [
+      {
+        "name": "Silvio Jose Trindade Alvim",
+        "email": "salvim@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NEPPEA",
+    "name": "Núcleo De Estudos, Pesquisas E Práticas Em Estatística Aplicada",
+    "campus": "Cariacica",
+    "knowledge_area": "Probabilidade E Estatística",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9939024859145817",
+    "leaders": [
+      {
+        "name": "Daniela Bertolini Depizzol",
+        "email": "danieladepizzol@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "NUGEIN",
+    "name": "Núcleo De Gestão, Empreendedorismo E Inovação",
+    "campus": "Serra",
+    "knowledge_area": "Administração",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5708458833286557",
+    "leaders": [
+      {
+        "name": "Adelson Pereira Do Nascimento",
+        "email": "adelsonpn@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Nupai",
+    "name": "Núcleo De Pesquisa Em Avaliação De Impacto",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia Sanitária",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6134486576852195",
+    "leaders": [
+      {
+        "name": "Fernanda Aparecida Veronez",
+        "email": "fveronez@ifes.edu.br"
+      },
+      {
+        "name": "Dejanyne Paiva Zamprogno Bianchi",
+        "email": "dejanyne@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NEPS",
+    "name": "Núcleo De Pesquisa Em Eletrônica E Processamento De Sinais",
+    "campus": "São Mateus",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8718499640782120",
+    "leaders": [
+      {
+        "name": "Cristiano Luiz Silva Tavares",
+        "email": "cristianot@ifes.edu.br"
+      },
+      {
+        "name": "Tiago Zanotelli",
+        "email": "tiagoz@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NPLT",
+    "name": "Núcleo De Pesquisa Em Literatura E Testemunho",
+    "campus": "Vitória",
+    "knowledge_area": "Letras",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9943899298760876",
+    "leaders": [
+      {
+        "name": "Nelson Martinelli Filho",
+        "email": "nelson.martinelli@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NPLMC",
+    "name": "Núcleo De Pesquisa Em Literatura Moderna E Contemporânea",
+    "campus": "Vitória",
+    "knowledge_area": "Letras",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5668318687225153",
+    "leaders": [
+      {
+        "name": "Nelson Martinelli Filho",
+        "email": "nelson.martinelli@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NUPES",
+    "name": "Núcleo De Pesquisas Siderúrgicas",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia De Materiais E Metalúrgica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4789785560483569",
+    "leaders": [
+      {
+        "name": "Jose Roberto De Oliveira",
+        "email": "jroberto@ifes.edu.br"
+      },
+      {
+        "name": "Felipe Fardin Grillo",
+        "email": "felipe.grillo@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NUTAC",
+    "name": "Núcleo De Tecnologias Agropecuária Capixaba",
+    "campus": "Montanha",
+    "knowledge_area": "Agronomia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8982801579982862",
+    "leaders": [
+      {
+        "name": "Waylson Zancanella Quartezani",
+        "email": "waylson.quartezani@ifes.edu.br"
+      },
+      {
+        "name": "Talita Aparecida Pletsch",
+        "email": "talitapletsch@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "NuENG",
+    "name": "Núcleo Estudos De Materiais De Construção Civil, Custos, Obras E Sustentabilidade",
+    "campus": "Nova Venécia",
+    "knowledge_area": "Engenharia Civil",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9837246475140578",
+    "leaders": [
+      {
+        "name": "Isis Cler Depolli",
+        "email": "isis.depolli@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "NEA",
+    "name": "Núcleo Interdisciplinar De Estudos Em Educação Ambiental E Agroecologia",
+    "campus": "Ibatiba",
+    "knowledge_area": "Interdisciplinar",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9530952932741850",
+    "leaders": [
+      {
+        "name": "Arnaldo Henrique De Oliveira Carvalho",
+        "email": "acarvalho@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "OAIG",
+    "name": "Observatório Astronômico Do Ifes Guarapari",
+    "campus": "Guarapari",
+    "knowledge_area": "Astronomia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3137362828701830",
+    "leaders": [
+      {
+        "name": "Adriano Mesquita Oliveira",
+        "email": "adriano.oliveira@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "OCA",
+    "name": "Observatório Da Cultura Alimentar",
+    "campus": "Venda Nova Do Imigrante",
+    "knowledge_area": "Antropologia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3028344722558218",
+    "leaders": [
+      {
+        "name": "Vinicius Lordes Dias",
+        "email": "viniciuslordes@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "OADCSS",
+    "name": "Observatório De Análise Dos Determinantes E Condicionantes Da Situação De Saúde",
+    "campus": "Vitória",
+    "knowledge_area": "Saúde Coletiva",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1792997810524349",
+    "leaders": [
+      {
+        "name": "Helia Marcia Silva Mathias",
+        "email": "helia@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "OMS",
+    "name": "Organizações, Mercados E Sociedade",
+    "campus": "São Mateus",
+    "knowledge_area": "Planejamento Urbano E Regional",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9195193297846762",
+    "leaders": [
+      {
+        "name": "Fabricio Borelli",
+        "email": "fabricioborelli@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "ORPHEUS",
+    "name": "Organization For Photovoltaic Energy Usages And Studies",
+    "campus": "São Mateus",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/8460820064375074",
+    "leaders": [
+      {
+        "name": "Rodrigo Fiorotti",
+        "email": "rodrigo.fiorotti@ifes.edu.br"
+      },
+      {
+        "name": "Pablo Rodrigues Muniz",
+        "email": "pablorm@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "PC",
+    "name": "Patologia Das Construções",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia Civil",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7163019165126057",
+    "leaders": [
+      {
+        "name": "Carla Therezinha Dalvi Borjaille Alledi",
+        "email": "borjaille@ifes.edu.br"
+      },
+      {
+        "name": "Gercyr Baptista Junior",
+        "email": "gercyr@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "PEDEI",
+    "name": "Pesquisa E Estudos Em Design Educacional E Inclusão",
+    "campus": "Cefor",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2621978665793982",
+    "leaders": [
+      {
+        "name": "Danielli Veiga Carneiro Sondermann",
+        "email": "danielli@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "PDTT",
+    "name": "Pesquisa Em Difusão E Transferência De Tecnologia",
+    "campus": "Santa Teresa",
+    "knowledge_area": "Agronomia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9413868469340968",
+    "leaders": [
+      {
+        "name": "Marcio Adonis Miranda Rocha",
+        "email": "marcioam@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "SANEAR",
+    "name": "Pesquisas Em Saneamento Ambiental",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia Sanitária",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4143459691756956",
+    "leaders": [
+      {
+        "name": "Mariangela Dutra De Oliveira",
+        "email": "mariangeladutra@ifes.edu.br"
+      },
+      {
+        "name": "Mauricio Sartori",
+        "email": "msartori@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "(PFD)",
+    "name": "Políticas De Formação Docente Na Concepção Freiriana",
+    "campus": "Vila Velha",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0259717843115283",
+    "leaders": [
+      {
+        "name": "Maria Geralda Oliver Rosa",
+        "email": "mariageraldaoliver@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "PEQE",
+    "name": "Políticas Educacionais E Qualidade Da Educação",
+    "campus": "Viana",
+    "knowledge_area": "Administração",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0161709516795331",
+    "leaders": [
+      {
+        "name": "Adonai Jose Lacruz",
+        "email": "adonai.lacruz@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "PEEPT",
+    "name": "Práticas Educativas Em Educação Profissional E Tecnológica",
+    "campus": "Vitória",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6901207537685409",
+    "leaders": [
+      {
+        "name": "Poliana Daré Zampirolli Pires",
+        "email": "poliana.pires@ifes.edu.br"
+      },
+      {
+        "name": "Renata Gomes De Jesus",
+        "email": "renata@ifes.edu.br"
+      },
+      {
+        "name": "Pablo Rodrigues Muniz",
+        "email": "pablorm@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "BioEn",
+    "name": "Processos Biotecnológicos: Aplicações Em Engenharia E Ensino",
+    "campus": "Vila Velha",
+    "knowledge_area": "Engenharia Química",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2525217352340700",
+    "leaders": [
+      {
+        "name": "Cristiane Pereira Zdradek",
+        "email": "criszdradek@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "PDS",
+    "name": "Processos De Desenvolvimento E Saúde",
+    "campus": "Venda Nova Do Imigrante",
+    "knowledge_area": "Psicologia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3160161491365930",
+    "leaders": [
+      {
+        "name": "Juliana Peterle Ronchi",
+        "email": "juliana.ronchi@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "PA",
+    "name": "Produção Animal",
+    "campus": "Alegre",
+    "knowledge_area": "Zootecnia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5665228540020869",
+    "leaders": [
+      {
+        "name": "Aparecida De Fatima Madella De Oliveira",
+        "email": "amadella@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "PNNR",
+    "name": "Produção E Nutrição De Não Ruminantes",
+    "campus": "Itapina",
+    "knowledge_area": "Zootecnia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/5628059102701198",
+    "leaders": [
+      {
+        "name": "Henrique Ferreira De Assis",
+        "email": "henrique.assis@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "PNR",
+    "name": "Produção E Nutrição De Ruminantes",
+    "campus": "Itapina",
+    "knowledge_area": "Zootecnia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3398524948006656",
+    "leaders": [
+      {
+        "name": "Nilson Nunes Morais Junior",
+        "email": "nilson.morais@ifes.edu.br"
+      },
+      {
+        "name": "Luciene Lignani Bitencourt",
+        "email": "luciene.lignani@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "PV",
+    "name": "Produção Vegetal",
+    "campus": "Itapina",
+    "knowledge_area": "Agronomia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6225816621046377",
+    "leaders": [
+      {
+        "name": "Anderson Mathias Holtz",
+        "email": "anderson.holtz@ifes.edu.br"
+      },
+      {
+        "name": "Patricia Soares Furno Fontes",
+        "email": "patricia.fontes@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "PPBPA",
+    "name": "Produtos E Processos Biotecnológicos Para A Produção De Alimentos",
+    "campus": "Venda Nova Do Imigrante",
+    "knowledge_area": "Ciência E Tecnologia De Alimentos",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9263191399730507",
+    "leaders": [
+      {
+        "name": "Flávia De Abreu Pinheiro",
+        "email": "flavia.pinheiro@ifes.edu.br"
+      },
+      {
+        "name": "Wilton Soares Cardoso",
+        "email": "wilton.cardoso@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "PMCFE",
+    "name": "Programação Em Mobile Como Ferramenta De Ensino",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0420351533636519",
+    "leaders": [
+      {
+        "name": "Eros Estevão De Moura",
+        "email": "eros@ifes.edu.br"
+      },
+      {
+        "name": "Rafael Vargas Mesquita Dos Santos",
+        "email": "rafaelv@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "PING",
+    "name": "Programmable And Intelligent Networking",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6687108387146313",
+    "leaders": [
+      {
+        "name": "Everson Scherrer Borges",
+        "email": "everson@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Ifes- ST",
+    "name": "Propagação E Micropropagação De Plantas",
+    "campus": "Santa Teresa",
+    "knowledge_area": "Agronomia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9472424372428365",
+    "leaders": [
+      {
+        "name": "Hediberto Nei Matiello",
+        "email": "hedibertonm@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "PIIA",
+    "name": "Propriedade Intelectual E Inovação No Agronegócio",
+    "campus": "Itapina",
+    "knowledge_area": "Direito",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6255266323004396",
+    "leaders": [
+      {
+        "name": "Jose Claudio Valbuza",
+        "email": "jose.valbuza@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "PROSATEC",
+    "name": "Prosatec: Tecnologias Digitais E Computação Na Educação",
+    "campus": "Cefor",
+    "knowledge_area": "Ensino",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4384835684643444",
+    "leaders": [
+      {
+        "name": "Rosane Maria Muñoz",
+        "email": "munoz.rosane@gmail.com"
+      },
+      {
+        "name": "Márcia Gonçalves De Oliveira",
+        "email": "clickmarcia@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "QTÁ",
+    "name": "Qualidade E Tratamento De Águas",
+    "campus": "Ibatiba",
+    "knowledge_area": "Engenharia Sanitária",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3547411167396528",
+    "leaders": [
+      {
+        "name": "Benvindo Sirtoli Gardiman Junior",
+        "email": "benvindo.gardiman@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "QAAA",
+    "name": "Química Analítica Ambiental E Aplicada",
+    "campus": "Aracruz",
+    "knowledge_area": "Química",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9902297800862651",
+    "leaders": [
+      {
+        "name": "Thalles Ramon Rosa",
+        "email": "thalles.rosa@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GPQA",
+    "name": "Química Aplicada",
+    "campus": "Alegre",
+    "knowledge_area": "Química",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4705908974942479",
+    "leaders": [
+      {
+        "name": "Luciano Menini",
+        "email": "lmenini@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "QMAPLAFARM-ES",
+    "name": "Química Medicinal Aplicada Ao Planejamento De Fármacos Do Espírito Santo",
+    "campus": "Vila Velha",
+    "knowledge_area": "Química",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6915742836499102",
+    "leaders": [
+      {
+        "name": "Arlan Da Silva Goncalves",
+        "email": "agoncalves@ifes.edu.br"
+      },
+      {
+        "name": "Osmair Vital De Oliveira",
+        "email": "osmair@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "QOPN",
+    "name": "Química Orgânica E De Produtos Naturais",
+    "campus": "Aracruz",
+    "knowledge_area": "Química",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9575326780112347",
+    "leaders": [
+      {
+        "name": "Graziella Penha Claudino",
+        "email": "graziella@ifes.edu.br"
+      },
+      {
+        "name": "Ildomar Alves Do Nascimento",
+        "email": "ildomar@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "QCÔB",
+    "name": "Química, Ciências Ômicas E Biotecnologia",
+    "campus": "Vila Velha",
+    "knowledge_area": "Química",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4198997404798027",
+    "leaders": [
+      {
+        "name": "Wanderson Romão",
+        "email": "wanderson.romao@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Raízes",
+    "name": "Raízes",
+    "campus": "Cariacica",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/7073000271642096",
+    "leaders": [
+      {
+        "name": "Maria José Correa De Souza",
+        "email": "msouza@ifes.edu.br"
+      },
+      {
+        "name": "Filipe Leôncio Braga",
+        "email": "filipe.braga@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "RGEPAIC",
+    "name": "Raízes: Grupo De Estudos E Pesquisas Afro-Brasileiros E Indígenas De Cariacica",
+    "campus": "Cariacica",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2645008552234097",
+    "leaders": [
+      {
+        "name": "Maria José Correa De Souza",
+        "email": "msouza@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "REPROGRAMESE",
+    "name": "Reprograme-Se",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "",
+    "leaders": [
+      {
+        "name": "Daniel José Ventorim Nunes",
+        "email": "danielv@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "RAI",
+    "name": "Robótica E Automação Industrial",
+    "campus": "Linhares",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2978224155566273",
+    "leaders": [
+      {
+        "name": "Lucas Vago Santana",
+        "email": "lucas@ifes.edu.br"
+      },
+      {
+        "name": "Roberto Felipe Andrade Menezes",
+        "email": "roberto.menezes@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "RAI",
+    "name": "Robótica E Automação Inteligente",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2984431002064399",
+    "leaders": [
+      {
+        "name": "Douglas Ruy Soprani Da Silveira Araújo",
+        "email": "douglassoprani@ifes.edu.br "
+      },
+      {
+        "name": "Thomaz Rodrigues Botelho",
+        "email": "thomazrb@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "R",
+    "name": "Ruminantia",
+    "campus": "Santa Teresa",
+    "knowledge_area": "Medicina Veterinária",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2442319522214267",
+    "leaders": [
+      {
+        "name": "Alberto Chambela Neto",
+        "email": "chambela@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "SAFIRA",
+    "name": "Saberes, Afetividade, Formação E Inclusão Relacionados A Aprendizagem",
+    "campus": "Viana",
+    "knowledge_area": "Educação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/1184843840446113",
+    "leaders": [
+      {
+        "name": "Nahun Thiaghor Lippaus Pires Gonçalves",
+        "email": "nahun.goncalves@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "Ifes-Campus Piúma",
+    "name": "Sedimentologia E Dinâmica Ambiental",
+    "campus": "Piúma",
+    "knowledge_area": "Oceanografia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6423098755241730",
+    "leaders": [
+      {
+        "name": "Marlon Carlos Franca",
+        "email": "marlon.franca@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "SMA",
+    "name": "Silvicultura E Meio Ambiente",
+    "campus": "Alegre",
+    "knowledge_area": "Recursos Florestais E Engenharia Florestal",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4271410364048657",
+    "leaders": [
+      {
+        "name": "Carlos Henrique Rodrigues De Oliveira",
+        "email": "engcarloshenrique@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "SiMoPI",
+    "name": "Simulação E Modelagem De Processos Industriais",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia De Materiais E Metalúrgica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9260475507097403",
+    "leaders": [
+      {
+        "name": "Marcelo Lucas Pereira Machado",
+        "email": "marcelolucas@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "SCAOSSP",
+    "name": "Sistemas Computacionais Aplicados A Otimização De Serviços, Sistemas E Processos",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2732118609564185",
+    "leaders": [
+      {
+        "name": "Mário Mestria",
+        "email": "mmestria@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "SEPE",
+    "name": "Sistemas Elétricos De Potência E Energia",
+    "campus": "Guarapari",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4500409186753688",
+    "leaders": [
+      {
+        "name": "Murillo Cobe Vargas",
+        "email": "murillo.vargas@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "SFT",
+    "name": "Sistemas Fluidotérmicos",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Engenharia Mecânica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6042374680220439",
+    "leaders": [
+      {
+        "name": "Leandro Marochio Fernandes",
+        "email": "leandro.mfernandes@ifes.edu.br"
+      },
+      {
+        "name": "Hilton Moulin Caliman",
+        "email": "hilton.caliman@ifes.edu.br"
+      },
+      {
+        "name": "Erick Bernabé Zanelato",
+        "email": "erick.zanelato@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "SI",
+    "name": "Sistemas Inteligentes",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/6611237341601654",
+    "leaders": [
+      {
+        "name": "Bruno Missi Xavier",
+        "email": "bruno.xavier@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "SM",
+    "name": "Sistemas Mecânicos",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Engenharia Mecânica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3712682642913918",
+    "leaders": [
+      {
+        "name": "Markcilei Lima Dan",
+        "email": "dan@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "TAP",
+    "name": "Tecnologia Para Agricultura De Precisão",
+    "campus": "Itapina",
+    "knowledge_area": "Agronomia",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2971141528708122",
+    "leaders": [
+      {
+        "name": "Evandro Chaves De Oliveira",
+        "email": "evandro.oliveira@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "TEIA",
+    "name": "Tecnologia, Empreendedorismo, Inovação E Administração",
+    "campus": "Itapina",
+    "knowledge_area": "Administração",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9080161403091398",
+    "leaders": [
+      {
+        "name": "Larissa Haddad Souza Vieira",
+        "email": "larissa.vieira@ifes.edu.br"
+      },
+      {
+        "name": "Raphael Magalhães Gomes Moreira",
+        "email": "raphael.moreira@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GTA",
+    "name": "Tecnologias Aplicadas",
+    "campus": "Vitória",
+    "knowledge_area": "Engenharia Elétrica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3104542268007514",
+    "leaders": [
+      {
+        "name": "Rodrigo Varejão Andreão",
+        "email": "rodrigova@ifes.edu.br"
+      },
+      {
+        "name": "Mariana Rampinelli Fernandes",
+        "email": "mariana.rampinelli@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "GEPRO",
+    "name": "Tecnologias De Produção E Caracterização De Rochas Ornamentais",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Geociências",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3848701456546526",
+    "leaders": [
+      {
+        "name": "Evanizis Dias Frizzera Castilho",
+        "email": "evanizis@ifes.edu.br"
+      },
+      {
+        "name": "Lilian Gabriella Batista Goncalves De Freitas",
+        "email": "lilian.freitas@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "TMQDNPA",
+    "name": "Tecnologias Para Melhoria Da Qualidade E Desenvolvimento De Novos Produtos Das Abelhas",
+    "campus": "Venda Nova Do Imigrante",
+    "knowledge_area": "Ciência E Tecnologia De Alimentos",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3823253069587904",
+    "leaders": [
+      {
+        "name": "Emanuele Catarina Da Silva Oliveira",
+        "email": "emanuele.oliveira@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "tecVAR",
+    "name": "Tecnologias Para Virtualização, Automação E Robotização E Seus Impactos Sociais, Econômicos E Ambientais",
+    "campus": "Presidente Kennedy",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2975913374297053",
+    "leaders": [
+      {
+        "name": "Ricardo De Magalhães Simões",
+        "email": "rmagalhaess@gmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "TFDR",
+    "name": "Termofluidodinâmica Reativa",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Engenharia Mecânica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/9022222572612275",
+    "leaders": [
+      {
+        "name": "Leandro Marochio Fernandes",
+        "email": "leandro.mfernandes@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "TFTA",
+    "name": "Transporte Ferroviário E Tecnologias Aplicadas",
+    "campus": "Cariacica",
+    "knowledge_area": "Engenharia De Transportes",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/2932111322702214",
+    "leaders": [
+      {
+        "name": "Michel Bruno Taffner",
+        "email": "michel@ifes.edu.br"
+      },
+      {
+        "name": "Renan Carreiro Rocha",
+        "email": "renancarreiro@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "LTM IFES",
+    "name": "Tratamento De Minérios",
+    "campus": "Cachoeiro De Itapemirim",
+    "knowledge_area": "Engenharia De Minas",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/3755604573165445",
+    "leaders": [
+      {
+        "name": "Eliseu Romero Campelo Correia",
+        "email": "eliseur@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "TriboES",
+    "name": "Tribologia E Engenharia De Superfícies",
+    "campus": "Aracruz",
+    "knowledge_area": "Engenharia Mecânica",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/0520274917916498",
+    "leaders": [
+      {
+        "name": "Maycoln Depianti Conci",
+        "email": "mdconci@hotmail.com"
+      }
+    ]
+  },
+  {
+    "short_name": "ZitoLab",
+    "name": "Zitolab",
+    "campus": "Venda Nova Do Imigrante",
+    "knowledge_area": "Ciência E Tecnologia De Alimentos",
+    "repository": "http://dgp.cnpq.br/dgp/espelhogrupo/4899257640192396",
+    "leaders": [
+      {
+        "name": "Genilson De Paiva",
+        "email": "gdepaiva@ifes.edu.br"
+      },
+      {
+        "name": "Marcos Roberto Moacir Ribeiro Pinto",
+        "email": "marcosrmrp@gmail.com"
+      },
+      {
+        "name": "Tiago Delpupo Mognhol",
+        "email": "tiagod@ifes.edu.br"
+      }
+    ]
+  },
+  {
+    "short_name": "",
+    "name": "Filosofia, História E Educação. Resistência Cultural E Subjetividades Não-Hegemônicas",
+    "campus": "Itapina",
+    "knowledge_area": "Sociologia",
+    "repository": "",
+    "leaders": []
+  },
+  {
+    "short_name": "",
+    "name": "Data Science And Complex Networks",
+    "campus": "Serra",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "",
+    "leaders": []
+  },
+  {
+    "short_name": "",
+    "name": "Ontology, Data Science And Integration Research Group",
+    "campus": "Serra",
+    "knowledge_area": "Ciência Da Computação",
+    "repository": "",
+    "leaders": []
+  }
+]

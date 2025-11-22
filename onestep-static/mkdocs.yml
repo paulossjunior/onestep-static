@@ -13,6 +13,7 @@ nav:
   - Researchers: supervisors.md
   - Students: students.md
   - Scholarships: scholarship.md
+  - Downloads: downloads.md
 plugins:
   - search
   - i18n:
@@ -35,6 +36,7 @@ plugins:
             Researchers: Pesquisadores
             Students: Estudantes
             Scholarships: Bolsas
+            Downloads: Downloads
   - macros
   - table-reader
 extra:
