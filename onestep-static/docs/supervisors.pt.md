@@ -7,9 +7,23 @@
   .md-content__inner {
     max-width: 100% !important;
     margin: 0 auto !important;
+    padding: 0 20px !important;
   }
   article {
     max-width: 100% !important;
+  }
+  .md-typeset table:not([class]) {
+    display: table !important;
+    width: 100% !important;
+    table-layout: fixed !important;
+  }
+  #supervisorsTable {
+    width: 100% !important;
+    table-layout: fixed !important;
+  }
+  #supervisorsTable td {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
   }
 </style>
 
@@ -205,30 +219,30 @@
 
 ## Lista de Pesquisadores
 
-{# Sort supervisors by total activity (projects + supervisions) #}
-{% set sorted_supervisors = supervisors|sort(attribute='statistics.total_projects', reverse=True) %}
+{# Sort supervisors alphabetically by name #}
+{% set sorted_supervisors = supervisors|sort(attribute='name') %}
 
 <div style="margin-bottom: 20px;">
   <input type="text" id="searchInput" placeholder="Buscar pesquisador..." 
          style="width: 100%; padding: 10px; font-size: 16px; border: 2px solid #ddd; border-radius: 4px;">
 </div>
 
-<table id="supervisorsTable" style="width:100%; border-collapse: collapse; margin: 20px 0;">
+<table id="supervisorsTable" style="width:100%; border-collapse: collapse; margin: 20px 0; font-size: 13px; table-layout: fixed;">
   <thead>
     <tr style="background-color: #e9ecef;">
-      <th style="padding: 10px; text-align: left; border: 1px solid #dee2e6; cursor: pointer;" onclick="sortTable(0)">
+      <th style="padding: 10px; text-align: left; border: 1px solid #dee2e6; cursor: pointer; width: 20%;" onclick="sortTable(0)">
         Nome ▼
       </th>
-      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; cursor: pointer;" onclick="sortTable(1)">
-        Campus
-      </th>
-      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; cursor: pointer;" onclick="sortTable(2)">
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; cursor: pointer; width: 8%;" onclick="sortTable(1)">
         Projetos
       </th>
-      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; cursor: pointer;" onclick="sortTable(3)">
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; cursor: pointer; width: 12%;" onclick="sortTable(2)">
         Orientações IC
       </th>
-      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; cursor: pointer;" onclick="sortTable(4)">
+      <th style="padding: 10px; text-align: left; border: 1px solid #dee2e6; width: 45%;">
+        Linhas de Pesquisa
+      </th>
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; cursor: pointer; width: 15%;" onclick="sortTable(4)">
         Anos Ativos
       </th>
     </tr>
@@ -243,9 +257,6 @@
         {% endif %}
       </td>
       <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">
-        {{ supervisor['campus'] if supervisor['campus'] else '-' }}
-      </td>
-      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">
         <span style="font-weight: bold; color: #667eea;">{{ supervisor['statistics']['total_projects'] }}</span>
       </td>
       <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">
@@ -255,6 +266,26 @@
           {{ supervisor['statistics']['total_scholarship_holders'] }} bolsistas, 
           {{ supervisor['statistics']['total_volunteers'] }} voluntários
         </small>
+        {% endif %}
+      </td>
+      <td style="padding: 8px; border: 1px solid #dee2e6;">
+        {% set lines = [] %}
+        {% for project in supervisor['research_projects'] %}
+          {% if project.get('research_line') and project['research_line'].strip() %}
+            {% set line = project['research_line'].strip() %}
+            {% if line not in lines %}
+              {% set _ = lines.append(line) %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        {% if lines|length > 0 %}
+          <div style="display: flex; flex-wrap: wrap; gap: 3px; line-height: 1.8;">
+            {% for line in lines|sort %}
+              <span style="background: #e3f2fd; color: #1565c0; padding: 2px 6px; border-radius: 3px; font-size: 11px; white-space: nowrap;">{{ line }}</span>
+            {% endfor %}
+          </div>
+        {% else %}
+          <small style="color: #999;">-</small>
         {% endif %}
       </td>
       <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">
