@@ -1,0 +1,402 @@
+{
+  "metadata": {
+    "user_id": "cFAEK0wAAAAJ",
+    "name": "Paulo Sergio dos Santos Junior",
+    "fetched_at": "2025-11-23T10:07:24.171394",
+    "source": "SearchAPI.io - Google Scholar"
+  },
+  "profile": {
+    "name": "Paulo Sérgio dos Santos Junior",
+    "affiliations": "Professor of Computer Science, Federal Institute of Espirito Santo",
+    "email": "Verified email at ifes.edu.br",
+    "website": "",
+    "interests": [
+      "Enterprise Architecture",
+      "Applied Ontology",
+      "Agile",
+      "Software Engineering"
+    ],
+    "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=cFAEK0wAAAAJ&citpid=3",
+    "metrics": {
+      "citations_all": 409,
+      "citations_since_2020": 166,
+      "h_index_all": 11,
+      "h_index_since_2020": 7,
+      "i10_index_all": 11,
+      "i10_index_since_2020": 6
+    },
+    "citations_by_year": [
+      {
+        "year": 2009,
+        "cites": 2
+      },
+      {
+        "year": 2010,
+        "cites": 14
+      },
+      {
+        "year": 2011,
+        "cites": 26
+      },
+      {
+        "year": 2012,
+        "cites": 13
+      },
+      {
+        "year": 2013,
+        "cites": 33
+      },
+      {
+        "year": 2014,
+        "cites": 26
+      },
+      {
+        "year": 2015,
+        "cites": 27
+      },
+      {
+        "year": 2016,
+        "cites": 23
+      },
+      {
+        "year": 2017,
+        "cites": 15
+      },
+      {
+        "year": 2018,
+        "cites": 25
+      },
+      {
+        "year": 2019,
+        "cites": 24
+      },
+      {
+        "year": 2020,
+        "cites": 20
+      },
+      {
+        "year": 2021,
+        "cites": 32
+      },
+      {
+        "year": 2022,
+        "cites": 30
+      },
+      {
+        "year": 2023,
+        "cites": 26
+      },
+      {
+        "year": 2024,
+        "cites": 30
+      },
+      {
+        "year": 2025,
+        "cites": 27
+      }
+    ],
+    "co_authors": [
+      {
+        "author_id": "9MY-f0EAAAAJ",
+        "name": "João Paulo A. Almeida",
+        "link": "https://scholar.google.com/citations?user=9MY-f0EAAAAJ&hl=en",
+        "affiliations": "Federal University of Espirito Santo, Brazil",
+        "email": "Verified email at inf.ufes.br",
+        "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=small_photo&user=9MY-f0EAAAAJ&citpid=4"
+      },
+      {
+        "author_id": "-ZXHoL4AAAAJ",
+        "name": "Monalessa Perini Barcellos",
+        "link": "https://scholar.google.com/citations?user=-ZXHoL4AAAAJ&hl=en",
+        "affiliations": "Associate Professor - Federal University of Espírito Santo (UFES)",
+        "email": "Verified email at inf.ufes.br",
+        "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=small_photo&user=-ZXHoL4AAAAJ&citpid=3"
+      },
+      {
+        "author_id": "nnfVBt8AAAAJ",
+        "name": "Giancarlo Guizzardi",
+        "link": "https://scholar.google.com/citations?user=nnfVBt8AAAAJ&hl=en",
+        "affiliations": "Chair of Semantics, Cybersecurity & Services (SCS), University of Twente, EEMCS, The Netherlands",
+        "email": "Verified email at inf.ufes.br",
+        "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=small_photo&user=nnfVBt8AAAAJ&citpid=4"
+      },
+      {
+        "author_id": "mrBLyX0AAAAJ",
+        "name": "Rodrigo F. Calhau",
+        "link": "https://scholar.google.com/citations?user=mrBLyX0AAAAJ&hl=en",
+        "affiliations": "Federal Institute of Espírito Santo",
+        "email": "Verified email at ifes.edu.br",
+        "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=small_photo&user=mrBLyX0AAAAJ&citpid=23"
+      },
+      {
+        "author_id": "StrLqxIAAAAJ",
+        "name": "Fabiano B. Ruy",
+        "link": "https://scholar.google.com/citations?user=StrLqxIAAAAJ&hl=en",
+        "affiliations": "Federal Institute of Espírito Santo",
+        "email": "Verified email at ifes.edu.br",
+        "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=small_photo&user=StrLqxIAAAAJ&citpid=2"
+      },
+      {
+        "author_id": "eH4gxyUAAAAJ",
+        "name": "Mateus Barcellos Costa",
+        "link": "https://scholar.google.com/citations?user=eH4gxyUAAAAJ&hl=en",
+        "affiliations": "Instituto Federal do Espírito Santo, Federal Institute of Espírito Santo",
+        "email": "Verified email at ifes.edu.br",
+        "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=small_photo&user=eH4gxyUAAAAJ&citpid=9"
+      },
+      {
+        "author_id": "fUNNBSkAAAAJ",
+        "name": "Davidson Cury",
+        "link": "https://scholar.google.com/citations?user=fUNNBSkAAAAJ&hl=en",
+        "affiliations": "Professor Titular de Ciência da Computação, Universidade Federal do Espírito",
+        "email": "Verified email at inf.ufes.br",
+        "thumbnail": "https://scholar.google.com/citations/images/avatar_scholar_56.png"
+      },
+      {
+        "author_id": "Ftf_14QAAAAJ",
+        "name": "Renata Guizzardi",
+        "link": "https://scholar.google.com/citations?user=Ftf_14QAAAAJ&hl=en",
+        "affiliations": "University of Twente",
+        "email": "Verified email at utwente.nl",
+        "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=small_photo&user=Ftf_14QAAAAJ&citpid=2"
+      },
+      {
+        "author_id": "L7uBo5gAAAAJ",
+        "name": "Evellin Cardoso",
+        "link": "https://scholar.google.com/citations?user=L7uBo5gAAAAJ&hl=en",
+        "affiliations": "Federal University of Goias, Brazil",
+        "email": "Verified email at ufg.br",
+        "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=small_photo&user=L7uBo5gAAAAJ&citpid=3"
+      },
+      {
+        "author_id": "GS-PGMMAAAAJ",
+        "name": "Marcio Bender Machado",
+        "link": "https://scholar.google.com/citations?user=GS-PGMMAAAAJ&hl=en",
+        "affiliations": "Professor IFSP, Brazil",
+        "email": "Verified email at ifsp.edu.br",
+        "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=small_photo&user=GS-PGMMAAAAJ&citpid=1"
+      },
+      {
+        "author_id": "VEi6_yEAAAAJ",
+        "name": "Wagner de Andrade Perin",
+        "link": "https://scholar.google.com/citations?user=VEi6_yEAAAAJ&hl=en",
+        "affiliations": "Universidade Federal do Espírito Santo",
+        "email": "Verified email at ufes.br",
+        "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=small_photo&user=VEi6_yEAAAAJ&citpid=1"
+      },
+      {
+        "author_id": "JY5JjFkAAAAJ",
+        "name": "Karin Satie Komati",
+        "link": "https://scholar.google.com/citations?user=JY5JjFkAAAAJ&hl=en",
+        "affiliations": "Ifes Campus Serra",
+        "email": "Verified email at ifes.edu.br",
+        "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=small_photo&user=JY5JjFkAAAAJ&citpid=2"
+      },
+      {
+        "author_id": "cSxuntYAAAAJ",
+        "name": "Maxwell E. Monteiro",
+        "link": "https://scholar.google.com/citations?user=cSxuntYAAAAJ&hl=en",
+        "affiliations": "Professor at federal Institute of Technology of espirito santo(IFES)",
+        "email": "Verified email at ifes.edu.br",
+        "thumbnail": "https://scholar.google.com/citations/images/avatar_scholar_56.png"
+      },
+      {
+        "author_id": "OpwJrFYAAAAJ",
+        "name": "Gabriel Miranda",
+        "link": "https://scholar.google.com/citations?user=OpwJrFYAAAAJ&hl=en",
+        "affiliations": "Universidade Federal do Espírito Santo",
+        "email": "Verified email at ufes.br",
+        "thumbnail": "https://scholar.google.com/citations/images/avatar_scholar_56.png"
+      }
+    ]
+  },
+  "statistics": {
+    "total_years": 17,
+    "avg_citations_per_year": 23.12,
+    "peak_year": 2013,
+    "peak_citations": 33,
+    "recent_trend": "Growing"
+  },
+  "articles": [
+    {
+      "title": "An ontology-based analysis and semantics for organizational structure modeling in the ARIS method",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:UeHWp8X0CEIC",
+      "citation_id": "cFAEK0wAAAAJ:UeHWp8X0CEIC",
+      "authors": "PS Santos Jr, JPA Almeida, G Guizzardi",
+      "publication": "Information Systems 38 (5), 690-708, 2013",
+      "cited_by": 71,
+      "year": 2013
+    },
+    {
+      "title": "An ontology-based semantic foundation for ARIS EPCs",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:u5HHmVD_uO8C",
+      "citation_id": "cFAEK0wAAAAJ:u5HHmVD_uO8C",
+      "authors": "PS Santos Jr, JPA Almeida, G Guizzardi",
+      "publication": "Proceedings of the 2010 ACM Symposium on Applied Computing, 124-130, 2010",
+      "cited_by": 54,
+      "year": 2010
+    },
+    {
+      "title": "From a scrum reference ontology to the integration of applications for data-driven software development",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:Fu2w8maKXqMC",
+      "citation_id": "cFAEK0wAAAAJ:Fu2w8maKXqMC",
+      "authors": "PSS Júnior, MP Barcellos, R de Almeida Falbo, JPA Almeida",
+      "publication": "Information and Software Technology 136, 106570, 2021",
+      "cited_by": 46,
+      "year": 2021
+    },
+    {
+      "title": "Applying and extending a semantic foundation for role-related concepts in enterprise modelling",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:u-x6o8ySG0sC",
+      "citation_id": "cFAEK0wAAAAJ:u-x6o8ySG0sC",
+      "authors": "JPA Almeida, G Guizzardi, PS Santos Jr",
+      "publication": "Enterprise Information Systems 3 (3), 253-277, 2009",
+      "cited_by": 44,
+      "year": 2009
+    },
+    {
+      "title": "Semantic integration of goal and business process modeling",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:d1gkVwhDpl0C",
+      "citation_id": "cFAEK0wAAAAJ:d1gkVwhDpl0C",
+      "authors": "ECS Cardoso, PS Santos Jr, JPA Almeida, RSS Guizzardi, G Guizzardi",
+      "publication": "IFIP International Conference on Research and Practical Issues of Enterprise …, 2010",
+      "cited_by": 39,
+      "year": 2010
+    },
+    {
+      "title": "An ontology-based semantic foundation for organizational structure modeling in the aris method",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:eQOLeE2rZwMC",
+      "citation_id": "cFAEK0wAAAAJ:eQOLeE2rZwMC",
+      "authors": "PS Santos Jr, JPA Almeida, G Guizzardi",
+      "publication": "2010 14th IEEE International Enterprise Distributed Object Computing …, 2010",
+      "cited_by": 29,
+      "year": 2010
+    },
+    {
+      "title": "Uncovering the organisational modelling and business process modelling languages in the ARIS method",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:9yKSN-GCB0IC",
+      "citation_id": "cFAEK0wAAAAJ:9yKSN-GCB0IC",
+      "authors": "PS Santos, JPA Almeida, TL Pianissolla",
+      "publication": "International Journal of Business Process Integration and Management 5 (2 …, 2011",
+      "cited_by": 27,
+      "year": 2011
+    },
+    {
+      "title": "A blended learning experience applying project-based learning in an interdisciplinary classroom",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:JQOojiI6XY0C",
+      "citation_id": "cFAEK0wAAAAJ:JQOojiI6XY0C",
+      "authors": "F Medeiros, P Júnior, M Bender, L Menegussi, M Curcher",
+      "publication": "ICERI2017 Proceedings, 8665-8672, 2017",
+      "cited_by": 23,
+      "year": 2017
+    },
+    {
+      "title": "Am i going to heaven? first step climbing the stairway to heaven model results from a case study in industry",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:uLbwQdceFCQC",
+      "citation_id": "cFAEK0wAAAAJ:uLbwQdceFCQC",
+      "authors": "PS Santos, MP Barcellos, RF Calhau",
+      "publication": "Proceedings of the XXXIV Brazilian Symposium on Software Engineering, 309-318, 2020",
+      "cited_by": 13,
+      "year": 2020
+    },
+    {
+      "title": "CMPAAS: A platform of services for construction and handling of concept maps",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:YsMSGLbcyi4C",
+      "citation_id": "cFAEK0wAAAAJ:YsMSGLbcyi4C",
+      "authors": "D Cury, WA Perin, PS Santos Jr",
+      "publication": "International Conference on Concept Mapping, 6th, 107-115, 2014",
+      "cited_by": 13,
+      "year": 2014
+    },
+    {
+      "title": "Tell me: Am i going to heaven? a diagnosis instrument of continuous software engineering practices adoption",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:W5xh706n7nkC",
+      "citation_id": "cFAEK0wAAAAJ:W5xh706n7nkC",
+      "authors": "PS dos Santos Júnior, M Perini Barcellos, F Borges Ruy",
+      "publication": "Proceedings of the 25th International Conference on Evaluation and …, 2021",
+      "cited_by": 12,
+      "year": 2021
+    },
+    {
+      "title": "Flying over brazilian organizations with zeppelin: A preliminary panoramic picture of continuous software engineering",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:ZfRJV9d4-WMC",
+      "citation_id": "cFAEK0wAAAAJ:ZfRJV9d4-WMC",
+      "authors": "PSS Júnior, MP Barcellos, FB Ruy, MS Omêna",
+      "publication": "Proceedings of the XXXVI Brazilian Symposium on Software Engineering, 279-288, 2022",
+      "cited_by": 6,
+      "year": 2022
+    },
+    {
+      "title": "Um ambiente para acompanhamento da aprendizagem baseado em mapas conceituais",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:1yQoGdGgb4wC",
+      "citation_id": "cFAEK0wAAAAJ:1yQoGdGgb4wC",
+      "authors": "PS Santos Jr, CS de Menezes, D Cury, RA de Nevado",
+      "publication": "Brazilian Symposium on Computers in Education (Simpósio Brasileiro de …, 2005",
+      "cited_by": 6,
+      "year": 2005
+    },
+    {
+      "title": "Unveiling the Landscape of System Thinking Modeling Tools Use in Software Engineering",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:z_wVstp3MssC",
+      "citation_id": "cFAEK0wAAAAJ:z_wVstp3MssC",
+      "authors": "J de Souza Borges, TFN Lahass, AB Apolinário, PS dos Santos Júnior, ...",
+      "publication": "Simpósio Brasileiro de Engenharia de Software (SBES), 47-57, 2024",
+      "cited_by": 3,
+      "year": 2024
+    },
+    {
+      "title": "Towards federated ontology-driven data integration in continuous software engineering",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:VLnqNzywnoUC",
+      "citation_id": "cFAEK0wAAAAJ:VLnqNzywnoUC",
+      "authors": "PS Santos Júnior, JPA Almeida, M Barcellos",
+      "publication": "Proceedings of the XXXVII Brazilian Symposium on Software Engineering, 31-36, 2023",
+      "cited_by": 3,
+      "year": 2023
+    },
+    {
+      "title": "Ontologia de Domínio de Doação de Órgãos e Tecidos para apoio a Integração Semântica de Sistemas.",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:Tyk-4Ss8FVUC",
+      "citation_id": "cFAEK0wAAAAJ:Tyk-4Ss8FVUC",
+      "authors": "L Pereira, RF Calhau, PS dos Santos Júnior, MB Costa",
+      "publication": "CIbSE, 222, 2015",
+      "cited_by": 3,
+      "year": 2015
+    },
+    {
+      "title": "LEDS: Um Ambiente para Impulsionar o Aprendizado em Computação",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:W7OEmFMy1HYC",
+      "citation_id": "cFAEK0wAAAAJ:W7OEmFMy1HYC",
+      "authors": "R Calhau, PS Júnior, K Komati, M Monteiro, F Ruy, V Nunes",
+      "publication": "Workshop sobre Educação em Computação (WEI), 199-208, 2014",
+      "cited_by": 3,
+      "year": 2014
+    },
+    {
+      "title": "Uma interpretação para os elementos de EPCs com base em uma ontologia de fundamentação",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:qjMakFHDy7sC",
+      "citation_id": "cFAEK0wAAAAJ:qjMakFHDy7sC",
+      "authors": "PS Santos Jr, JPA Almeida, G Guizzardi",
+      "publication": "3rd Workshop on Business Process Modeling Management (WBPM), 15th Brazilian …, 2009",
+      "cited_by": 3,
+      "year": 2009
+    },
+    {
+      "title": "Escavando as linguagens de modelagem organizacional e modelagem de processos de negócio do ARIS method",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:2osOgNQ5qMEC",
+      "citation_id": "cFAEK0wAAAAJ:2osOgNQ5qMEC",
+      "authors": "PS Santos Jr, JPA Almeida",
+      "publication": "Companion Proceedings of the XIV Brazilian Symposium on Multimedia and the …, 2008",
+      "cited_by": 3,
+      "year": 2008
+    },
+    {
+      "title": "Help! i need somebody. a mapping study about expert identification in software development",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:uJ-U7cs_P_0C",
+      "citation_id": "cFAEK0wAAAAJ:uJ-U7cs_P_0C",
+      "authors": "C Braga, P Santos Jr, M Barcellos",
+      "publication": "Proceedings of the XXXVII Brazilian Symposium on Software Engineering, 154-163, 2023",
+      "cited_by": 2,
+      "year": 2023
+    }
+  ]
+}

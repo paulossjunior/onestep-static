@@ -5,7 +5,8 @@
 
 .PHONY: help install clean process-all process-groups process-projects process-scholarships \
         aggregate-students aggregate-supervisors analyze-partnerships analyze-networks \
-        calculate-recurrence translate-docs build-docs serve-docs deploy test lint
+        calculate-recurrence translate-docs build-docs serve-docs deploy test lint \
+        fetch-scholar-data
 
 # Default target
 .DEFAULT_GOAL := help
@@ -128,10 +129,10 @@ analyze-networks: ## Generate network statistics for research groups
 	$(PYTHON) $(SRC_DIR)/generate_network_stats.py
 	@echo "$(COLOR_GREEN)✓ Network statistics generated$(COLOR_RESET)"
 
-aggregate-research-lines: ## Aggregate data by research line
-	@echo "$(COLOR_BOLD)Aggregating data by research line...$(COLOR_RESET)"
-	$(PYTHON) $(SRC_DIR)/group_by_research_line.py
-	@echo "$(COLOR_GREEN)✓ Research lines aggregated$(COLOR_RESET)"
+fetch-scholar-data: ## Fetch Google Scholar data and generate papers.json
+	@echo "$(COLOR_BOLD)Fetching Google Scholar data from supervisors...$(COLOR_RESET)"
+	$(PYTHON) $(SRC_DIR)/fetch_all_researchers_papers.py
+	@echo "$(COLOR_GREEN)✓ Scholar data fetched and papers.json generated$(COLOR_RESET)"
 
 translate-docs: ## Translate documentation to Portuguese
 	@echo "$(COLOR_BOLD)Translating documentation...$(COLOR_RESET)"

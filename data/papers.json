@@ -1,0 +1,1404 @@
+{
+  "campus": "Serra",
+  "total_researchers": 4,
+  "generated_at": "2025-11-23T15:14:25.677505",
+  "researchers": [
+    {
+      "researcher": {
+        "name": "Paulo Sérgio Dos Santos Júnior",
+        "campus": "Serra",
+        "scholar_id": "cFAEK0wAAAAJ",
+        "scholar_url": "https://scholar.google.com/citations?user=cFAEK0wAAAAJ",
+        "affiliation": "Professor of Computer Science, Federal Institute of Espirito Santo",
+        "email": "Verified email at ifes.edu.br",
+        "interests": [
+          "Enterprise Architecture",
+          "Applied Ontology",
+          "Agile",
+          "Software Engineering"
+        ]
+      },
+      "statistics": {
+        "total_papers": 20,
+        "total_citations": 409,
+        "average_citations_per_paper": 20.45,
+        "h_index": {
+          "all_time": "11",
+          "since_2020": "7"
+        },
+        "i10_index": {
+          "all_time": "11",
+          "since_2020": "6"
+        },
+        "papers_by_year": {
+          "2013": 1,
+          "2010": 3,
+          "2021": 2,
+          "2009": 2,
+          "2011": 1,
+          "2017": 1,
+          "2020": 1,
+          "2014": 2,
+          "2022": 1,
+          "2005": 1,
+          "2024": 1,
+          "2023": 2,
+          "2015": 1,
+          "2008": 1
+        },
+        "citations_by_year": [
+          {
+            "year": 2009,
+            "cites": 2
+          },
+          {
+            "year": 2010,
+            "cites": 14
+          },
+          {
+            "year": 2011,
+            "cites": 26
+          },
+          {
+            "year": 2012,
+            "cites": 13
+          },
+          {
+            "year": 2013,
+            "cites": 33
+          },
+          {
+            "year": 2014,
+            "cites": 26
+          },
+          {
+            "year": 2015,
+            "cites": 27
+          },
+          {
+            "year": 2016,
+            "cites": 23
+          },
+          {
+            "year": 2017,
+            "cites": 15
+          },
+          {
+            "year": 2018,
+            "cites": 25
+          },
+          {
+            "year": 2019,
+            "cites": 24
+          },
+          {
+            "year": 2020,
+            "cites": 20
+          },
+          {
+            "year": 2021,
+            "cites": 32
+          },
+          {
+            "year": 2022,
+            "cites": 30
+          },
+          {
+            "year": 2023,
+            "cites": 26
+          },
+          {
+            "year": 2024,
+            "cites": 30
+          },
+          {
+            "year": 2025,
+            "cites": 27
+          }
+        ]
+      },
+      "top_5_papers": [
+        {
+          "title": "An ontology-based analysis and semantics for organizational structure modeling in the ARIS method",
+          "authors": "PS Santos Jr, JPA Almeida, G Guizzardi",
+          "publication": "Information Systems 38 (5), 690-708, 2013",
+          "year": 2013,
+          "citations": 71,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:UeHWp8X0CEIC",
+          "citation_id": "cFAEK0wAAAAJ:UeHWp8X0CEIC"
+        },
+        {
+          "title": "An ontology-based semantic foundation for ARIS EPCs",
+          "authors": "PS Santos Jr, JPA Almeida, G Guizzardi",
+          "publication": "Proceedings of the 2010 ACM Symposium on Applied Computing, 124-130, 2010",
+          "year": 2010,
+          "citations": 54,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:u5HHmVD_uO8C",
+          "citation_id": "cFAEK0wAAAAJ:u5HHmVD_uO8C"
+        },
+        {
+          "title": "From a scrum reference ontology to the integration of applications for data-driven software development",
+          "authors": "PSS Júnior, MP Barcellos, R de Almeida Falbo, JPA Almeida",
+          "publication": "Information and Software Technology 136, 106570, 2021",
+          "year": 2021,
+          "citations": 46,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:Fu2w8maKXqMC",
+          "citation_id": "cFAEK0wAAAAJ:Fu2w8maKXqMC"
+        },
+        {
+          "title": "Applying and extending a semantic foundation for role-related concepts in enterprise modelling",
+          "authors": "JPA Almeida, G Guizzardi, PS Santos Jr",
+          "publication": "Enterprise Information Systems 3 (3), 253-277, 2009",
+          "year": 2009,
+          "citations": 44,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:u-x6o8ySG0sC",
+          "citation_id": "cFAEK0wAAAAJ:u-x6o8ySG0sC"
+        },
+        {
+          "title": "Semantic integration of goal and business process modeling",
+          "authors": "ECS Cardoso, PS Santos Jr, JPA Almeida, RSS Guizzardi, G Guizzardi",
+          "publication": "IFIP International Conference on Research and Practical Issues of Enterprise …, 2010",
+          "year": 2010,
+          "citations": 39,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:d1gkVwhDpl0C",
+          "citation_id": "cFAEK0wAAAAJ:d1gkVwhDpl0C"
+        }
+      ],
+      "all_papers": [
+        {
+          "title": "An ontology-based analysis and semantics for organizational structure modeling in the ARIS method",
+          "authors": "PS Santos Jr, JPA Almeida, G Guizzardi",
+          "publication": "Information Systems 38 (5), 690-708, 2013",
+          "year": 2013,
+          "citations": 71,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:UeHWp8X0CEIC",
+          "citation_id": "cFAEK0wAAAAJ:UeHWp8X0CEIC"
+        },
+        {
+          "title": "An ontology-based semantic foundation for ARIS EPCs",
+          "authors": "PS Santos Jr, JPA Almeida, G Guizzardi",
+          "publication": "Proceedings of the 2010 ACM Symposium on Applied Computing, 124-130, 2010",
+          "year": 2010,
+          "citations": 54,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:u5HHmVD_uO8C",
+          "citation_id": "cFAEK0wAAAAJ:u5HHmVD_uO8C"
+        },
+        {
+          "title": "From a scrum reference ontology to the integration of applications for data-driven software development",
+          "authors": "PSS Júnior, MP Barcellos, R de Almeida Falbo, JPA Almeida",
+          "publication": "Information and Software Technology 136, 106570, 2021",
+          "year": 2021,
+          "citations": 46,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:Fu2w8maKXqMC",
+          "citation_id": "cFAEK0wAAAAJ:Fu2w8maKXqMC"
+        },
+        {
+          "title": "Applying and extending a semantic foundation for role-related concepts in enterprise modelling",
+          "authors": "JPA Almeida, G Guizzardi, PS Santos Jr",
+          "publication": "Enterprise Information Systems 3 (3), 253-277, 2009",
+          "year": 2009,
+          "citations": 44,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:u-x6o8ySG0sC",
+          "citation_id": "cFAEK0wAAAAJ:u-x6o8ySG0sC"
+        },
+        {
+          "title": "Semantic integration of goal and business process modeling",
+          "authors": "ECS Cardoso, PS Santos Jr, JPA Almeida, RSS Guizzardi, G Guizzardi",
+          "publication": "IFIP International Conference on Research and Practical Issues of Enterprise …, 2010",
+          "year": 2010,
+          "citations": 39,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:d1gkVwhDpl0C",
+          "citation_id": "cFAEK0wAAAAJ:d1gkVwhDpl0C"
+        },
+        {
+          "title": "An ontology-based semantic foundation for organizational structure modeling in the aris method",
+          "authors": "PS Santos Jr, JPA Almeida, G Guizzardi",
+          "publication": "2010 14th IEEE International Enterprise Distributed Object Computing …, 2010",
+          "year": 2010,
+          "citations": 29,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:eQOLeE2rZwMC",
+          "citation_id": "cFAEK0wAAAAJ:eQOLeE2rZwMC"
+        },
+        {
+          "title": "Uncovering the organisational modelling and business process modelling languages in the ARIS method",
+          "authors": "PS Santos, JPA Almeida, TL Pianissolla",
+          "publication": "International Journal of Business Process Integration and Management 5 (2 …, 2011",
+          "year": 2011,
+          "citations": 27,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:9yKSN-GCB0IC",
+          "citation_id": "cFAEK0wAAAAJ:9yKSN-GCB0IC"
+        },
+        {
+          "title": "A blended learning experience applying project-based learning in an interdisciplinary classroom",
+          "authors": "F Medeiros, P Júnior, M Bender, L Menegussi, M Curcher",
+          "publication": "ICERI2017 Proceedings, 8665-8672, 2017",
+          "year": 2017,
+          "citations": 23,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:JQOojiI6XY0C",
+          "citation_id": "cFAEK0wAAAAJ:JQOojiI6XY0C"
+        },
+        {
+          "title": "Am i going to heaven? first step climbing the stairway to heaven model results from a case study in industry",
+          "authors": "PS Santos, MP Barcellos, RF Calhau",
+          "publication": "Proceedings of the XXXIV Brazilian Symposium on Software Engineering, 309-318, 2020",
+          "year": 2020,
+          "citations": 13,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:uLbwQdceFCQC",
+          "citation_id": "cFAEK0wAAAAJ:uLbwQdceFCQC"
+        },
+        {
+          "title": "CMPAAS: A platform of services for construction and handling of concept maps",
+          "authors": "D Cury, WA Perin, PS Santos Jr",
+          "publication": "International Conference on Concept Mapping, 6th, 107-115, 2014",
+          "year": 2014,
+          "citations": 13,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:YsMSGLbcyi4C",
+          "citation_id": "cFAEK0wAAAAJ:YsMSGLbcyi4C"
+        },
+        {
+          "title": "Tell me: Am i going to heaven? a diagnosis instrument of continuous software engineering practices adoption",
+          "authors": "PS dos Santos Júnior, M Perini Barcellos, F Borges Ruy",
+          "publication": "Proceedings of the 25th International Conference on Evaluation and …, 2021",
+          "year": 2021,
+          "citations": 12,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:W5xh706n7nkC",
+          "citation_id": "cFAEK0wAAAAJ:W5xh706n7nkC"
+        },
+        {
+          "title": "Flying over brazilian organizations with zeppelin: A preliminary panoramic picture of continuous software engineering",
+          "authors": "PSS Júnior, MP Barcellos, FB Ruy, MS Omêna",
+          "publication": "Proceedings of the XXXVI Brazilian Symposium on Software Engineering, 279-288, 2022",
+          "year": 2022,
+          "citations": 6,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:ZfRJV9d4-WMC",
+          "citation_id": "cFAEK0wAAAAJ:ZfRJV9d4-WMC"
+        },
+        {
+          "title": "Um ambiente para acompanhamento da aprendizagem baseado em mapas conceituais",
+          "authors": "PS Santos Jr, CS de Menezes, D Cury, RA de Nevado",
+          "publication": "Brazilian Symposium on Computers in Education (Simpósio Brasileiro de …, 2005",
+          "year": 2005,
+          "citations": 6,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:1yQoGdGgb4wC",
+          "citation_id": "cFAEK0wAAAAJ:1yQoGdGgb4wC"
+        },
+        {
+          "title": "Unveiling the Landscape of System Thinking Modeling Tools Use in Software Engineering",
+          "authors": "J de Souza Borges, TFN Lahass, AB Apolinário, PS dos Santos Júnior, ...",
+          "publication": "Simpósio Brasileiro de Engenharia de Software (SBES), 47-57, 2024",
+          "year": 2024,
+          "citations": 3,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:z_wVstp3MssC",
+          "citation_id": "cFAEK0wAAAAJ:z_wVstp3MssC"
+        },
+        {
+          "title": "Towards federated ontology-driven data integration in continuous software engineering",
+          "authors": "PS Santos Júnior, JPA Almeida, M Barcellos",
+          "publication": "Proceedings of the XXXVII Brazilian Symposium on Software Engineering, 31-36, 2023",
+          "year": 2023,
+          "citations": 3,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:VLnqNzywnoUC",
+          "citation_id": "cFAEK0wAAAAJ:VLnqNzywnoUC"
+        },
+        {
+          "title": "Ontologia de Domínio de Doação de Órgãos e Tecidos para apoio a Integração Semântica de Sistemas.",
+          "authors": "L Pereira, RF Calhau, PS dos Santos Júnior, MB Costa",
+          "publication": "CIbSE, 222, 2015",
+          "year": 2015,
+          "citations": 3,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:Tyk-4Ss8FVUC",
+          "citation_id": "cFAEK0wAAAAJ:Tyk-4Ss8FVUC"
+        },
+        {
+          "title": "LEDS: Um Ambiente para Impulsionar o Aprendizado em Computação",
+          "authors": "R Calhau, PS Júnior, K Komati, M Monteiro, F Ruy, V Nunes",
+          "publication": "Workshop sobre Educação em Computação (WEI), 199-208, 2014",
+          "year": 2014,
+          "citations": 3,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:W7OEmFMy1HYC",
+          "citation_id": "cFAEK0wAAAAJ:W7OEmFMy1HYC"
+        },
+        {
+          "title": "Uma interpretação para os elementos de EPCs com base em uma ontologia de fundamentação",
+          "authors": "PS Santos Jr, JPA Almeida, G Guizzardi",
+          "publication": "3rd Workshop on Business Process Modeling Management (WBPM), 15th Brazilian …, 2009",
+          "year": 2009,
+          "citations": 3,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:qjMakFHDy7sC",
+          "citation_id": "cFAEK0wAAAAJ:qjMakFHDy7sC"
+        },
+        {
+          "title": "Escavando as linguagens de modelagem organizacional e modelagem de processos de negócio do ARIS method",
+          "authors": "PS Santos Jr, JPA Almeida",
+          "publication": "Companion Proceedings of the XIV Brazilian Symposium on Multimedia and the …, 2008",
+          "year": 2008,
+          "citations": 3,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:2osOgNQ5qMEC",
+          "citation_id": "cFAEK0wAAAAJ:2osOgNQ5qMEC"
+        },
+        {
+          "title": "Help! i need somebody. a mapping study about expert identification in software development",
+          "authors": "C Braga, P Santos Jr, M Barcellos",
+          "publication": "Proceedings of the XXXVII Brazilian Symposium on Software Engineering, 154-163, 2023",
+          "year": 2023,
+          "citations": 2,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:uJ-U7cs_P_0C",
+          "citation_id": "cFAEK0wAAAAJ:uJ-U7cs_P_0C"
+        }
+      ]
+    },
+    {
+      "researcher": {
+        "name": "Rodrigo Fernandes Calhau",
+        "campus": "Serra",
+        "scholar_id": "mrBLyX0AAAAJ",
+        "scholar_url": "https://scholar.google.com/citations?user=mrBLyX0AAAAJ",
+        "affiliation": "Federal Institute of Espírito Santo",
+        "email": "Verified email at ifes.edu.br",
+        "interests": [
+          "Applied Ontology",
+          "Semantic Integration",
+          "Capability Modeling",
+          "System Modeling"
+        ]
+      },
+      "statistics": {
+        "total_papers": 20,
+        "total_citations": 218,
+        "average_citations_per_paper": 10.9,
+        "h_index": {
+          "all_time": "9",
+          "since_2020": "7"
+        },
+        "i10_index": {
+          "all_time": "8",
+          "since_2020": "6"
+        },
+        "papers_by_year": {
+          "2010": 1,
+          "2012": 1,
+          "2021": 1,
+          "2024": 4,
+          "2011": 2,
+          "2023": 3,
+          "2020": 1,
+          "2022": 2,
+          "2015": 1,
+          "2014": 1,
+          "2013": 1,
+          "2008": 1,
+          "2025": 1
+        },
+        "citations_by_year": [
+          {
+            "year": 2011,
+            "cites": 7
+          },
+          {
+            "year": 2012,
+            "cites": 3
+          },
+          {
+            "year": 2013,
+            "cites": 4
+          },
+          {
+            "year": 2014,
+            "cites": 14
+          },
+          {
+            "year": 2015,
+            "cites": 11
+          },
+          {
+            "year": 2016,
+            "cites": 9
+          },
+          {
+            "year": 2017,
+            "cites": 8
+          },
+          {
+            "year": 2018,
+            "cites": 6
+          },
+          {
+            "year": 2019,
+            "cites": 7
+          },
+          {
+            "year": 2020,
+            "cites": 8
+          },
+          {
+            "year": 2021,
+            "cites": 15
+          },
+          {
+            "year": 2022,
+            "cites": 12
+          },
+          {
+            "year": 2023,
+            "cites": 26
+          },
+          {
+            "year": 2024,
+            "cites": 44
+          },
+          {
+            "year": 2025,
+            "cites": 40
+          }
+        ]
+      },
+      "top_5_papers": [
+        {
+          "title": "An ontology-based approach for semantic integration",
+          "authors": "RF Calhau, R de Almeida Falbo",
+          "publication": "2010 14th IEEE International Enterprise Distributed Object Computing …, 2010",
+          "year": 2010,
+          "citations": 41,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:IjCSPb-OGe4C",
+          "citation_id": "mrBLyX0AAAAJ:IjCSPb-OGe4C"
+        },
+        {
+          "title": "A configuration management task ontology for semantic integration",
+          "authors": "RF Calhau, R de Almeida Falbo",
+          "publication": "Proceedings of the 27th Annual ACM Symposium on Applied Computing, 348-353, 2012",
+          "year": 2012,
+          "citations": 28,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:UeHWp8X0CEIC",
+          "citation_id": "mrBLyX0AAAAJ:UeHWp8X0CEIC"
+        },
+        {
+          "title": "Towards Ontology-based Competence Modeling in Enterprise Architecture",
+          "authors": "RF Calhau, CLB Azevedo, JPA Almeida",
+          "publication": "2021 20th IEEE International Enterprise Distributed Object Computing Conference, 2021",
+          "year": 2021,
+          "citations": 25,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:TFP_iSt0sucC",
+          "citation_id": "mrBLyX0AAAAJ:TFP_iSt0sucC"
+        },
+        {
+          "title": "Modeling competences in enterprise architecture: From knowledge, skills, and attitudes to organizational capabilities",
+          "authors": "RF Calhau, JPA Almeida, S Kokkula, G Guizzardi",
+          "publication": "Software and Systems Modeling 23 (3), 559-598, 2024",
+          "year": 2024,
+          "citations": 24,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:J_g5lzvAfSwC",
+          "citation_id": "mrBLyX0AAAAJ:J_g5lzvAfSwC"
+        },
+        {
+          "title": "An approach for managing and semantically enriching the publication of Linked Open Governmental Data",
+          "authors": "K de Faria Cordeiro, FF de Faria, B de Oliveira Pereira, A Freitas, ...",
+          "publication": "Proceedings of the 3rd workshop in applied computing for electronic …, 2011",
+          "year": 2011,
+          "citations": 17,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:zYLM7Y9cAGgC",
+          "citation_id": "mrBLyX0AAAAJ:zYLM7Y9cAGgC"
+        }
+      ],
+      "all_papers": [
+        {
+          "title": "An ontology-based approach for semantic integration",
+          "authors": "RF Calhau, R de Almeida Falbo",
+          "publication": "2010 14th IEEE International Enterprise Distributed Object Computing …, 2010",
+          "year": 2010,
+          "citations": 41,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:IjCSPb-OGe4C",
+          "citation_id": "mrBLyX0AAAAJ:IjCSPb-OGe4C"
+        },
+        {
+          "title": "A configuration management task ontology for semantic integration",
+          "authors": "RF Calhau, R de Almeida Falbo",
+          "publication": "Proceedings of the 27th Annual ACM Symposium on Applied Computing, 348-353, 2012",
+          "year": 2012,
+          "citations": 28,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:UeHWp8X0CEIC",
+          "citation_id": "mrBLyX0AAAAJ:UeHWp8X0CEIC"
+        },
+        {
+          "title": "Towards Ontology-based Competence Modeling in Enterprise Architecture",
+          "authors": "RF Calhau, CLB Azevedo, JPA Almeida",
+          "publication": "2021 20th IEEE International Enterprise Distributed Object Computing Conference, 2021",
+          "year": 2021,
+          "citations": 25,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:TFP_iSt0sucC",
+          "citation_id": "mrBLyX0AAAAJ:TFP_iSt0sucC"
+        },
+        {
+          "title": "Modeling competences in enterprise architecture: From knowledge, skills, and attitudes to organizational capabilities",
+          "authors": "RF Calhau, JPA Almeida, S Kokkula, G Guizzardi",
+          "publication": "Software and Systems Modeling 23 (3), 559-598, 2024",
+          "year": 2024,
+          "citations": 24,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:J_g5lzvAfSwC",
+          "citation_id": "mrBLyX0AAAAJ:J_g5lzvAfSwC"
+        },
+        {
+          "title": "An approach for managing and semantically enriching the publication of Linked Open Governmental Data",
+          "authors": "K de Faria Cordeiro, FF de Faria, B de Oliveira Pereira, A Freitas, ...",
+          "publication": "Proceedings of the 3rd workshop in applied computing for electronic …, 2011",
+          "year": 2011,
+          "citations": 17,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:zYLM7Y9cAGgC",
+          "citation_id": "mrBLyX0AAAAJ:zYLM7Y9cAGgC"
+        },
+        {
+          "title": "A system core ontology for capability emergence modeling",
+          "authors": "RF Calhau, T Prince Sales, Í Oliveira, S Kokkula, L Ferreira Pires, ...",
+          "publication": "International Conference on Enterprise Design, Operations, and Computing, 3-20, 2023",
+          "year": 2023,
+          "citations": 14,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:hMod-77fHWUC",
+          "citation_id": "mrBLyX0AAAAJ:hMod-77fHWUC"
+        },
+        {
+          "title": "Am i going to heaven? first step climbing the stairway to heaven model results from a case study in industry",
+          "authors": "PS Santos, MP Barcellos, RF Calhau",
+          "publication": "Proceedings of the XXXIV Brazilian Symposium on Software Engineering, 309-318, 2020",
+          "year": 2020,
+          "citations": 13,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:iH-uZ7U-co4C",
+          "citation_id": "mrBLyX0AAAAJ:iH-uZ7U-co4C"
+        },
+        {
+          "title": "Zooming in on competences in ontology-based enterprise architecture modeling",
+          "authors": "RF Calhau, JPA Almeida",
+          "publication": "Enterprise Design, Operations, and Computing. EDOC 2022 Workshops: IDAMS …, 2022",
+          "year": 2022,
+          "citations": 11,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:M3NEmzRMIkIC",
+          "citation_id": "mrBLyX0AAAAJ:M3NEmzRMIkIC"
+        },
+        {
+          "title": "Modeling competence framework elements with an ontology-based approach",
+          "authors": "RF Calhau, S Kokkula, D Cameron, G Guizzardi, JPA Almeida",
+          "publication": "2023 IEEE 25th Conference on Business Informatics (CBI), 1-10, 2023",
+          "year": 2023,
+          "citations": 9,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:JV2RwH3_ST0C",
+          "citation_id": "mrBLyX0AAAAJ:JV2RwH3_ST0C"
+        },
+        {
+          "title": "Uma Abordagem Baseada em Ontologias para a Integração Semântica de Sistemas",
+          "authors": "RF Calhau",
+          "publication": "Master Thesis, Federal University of Espírito Santo, 2011",
+          "year": 2011,
+          "citations": 9,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:Tyk-4Ss8FVUC",
+          "citation_id": "mrBLyX0AAAAJ:Tyk-4Ss8FVUC"
+        },
+        {
+          "title": "Toward a phishing attack ontology",
+          "authors": "Í Oliveira, RF Calhau, G Guizzardi",
+          "publication": "42nd International Conference on Conceptual Modeling, ER 2023, 2023",
+          "year": 2023,
+          "citations": 6,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:NMxIlDl6LWMC",
+          "citation_id": "mrBLyX0AAAAJ:NMxIlDl6LWMC"
+        },
+        {
+          "title": "Ontological foundations of resilience",
+          "authors": "PP F. Barcelos, RF Calhau, Í Oliveira, T Prince Sales, F Gailly, G Poels, ...",
+          "publication": "International Conference on Conceptual Modeling, 396-416, 2024",
+          "year": 2024,
+          "citations": 4,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:vV6vV6tmYwMC",
+          "citation_id": "mrBLyX0AAAAJ:vV6vV6tmYwMC"
+        },
+        {
+          "title": "Ontologia de Domínio de Doação de Órgãos e Tecidos para apoio a Integração Semântica de Sistemas.",
+          "authors": "L Pereira, RF Calhau, PS dos Santos Júnior, MB Costa",
+          "publication": "CIbSE, 222, 2015",
+          "year": 2015,
+          "citations": 3,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:YsMSGLbcyi4C",
+          "citation_id": "mrBLyX0AAAAJ:YsMSGLbcyi4C"
+        },
+        {
+          "title": "LEDS: Um Ambiente para Impulsionar o Aprendizado em Computação",
+          "authors": "R Calhau, PS Júnior, K Komati, M Monteiro, F Ruy, V Nunes",
+          "publication": "Workshop sobre Educação em Computação (WEI), 199-208, 2014",
+          "year": 2014,
+          "citations": 3,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:WF5omc3nYNoC",
+          "citation_id": "mrBLyX0AAAAJ:WF5omc3nYNoC"
+        },
+        {
+          "title": "Core-O: A Competence Reference Ontology for Professional and Learning Ecosystems",
+          "authors": "RF Calhau, JPA Almeida, TP Sales, PPF Barcelos, G Guizzardi",
+          "publication": "14TH INTERNATIONAL CONFERENCE ON FORMAL ONTOLOGY IN INFORMATION SYSTEMS …, 2024",
+          "year": 2024,
+          "citations": 2,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:lSLTfruPkqcC",
+          "citation_id": "mrBLyX0AAAAJ:lSLTfruPkqcC"
+        },
+        {
+          "title": "First step climbing the Stairway to Heaven Model-Results from a Case Study in Industry",
+          "authors": "PS dos Santos Júnior, MP Barcellos, RF Calhau",
+          "publication": "Journal of Software Engineering Research and Development 10, 5: 1-5: 18, 2022",
+          "year": 2022,
+          "citations": 2,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:k_IJM867U9cC",
+          "citation_id": "mrBLyX0AAAAJ:k_IJM867U9cC"
+        },
+        {
+          "title": "Web-based Notification System for an Organ Transplant Process",
+          "authors": "CTM Uka, R Erlacher, TZR Santos, KS Komati, PS Santos Jr, RF Calhau",
+          "publication": "International Workshop on ADVANCEs in ICT Infrastructures and Services …, 2013",
+          "year": 2013,
+          "citations": 2,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:Y0pCki6q_DkC",
+          "citation_id": "mrBLyX0AAAAJ:Y0pCki6q_DkC"
+        },
+        {
+          "title": "Uso de Gerência de Conhecimento para Apoiar a Rastreabilidade e a Avaliação de Impacto de Alterações",
+          "authors": "RF Calhau, L de Oliveira Arantes, R de Almeida Falbo",
+          "publication": "Simpósio Brasileiro de Engenharia de Software (SBES), 236-251, 2008",
+          "year": 2008,
+          "citations": 2,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:W7OEmFMy1HYC",
+          "citation_id": "mrBLyX0AAAAJ:W7OEmFMy1HYC"
+        },
+        {
+          "title": "Advancing the Domain of Strategy Planning and Implementation through Enterprise Architecture: A Research Agenda for Capability-Based Management",
+          "authors": "J Van Riel, G Poels, G Koutsopoulos, RF Calhau, I Bider, E Perjons, ...",
+          "publication": "Communications of the Association for Information Systems 56 (1), 3, 2025",
+          "year": 2025,
+          "citations": 1,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:g5m5HwL7SMYC",
+          "citation_id": "mrBLyX0AAAAJ:g5m5HwL7SMYC"
+        },
+        {
+          "title": "Towards a conceptual model for FAIR metadata schemas",
+          "authors": "FM Soares, LF Pires, LOBS Santos, RF Calhau, BCMS Maculan, K Coyle, ...",
+          "publication": "Companion Proceedings, 2024",
+          "year": 2024,
+          "citations": 1,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:M05iB0D1s5AC",
+          "citation_id": "mrBLyX0AAAAJ:M05iB0D1s5AC"
+        }
+      ]
+    },
+    {
+      "researcher": {
+        "name": "Fabiano Borges Ruy",
+        "campus": "Serra",
+        "scholar_id": "StrLqxIAAAAJ",
+        "scholar_url": "https://scholar.google.com/citations?user=StrLqxIAAAAJ",
+        "affiliation": "Federal Institute of Espírito Santo",
+        "email": "Verified email at ifes.edu.br",
+        "interests": [
+          "Software Engineering",
+          "Software Processes",
+          "Ontology Engineering",
+          "Conceptual Modeling"
+        ]
+      },
+      "statistics": {
+        "total_papers": 20,
+        "total_citations": 751,
+        "average_citations_per_paper": 37.55,
+        "h_index": {
+          "all_time": "14",
+          "since_2020": "8"
+        },
+        "i10_index": {
+          "all_time": "16",
+          "since_2020": "7"
+        },
+        "papers_by_year": {
+          "2003": 1,
+          "2017": 2,
+          "2016": 2,
+          "2005": 1,
+          "2015": 3,
+          "2014": 2,
+          "2004": 3,
+          "2002": 2,
+          "2006": 1,
+          "2021": 1,
+          "2022": 2
+        },
+        "citations_by_year": [
+          {
+            "year": 2002,
+            "cites": 4
+          },
+          {
+            "year": 2003,
+            "cites": 13
+          },
+          {
+            "year": 2004,
+            "cites": 21
+          },
+          {
+            "year": 2005,
+            "cites": 21
+          },
+          {
+            "year": 2006,
+            "cites": 41
+          },
+          {
+            "year": 2007,
+            "cites": 26
+          },
+          {
+            "year": 2008,
+            "cites": 40
+          },
+          {
+            "year": 2009,
+            "cites": 22
+          },
+          {
+            "year": 2010,
+            "cites": 23
+          },
+          {
+            "year": 2011,
+            "cites": 22
+          },
+          {
+            "year": 2012,
+            "cites": 12
+          },
+          {
+            "year": 2013,
+            "cites": 5
+          },
+          {
+            "year": 2014,
+            "cites": 12
+          },
+          {
+            "year": 2015,
+            "cites": 22
+          },
+          {
+            "year": 2016,
+            "cites": 35
+          },
+          {
+            "year": 2017,
+            "cites": 50
+          },
+          {
+            "year": 2018,
+            "cites": 43
+          },
+          {
+            "year": 2019,
+            "cites": 47
+          },
+          {
+            "year": 2020,
+            "cites": 59
+          },
+          {
+            "year": 2021,
+            "cites": 48
+          },
+          {
+            "year": 2022,
+            "cites": 60
+          },
+          {
+            "year": 2023,
+            "cites": 48
+          },
+          {
+            "year": 2024,
+            "cites": 28
+          },
+          {
+            "year": 2025,
+            "cites": 30
+          }
+        ]
+      },
+      "top_5_papers": [
+        {
+          "title": "ODE: Ontology-based software development environment",
+          "authors": "RA Falbo, ACC Natali, PG Mian, G Bertollo, FB Ruy",
+          "publication": "IX Congreso Argentino de Ciencias de la Computación, 2003",
+          "year": 2003,
+          "citations": 103,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:zYLM7Y9cAGgC",
+          "citation_id": "StrLqxIAAAAJ:zYLM7Y9cAGgC"
+        },
+        {
+          "title": "From Reference Ontologies to Ontology Patterns and Back",
+          "authors": "FB Ruy, G Guizzardi, RA Falbo, CC Reginato, VA Santos",
+          "publication": "Data & Knowledge Engineering 109, 41-69, 2017",
+          "year": 2017,
+          "citations": 99,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:_kc_bZDykSQC",
+          "citation_id": "StrLqxIAAAAJ:_kc_bZDykSQC"
+        },
+        {
+          "title": "SEON: a Software Engineering Ontology Network",
+          "authors": "FB Ruy, RA Falbo, MP Barcellos, SD Costa, G Guizzardi",
+          "publication": "Knowledge Engineering and Knowledge Management: 20th International …, 2016",
+          "year": 2016,
+          "citations": 96,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:hMod-77fHWUC",
+          "citation_id": "StrLqxIAAAAJ:hMod-77fHWUC"
+        },
+        {
+          "title": "Using Ontologies to Add Semantics to a Software Engineering Environment",
+          "authors": "RA Falbo, FB Ruy, R Dal Moro",
+          "publication": "SEKE, 151-156, 2005",
+          "year": 2005,
+          "citations": 66,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:Tyk-4Ss8FVUC",
+          "citation_id": "StrLqxIAAAAJ:Tyk-4Ss8FVUC"
+        },
+        {
+          "title": "Ontology Engineering by Combining Ontology Patterns",
+          "authors": "FB Ruy, CC Reginato, VA Santos, RA Falbo, G Guizzardi",
+          "publication": "34th International Conference on Conceptual Modeling, ER 2015, Stockholm …, 2015",
+          "year": 2015,
+          "citations": 46,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:Se3iqnhoufwC",
+          "citation_id": "StrLqxIAAAAJ:Se3iqnhoufwC"
+        }
+      ],
+      "all_papers": [
+        {
+          "title": "ODE: Ontology-based software development environment",
+          "authors": "RA Falbo, ACC Natali, PG Mian, G Bertollo, FB Ruy",
+          "publication": "IX Congreso Argentino de Ciencias de la Computación, 2003",
+          "year": 2003,
+          "citations": 103,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:zYLM7Y9cAGgC",
+          "citation_id": "StrLqxIAAAAJ:zYLM7Y9cAGgC"
+        },
+        {
+          "title": "From Reference Ontologies to Ontology Patterns and Back",
+          "authors": "FB Ruy, G Guizzardi, RA Falbo, CC Reginato, VA Santos",
+          "publication": "Data & Knowledge Engineering 109, 41-69, 2017",
+          "year": 2017,
+          "citations": 99,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:_kc_bZDykSQC",
+          "citation_id": "StrLqxIAAAAJ:_kc_bZDykSQC"
+        },
+        {
+          "title": "SEON: a Software Engineering Ontology Network",
+          "authors": "FB Ruy, RA Falbo, MP Barcellos, SD Costa, G Guizzardi",
+          "publication": "Knowledge Engineering and Knowledge Management: 20th International …, 2016",
+          "year": 2016,
+          "citations": 96,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:hMod-77fHWUC",
+          "citation_id": "StrLqxIAAAAJ:hMod-77fHWUC"
+        },
+        {
+          "title": "Using Ontologies to Add Semantics to a Software Engineering Environment",
+          "authors": "RA Falbo, FB Ruy, R Dal Moro",
+          "publication": "SEKE, 151-156, 2005",
+          "year": 2005,
+          "citations": 66,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:Tyk-4Ss8FVUC",
+          "citation_id": "StrLqxIAAAAJ:Tyk-4Ss8FVUC"
+        },
+        {
+          "title": "Ontology Engineering by Combining Ontology Patterns",
+          "authors": "FB Ruy, CC Reginato, VA Santos, RA Falbo, G Guizzardi",
+          "publication": "34th International Conference on Conceptual Modeling, ER 2015, Stockholm …, 2015",
+          "year": 2015,
+          "citations": 46,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:Se3iqnhoufwC",
+          "citation_id": "StrLqxIAAAAJ:Se3iqnhoufwC"
+        },
+        {
+          "title": "Towards an Enterprise Ontology Pattern Language",
+          "authors": "RA Falbo, FB Ruy, G Guizzardi, MP Barcellos, JPA Almeida",
+          "publication": "Proceedings of the 29th Annual ACM Symposium on Applied Computing, 323-330, 2014",
+          "year": 2014,
+          "citations": 40,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:ufrVoPGSRksC",
+          "citation_id": "StrLqxIAAAAJ:ufrVoPGSRksC"
+        },
+        {
+          "title": "Ontologias e ambientes de desenvolvimento de software semânticos",
+          "authors": "RA Falbo, FB Ruy, J Pezzin, R Dal Moro",
+          "publication": "4th Ibero-American Symposium on Software Engineering and Knowledge …, 2004",
+          "year": 2004,
+          "citations": 38,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:Y0pCki6q_DkC",
+          "citation_id": "StrLqxIAAAAJ:Y0pCki6q_DkC"
+        },
+        {
+          "title": "Learning how to manage risks using organizational knowledge",
+          "authors": "RA Falbo, FB Ruy, G Bertollo, DF Togneri",
+          "publication": "International Workshop on Learning Software Organizations, 7-18, 2004",
+          "year": 2004,
+          "citations": 34,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:W7OEmFMy1HYC",
+          "citation_id": "StrLqxIAAAAJ:W7OEmFMy1HYC"
+        },
+        {
+          "title": "Towards semantic software engineering environments",
+          "authors": "RA Falbo, G Guizzardi, ACC Natali, G Bertollo, FB Ruy, PG Mian",
+          "publication": "Proceedings of the 14th international conference on Software engineering and …, 2002",
+          "year": 2002,
+          "citations": 33,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:IjCSPb-OGe4C",
+          "citation_id": "StrLqxIAAAAJ:IjCSPb-OGe4C"
+        },
+        {
+          "title": "Ontology pattern languages",
+          "authors": "R Falbo, M Barcellos, F Ruy, G Guizzardi, R Guizzardi",
+          "publication": "Ontology Engineering with Ontology Design Patterns, 133-159, 2016",
+          "year": 2016,
+          "citations": 26,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:NMxIlDl6LWMC",
+          "citation_id": "StrLqxIAAAAJ:NMxIlDl6LWMC"
+        },
+        {
+          "title": "An Ontological Analysis of the ISO/IEC 24744 Metamodel",
+          "authors": "FB Ruy, R de Almeida Falbo, MP Barcellos, G Guizzardi",
+          "publication": "FOIS, 330-343, 2014",
+          "year": 2014,
+          "citations": 26,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:LkGwnXOMwfcC",
+          "citation_id": "StrLqxIAAAAJ:LkGwnXOMwfcC"
+        },
+        {
+          "title": "An ISO-based software process ontology pattern language and its application for harmonizing standards",
+          "authors": "FB Ruy, RA Falbo, MP Barcellos, G Guizzardi, GKS Quirino",
+          "publication": "ACM SIGAPP Applied Computing Review 15 (2), 27-40, 2015",
+          "year": 2015,
+          "citations": 23,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:kNdYIx-mwKoC",
+          "citation_id": "StrLqxIAAAAJ:kNdYIx-mwKoC"
+        },
+        {
+          "title": "ODE–Um Ambiente de Desenvolvimento de Software Baseado em Ontologias",
+          "authors": "G Bertollo, FB Ruy, PG Mian, J Pezzin, M Schwambach, ACC Natali, ...",
+          "publication": "Simpósio Brasileiro de Engenharia de Software (SBES), 438-443, 2002",
+          "year": 2002,
+          "citations": 20,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:YsMSGLbcyi4C",
+          "citation_id": "StrLqxIAAAAJ:YsMSGLbcyi4C"
+        },
+        {
+          "title": "Semântica em um Ambiente de Desenvolvimento de Software",
+          "authors": "FB RUY",
+          "publication": "Dissertação de Mestrado, UFES, Vitória, ES, Brasil, 2006",
+          "year": 2006,
+          "citations": 18,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:3fE2CSJIrl8C",
+          "citation_id": "StrLqxIAAAAJ:3fE2CSJIrl8C"
+        },
+        {
+          "title": "Knowledge-based Support to Process Integration in ODE",
+          "authors": "FB Ruy, G Bertollo, R de Almeida Falbo",
+          "publication": "Clei Electronic Journal 7 (1), 3: 1-3: 18, 2004",
+          "year": 2004,
+          "citations": 14,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:eQOLeE2rZwMC",
+          "citation_id": "StrLqxIAAAAJ:eQOLeE2rZwMC"
+        },
+        {
+          "title": "Tell me: Am i going to heaven? a diagnosis instrument of continuous software engineering practices adoption",
+          "authors": "PS dos Santos Júnior, M Perini Barcellos, F Borges Ruy",
+          "publication": "Proceedings of the 25th International Conference on Evaluation and …, 2021",
+          "year": 2021,
+          "citations": 12,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:4JMBOYKVnBMC",
+          "citation_id": "StrLqxIAAAAJ:4JMBOYKVnBMC"
+        },
+        {
+          "title": "Software Engineering Standards Harmonization: An Ontology-Based Approach",
+          "authors": "FB Ruy",
+          "publication": "Doctoral Thesis. Postgraduate Program in Computer Science. Federal …, 2017",
+          "year": 2017,
+          "citations": 8,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:hFOr9nPyWt4C",
+          "citation_id": "StrLqxIAAAAJ:hFOr9nPyWt4C"
+        },
+        {
+          "title": "Towards an Ontology Pattern Language for Harmonizing Software Process related ISO Standards",
+          "authors": "FB Ruy, RA Falbo, MP Barcellos, G Guizzardi",
+          "publication": "Proceedings of the 29th Annual ACM Symposium on Applied Computing, 388-395, 2015",
+          "year": 2015,
+          "citations": 8,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:5nxA0vEk-isC",
+          "citation_id": "StrLqxIAAAAJ:5nxA0vEk-isC"
+        },
+        {
+          "title": "Flying over brazilian organizations with zeppelin: A preliminary panoramic picture of continuous software engineering",
+          "authors": "PSS Júnior, MP Barcellos, FB Ruy, MS Omêna",
+          "publication": "Proceedings of the XXXVI Brazilian Symposium on Software Engineering, 279-288, 2022",
+          "year": 2022,
+          "citations": 6,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:k_IJM867U9cC",
+          "citation_id": "StrLqxIAAAAJ:k_IJM867U9cC"
+        },
+        {
+          "title": "Abordagem para análise de múltiplas fontes de dados de evasão escolar",
+          "authors": "EM da Silva, FB Ruy, FW Mutz",
+          "publication": "Anais do Computer on the Beach 13, 149-156, 2022",
+          "year": 2022,
+          "citations": 5,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:iH-uZ7U-co4C",
+          "citation_id": "StrLqxIAAAAJ:iH-uZ7U-co4C"
+        }
+      ]
+    },
+    {
+      "researcher": {
+        "name": "Mateus Conrad Barcellos Da Costa",
+        "campus": "Serra",
+        "scholar_id": "eH4gxyUAAAAJ",
+        "scholar_url": "https://scholar.google.com/citations?user=eH4gxyUAAAAJ",
+        "affiliation": "Instituto Federal do Espírito Santo, Federal Institute of Espírito Santo",
+        "email": "Verified email at ifes.edu.br",
+        "interests": [
+          "Business Process Management",
+          "Decision Support",
+          "Software Engineering"
+        ]
+      },
+      "statistics": {
+        "total_papers": 20,
+        "total_citations": 70,
+        "average_citations_per_paper": 3.5,
+        "h_index": {
+          "all_time": "4",
+          "since_2020": "3"
+        },
+        "i10_index": {
+          "all_time": "2",
+          "since_2020": "1"
+        },
+        "papers_by_year": {
+          "2008": 1,
+          "2017": 1,
+          "2018": 2,
+          "2004": 2,
+          "2014": 1,
+          "2015": 2,
+          "2007": 1,
+          "2023": 1,
+          "2021": 3,
+          "2010": 1,
+          "2025": 4,
+          "2024": 1
+        },
+        "citations_by_year": [
+          {
+            "year": 2005,
+            "cites": 1
+          },
+          {
+            "year": 2006,
+            "cites": 1
+          },
+          {
+            "year": 2007,
+            "cites": 2
+          },
+          {
+            "year": 2008,
+            "cites": 6
+          },
+          {
+            "year": 2009,
+            "cites": 1
+          },
+          {
+            "year": 2010,
+            "cites": 6
+          },
+          {
+            "year": 2011,
+            "cites": 3
+          },
+          {
+            "year": 2012,
+            "cites": 1
+          },
+          {
+            "year": 2013,
+            "cites": 3
+          },
+          {
+            "year": 2014,
+            "cites": 2
+          },
+          {
+            "year": 2015,
+            "cites": 5
+          },
+          {
+            "year": 2016,
+            "cites": 1
+          },
+          {
+            "year": 2017,
+            "cites": 3
+          },
+          {
+            "year": 2018,
+            "cites": 6
+          },
+          {
+            "year": 2019,
+            "cites": 8
+          },
+          {
+            "year": 2020,
+            "cites": 3
+          },
+          {
+            "year": 2021,
+            "cites": 4
+          },
+          {
+            "year": 2022,
+            "cites": 6
+          },
+          {
+            "year": 2023,
+            "cites": 7
+          }
+        ]
+      },
+      "top_5_papers": [
+        {
+          "title": "Software frameworks for information systems integration based on web services",
+          "authors": "MB Costa, RF Resende, EF Nakamura, MV Segatto",
+          "publication": "Proceedings of the 2008 ACM symposium on Applied computing, 777-782, 2008",
+          "year": 2008,
+          "citations": 15,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:u5HHmVD_uO8C",
+          "citation_id": "eH4gxyUAAAAJ:u5HHmVD_uO8C"
+        },
+        {
+          "title": "Recommendation patterns for business process imperative modeling",
+          "authors": "MB Costa, D Tamzalit",
+          "publication": "Proceedings of the Symposium on Applied Computing, 735-742, 2017",
+          "year": 2017,
+          "citations": 12,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:YsMSGLbcyi4C",
+          "citation_id": "eH4gxyUAAAAJ:YsMSGLbcyi4C"
+        },
+        {
+          "title": "A comparative analysis of loan requests classification algorithms in a peer-to-peer lending platform",
+          "authors": "DS Rodrigues, ARA Brasil, MB Costa, KS Komati, LA Pinto",
+          "publication": "Proceedings of the XIV Brazilian Symposium on Information Systems, 1-8, 2018",
+          "year": 2018,
+          "citations": 9,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:0EnyYjriUFMC",
+          "citation_id": "eH4gxyUAAAAJ:0EnyYjriUFMC"
+        },
+        {
+          "title": "Utilizaçao de aspectos no desenvolvimento de aplicaçóes baseadas em serviços web",
+          "authors": "MB Costa, RF Resende, P dos Santos Neto, MHF Alves",
+          "publication": "WASP'04, 76, 2004",
+          "year": 2004,
+          "citations": 5,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:u-x6o8ySG0sC",
+          "citation_id": "eH4gxyUAAAAJ:u-x6o8ySG0sC"
+        },
+        {
+          "title": "Texture Classification of Sea Turtle Shell based on Color Features: Color Histograms and Chromaticity Moments",
+          "authors": "WR da Paixao, TM Paixao, MCB da Costa, JO Andrade, FG Pereira, ...",
+          "publication": "",
+          "year": 2018,
+          "citations": 4,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:UebtZRa9Y70C",
+          "citation_id": "eH4gxyUAAAAJ:UebtZRa9Y70C"
+        }
+      ],
+      "all_papers": [
+        {
+          "title": "Software frameworks for information systems integration based on web services",
+          "authors": "MB Costa, RF Resende, EF Nakamura, MV Segatto",
+          "publication": "Proceedings of the 2008 ACM symposium on Applied computing, 777-782, 2008",
+          "year": 2008,
+          "citations": 15,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:u5HHmVD_uO8C",
+          "citation_id": "eH4gxyUAAAAJ:u5HHmVD_uO8C"
+        },
+        {
+          "title": "Recommendation patterns for business process imperative modeling",
+          "authors": "MB Costa, D Tamzalit",
+          "publication": "Proceedings of the Symposium on Applied Computing, 735-742, 2017",
+          "year": 2017,
+          "citations": 12,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:YsMSGLbcyi4C",
+          "citation_id": "eH4gxyUAAAAJ:YsMSGLbcyi4C"
+        },
+        {
+          "title": "A comparative analysis of loan requests classification algorithms in a peer-to-peer lending platform",
+          "authors": "DS Rodrigues, ARA Brasil, MB Costa, KS Komati, LA Pinto",
+          "publication": "Proceedings of the XIV Brazilian Symposium on Information Systems, 1-8, 2018",
+          "year": 2018,
+          "citations": 9,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:0EnyYjriUFMC",
+          "citation_id": "eH4gxyUAAAAJ:0EnyYjriUFMC"
+        },
+        {
+          "title": "Utilizaçao de aspectos no desenvolvimento de aplicaçóes baseadas em serviços web",
+          "authors": "MB Costa, RF Resende, P dos Santos Neto, MHF Alves",
+          "publication": "WASP'04, 76, 2004",
+          "year": 2004,
+          "citations": 5,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:u-x6o8ySG0sC",
+          "citation_id": "eH4gxyUAAAAJ:u-x6o8ySG0sC"
+        },
+        {
+          "title": "Texture Classification of Sea Turtle Shell based on Color Features: Color Histograms and Chromaticity Moments",
+          "authors": "WR da Paixao, TM Paixao, MCB da Costa, JO Andrade, FG Pereira, ...",
+          "publication": "",
+          "year": 2018,
+          "citations": 4,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:UebtZRa9Y70C",
+          "citation_id": "eH4gxyUAAAAJ:UebtZRa9Y70C"
+        },
+        {
+          "title": "Uma Abordagem para Recomendação no Apoio à Modelagem de Processos de Negócio.",
+          "authors": "MB Costa, TS Silva",
+          "publication": "SBBD, 177-186, 2014",
+          "year": 2014,
+          "citations": 4,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:UeHWp8X0CEIC",
+          "citation_id": "eH4gxyUAAAAJ:UeHWp8X0CEIC"
+        },
+        {
+          "title": "Business to business transaction modeling and WWW support",
+          "authors": "M Barcellos Costa, R Ferreira Resende, M Halfeld Ferrari Alves, ...",
+          "publication": "International Conference on Business Process Management, 132-147, 2004",
+          "year": 2004,
+          "citations": 4,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:d1gkVwhDpl0C",
+          "citation_id": "eH4gxyUAAAAJ:d1gkVwhDpl0C"
+        },
+        {
+          "title": "Ontologia de Domínio de Doação de Órgãos e Tecidos para apoio a Integração Semântica de Sistemas.",
+          "authors": "L Pereira, RF Calhau, PS dos Santos Júnior, MB Costa",
+          "publication": "CIbSE, 222, 2015",
+          "year": 2015,
+          "citations": 3,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:zYLM7Y9cAGgC",
+          "citation_id": "eH4gxyUAAAAJ:zYLM7Y9cAGgC"
+        },
+        {
+          "title": "BASS: Business Application Support through Software Services.",
+          "authors": "MB Costa, RF Resende, MEV Segatto, EF Nakamura, N Fonseca",
+          "publication": "SEKE, 523-, 2007",
+          "year": 2007,
+          "citations": 3,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:9yKSN-GCB0IC",
+          "citation_id": "eH4gxyUAAAAJ:9yKSN-GCB0IC"
+        },
+        {
+          "title": "Identificação de estáticas em poços de petróleo utilizando motifs",
+          "authors": "DF Rossi, KS Komati, MCB da Costa",
+          "publication": "Seminário Integrado de Software e Hardware (SEMISH), 308-319, 2023",
+          "year": 2023,
+          "citations": 2,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:M3ejUd6NZC8C",
+          "citation_id": "eH4gxyUAAAAJ:M3ejUd6NZC8C"
+        },
+        {
+          "title": "Identificaçao de estáticas em poços de petróleo via sensor de pressao de fundo",
+          "authors": "DF Rossi, KS Komati, MCB da Costa",
+          "publication": "Simpósio Brasileiro de Automação Inteligente-SBAI 1 (1), 2021",
+          "year": 2021,
+          "citations": 2,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:ULOm3_A8WrAC",
+          "citation_id": "eH4gxyUAAAAJ:ULOm3_A8WrAC"
+        },
+        {
+          "title": "Interações automatizadas para apoio à modelagem de processos de negócio",
+          "authors": "FB Cabral, BC Coutinho, FZ de Castro, MB Costa",
+          "publication": "Simpósio Brasileiro de Automação Inteligente-SBAI 1 (1), 2021",
+          "year": 2021,
+          "citations": 2,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:Zph67rFs4hoC",
+          "citation_id": "eH4gxyUAAAAJ:Zph67rFs4hoC"
+        },
+        {
+          "title": "Alinhamento estratégico de tecnologia da informação (TI): um estudo da prática de empresa do setor siderúrgico brasileiro",
+          "authors": "AS de Freitas, MB Costa",
+          "publication": "",
+          "year": 2010,
+          "citations": 2,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:LkGwnXOMwfcC",
+          "citation_id": "eH4gxyUAAAAJ:LkGwnXOMwfcC"
+        },
+        {
+          "title": "Evaluation of automated pressure transient detection methods for efficient oil well management",
+          "authors": "DF Rossi, MCB da Costa, KS Komati",
+          "publication": "Geoenergy Science and Engineering, 214202, 2025",
+          "year": 2025,
+          "citations": 1,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:QIV2ME_5wuYC",
+          "citation_id": "eH4gxyUAAAAJ:QIV2ME_5wuYC"
+        },
+        {
+          "title": "An annotated dataset for automatic extraction of entities and restrictions from business process models",
+          "authors": "DS Candido, JVB Lima, H Oliveira, MB Costa",
+          "publication": "Encontro Nacional de Inteligência Artificial e Computacional (ENIAC), 978-989, 2024",
+          "year": 2024,
+          "citations": 1,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:aqlVkmm33-oC",
+          "citation_id": "eH4gxyUAAAAJ:aqlVkmm33-oC"
+        },
+        {
+          "title": "Uma ferramenta para modelagem de processos de negócios com base em padrões de recomendação",
+          "authors": "AC Lucas, KS Komati, MCB da Costa",
+          "publication": "Escola Regional de Informática de Goiás (ERI-GO), 82-95, 2021",
+          "year": 2021,
+          "citations": 1,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:YOwf2qJgpHMC",
+          "citation_id": "eH4gxyUAAAAJ:YOwf2qJgpHMC"
+        },
+        {
+          "title": "Empowering Pharmaceutical Retail Storefronts: An Exploratory Study on Classification and Association Techniques",
+          "authors": "HT Carlos, L Lee, MB Costa",
+          "publication": "27th International Conference on Enterprise Information Systems 1 (1), 326-334, 2025",
+          "year": 2025,
+          "citations": 0,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:mVmsd5A6BfQC",
+          "citation_id": "eH4gxyUAAAAJ:mVmsd5A6BfQC"
+        },
+        {
+          "title": "Business Process Design Support with Automated Interviews",
+          "authors": "DS de Castro, M Fantinato, MB Costa",
+          "publication": "27th International Conference on Enterprise Information Systems 1 (1), 734-745, 2025",
+          "year": 2025,
+          "citations": 0,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:Wp0gIr-vW9MC",
+          "citation_id": "eH4gxyUAAAAJ:Wp0gIr-vW9MC"
+        },
+        {
+          "title": "Unveiling Business Processes Control-Flow: Automated Extraction of Entities and Constraint Relations from Text",
+          "authors": "D de Santana Candido, HTA de Oliveira, MB Costa",
+          "publication": "International Conference on Enterprise Information Systems (ICEIS), 2025",
+          "year": 2025,
+          "citations": 0,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:4DMP91E08xMC",
+          "citation_id": "eH4gxyUAAAAJ:4DMP91E08xMC"
+        },
+        {
+          "title": "Automated Support for Scrum Projects Sprint Planning",
+          "authors": "HT de Sousa, TS Silva, PS Santos Jr, RF Calhau, MB Costa",
+          "publication": "Proceedings of the annual conference on Brazilian Symposium on Information …, 2015",
+          "year": 2015,
+          "citations": 0,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:4TOpqqG69KYC",
+          "citation_id": "eH4gxyUAAAAJ:4TOpqqG69KYC"
+        }
+      ]
+    }
+  ]
+}

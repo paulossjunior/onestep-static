@@ -137,22 +137,49 @@ class ScholarDataParser:
         author = data.get('author', {})
         cited_by = data.get('cited_by', {})
         
+        # Parse table structure
+        table = cited_by.get('table', {})
+        rows = table.get('rows', [])
+        
+        # Extract metrics from rows
+        citations_all = 0
+        citations_since_2020 = 0
+        h_index_all = 0
+        h_index_since_2020 = 0
+        i10_index_all = 0
+        i10_index_since_2020 = 0
+        
+        if len(rows) > 0:  # Citations row
+            citations_all = int(rows[0][1]) if len(rows[0]) > 1 else 0
+            citations_since_2020 = int(rows[0][2]) if len(rows[0]) > 2 else 0
+        
+        if len(rows) > 1:  # h-index row
+            h_index_all = int(rows[1][1]) if len(rows[1]) > 1 else 0
+            h_index_since_2020 = int(rows[1][2]) if len(rows[1]) > 2 else 0
+        
+        if len(rows) > 2:  # i10-index row
+            i10_index_all = int(rows[2][1]) if len(rows[2]) > 1 else 0
+            i10_index_since_2020 = int(rows[2][2]) if len(rows[2]) > 2 else 0
+        
+        # Extract interests
+        interests = [item.get('title', '') for item in author.get('interests', [])]
+        
         profile = {
             'name': author.get('name', ''),
             'affiliations': author.get('affiliations', ''),
             'email': author.get('email', ''),
             'website': author.get('website', ''),
-            'interests': author.get('interests', []),
+            'interests': interests,
             'thumbnail': author.get('thumbnail', ''),
             'metrics': {
-                'citations_all': cited_by.get('table', [{}])[0].get('citations', {}).get('all', 0) if cited_by.get('table') else 0,
-                'citations_since_2019': cited_by.get('table', [{}])[0].get('citations', {}).get('since_2019', 0) if cited_by.get('table') else 0,
-                'h_index_all': cited_by.get('table', [{}])[1].get('h_index', {}).get('all', 0) if len(cited_by.get('table', [])) > 1 else 0,
-                'h_index_since_2019': cited_by.get('table', [{}])[1].get('h_index', {}).get('since_2019', 0) if len(cited_by.get('table', [])) > 1 else 0,
-                'i10_index_all': cited_by.get('table', [{}])[2].get('i10_index', {}).get('all', 0) if len(cited_by.get('table', [])) > 2 else 0,
-                'i10_index_since_2019': cited_by.get('table', [{}])[2].get('i10_index', {}).get('since_2019', 0) if len(cited_by.get('table', [])) > 2 else 0,
+                'citations_all': citations_all,
+                'citations_since_2020': citations_since_2020,
+                'h_index_all': h_index_all,
+                'h_index_since_2020': h_index_since_2020,
+                'i10_index_all': i10_index_all,
+                'i10_index_since_2020': i10_index_since_2020,
             },
-            'citations_by_year': cited_by.get('graph', []),
+            'citations_by_year': cited_by.get('histogram', []),
             'co_authors': data.get('co_authors', [])
         }
         
@@ -172,13 +199,16 @@ class ScholarDataParser:
         articles = []
         
         for article in data.get('articles', []):
+            cited_by_data = article.get('cited_by', {})
+            cited_by_count = cited_by_data.get('total', 0) if isinstance(cited_by_data, dict) else 0
+            
             articles.append({
                 'title': article.get('title', ''),
                 'link': article.get('link', ''),
                 'citation_id': article.get('citation_id', ''),
                 'authors': article.get('authors', ''),
                 'publication': article.get('publication', ''),
-                'cited_by': article.get('cited_by', {}).get('value', 0),
+                'cited_by': cited_by_count,
                 'year': article.get('year', '')
             })
         
@@ -207,7 +237,7 @@ class ScholarDataParser:
             }
         
         years = [int(item['year']) for item in citations_by_year if 'year' in item]
-        citations = [int(item['citations']) for item in citations_by_year if 'citations' in item]
+        citations = [int(item['cites']) for item in citations_by_year if 'cites' in item]
         
         total_years = len(years)
         avg_citations = sum(citations) / total_years if total_years > 0 else 0
@@ -322,11 +352,11 @@ class ScholarDataTester:
         print("-" * 80)
         metrics = profile['metrics']
         print(f"Total Citations: {metrics['citations_all']}")
-        print(f"Citations (since 2019): {metrics['citations_since_2019']}")
+        print(f"Citations (since 2020): {metrics['citations_since_2020']}")
         print(f"h-index: {metrics['h_index_all']}")
-        print(f"h-index (since 2019): {metrics['h_index_since_2019']}")
+        print(f"h-index (since 2020): {metrics['h_index_since_2020']}")
         print(f"i10-index: {metrics['i10_index_all']}")
-        print(f"i10-index (since 2019): {metrics['i10_index_since_2019']}")
+        print(f"i10-index (since 2020): {metrics['i10_index_since_2020']}")
         
         print("\n" + "-" * 80)
         print("STATISTICS")
@@ -341,7 +371,7 @@ class ScholarDataTester:
         print("-" * 80)
         for item in profile['citations_by_year']:
             year = item.get('year', 'N/A')
-            citations = item.get('citations', 0)
+            citations = item.get('cites', 0)
             print(f"  {year}: {citations} citations")
         
         print("\n" + "-" * 80)

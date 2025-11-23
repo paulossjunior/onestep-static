@@ -1,0 +1,24 @@
+{
+  "researchers": [
+    {
+      "name": "Paulo Sérgio Dos Santos Júnior",
+      "scholar_id": "cFAEK0wAAAAJ",
+      "campus": "Serra"
+    },
+    {
+      "name": "Rodrigo Fernandes Calhau",
+      "scholar_id": "mrBLyX0AAAAJ",
+      "campus": "Serra"
+    },
+    {
+      "name": "Fabiano Borges Ruy",
+      "scholar_id": "StrLqxIAAAAJ",
+      "campus": "Serra"
+    },
+    {
+      "name": "Mateus Conrad Barcellos Da Costa",
+      "scholar_id": "eH4gxyUAAAAJ",
+      "campus": "Serra"
+    }
+  ]
+}

@@ -14,6 +14,7 @@ nav:
   - Students: students.md
   - Scholarships: scholarship.md
   - Research Lines: research_lines.md
+  - Papers: papers.md
   - Downloads: downloads.md
 
 plugins:
@@ -39,6 +40,7 @@ plugins:
             Students: Estudantes
             Scholarships: Bolsas de Estudo
             Research Lines: Linhas de Pesquisa
+            Papers: Publicações
             Downloads: Downloads
   - macros
   - table-reader

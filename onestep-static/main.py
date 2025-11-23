@@ -195,6 +195,22 @@ class DataLoader:
         }
         
         return self.load_with_fallback('research_lines.json', default)
+    
+    def load_papers_data(self) -> Dict[str, Any]:
+        """
+        Load papers data with fallback structure.
+        
+        Returns:
+            Papers data dictionary
+        """
+        default = {
+            'campus': 'Serra',
+            'total_researchers': 0,
+            'generated_at': '',
+            'researchers': []
+        }
+        
+        return self.load_with_fallback('papers.json', default)
 
 
 class DateProvider:
@@ -247,6 +263,7 @@ class MacroRegistry:
         self.env.macro(self.data_loader.load_supervisors_data)
         self.env.macro(self.data_loader.load_students_data)
         self.env.macro(self.data_loader.load_research_lines_data)
+        self.env.macro(self.data_loader.load_papers_data)
 
 
 def define_env(env: Any) -> None:
