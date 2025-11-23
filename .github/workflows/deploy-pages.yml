@@ -9,6 +9,8 @@ on:
       - 'source/**'
       - 'src/**'
       - 'onestep-static/**'
+      - 'Makefile'
+      - 'requirements.txt'
       - '.github/workflows/deploy-pages.yml'
   
   # Allow manual trigger
@@ -40,48 +42,44 @@ jobs:
           python-version: '3.12'
           cache: 'pip'
       
-      - name: Install Python dependencies
-        run: |
-          python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Install dependencies
+        run: make install
+      
+      - name: Show project status
+        run: make status
       
       - name: Process research groups
-        run: |
-          echo "Processing research groups..."
-          python src/process_research_groups.py
+        run: make process-groups
       
       - name: Process research projects
-        run: |
-          echo "Processing research projects..."
-          python src/process_research_projects.py
+        run: make process-projects
+      
+      - name: Process scholarships
+        run: make process-scholarships
+      
+      - name: Calculate student recurrence
+        run: make calculate-recurrence
+      
+      - name: Aggregate data by student
+        run: make aggregate-students
+      
+      - name: Aggregate data by supervisor
+        run: make aggregate-supervisors
+      
+      - name: Analyze partnerships
+        run: make analyze-partnerships
       
       - name: Generate network statistics
-        run: |
-          echo "Generating network statistics..."
-          python src/generate_network_stats.py
-      
-      - name: Group data by supervisor
-        run: |
-          echo "Grouping data by supervisor..."
-          python scripts/group_by_supervisor.py
-      
-      - name: Group data by student
-        run: |
-          echo "Grouping data by student..."
-          python scripts/group_by_student.py
+        run: make analyze-networks
       
       - name: Copy data files to docs
-        run: |
-          echo "Copying data files for downloads..."
-          mkdir -p onestep-static/docs/data
-          cp data/*.json onestep-static/docs/data/
+        run: make copy-data
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
       
-      - name: Build with MkDocs
+      - name: Build documentation with MkDocs
         run: |
-          echo "Building documentation with MkDocs..."
           cd onestep-static
           mkdocs build --clean --strict
       

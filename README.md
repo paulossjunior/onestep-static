@@ -42,26 +42,43 @@ This project automatically generates a static documentation website from researc
 .
 ├── .github/
 │   └── workflows/
-│       └── deploy-pages.yml      # GitHub Actions deployment
+│       └── deploy-pages.yml      # GitHub Actions CI/CD
 │
 ├── source/                       # Source CSV files from SIGPESQ
 │   ├── research_groups/
 │   │   └── research_group.csv
-│   └── research_project/
-│       └── *.csv                 # Multiple CSV files by year
+│   ├── research_project/
+│   │   └── *.csv                 # Multiple CSV files by year
+│   └── scholarships/
+│       └── *.csv                 # Scholarship data by year
 │
-├── src/                          # Python processing scripts
+├── src/                          # Python processing scripts (OOP)
 │   ├── process_research_groups.py      # Convert groups CSV to JSON
 │   ├── process_research_projects.py    # Convert projects CSV to JSON
-│   └── generate_network_stats.py       # Generate collaboration networks
+│   ├── process_scholarships.py         # Convert scholarships CSV to JSON
+│   ├── calculate_student_recurrence.py # Calculate student statistics
+│   ├── group_by_student.py             # Aggregate by student
+│   ├── group_by_supervisor.py          # Aggregate by supervisor
+│   ├── analyze_partnerships.py         # Analyze partnerships
+│   ├── generate_network_stats.py       # Generate collaboration networks
+│   ├── translate_docs.py               # Translate documentation
+│   ├── remove_pii_columns.py           # Remove PII from CSV
+│   ├── remove_cpf_from_json.py         # Remove CPF from JSON
+│   ├── build.sh                        # Build script
+│   └── README.md                       # Scripts documentation
 │
 ├── data/                         # Generated JSON files
 │   ├── research_group.json       # Processed research groups
 │   ├── research_projects.json    # Processed research projects
+│   ├── scholarships.json         # Processed scholarships
+│   ├── students.json             # Student aggregated data
+│   ├── supervisors.json          # Supervisor aggregated data
+│   ├── partnership_analysis.json # Partnership analysis
 │   └── network_stats.json        # Collaboration network statistics
 │
 ├── onestep-static/              # MkDocs documentation
 │   ├── mkdocs.yml               # MkDocs configuration
+│   ├── main.py                  # MkDocs macros (OOP)
 │   ├── overrides/               # Custom templates
 │   └── docs/
 │       ├── index.md             # Landing page (English)
@@ -69,12 +86,23 @@ This project automatically generates a static documentation website from researc
 │       ├── research_groups.md   # Research groups (English)
 │       ├── research_groups.pt.md # Research groups (Portuguese)
 │       ├── research_projects.md # Research projects (English)
-│       └── research_projects.pt.md # Research projects (Portuguese)
+│       ├── research_projects.pt.md # Research projects (Portuguese)
+│       ├── students.md          # Students (English)
+│       ├── students.pt.md       # Students (Portuguese)
+│       ├── supervisors.md       # Supervisors (English)
+│       ├── supervisors.pt.md    # Supervisors (Portuguese)
+│       ├── scholarship.md       # Scholarships (English)
+│       ├── scholarship.pt.md    # Scholarships (Portuguese)
+│       ├── downloads.md         # Data downloads (English)
+│       └── downloads.pt.md      # Data downloads (Portuguese)
 │
 ├── docs-projeto/                # Technical documentation
-│   └── *.md                     # Detailed guides and references
+│   ├── MAKEFILE_GUIDE.md        # Makefile usage guide
+│   └── *.md                     # Other guides and references
 │
+├── Makefile                     # Build automation
 ├── requirements.txt             # Python dependencies
+├── main.py                      # MkDocs entry point
 ├── GUIA_RAPIDO_PT.md           # Quick start guide (Portuguese)
 ├── GUIA_PUBLICACAO_GITHUB.md   # GitHub Pages deployment guide
 ├── PUBLICAR_AGORA.md           # Quick publish guide
@@ -108,39 +136,118 @@ This project automatically generates a static documentation website from researc
 
 ## 📊 Usage
 
-### Process Data
+### Quick Start with Makefile
 
-Run the processing scripts in order:
+The project includes a comprehensive Makefile for easy management:
 
 ```bash
-# 1. Process research groups
-python src/process_research_groups.py
+# Show all available commands
+make help
 
-# 2. Process research projects
-python src/process_research_projects.py
+# Install dependencies
+make install
 
-# 3. Generate network statistics
-python src/generate_network_stats.py
+# Process all data (complete pipeline)
+make process-all
+
+# Build documentation
+make build-docs
+
+# Serve documentation locally
+make serve-docs
 ```
 
-Or run all at once:
+### Complete Workflow
+
 ```bash
-python src/process_research_groups.py && \
-python src/process_research_projects.py && \
-python src/generate_network_stats.py
+# 1. Install dependencies
+make install
+
+# 2. Process all data
+make process-all
+
+# 3. Build and serve documentation
+make serve-docs
+# Open http://127.0.0.1:8000
 ```
 
-### Build Documentation
+### Individual Processing Steps
 
 ```bash
+# Process research groups
+make process-groups
+
+# Process research projects
+make process-projects
+
+# Process scholarships
+make process-scholarships
+
+# Calculate student recurrence
+make calculate-recurrence
+
+# Aggregate data by student
+make aggregate-students
+
+# Aggregate data by supervisor
+make aggregate-supervisors
+
+# Analyze partnerships
+make analyze-partnerships
+
+# Generate network statistics
+make analyze-networks
+```
+
+### Documentation Commands
+
+```bash
+# Copy data files to docs
+make copy-data
+
 # Build static site
-mkdocs build --clean --strict
+make build-docs
 
-# Preview locally
-mkdocs serve
+# Preview locally (with auto-reload)
+make serve-docs
 # Open http://127.0.0.1:8000
 # The site will be available in both English and Portuguese
 # Use the language selector in the top navigation bar
+
+# Translate documentation to Portuguese
+make translate-docs
+```
+
+### Utility Commands
+
+```bash
+# Check status of data files
+make status
+
+# Show project information
+make info
+
+# Clean generated files
+make clean
+
+# Clean data files (⚠️ WARNING: removes processed data)
+make clean-data
+```
+
+### Code Quality
+
+```bash
+# Format code with black
+make format
+
+# Run linter
+make lint
+
+# Type checking
+make type-check
+
+# Run tests
+make test
 ```
 
 ### Deploy to GitHub Pages
@@ -150,9 +257,41 @@ mkdocs serve
 - GitHub Actions will automatically build and deploy
 
 **Manual deployment:**
+```bash
+# Prepare for deployment
+make deploy
+
+# Then follow the git commands shown
+git add .
+git commit -m "Update data and documentation"
+git push origin main
+```
+
+**Manual workflow trigger:**
 - Go to Actions tab in GitHub
 - Select "Deploy to GitHub Pages"
 - Click "Run workflow"
+
+### Alternative: Direct Python Commands
+
+If you prefer not to use Make:
+
+```bash
+# Process data
+python src/process_research_groups.py
+python src/process_research_projects.py
+python src/process_scholarships.py
+python src/calculate_student_recurrence.py
+python src/group_by_student.py
+python src/group_by_supervisor.py
+python src/analyze_partnerships.py
+python src/generate_network_stats.py
+
+# Build documentation
+cd onestep-static
+mkdocs build --clean --strict
+mkdocs serve
+```
 
 ## 🏗️ Architecture
 
@@ -241,14 +380,20 @@ mkdocs serve
 - **Landing Page**: Overview and navigation guide (English and Portuguese)
 - **Research Groups**: Group-centric view with networks
 - **Research Projects**: Project-centric view with analytics
+- **Students**: Student participation and collaboration
+- **Supervisors**: Supervisor profiles and statistics
+- **Scholarships**: IC scholarship data and analysis
+- **Downloads**: Access to all data files in JSON format
 - **Language Selector**: Switch between English and Portuguese
 
 ### For Developers
+- **Makefile Guide**: `docs-projeto/MAKEFILE_GUIDE.md` - Complete Makefile documentation
 - **Quick Start**: `GUIA_RAPIDO_PT.md` - Quick start guide in Portuguese
 - **Deployment**: `GUIA_PUBLICACAO_GITHUB.md` - Complete GitHub Pages guide
 - **Quick Publish**: `PUBLICAR_AGORA.md` - Fast deployment guide
+- **Scripts Documentation**: `src/README.md` - All Python scripts documented
 - **Technical Docs**: `docs-projeto/` - Detailed technical documentation
-- **Code Documentation**: Docstrings in all Python files
+- **Code Documentation**: Comprehensive docstrings in all Python files
 
 ## 🤝 Contributing
 

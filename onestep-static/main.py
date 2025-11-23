@@ -1,62 +1,124 @@
 """
-Custom macros for MkDocs
+MkDocs Custom Macros Module
+
+This module provides custom macros for MkDocs documentation generation.
+It enables dynamic content loading from JSON data files and provides
+utility functions for date handling.
+
+Classes:
+    DataLoader: Handles loading of JSON data files with fallback paths
+    DateProvider: Provides current date information
+    MacroRegistry: Registers all custom macros with MkDocs
+
+Functions:
+    define_env: Entry point for MkDocs macro registration
 """
+
 import json
 from pathlib import Path
 from datetime import datetime
+from typing import Dict, Any, List, Optional
 
 
-def define_env(env):
+class DataLoader:
     """
-    Define custom macros for MkDocs
+    Handles loading of JSON data files with multiple fallback paths.
+    
+    This class provides robust data loading with automatic path resolution
+    and fallback to empty structures if files are not found.
     """
     
-    @env.macro
-    def get_current_date():
+    def __init__(self, base_path: Path):
         """
-        Get current date information
-        """
-        now = datetime.now()
-        return {
-            'year': now.year,
-            'month': now.month,
-            'day': now.day,
-            'date_str': now.strftime('%Y-%m-%d')
-        }
-    
-    @env.macro
-    def load_partnership_data():
-        """
-        Load partnership analysis data from JSON file
-        """
-        json_path = Path(__file__).parent.parent / 'data' / 'partnership_analysis.json'
+        Initialize data loader with base path.
         
-        with open(json_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-        
-        return data
+        Args:
+            base_path: Base directory path for resolving relative paths
+        """
+        self.base_path = base_path
     
-    @env.macro
-    def load_scholarship_data():
+    def _get_possible_paths(self, filename: str) -> List[Path]:
         """
-        Load scholarship data from JSON file
+        Generate list of possible paths for a data file.
+        
+        Args:
+            filename: Name of the JSON file to load
+            
+        Returns:
+            List of Path objects to try in order
         """
-        # Try multiple paths
-        possible_paths = [
-            Path(__file__).parent.parent / 'data' / 'scholarships.json',
-            Path('data/scholarships.json'),
-            Path('../data/scholarships.json')
+        return [
+            self.base_path.parent / 'data' / filename,
+            Path('data') / filename,
+            Path('..') / 'data' / filename
         ]
+    
+    def _load_json(self, filepath: Path) -> Optional[Dict[str, Any]]:
+        """
+        Load JSON data from a file.
         
-        for json_path in possible_paths:
-            if json_path.exists():
-                with open(json_path, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
+        Args:
+            filepath: Path to JSON file
+            
+        Returns:
+            Parsed JSON data or None if file doesn't exist or is invalid
+        """
+        if not filepath.exists():
+            return None
+        
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except (json.JSONDecodeError, IOError):
+            return None
+    
+    def load_with_fallback(
+        self, 
+        filename: str, 
+        default_structure: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """
+        Load JSON file with fallback to default structure.
+        
+        Args:
+            filename: Name of the JSON file
+            default_structure: Default structure to return if file not found
+            
+        Returns:
+            Loaded data or default structure
+        """
+        for path in self._get_possible_paths(filename):
+            data = self._load_json(path)
+            if data is not None:
                 return data
         
-        # If no path works, return empty structure
-        return {
-            'metadata': {'generated_at': '', 'total_records': 0, 'source': 'N/A'},
+        return default_structure
+    
+    def load_partnership_data(self) -> Dict[str, Any]:
+        """
+        Load partnership analysis data.
+        
+        Returns:
+            Partnership analysis data dictionary
+        """
+        json_path = self.base_path.parent / 'data' / 'partnership_analysis.json'
+        
+        with open(json_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    
+    def load_scholarship_data(self) -> Dict[str, Any]:
+        """
+        Load scholarship data with fallback structure.
+        
+        Returns:
+            Scholarship data dictionary
+        """
+        default = {
+            'metadata': {
+                'generated_at': '',
+                'total_records': 0,
+                'source': 'N/A'
+            },
             'statistics': {
                 'total_scholarships': 0,
                 'by_year': {},
@@ -68,27 +130,17 @@ def define_env(env):
             },
             'scholarships': []
         }
+        
+        return self.load_with_fallback('scholarships.json', default)
     
-    @env.macro
-    def load_supervisors_data():
+    def load_supervisors_data(self) -> Dict[str, Any]:
         """
-        Load supervisors data from JSON file
+        Load supervisors data with fallback structure.
+        
+        Returns:
+            Supervisors data dictionary
         """
-        # Try multiple paths
-        possible_paths = [
-            Path(__file__).parent.parent / 'data' / 'supervisors.json',
-            Path('data/supervisors.json'),
-            Path('../data/supervisors.json')
-        ]
-        
-        for json_path in possible_paths:
-            if json_path.exists():
-                with open(json_path, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                return data
-        
-        # If no path works, return empty structure
-        return {
+        default = {
             'metadata': {
                 'generated_at': '',
                 'total_supervisors': 0,
@@ -98,27 +150,17 @@ def define_env(env):
             },
             'supervisors': []
         }
+        
+        return self.load_with_fallback('supervisors.json', default)
     
-    @env.macro
-    def load_students_data():
+    def load_students_data(self) -> Dict[str, Any]:
         """
-        Load students data from JSON file
+        Load students data with fallback structure.
+        
+        Returns:
+            Students data dictionary
         """
-        # Try multiple paths
-        possible_paths = [
-            Path(__file__).parent.parent / 'data' / 'students.json',
-            Path('data/students.json'),
-            Path('../data/students.json')
-        ]
-        
-        for json_path in possible_paths:
-            if json_path.exists():
-                with open(json_path, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                return data
-        
-        # If no path works, return empty structure
-        return {
+        default = {
             'metadata': {
                 'generated_at': '',
                 'total_students': 0,
@@ -129,3 +171,75 @@ def define_env(env):
             },
             'students': []
         }
+        
+        return self.load_with_fallback('students.json', default)
+
+
+class DateProvider:
+    """Provides current date and time information."""
+    
+    @staticmethod
+    def get_current_date() -> Dict[str, Any]:
+        """
+        Get current date information.
+        
+        Returns:
+            Dictionary with year, month, day, and formatted date string
+        """
+        now = datetime.now()
+        return {
+            'year': now.year,
+            'month': now.month,
+            'day': now.day,
+            'date_str': now.strftime('%Y-%m-%d')
+        }
+
+
+class MacroRegistry:
+    """
+    Registers custom macros with MkDocs environment.
+    
+    This class manages the registration of all custom macros that
+    can be used in MkDocs markdown files.
+    """
+    
+    def __init__(self, env: Any):
+        """
+        Initialize macro registry.
+        
+        Args:
+            env: MkDocs macro environment object
+        """
+        self.env = env
+        self.data_loader = DataLoader(Path(__file__).parent)
+        self.date_provider = DateProvider()
+    
+    def register_all(self) -> None:
+        """Register all custom macros with the environment."""
+        # Register date macro
+        self.env.macro(self.date_provider.get_current_date)
+        
+        # Register data loading macros
+        self.env.macro(self.data_loader.load_partnership_data)
+        self.env.macro(self.data_loader.load_scholarship_data)
+        self.env.macro(self.data_loader.load_supervisors_data)
+        self.env.macro(self.data_loader.load_students_data)
+
+
+def define_env(env: Any) -> None:
+    """
+    Define custom macros for MkDocs.
+    
+    This function is called by MkDocs to register custom macros
+    that can be used in markdown documentation files.
+    
+    Args:
+        env: MkDocs macro environment object
+        
+    Example:
+        In markdown files, use macros like:
+        {{ get_current_date() }}
+        {{ load_scholarship_data() }}
+    """
+    registry = MacroRegistry(env)
+    registry.register_all()

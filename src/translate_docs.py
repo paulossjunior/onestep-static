@@ -1,10 +1,36 @@
 #!/usr/bin/env python3
-"""Script to translate key terms in Portuguese documentation files."""
+"""
+Documentation Translation Tool
+
+This module provides automated translation of key terms and phrases in
+Portuguese documentation files. It uses predefined translation dictionaries
+to convert English content to Portuguese while preserving formatting and
+structure.
+
+Classes:
+    TranslationDictionary: Manages translation mappings
+    DocumentTranslator: Handles file translation operations
+    TranslationOrchestrator: Coordinates the translation process
+
+Usage:
+    python translate_docs.py
+"""
 
 import re
+from pathlib import Path
+from typing import Dict
 
-# Translation dictionary for research_projects
-translations_projects = {
+
+class TranslationDictionary:
+    """
+    Manages translation mappings for different document types.
+    
+    This class stores and provides access to translation dictionaries
+    for various documentation files.
+    """
+    
+    # Translation dictionary for research_projects
+    PROJECTS = {
     # Chart titles and labels
     "title: 'Year'": "title: 'Ano'",
     "title: 'Count'": "title: 'Contagem'",
@@ -80,9 +106,9 @@ translations_projects = {
     "**Total:**": "**Total:**",
     "student(s) with sustained research involvement": "estudante(s) com envolvimento sustentado em pesquisa",
 }
-
-# Translation dictionary for research_groups
-translations_groups = {
+    
+    # Translation dictionary for research_groups
+    GROUPS = {
     # Title
     "# Research Groups": "# Grupos de Pesquisa",
     
@@ -165,21 +191,95 @@ translations_groups = {
     "<th>Total</th>": "<th>Total</th>",
 }
 
-def translate_file(filepath, translations):
-    """Translate a file using the translation dictionary."""
-    with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
+
+class DocumentTranslator:
+    """
+    Handles translation of individual documentation files.
     
-    # Apply translations
-    for english, portuguese in translations.items():
-        content = content.replace(english, portuguese)
+    This class reads files, applies translations, and writes the
+    translated content back to disk.
+    """
     
-    with open(filepath, 'w', encoding='utf-8') as f:
-        f.write(content)
+    def __init__(self, translations: Dict[str, str]):
+        """
+        Initialize translator with a translation dictionary.
+        
+        Args:
+            translations: Dictionary mapping English terms to Portuguese
+        """
+        self.translations = translations
     
-    print(f"Translated: {filepath}")
+    def translate_file(self, filepath: Path) -> None:
+        """
+        Translate a file using the configured translation dictionary.
+        
+        Args:
+            filepath: Path to the file to translate
+            
+        Raises:
+            FileNotFoundError: If the file doesn't exist
+            IOError: If there's an error reading or writing the file
+        """
+        # Read file content
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Apply all translations
+        for english, portuguese in self.translations.items():
+            content = content.replace(english, portuguese)
+        
+        # Write translated content
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        print(f"✓ Translated: {filepath}")
+
+
+class TranslationOrchestrator:
+    """
+    Orchestrates the translation process for multiple files.
+    
+    This class manages the translation of different documentation
+    files using appropriate translation dictionaries.
+    """
+    
+    def __init__(self):
+        """Initialize orchestrator with translation dictionaries."""
+        self.translation_dict = TranslationDictionary()
+    
+    def translate_research_projects(self) -> None:
+        """Translate research projects documentation."""
+        filepath = Path("onestep-static/docs/research_projects.pt.md")
+        translator = DocumentTranslator(self.translation_dict.PROJECTS)
+        translator.translate_file(filepath)
+    
+    def translate_research_groups(self) -> None:
+        """Translate research groups documentation."""
+        filepath = Path("onestep-static/docs/research_groups.pt.md")
+        translator = DocumentTranslator(self.translation_dict.GROUPS)
+        translator.translate_file(filepath)
+    
+    def run(self) -> None:
+        """Execute translation for all configured files."""
+        print("=" * 60)
+        print("DOCUMENTATION TRANSLATION")
+        print("=" * 60)
+        print()
+        
+        self.translate_research_projects()
+        self.translate_research_groups()
+        
+        print()
+        print("=" * 60)
+        print("✓ Translation complete!")
+        print("=" * 60)
+
+
+def main():
+    """Main entry point for the translation script."""
+    orchestrator = TranslationOrchestrator()
+    orchestrator.run()
+
 
 if __name__ == "__main__":
-    translate_file("onestep-static/docs/research_projects.pt.md", translations_projects)
-    translate_file("onestep-static/docs/research_groups.pt.md", translations_groups)
-    print("Translation complete!")
+    main()
