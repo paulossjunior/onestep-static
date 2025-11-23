@@ -408,11 +408,9 @@ function sortTable(columnIndex) {
 
 ---
 
-## Individual Researcher Profiles
-
 {% for supervisor in supervisors|sort(attribute='name') %}
 
-### {{ supervisor['name'] }}
+## {{ supervisor['name'] }}
 
 <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
   <p style="margin: 5px 0;"><strong>Campus:</strong> {{ supervisor['campus'] if supervisor['campus'] else 'Not specified' }}</p>
@@ -452,6 +450,126 @@ function sortTable(columnIndex) {
     <div style="font-size: 24px; font-weight: bold;">{{ supervisor['statistics']['total_volunteers'] }}</div>
     <div style="font-size: 12px;">Volunteers</div>
   </div>
+</div>
+
+{# Calculate role statistics (leader vs member) #}
+{% set role_stats = {'as_coordinator': 0, 'as_researcher': 0, 'coordinator_with_funding': 0, 'coordinator_without_funding': 0} %}
+
+{% for project in supervisor['research_projects'] %}
+  {% if project.get('role_in_project') == 'researcher' %}
+    {% set _ = role_stats.__setitem__('as_researcher', role_stats['as_researcher'] + 1) %}
+  {% else %}
+    {# If no role specified or coordinator #}
+    {% set _ = role_stats.__setitem__('as_coordinator', role_stats['as_coordinator'] + 1) %}
+    
+    {# Check funding for coordinator projects #}
+    {% if project.get('partner') or project.get('external_research_group') or project.get('funding_count') and project['funding_count']|int > 0 %}
+      {% set _ = role_stats.__setitem__('coordinator_with_funding', role_stats['coordinator_with_funding'] + 1) %}
+    {% else %}
+      {% set _ = role_stats.__setitem__('coordinator_without_funding', role_stats['coordinator_without_funding'] + 1) %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{# Role Distribution Chart #}
+<div id="role-chart-{{ loop.index }}" style="width:100%;height:400px;margin:20px 0;"></div>
+
+<script>
+(function() {
+  var roleStats = {{ role_stats|tojson }};
+  
+  // Create two pie charts side by side
+  var trace1 = {
+    labels: ['As Coordinator', 'As Researcher'],
+    values: [roleStats.as_coordinator, roleStats.as_researcher],
+    type: 'pie',
+    name: 'Role Distribution',
+    domain: {
+      x: [0, 0.48],
+      y: [0, 1]
+    },
+    marker: {
+      colors: ['#667eea', '#4facfe']
+    },
+    textinfo: 'label+value+percent',
+    textposition: 'inside',
+    hovertemplate: '<b>%{label}</b><br>%{value} projects<br>%{percent}<extra></extra>'
+  };
+  
+  var trace2 = {
+    labels: ['With Funding', 'Without Funding'],
+    values: [roleStats.coordinator_with_funding, roleStats.coordinator_without_funding],
+    type: 'pie',
+    name: 'Funding (as Coordinator)',
+    domain: {
+      x: [0.52, 1],
+      y: [0, 1]
+    },
+    marker: {
+      colors: ['#28a745', '#6c757d']
+    },
+    textinfo: 'label+value+percent',
+    textposition: 'inside',
+    hovertemplate: '<b>%{label}</b><br>%{value} projects<br>%{percent}<extra></extra>'
+  };
+  
+  var data = [trace1, trace2];
+  
+  var layout = {
+    title: {
+      text: 'Project Role Distribution & Funding Status (as Coordinator)',
+      font: {size: 16, family: 'Arial, sans-serif', color: '#222'}
+    },
+    showlegend: false,
+    annotations: [
+      {
+        text: '<b>Role in Projects</b>',
+        x: 0.24,
+        y: -0.1,
+        xref: 'paper',
+        yref: 'paper',
+        showarrow: false,
+        font: {size: 13, color: '#555'}
+      },
+      {
+        text: '<b>Funding Status<br>(Coordinator Only)</b>',
+        x: 0.76,
+        y: -0.1,
+        xref: 'paper',
+        yref: 'paper',
+        showarrow: false,
+        font: {size: 13, color: '#555'}
+      }
+    ],
+    paper_bgcolor: 'white',
+    plot_bgcolor: 'white',
+    margin: {t: 60, b: 80, l: 20, r: 20},
+    height: 400
+  };
+  
+  Plotly.newPlot('role-chart-{{ loop.index }}', data, layout);
+})();
+</script>
+
+<div style="background-color: #e7f5ff; padding: 15px; border-radius: 6px; margin-bottom: 20px;">
+  <p style="margin: 5px 0; font-size: 14px;">
+    <strong>📊 Project Participation Summary:</strong>
+  </p>
+  <ul style="margin: 10px 0; font-size: 13px; color: #555;">
+    <li><strong>As Coordinator:</strong> {{ role_stats['as_coordinator'] }} project{{ 's' if role_stats['as_coordinator'] != 1 else '' }}
+      {% if role_stats['as_coordinator'] > 0 %}
+        ({{ role_stats['coordinator_with_funding'] }} with funding, {{ role_stats['coordinator_without_funding'] }} without)
+      {% endif %}
+    </li>
+    <li><strong>As Researcher/Member:</strong> {{ role_stats['as_researcher'] }} project{{ 's' if role_stats['as_researcher'] != 1 else '' }}</li>
+    <li><strong>Funding Success Rate:</strong> 
+      {% if role_stats['as_coordinator'] > 0 %}
+        {{ "%.1f"|format((role_stats['coordinator_with_funding'] / role_stats['as_coordinator']) * 100) }}%
+      {% else %}
+        N/A
+      {% endif %}
+    </li>
+  </ul>
 </div>
 
 {# Calculate detailed statistics by year #}
@@ -614,7 +732,7 @@ function sortTable(columnIndex) {
 {% set collaborators = supervisor.get('collaborations', {}) %}
 
 {% if collaborators %}
-#### Collaboration Network ({{ collaborators|length }} collaborators)
+### Collaboration Network ({{ collaborators|length }} collaborators)
 
 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
   <h4 style="margin: 0 0 15px 0; color: white;">🤝 Collaboration Overview</h4>
@@ -1054,7 +1172,7 @@ function sortTable(columnIndex) {
 {% endif %}
 
 {% if supervisor['research_projects'] %}
-#### Research Projects ({{ supervisor['research_projects']|length }})
+### Research Projects ({{ supervisor['research_projects']|length }})
 
 <table style="width:100%; border-collapse: collapse; margin: 15px 0; font-size: 14px;">
   <thead>
@@ -1112,7 +1230,7 @@ function sortTable(columnIndex) {
 {% endif %}
 
 {% if supervisor['ic_supervisions'] %}
-#### Scientific Initiation Supervisions ({{ supervisor['ic_supervisions']|length }})
+### Scientific Initiation Supervisions ({{ supervisor['ic_supervisions']|length }})
 
 <table style="width:100%; border-collapse: collapse; margin: 15px 0; font-size: 14px;">
   <thead>

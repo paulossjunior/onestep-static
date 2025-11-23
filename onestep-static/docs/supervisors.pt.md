@@ -408,11 +408,9 @@ function sortTable(columnIndex) {
 
 ---
 
-## Perfis Individuais dos Pesquisadores
-
 {% for supervisor in supervisors|sort(attribute='name') %}
 
-### {{ supervisor['name'] }}
+## {{ supervisor['name'] }}
 
 <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
   <p style="margin: 5px 0;"><strong>Campus:</strong> {{ supervisor['campus'] if supervisor['campus'] else 'Não especificado' }}</p>
@@ -452,6 +450,126 @@ function sortTable(columnIndex) {
     <div style="font-size: 24px; font-weight: bold;">{{ supervisor['statistics']['total_volunteers'] }}</div>
     <div style="font-size: 12px;">Voluntários</div>
   </div>
+</div>
+
+{# Calculate role statistics (leader vs member) #}
+{% set role_stats = {'as_coordinator': 0, 'as_researcher': 0, 'coordinator_with_funding': 0, 'coordinator_without_funding': 0} %}
+
+{% for project in supervisor['research_projects'] %}
+  {% if project.get('role_in_project') == 'researcher' %}
+    {% set _ = role_stats.__setitem__('as_researcher', role_stats['as_researcher'] + 1) %}
+  {% else %}
+    {# If no role specified or coordinator #}
+    {% set _ = role_stats.__setitem__('as_coordinator', role_stats['as_coordinator'] + 1) %}
+    
+    {# Check funding for coordinator projects #}
+    {% if project.get('partner') or project.get('external_research_group') or project.get('funding_count') and project['funding_count']|int > 0 %}
+      {% set _ = role_stats.__setitem__('coordinator_with_funding', role_stats['coordinator_with_funding'] + 1) %}
+    {% else %}
+      {% set _ = role_stats.__setitem__('coordinator_without_funding', role_stats['coordinator_without_funding'] + 1) %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{# Role Distribution Chart #}
+<div id="role-chart-{{ loop.index }}" style="width:100%;height:400px;margin:20px 0;"></div>
+
+<script>
+(function() {
+  var roleStats = {{ role_stats|tojson }};
+  
+  // Create two pie charts side by side
+  var trace1 = {
+    labels: ['Como Coordenador', 'Como Pesquisador'],
+    values: [roleStats.as_coordinator, roleStats.as_researcher],
+    type: 'pie',
+    name: 'Distribuição de Papéis',
+    domain: {
+      x: [0, 0.48],
+      y: [0, 1]
+    },
+    marker: {
+      colors: ['#667eea', '#4facfe']
+    },
+    textinfo: 'label+value+percent',
+    textposition: 'inside',
+    hovertemplate: '<b>%{label}</b><br>%{value} projetos<br>%{percent}<extra></extra>'
+  };
+  
+  var trace2 = {
+    labels: ['Com Fomento', 'Sem Fomento'],
+    values: [roleStats.coordinator_with_funding, roleStats.coordinator_without_funding],
+    type: 'pie',
+    name: 'Fomento (como Coordenador)',
+    domain: {
+      x: [0.52, 1],
+      y: [0, 1]
+    },
+    marker: {
+      colors: ['#28a745', '#6c757d']
+    },
+    textinfo: 'label+value+percent',
+    textposition: 'inside',
+    hovertemplate: '<b>%{label}</b><br>%{value} projetos<br>%{percent}<extra></extra>'
+  };
+  
+  var data = [trace1, trace2];
+  
+  var layout = {
+    title: {
+      text: 'Distribuição de Papéis em Projetos & Status de Fomento (como Coordenador)',
+      font: {size: 16, family: 'Arial, sans-serif', color: '#222'}
+    },
+    showlegend: false,
+    annotations: [
+      {
+        text: '<b>Papel nos Projetos</b>',
+        x: 0.24,
+        y: -0.1,
+        xref: 'paper',
+        yref: 'paper',
+        showarrow: false,
+        font: {size: 13, color: '#555'}
+      },
+      {
+        text: '<b>Status de Fomento<br>(Apenas Coordenador)</b>',
+        x: 0.76,
+        y: -0.1,
+        xref: 'paper',
+        yref: 'paper',
+        showarrow: false,
+        font: {size: 13, color: '#555'}
+      }
+    ],
+    paper_bgcolor: 'white',
+    plot_bgcolor: 'white',
+    margin: {t: 60, b: 80, l: 20, r: 20},
+    height: 400
+  };
+  
+  Plotly.newPlot('role-chart-{{ loop.index }}', data, layout);
+})();
+</script>
+
+<div style="background-color: #e7f5ff; padding: 15px; border-radius: 6px; margin-bottom: 20px;">
+  <p style="margin: 5px 0; font-size: 14px;">
+    <strong>📊 Resumo de Participação em Projetos:</strong>
+  </p>
+  <ul style="margin: 10px 0; font-size: 13px; color: #555;">
+    <li><strong>Como Coordenador:</strong> {{ role_stats['as_coordinator'] }} projeto{{ 's' if role_stats['as_coordinator'] != 1 else '' }}
+      {% if role_stats['as_coordinator'] > 0 %}
+        ({{ role_stats['coordinator_with_funding'] }} com fomento, {{ role_stats['coordinator_without_funding'] }} sem fomento)
+      {% endif %}
+    </li>
+    <li><strong>Como Pesquisador/Membro:</strong> {{ role_stats['as_researcher'] }} projeto{{ 's' if role_stats['as_researcher'] != 1 else '' }}</li>
+    <li><strong>Taxa de Sucesso em Fomento:</strong> 
+      {% if role_stats['as_coordinator'] > 0 %}
+        {{ "%.1f"|format((role_stats['coordinator_with_funding'] / role_stats['as_coordinator']) * 100) }}%
+      {% else %}
+        N/A
+      {% endif %}
+    </li>
+  </ul>
 </div>
 
 {# Calculate detailed statistics by year #}
@@ -614,7 +732,7 @@ function sortTable(columnIndex) {
 {% set collaborators = supervisor.get('collaborations', {}) %}
 
 {% if collaborators %}
-#### Rede de Colaboração ({{ collaborators|length }} colaboradores)
+### Rede de Colaboração ({{ collaborators|length }} colaboradores)
 
 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
   <h4 style="margin: 0 0 15px 0; color: white;">🤝 Visão Geral da Colaboração</h4>
@@ -1041,7 +1159,7 @@ function sortTable(columnIndex) {
 {% endif %}
 
 {% if supervisor['research_projects'] %}
-#### Projetos de Pesquisa ({{ supervisor['research_projects']|length }})
+### Projetos de Pesquisa ({{ supervisor['research_projects']|length }})
 
 <table style="width:100%; border-collapse: collapse; margin: 15px 0; font-size: 14px;">
   <thead>
@@ -1099,7 +1217,7 @@ function sortTable(columnIndex) {
 {% endif %}
 
 {% if supervisor['ic_supervisions'] %}
-#### Orientações de Iniciação Científica ({{ supervisor['ic_supervisions']|length }})
+### Orientações de Iniciação Científica ({{ supervisor['ic_supervisions']|length }})
 
 <table style="width:100%; border-collapse: collapse; margin: 15px 0; font-size: 14px;">
   <thead>
