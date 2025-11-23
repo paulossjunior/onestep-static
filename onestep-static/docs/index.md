@@ -4,7 +4,7 @@ Welcome to **OneStep**, the research observatory for Campus Serra. This portal p
 
 ## Overview
 
-This documentation is organized into four main sections, each offering different perspectives on our research ecosystem:
+This documentation is organized into five main sections, each offering different perspectives on our research ecosystem:
 
 ### [Research Groups](research_groups.md)
 
@@ -65,6 +65,30 @@ The Researchers section provides a **researcher-centric view** of research activ
 
 This section is perfect for understanding individual researcher contributions, identifying collaboration opportunities, and analyzing the research network structure at Campus Serra.
 
+### [Research Papers](papers.md)
+
+The Research Papers section provides a **publication-centric view** of academic output from Campus Serra researchers. Here you'll find:
+
+- **Comprehensive publication data** sourced from **Google Scholar**
+- **Researcher profiles** featuring:
+  - Total publications and citation counts
+  - h-index and i10-index metrics
+  - Research interests and affiliations
+  - Links to Google Scholar profiles
+- **Publication listings** including:
+  - Paper titles, authors, and publication venues
+  - Citation counts for each publication
+  - Publication years and links to full papers
+  - Top 10 most cited papers per researcher
+- **Campus-wide publication metrics** showing:
+  - Total researchers with Google Scholar profiles
+  - Aggregate citation statistics
+  - Publication trends and research impact
+
+This section is ideal for assessing research impact, discovering publications by topic, and understanding the scholarly output of Campus Serra researchers.
+
+*Data is sourced from Google Scholar via SearchAPI.io and updated regularly to ensure accuracy.*
+
 ### [Scholarships](scholarship.md)
 
 The Scholarships section provides comprehensive information about research scholarships and student support. Here you'll find:
@@ -88,6 +112,7 @@ This section is ideal for understanding scholarship trends, identifying funding 
 
 - **Exploring by research area?** Start with [Research Groups](research_groups.md) to see which groups work in your area of interest
 - **Looking for specific researchers?** Browse [Researchers](supervisors.md) to see individual profiles and collaboration networks
+- **Looking for publications?** Check [Research Papers](papers.md) for Google Scholar data, citations, and h-index metrics
 - **Looking for specific projects?** Browse [Research Projects](research_projects.md) organized by year
 - **Researching scholarships?** Check [Scholarships](scholarship.md) for funding trends and opportunities
 - **Analyzing trends?** All sections include interactive charts showing evolution over time
@@ -109,9 +134,12 @@ All data presented in this documentation is filtered to include only research ac
 - **Highlights** highly engaged students and active research groups
 - **Tracks** funding sources and partnership relationships
 
-## Data Source
+## Data Sources
 
-The data presented in this documentation was extracted from **SIGPESQ** (Sistema de Gestão de Pesquisa do IFES - Research Management System of the Federal Institute of Espírito Santo). SIGPESQ is the official platform used by IFES to register, manage, and track all research projects, groups, and activities across its campuses.
+The data presented in this documentation comes from multiple sources:
+
+- **SIGPESQ** (Sistema de Gestão de Pesquisa do IFES - Research Management System of the Federal Institute of Espírito Santo) - The official platform used by IFES to register, manage, and track all research projects, groups, and activities across its campuses
+- **Google Scholar** - Academic publication and citation data accessed via SearchAPI.io, providing comprehensive metrics on research output, citations, h-index, and scholarly impact
 
 ---
 

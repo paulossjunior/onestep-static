@@ -31,6 +31,34 @@ This page provides access to all research data files in JSON format. These datas
 
 ---
 
+### 📚 Research Papers
+**File:** [papers.json](data/papers.json)  
+**Format:** JSON  
+**Description:** Academic publications and citation data from Google Scholar.
+
+**Contains:**
+- Researcher profiles (name, affiliation, email)
+- Google Scholar profile links
+- Publication statistics (total papers, citations, h-index, i10-index)
+- Research interests
+- Individual publications with:
+  - Title, authors, publication venue
+  - Citation counts
+  - Publication year
+  - Links to papers
+- Top 10 most cited papers per researcher
+
+**Data Source:** Google Scholar (via SearchAPI.io)
+
+**Use cases:**
+- Analyze research impact and citations
+- Track publication trends over time
+- Identify highly cited papers
+- Study research interests and collaborations
+- Assess researcher productivity
+
+---
+
 ### 🎓 IC Scholarships
 **File:** [scholarships.json](data/scholarships.json)  
 **Format:** JSON  
@@ -279,6 +307,7 @@ For questions, issues, or data requests:
 | File | Size | Records | Download |
 |------|------|---------|----------|
 | research_projects.json | ~500 KB | ~300 projects | [⬇️ Download](data/research_projects.json) |
+| papers.json | ~800 KB | ~50 researchers | [⬇️ Download](data/papers.json) |
 | scholarships.json | ~800 KB | ~1000 scholarships | [⬇️ Download](data/scholarships.json) |
 | students.json | ~600 KB | ~500 students | [⬇️ Download](data/students.json) |
 | supervisors.json | ~400 KB | ~150 supervisors | [⬇️ Download](data/supervisors.json) |

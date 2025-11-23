@@ -1,7 +1,7 @@
 {
   "campus": "Serra",
-  "total_researchers": 6,
-  "generated_at": "2025-11-23T16:08:57.327137",
+  "total_researchers": 8,
+  "generated_at": "2025-11-23T16:27:42.171614",
   "researchers": [
     {
       "researcher": {
@@ -2071,6 +2071,640 @@
           "citations": 1,
           "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:dhFuZR0502QC",
           "citation_id": "y6Smt-cAAAAJ:dhFuZR0502QC"
+        }
+      ]
+    },
+    {
+      "researcher": {
+        "name": "Francisco de Assis Boldt",
+        "campus": "Serra",
+        "scholar_id": "cVUbNyMAAAAJ",
+        "scholar_url": "https://scholar.google.com/citations?user=cVUbNyMAAAAJ",
+        "affiliation": "Ifes - Instituto Federal do Espírito Santo",
+        "email": "Verified email at ifes.edu.br",
+        "interests": [
+          "Machine Learning",
+          "Fault Diagnosis"
+        ]
+      },
+      "statistics": {
+        "total_papers": 20,
+        "total_citations": 712,
+        "average_citations_per_paper": 35.6,
+        "h_index": {
+          "all_time": "10",
+          "since_2020": "7"
+        },
+        "i10_index": {
+          "all_time": "10",
+          "since_2020": "7"
+        },
+        "papers_by_year": {
+          "2014": 4,
+          "2021": 3,
+          "2017": 3,
+          "2020": 2,
+          "2013": 2,
+          "2024": 1,
+          "2015": 2,
+          "2025": 2,
+          "2019": 1
+        },
+        "citations_by_year": [
+          {
+            "year": 2014,
+            "cites": 3
+          },
+          {
+            "year": 2015,
+            "cites": 26
+          },
+          {
+            "year": 2016,
+            "cites": 30
+          },
+          {
+            "year": 2017,
+            "cites": 51
+          },
+          {
+            "year": 2018,
+            "cites": 66
+          },
+          {
+            "year": 2019,
+            "cites": 64
+          },
+          {
+            "year": 2020,
+            "cites": 68
+          },
+          {
+            "year": 2021,
+            "cites": 105
+          },
+          {
+            "year": 2022,
+            "cites": 68
+          },
+          {
+            "year": 2023,
+            "cites": 70
+          },
+          {
+            "year": 2024,
+            "cites": 86
+          },
+          {
+            "year": 2025,
+            "cites": 63
+          }
+        ]
+      },
+      "top_5_papers": [
+        {
+          "title": "Heterogeneous feature models and feature selection applied to bearing fault diagnosis",
+          "authors": "TW Rauber, F de Assis Boldt, FM Varejão",
+          "publication": "IEEE Transactions on Industrial Electronics 62 (1), 637-646, 2014",
+          "year": 2014,
+          "citations": 394,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:IjCSPb-OGe4C",
+          "citation_id": "cVUbNyMAAAAJ:IjCSPb-OGe4C"
+        },
+        {
+          "title": "An experimental methodology to evaluate machine learning methods for fault diagnosis based on vibration signals",
+          "authors": "TW Rauber, AL da Silva Loca, F de Assis Boldt, AL Rodrigues, ...",
+          "publication": "Expert Systems with Applications 167, 114022, 2021",
+          "year": 2021,
+          "citations": 119,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:ULOm3_A8WrAC",
+          "citation_id": "cVUbNyMAAAAJ:ULOm3_A8WrAC"
+        },
+        {
+          "title": "Cascade feature selection and ELM for automatic fault diagnosis of the Tennessee Eastman process",
+          "authors": "F de Assis Boldt, TW Rauber, FM Varejão",
+          "publication": "Neurocomputing 239, 238-248, 2017",
+          "year": 2017,
+          "citations": 26,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:Se3iqnhoufwC",
+          "citation_id": "cVUbNyMAAAAJ:Se3iqnhoufwC"
+        },
+        {
+          "title": "Kernel and random extreme learning machine applied to submersible motor pump fault diagnosis",
+          "authors": "TW Rauber, T Oliveira-Santos, F de Assis Boldt, A Rodrigues, FM Varejao, ...",
+          "publication": "2017 International Joint Conference on Neural Networks (IJCNN), 3347-3354, 2017",
+          "year": 2017,
+          "citations": 25,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:hqOjcs7Dif8C",
+          "citation_id": "cVUbNyMAAAAJ:hqOjcs7Dif8C"
+        },
+        {
+          "title": "Performance analysis of extreme learning machine for automatic diagnosis of electrical submersible pump conditions",
+          "authors": "F de Assis Boldt, TW Rauber, FM Varejão, MP Ribeiro",
+          "publication": "2014 12th IEEE International Conference on Industrial Informatics (INDIN), 67-72, 2014",
+          "year": 2014,
+          "citations": 18,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:Tyk-4Ss8FVUC",
+          "citation_id": "cVUbNyMAAAAJ:Tyk-4Ss8FVUC"
+        }
+      ],
+      "all_papers": [
+        {
+          "title": "Heterogeneous feature models and feature selection applied to bearing fault diagnosis",
+          "authors": "TW Rauber, F de Assis Boldt, FM Varejão",
+          "publication": "IEEE Transactions on Industrial Electronics 62 (1), 637-646, 2014",
+          "year": 2014,
+          "citations": 394,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:IjCSPb-OGe4C",
+          "citation_id": "cVUbNyMAAAAJ:IjCSPb-OGe4C"
+        },
+        {
+          "title": "An experimental methodology to evaluate machine learning methods for fault diagnosis based on vibration signals",
+          "authors": "TW Rauber, AL da Silva Loca, F de Assis Boldt, AL Rodrigues, ...",
+          "publication": "Expert Systems with Applications 167, 114022, 2021",
+          "year": 2021,
+          "citations": 119,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:ULOm3_A8WrAC",
+          "citation_id": "cVUbNyMAAAAJ:ULOm3_A8WrAC"
+        },
+        {
+          "title": "Cascade feature selection and ELM for automatic fault diagnosis of the Tennessee Eastman process",
+          "authors": "F de Assis Boldt, TW Rauber, FM Varejão",
+          "publication": "Neurocomputing 239, 238-248, 2017",
+          "year": 2017,
+          "citations": 26,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:Se3iqnhoufwC",
+          "citation_id": "cVUbNyMAAAAJ:Se3iqnhoufwC"
+        },
+        {
+          "title": "Kernel and random extreme learning machine applied to submersible motor pump fault diagnosis",
+          "authors": "TW Rauber, T Oliveira-Santos, F de Assis Boldt, A Rodrigues, FM Varejao, ...",
+          "publication": "2017 International Joint Conference on Neural Networks (IJCNN), 3347-3354, 2017",
+          "year": 2017,
+          "citations": 25,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:hqOjcs7Dif8C",
+          "citation_id": "cVUbNyMAAAAJ:hqOjcs7Dif8C"
+        },
+        {
+          "title": "Performance analysis of extreme learning machine for automatic diagnosis of electrical submersible pump conditions",
+          "authors": "F de Assis Boldt, TW Rauber, FM Varejão, MP Ribeiro",
+          "publication": "2014 12th IEEE International Conference on Industrial Informatics (INDIN), 67-72, 2014",
+          "year": 2014,
+          "citations": 18,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:Tyk-4Ss8FVUC",
+          "citation_id": "cVUbNyMAAAAJ:Tyk-4Ss8FVUC"
+        },
+        {
+          "title": "Feature selection for multivariate contribution analysis in fault detection and isolation",
+          "authors": "TW Rauber, FA Boldt, CJ Munaro",
+          "publication": "Journal of the Franklin Institute 357 (10), 6294-6320, 2020",
+          "year": 2020,
+          "citations": 15,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:KlAtU1dfN6UC",
+          "citation_id": "cVUbNyMAAAAJ:KlAtU1dfN6UC"
+        },
+        {
+          "title": "Feature Extraction and Selection for Automatic Fault Diagnosis of Rotating Machinery",
+          "authors": "FA Boldt, TW Rauber, FM Varejão",
+          "publication": "X Encontro Nacional de Inteligência Artificial e Computacional (ENIAC), 2013",
+          "year": 2013,
+          "citations": 15,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:2osOgNQ5qMEC",
+          "citation_id": "cVUbNyMAAAAJ:2osOgNQ5qMEC"
+        },
+        {
+          "title": "Enhancing Brazilian Sign Language Recognition through Skeleton Image Representation",
+          "authors": "CE Alves, T Boldt, Francisco. Paixão",
+          "publication": "SIBGRAPI Conference on Graphics, Patterns and Images, 1-6, 2024",
+          "year": 2024,
+          "citations": 11,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:ZeXyd9-uunAC",
+          "citation_id": "cVUbNyMAAAAJ:ZeXyd9-uunAC"
+        },
+        {
+          "title": "Fast feature selection using hybrid ranking and wrapper approach for automatic fault diagnosis of motorpumps based on vibration signals",
+          "authors": "F de Assis Boldt, TW Rauber, FM Varejão, MP Ribeiro",
+          "publication": "2015 IEEE 13th international conference on industrial informatics (INDIN …, 2015",
+          "year": 2015,
+          "citations": 11,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:YsMSGLbcyi4C",
+          "citation_id": "cVUbNyMAAAAJ:YsMSGLbcyi4C"
+        },
+        {
+          "title": "Binary feature selection classifier ensemble for fault diagnosis of submersible motor pump",
+          "authors": "F de Assis Boldt, TW Rauber, T Oliveira-Santos, A Rodrigues, FM Varejão, ...",
+          "publication": "2017 IEEE 26th International Symposium on Industrial Electronics (ISIE …, 2017",
+          "year": 2017,
+          "citations": 10,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:0EnyYjriUFMC",
+          "citation_id": "cVUbNyMAAAAJ:0EnyYjriUFMC"
+        },
+        {
+          "title": "Evaluation of the Extreme Learning Machine for automatic fault diagnosis of the Tennessee Eastman chemical process",
+          "authors": "F de Assis Boldt, TW Rauber, FM Varejão",
+          "publication": "IECON 2014-40th Annual Conference of the IEEE Industrial Electronics Society …, 2014",
+          "year": 2014,
+          "citations": 9,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:W7OEmFMy1HYC",
+          "citation_id": "cVUbNyMAAAAJ:W7OEmFMy1HYC"
+        },
+        {
+          "title": "A proposal to mitigate similarity bias for the paderborn bearing data set",
+          "authors": "LAS Venturim, F de Assis Boldt",
+          "publication": "IECON 2021–47th Annual Conference of the IEEE Industrial Electronics Society …, 2021",
+          "year": 2021,
+          "citations": 7,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:qxL8FJ1GzNcC",
+          "citation_id": "cVUbNyMAAAAJ:qxL8FJ1GzNcC"
+        },
+        {
+          "title": "A fast feature selection algorithm applied to automatic faults diagnosis of rotating machinery",
+          "authors": "F de Assis Boldt, TW Rauber, FM Varejão",
+          "publication": "Journal of applied computing research 3 (2), 78-86, 2014",
+          "year": 2014,
+          "citations": 7,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:zYLM7Y9cAGgC",
+          "citation_id": "cVUbNyMAAAAJ:zYLM7Y9cAGgC"
+        },
+        {
+          "title": "Single sequence fast feature selection for high-dimensional data",
+          "authors": "F de Assis Boldt, TW Rauber, FM Varejão",
+          "publication": "2015 IEEE 27th International Conference on Tools with Artificial …, 2015",
+          "year": 2015,
+          "citations": 6,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:eQOLeE2rZwMC",
+          "citation_id": "cVUbNyMAAAAJ:eQOLeE2rZwMC"
+        },
+        {
+          "title": "Selective embedding for deep learning",
+          "authors": "M Sehri, Z Hua, F de Assis Boldt, P Dumond",
+          "publication": "Knowledge-Based Systems, 114535, 2025",
+          "year": 2025,
+          "citations": 5,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:hFOr9nPyWt4C",
+          "citation_id": "cVUbNyMAAAAJ:hFOr9nPyWt4C"
+        },
+        {
+          "title": "Towards a Universal Vibration Analysis Dataset: A Framework for Transfer Learning in Predictive Maintenance and Structural Health Monitoring",
+          "authors": "M Sehri, I Varejão, Z Hua, V Bonella, A Santos, FA Boldt, P Dumond, ...",
+          "publication": "International Journal of Prognostics and Health Management 16 (3), 2025",
+          "year": 2025,
+          "citations": 5,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:-f6ydRqryjwC",
+          "citation_id": "cVUbNyMAAAAJ:-f6ydRqryjwC"
+        },
+        {
+          "title": "Computational intelligence for automatic diagnosis of submersible motor pump conditions in offshore oil exploration",
+          "authors": "TW Rauber, F de Assis Boldt, FM Varejão, MP Ribeiro",
+          "publication": "2013 IEEE 20th International Conference on Electronics, Circuits, and …, 2013",
+          "year": 2013,
+          "citations": 5,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:UeHWp8X0CEIC",
+          "citation_id": "cVUbNyMAAAAJ:UeHWp8X0CEIC"
+        },
+        {
+          "title": "Previsão de receitas de icms do estado do espírito santo através de seleção de características em cascata e técnicas de aprendizado de máquina",
+          "authors": "M do Carmo, F Boldt, K Komati",
+          "publication": "Encontro Nacional de Inteligência Artificial e Computacional (ENIAC), 118-129, 2019",
+          "year": 2019,
+          "citations": 4,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:kNdYIx-mwKoC",
+          "citation_id": "cVUbNyMAAAAJ:kNdYIx-mwKoC"
+        },
+        {
+          "title": "Classificaçao de sotaques brasileiros usando redes neurais profundas",
+          "authors": "WA Tostes, FA Boldt, KS Komati, F Mutz",
+          "publication": "Simpósio Brasileiro de Automação Inteligente-SBAI 1 (1), 2021",
+          "year": 2021,
+          "citations": 3,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:Wp0gIr-vW9MC",
+          "citation_id": "cVUbNyMAAAAJ:Wp0gIr-vW9MC"
+        },
+        {
+          "title": "Reconhecimento de Gestos de Mão em Sequência a partir de Sensores Inerciais",
+          "authors": "CHG Correia, KS Komati, F de Assis Boldt",
+          "publication": "Journal of Health Informatics 12, 2020",
+          "year": 2020,
+          "citations": 3,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cVUbNyMAAAAJ&citation_for_view=cVUbNyMAAAAJ:4TOpqqG69KYC",
+          "citation_id": "cVUbNyMAAAAJ:4TOpqqG69KYC"
+        }
+      ]
+    },
+    {
+      "researcher": {
+        "name": "Sérgio Nery Simões",
+        "campus": "Serra",
+        "scholar_id": "cWxRO1kAAAAJ",
+        "scholar_url": "https://scholar.google.com/citations?user=cWxRO1kAAAAJ",
+        "affiliation": "Professor Titular, Instituto Federal do Espírito Santo",
+        "email": "Verified email at ifes.edu.br",
+        "interests": [
+          "Bioinformática",
+          "Redes Complexas",
+          "Integração de Dados",
+          "Reconhecimento de Padrões",
+          "Ciência de Dados"
+        ]
+      },
+      "statistics": {
+        "total_papers": 20,
+        "total_citations": 269,
+        "average_citations_per_paper": 13.45,
+        "h_index": {
+          "all_time": "8",
+          "since_2020": "6"
+        },
+        "i10_index": {
+          "all_time": "7",
+          "since_2020": "4"
+        },
+        "papers_by_year": {
+          "2020": 2,
+          "2016": 2,
+          "2019": 2,
+          "2022": 4,
+          "2015": 3,
+          "2014": 2,
+          "2012": 1,
+          "2017": 1,
+          "2024": 2,
+          "2021": 1
+        },
+        "citations_by_year": [
+          {
+            "year": 2015,
+            "cites": 5
+          },
+          {
+            "year": 2016,
+            "cites": 3
+          },
+          {
+            "year": 2017,
+            "cites": 8
+          },
+          {
+            "year": 2018,
+            "cites": 11
+          },
+          {
+            "year": 2019,
+            "cites": 14
+          },
+          {
+            "year": 2020,
+            "cites": 21
+          },
+          {
+            "year": 2021,
+            "cites": 42
+          },
+          {
+            "year": 2022,
+            "cites": 44
+          },
+          {
+            "year": 2023,
+            "cites": 49
+          },
+          {
+            "year": 2024,
+            "cites": 32
+          },
+          {
+            "year": 2025,
+            "cites": 36
+          }
+        ]
+      },
+      "top_5_papers": [
+        {
+          "title": "ACE2 interaction networks in COVID-19: a physiological framework for prediction of outcome in patients with cardiovascular risk factors",
+          "authors": "Z Wicik, C Eyileten, D Jakubik, SN Simões, DC Martins, R Pavão, ...",
+          "publication": "Journal of clinical medicine 9 (11), 3743, 2020",
+          "year": 2020,
+          "citations": 101,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:roLk4NBRz8UC",
+          "citation_id": "cWxRO1kAAAAJ:roLk4NBRz8UC"
+        },
+        {
+          "title": "Corrigendum: An integrative approach to investigate the respective roles of single-nucleotide variants and copy-number variants in Attention-Deficit/Hyperactivity Disorder",
+          "authors": "L de Araújo Lima, AC Feio-dos-Santos, SI Belangero, A Gadelha, ...",
+          "publication": "Scientific reports 6, 2016",
+          "year": 2016,
+          "citations": 34,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:Tyk-4Ss8FVUC",
+          "citation_id": "cWxRO1kAAAAJ:Tyk-4Ss8FVUC"
+        },
+        {
+          "title": "An integrative approach to investigate the respective roles of single-nucleotide variants and copy-number variants in Attention-Deficit/Hyperactivity Disorder",
+          "authors": "L de Araújo Lima, AC Feio-dos-Santos, SI Belangero, A Gadelha, ...",
+          "publication": "Scientific Reports 6, 2016",
+          "year": 2016,
+          "citations": 34,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:UeHWp8X0CEIC",
+          "citation_id": "cWxRO1kAAAAJ:UeHWp8X0CEIC"
+        },
+        {
+          "title": "Assessment of complementarity of WGCNA and NERI results for identification of modules associated to schizophrenia spectrum disorders",
+          "authors": "ASA Feltrin, AC Tahira, SN Simões, H Brentani, DC Martins Jr",
+          "publication": "PloS one 14 (1), e0210431, 2019",
+          "year": 2019,
+          "citations": 29,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:W7OEmFMy1HYC",
+          "citation_id": "cWxRO1kAAAAJ:W7OEmFMy1HYC"
+        },
+        {
+          "title": "Thrombosis-related circulating miR-16-5p is associated with disease severity in patients hospitalised for COVID-19",
+          "authors": "C Eyileten, Z Wicik, SN Simões, DC Martins-Jr, K Klos, W Wlodarczyk, ...",
+          "publication": "RNA biology 19 (1), 963-979, 2022",
+          "year": 2022,
+          "citations": 27,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:0EnyYjriUFMC",
+          "citation_id": "cWxRO1kAAAAJ:0EnyYjriUFMC"
+        }
+      ],
+      "all_papers": [
+        {
+          "title": "ACE2 interaction networks in COVID-19: a physiological framework for prediction of outcome in patients with cardiovascular risk factors",
+          "authors": "Z Wicik, C Eyileten, D Jakubik, SN Simões, DC Martins, R Pavão, ...",
+          "publication": "Journal of clinical medicine 9 (11), 3743, 2020",
+          "year": 2020,
+          "citations": 101,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:roLk4NBRz8UC",
+          "citation_id": "cWxRO1kAAAAJ:roLk4NBRz8UC"
+        },
+        {
+          "title": "Corrigendum: An integrative approach to investigate the respective roles of single-nucleotide variants and copy-number variants in Attention-Deficit/Hyperactivity Disorder",
+          "authors": "L de Araújo Lima, AC Feio-dos-Santos, SI Belangero, A Gadelha, ...",
+          "publication": "Scientific reports 6, 2016",
+          "year": 2016,
+          "citations": 34,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:Tyk-4Ss8FVUC",
+          "citation_id": "cWxRO1kAAAAJ:Tyk-4Ss8FVUC"
+        },
+        {
+          "title": "An integrative approach to investigate the respective roles of single-nucleotide variants and copy-number variants in Attention-Deficit/Hyperactivity Disorder",
+          "authors": "L de Araújo Lima, AC Feio-dos-Santos, SI Belangero, A Gadelha, ...",
+          "publication": "Scientific Reports 6, 2016",
+          "year": 2016,
+          "citations": 34,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:UeHWp8X0CEIC",
+          "citation_id": "cWxRO1kAAAAJ:UeHWp8X0CEIC"
+        },
+        {
+          "title": "Assessment of complementarity of WGCNA and NERI results for identification of modules associated to schizophrenia spectrum disorders",
+          "authors": "ASA Feltrin, AC Tahira, SN Simões, H Brentani, DC Martins Jr",
+          "publication": "PloS one 14 (1), e0210431, 2019",
+          "year": 2019,
+          "citations": 29,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:W7OEmFMy1HYC",
+          "citation_id": "cWxRO1kAAAAJ:W7OEmFMy1HYC"
+        },
+        {
+          "title": "Thrombosis-related circulating miR-16-5p is associated with disease severity in patients hospitalised for COVID-19",
+          "authors": "C Eyileten, Z Wicik, SN Simões, DC Martins-Jr, K Klos, W Wlodarczyk, ...",
+          "publication": "RNA biology 19 (1), 963-979, 2022",
+          "year": 2022,
+          "citations": 27,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:0EnyYjriUFMC",
+          "citation_id": "cWxRO1kAAAAJ:0EnyYjriUFMC"
+        },
+        {
+          "title": "NERI: network-medicine based integrative approach for disease gene prioritization by relative importance",
+          "authors": "SN Simões, DC Martins, CAB Pereira, RF Hashimoto, H Brentani",
+          "publication": "BMC Bioinformatics 16 (Suppl 19), S9, 2015",
+          "year": 2015,
+          "citations": 15,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:d1gkVwhDpl0C",
+          "citation_id": "cWxRO1kAAAAJ:d1gkVwhDpl0C"
+        },
+        {
+          "title": "Identifying dense subgraphs in protein–protein interaction network for gene selection from microarray data",
+          "authors": "T Swarnkar, SN Simoes, A Anura, H Brentani, J Chatterjee, RF Hashimoto, ...",
+          "publication": "Network Modeling Analysis in Health Informatics and Bioinformatics 4 (1), 1-18, 2015",
+          "year": 2015,
+          "citations": 13,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:qjMakFHDy7sC",
+          "citation_id": "cWxRO1kAAAAJ:qjMakFHDy7sC"
+        },
+        {
+          "title": "Multiview clustering on ppi network for gene selection and enrichment from microarray data",
+          "authors": "T Swarnkar, SN Simoes, DC Martins, A Anura, H Brentani, RF Hashimoto, ...",
+          "publication": "2014 IEEE International Conference on Bioinformatics and Bioengineering, 15-22, 2014",
+          "year": 2014,
+          "citations": 10,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:IjCSPb-OGe4C",
+          "citation_id": "cWxRO1kAAAAJ:IjCSPb-OGe4C"
+        },
+        {
+          "title": "Shortest paths ranking methodology to identify alterations in PPI networks of complex diseases",
+          "authors": "SN Simões, DC Martins-Jr, H Brentani, R Fumio",
+          "publication": "Proceedings of the ACM Conference on Bioinformatics, Computational Biology …, 2012",
+          "year": 2012,
+          "citations": 9,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:u5HHmVD_uO8C",
+          "citation_id": "cWxRO1kAAAAJ:u5HHmVD_uO8C"
+        },
+        {
+          "title": "Integrative Variation Analysis Reveals that a Complex Genotype May Specify Phenotype in Siblings with Syndromic Autism Spectrum Disorder",
+          "authors": "VN de Souza Reis, JP Kitajima, AC Tahira, AC Feio-dos-Santos, RA Fock, ...",
+          "publication": "PloS one 12 (1), e0170386, 2017",
+          "year": 2017,
+          "citations": 8,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:Y0pCki6q_DkC",
+          "citation_id": "cWxRO1kAAAAJ:Y0pCki6q_DkC"
+        },
+        {
+          "title": "Maternal immune response during pregnancy and neurodevelopmental outcomes: A longitudinal approach",
+          "authors": "V Euclydes, CIS Braga, G Gouveia, RCR Martinez, C Camilo, SN Simões, ...",
+          "publication": "Brain, Behavior, & Immunity-Health 40, 100832, 2024",
+          "year": 2024,
+          "citations": 4,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:4DMP91E08xMC",
+          "citation_id": "cWxRO1kAAAAJ:4DMP91E08xMC"
+        },
+        {
+          "title": "Addressing Classification on Highly Imbalanced Clinical Datasets",
+          "authors": "AB Fonseca, DC Martins-Jr, Z Wicik, M Postula, SN Simões",
+          "publication": "International Conference on Computational Advances in Bio and Medical …, 2021",
+          "year": 2021,
+          "citations": 4,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:3fE2CSJIrl8C",
+          "citation_id": "cWxRO1kAAAAJ:3fE2CSJIrl8C"
+        },
+        {
+          "title": "Alteration of circulating ACE2-network related microRNAs in patients with COVID-19",
+          "authors": "Z Wicik, C Eyileten, A Nowak, D Keshwani, SN Simões, DC Martins Jr, ...",
+          "publication": "Scientific Reports 14 (1), 13573, 2024",
+          "year": 2024,
+          "citations": 3,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:_kc_bZDykSQC",
+          "citation_id": "cWxRO1kAAAAJ:_kc_bZDykSQC"
+        },
+        {
+          "title": "Um jogo educativo para o ensino do código genético de forma lúdica",
+          "authors": "JYK de Souza, AB da Vitória, MB Andrade, SN Simões",
+          "publication": "",
+          "year": 2019,
+          "citations": 3,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:_FxGoFyzp5QC",
+          "citation_id": "cWxRO1kAAAAJ:_FxGoFyzp5QC"
+        },
+        {
+          "title": "Uma abordagem de integração de dados de redes PPI e expressão gênica para priorizar genes relacionados a doenças complexas",
+          "authors": "SN Simões",
+          "publication": "Universidade de São Paulo, 2015",
+          "year": 2015,
+          "citations": 2,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:9yKSN-GCB0IC",
+          "citation_id": "cWxRO1kAAAAJ:9yKSN-GCB0IC"
+        },
+        {
+          "title": "A Framework for prediction of dropout in distance learning through XAI techniques in Virtual Learning Environment",
+          "authors": "H da Silva Costa, AC Cardoso, CM Netto, DC Martins-Jr, SN Simoes",
+          "publication": "Anais do XIX Encontro Nacional de Inteligência Artificial e Computacional …, 2022",
+          "year": 2022,
+          "citations": 1,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:kNdYIx-mwKoC",
+          "citation_id": "cWxRO1kAAAAJ:kNdYIx-mwKoC"
+        },
+        {
+          "title": "Expression changes of circulating ACE2 regulating-microRNA profiles in patients with COVID-19 during hospitalisation",
+          "authors": "J Jarosz-Popek, C Eyileten, Z Wicik, A Nowak, M Wolska, A Shahzadi, ...",
+          "publication": "European Heart Journal 43 (Supplement_2), ehac544. 2941, 2022",
+          "year": 2022,
+          "citations": 1,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:Zph67rFs4hoC",
+          "citation_id": "cWxRO1kAAAAJ:Zph67rFs4hoC"
+        },
+        {
+          "title": "Thrombosis-related miR-16-5p predicts the disease severity in patients hospitalised for COVID-19",
+          "authors": "D Keshwani, C Eyileten, Z Wicik, A Nowak, D Jakubik, SN Simoes, ...",
+          "publication": "European Heart Journal 43 (Supplement_2), ehac544. 3071, 2022",
+          "year": 2022,
+          "citations": 1,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:hqOjcs7Dif8C",
+          "citation_id": "cWxRO1kAAAAJ:hqOjcs7Dif8C"
+        },
+        {
+          "title": "Comparação das Técnicas de Extração de Características HOG e LBP para Deteção de Glaucoma em Retinografias",
+          "authors": "R Jesus, K Komati, SN Simões",
+          "publication": "Anais do VII Encontro Nacional de Computação dos Institutos Federais, 77-84, 2020",
+          "year": 2020,
+          "citations": 1,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:LkGwnXOMwfcC",
+          "citation_id": "cWxRO1kAAAAJ:LkGwnXOMwfcC"
+        },
+        {
+          "title": "Network-based disease gene prioritization by hitting time analysis",
+          "authors": "LA Lima, SN Simões, RF Hashimoto, DCM Junior, H Brentani, GO Mota",
+          "publication": "2014 IEEE International Conference on Bioinformatics and Bioengineering, 9-14, 2014",
+          "year": 2014,
+          "citations": 1,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cWxRO1kAAAAJ&citation_for_view=cWxRO1kAAAAJ:zYLM7Y9cAGgC",
+          "citation_id": "cWxRO1kAAAAJ:zYLM7Y9cAGgC"
         }
       ]
     }
