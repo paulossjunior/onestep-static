@@ -80,7 +80,7 @@ clean-data: ## Clean generated data files (WARNING: removes processed data)
 	fi
 
 # Data Processing Pipeline
-process-all: process-groups process-projects process-scholarships calculate-recurrence aggregate-students aggregate-supervisors analyze-partnerships analyze-networks ## Run complete data processing pipeline
+process-all: process-groups process-projects process-scholarships calculate-recurrence aggregate-students aggregate-supervisors aggregate-research-lines analyze-partnerships analyze-networks ## Run complete data processing pipeline
 	@echo "$(COLOR_GREEN)✓ All data processing complete$(COLOR_RESET)"
 
 process-groups: ## Process research groups CSV to JSON
@@ -113,6 +113,11 @@ aggregate-supervisors: ## Aggregate data by supervisor
 	$(PYTHON) $(SRC_DIR)/group_by_supervisor.py
 	@echo "$(COLOR_GREEN)✓ Supervisor data aggregated$(COLOR_RESET)"
 
+aggregate-research-lines: ## Aggregate data by research line
+	@echo "$(COLOR_BOLD)Aggregating data by research line...$(COLOR_RESET)"
+	$(PYTHON) $(SRC_DIR)/group_by_research_line.py
+	@echo "$(COLOR_GREEN)✓ Research line data aggregated$(COLOR_RESET)"
+
 analyze-partnerships: ## Analyze partnerships and external collaborations
 	@echo "$(COLOR_BOLD)Analyzing partnerships...$(COLOR_RESET)"
 	$(PYTHON) $(SRC_DIR)/analyze_partnerships.py
@@ -122,6 +127,11 @@ analyze-networks: ## Generate network statistics for research groups
 	@echo "$(COLOR_BOLD)Generating network statistics...$(COLOR_RESET)"
 	$(PYTHON) $(SRC_DIR)/generate_network_stats.py
 	@echo "$(COLOR_GREEN)✓ Network statistics generated$(COLOR_RESET)"
+
+aggregate-research-lines: ## Aggregate data by research line
+	@echo "$(COLOR_BOLD)Aggregating data by research line...$(COLOR_RESET)"
+	$(PYTHON) $(SRC_DIR)/group_by_research_line.py
+	@echo "$(COLOR_GREEN)✓ Research lines aggregated$(COLOR_RESET)"
 
 translate-docs: ## Translate documentation to Portuguese
 	@echo "$(COLOR_BOLD)Translating documentation...$(COLOR_RESET)"

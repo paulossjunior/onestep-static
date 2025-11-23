@@ -13,7 +13,9 @@ nav:
   - Researchers: supervisors.md
   - Students: students.md
   - Scholarships: scholarship.md
+  - Research Lines: research_lines.md
   - Downloads: downloads.md
+
 plugins:
   - search
   - i18n:
@@ -35,7 +37,8 @@ plugins:
             Research Projects: Projetos de Pesquisa
             Researchers: Pesquisadores
             Students: Estudantes
-            Scholarships: Bolsas
+            Scholarships: Bolsas de Estudo
+            Research Lines: Linhas de Pesquisa
             Downloads: Downloads
   - macros
   - table-reader
