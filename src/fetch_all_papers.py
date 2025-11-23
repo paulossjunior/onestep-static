@@ -14,48 +14,88 @@ from dotenv import load_dotenv
 
 
 def fetch_author_data(api_key: str, author_id: str, author_name: str):
-    """Fetch author data and top 20 papers from SearchAPI.io."""
+    """Fetch author data and ALL papers from SearchAPI.io using pagination."""
     
     base_url = "https://www.searchapi.io/api/v1/search"
     
     print(f"\n  Fetching data for {author_name}...")
     
-    params = {
-        'engine': 'google_scholar_author',
-        'author_id': author_id,
-        'api_key': api_key
-    }
+    all_papers = []
+    first_page_data = None
+    from urllib.parse import urlparse, parse_qs
+
+    start = 0
+    # num = 20 # Do not set num, let it be default
     
-    try:
-        response = requests.get(base_url, params=params, timeout=30)
-        response.raise_for_status()
-        data = response.json()
-        
-        articles = data.get('articles', [])
-        
-        # Process articles (top 20 by default)
-        papers = []
-        for article in articles:
-            cited_by_data = article.get('cited_by', {})
-            cited_by_count = cited_by_data.get('total', 0) if isinstance(cited_by_data, dict) else 0
+    while True:
+        print(f"    Fetching page starting at {start}...")
+        params = {
+            'engine': 'google_scholar_author',
+            'author_id': author_id,
+            'api_key': api_key,
+            'start': start
+        }
             
-            paper = {
-                'title': article.get('title', ''),
-                'authors': article.get('authors', ''),
-                'publication': article.get('publication', ''),
-                'year': article.get('year', ''),
-                'citations': cited_by_count,
-                'link': article.get('link', ''),
-                'citation_id': article.get('citation_id', '')
-            }
-            papers.append(paper)
-        
-        print(f"  ✓ Fetched {len(papers)} papers")
-        return papers, data
-        
-    except requests.exceptions.RequestException as e:
-        print(f"  ✗ Error: {e}")
-        return [], None
+        try:
+            response = requests.get(base_url, params=params, timeout=30)
+            response.raise_for_status()
+            data = response.json()
+            
+            if start == 0:
+                first_page_data = data
+            
+            articles = data.get('articles', [])
+            
+            if not articles:
+                break
+                
+            # Process articles
+            for article in articles:
+                cited_by_data = article.get('cited_by', {})
+                cited_by_count = cited_by_data.get('total', 0) if isinstance(cited_by_data, dict) else 0
+                
+                paper = {
+                    'title': article.get('title', ''),
+                    'authors': article.get('authors', ''),
+                    'publication': article.get('publication', ''),
+                    'year': article.get('year', ''),
+                    'citations': cited_by_count,
+                    'link': article.get('link', ''),
+                    'citation_id': article.get('citation_id', '')
+                }
+                all_papers.append(paper)
+            
+            # Duplicate check to be safe
+            if len(articles) > 0 and len(all_papers) > len(articles):
+                prev_batch_last = all_papers[-len(articles)-1]
+                curr_batch_last = all_papers[-1]
+                if prev_batch_last['title'] == curr_batch_last['title']:
+                    print("    ! Detected duplicate papers. Assuming end of list.")
+                    break
+            
+            # Manual increment by 20 (default page size)
+            # We assume page size is 20 if we don't set num
+            if len(articles) < 20:
+                break
+                
+            start += 20
+            
+            # Safety break to prevent infinite loops
+            if len(all_papers) > 5000:
+                print("    ! Reached safety limit of 5000 papers")
+                break
+                
+            # Small delay to be nice to the API
+            time.sleep(1)
+            
+        except requests.exceptions.RequestException as e:
+            print(f"  ✗ Error fetching page: {e}")
+            if not all_papers:
+                return [], None
+            break
+            
+    print(f"  ✓ Fetched {len(all_papers)} papers total")
+    return all_papers, first_page_data
 
 
 def fetch_author_profile(api_key: str, author_id: str):

@@ -52,26 +52,16 @@
 {% set avg_pubs_per_year = (ns.total_pubs / years_span)|round(1) %}
 
 **Total Researchers:** {{ metadata['total_researchers'] }}  
-**Total Publications:** {{ ns.total_pubs }}  
-**Total Citations:** {{ researchers|sum(attribute='statistics.total_citations') }}  
-**Average Publications per Year:** {{ avg_pubs_per_year }} ({{ min_year }}-{{ max_year }})
+**Total Citations:** {{ researchers|sum(attribute='statistics.total_citations') }}
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 30px;">
   <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px; text-align: center;">
     <div style="font-size: 32px; font-weight: bold;">{{ researchers|length }}</div>
     <div style="font-size: 14px; margin-top: 5px;">Researchers</div>
   </div>
-  <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 20px; border-radius: 8px; text-align: center;">
-    <div style="font-size: 32px; font-weight: bold;">{{ ns.total_pubs }}</div>
-    <div style="font-size: 14px; margin-top: 5px;">Total Publications</div>
-  </div>
   <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 20px; border-radius: 8px; text-align: center;">
     <div style="font-size: 32px; font-weight: bold;">{{ researchers|sum(attribute='statistics.total_citations') }}</div>
     <div style="font-size: 14px; margin-top: 5px;">Total Citations</div>
-  </div>
-  <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; padding: 20px; border-radius: 8px; text-align: center;">
-    <div style="font-size: 32px; font-weight: bold;">{{ avg_pubs_per_year }}</div>
-    <div style="font-size: 14px; margin-top: 5px;">Avg Pubs/Year</div>
   </div>
 </div>
 
@@ -112,38 +102,27 @@
   }).slice(0, 10);
   
   var interests = sortedInterests;
-  var papers = interests.map(function(i) { return interestData[i].papers; });
   var citations = interests.map(function(i) { return interestData[i].citations; });
-  
-  var trace1 = {
-    x: interests,
-    y: papers,
-    name: 'Publications',
-    type: 'scatter',
-    mode: 'lines+markers',
-    line: {width: 3, color: '#667eea'},
-    marker: {size: 10, color: '#667eea'},
-    yaxis: 'y',
-    hovertemplate: '<b>%{x}</b><br>Publications: %{y}<extra></extra>'
-  };
   
   var trace2 = {
     x: interests,
     y: citations,
     name: 'Citations',
     type: 'scatter',
-    mode: 'lines+markers',
+    mode: 'lines+markers+text',
+    text: citations,
+    textposition: 'top center',
     line: {width: 3, color: '#f5576c'},
     marker: {size: 10, color: '#f5576c'},
-    yaxis: 'y2',
+    yaxis: 'y',
     hovertemplate: '<b>%{x}</b><br>Citations: %{y}<extra></extra>'
   };
   
-  var data = [trace1, trace2];
+  var data = [trace2];
   
   var layout = {
     title: {
-      text: 'Top 10 Research Areas - Publications and Citations',
+      text: 'Top 10 Research Areas - Citations',
       font: {size: 18, family: 'Arial, sans-serif', color: '#222'}
     },
     xaxis: {
@@ -151,18 +130,10 @@
       automargin: true
     },
     yaxis: {
-      title: 'Publications',
-      titlefont: {color: '#667eea'},
-      tickfont: {color: '#667eea'},
-      side: 'left',
-      rangemode: 'tozero'
-    },
-    yaxis2: {
       title: 'Citations',
       titlefont: {color: '#f5576c'},
       tickfont: {color: '#f5576c'},
-      overlaying: 'y',
-      side: 'right',
+      side: 'left',
       rangemode: 'tozero'
     },
     plot_bgcolor: '#fafafa',
@@ -220,36 +191,27 @@
   var allYears = new Set([...Object.keys(yearPubs), ...Object.keys(yearCitations)]);
   var years = Array.from(allYears).map(Number).sort();
   
-  var publications = years.map(function(y) { return yearPubs[String(y)] || 0; });
   var citations = years.map(function(y) { return yearCitations[y] || 0; });
-  
-  var trace1 = {
-    x: years,
-    y: publications,
-    name: 'Publications',
-    type: 'bar',
-    marker: {color: '#667eea'},
-    yaxis: 'y',
-    hovertemplate: '<b>Year %{x}</b><br>Publications: %{y}<extra></extra>'
-  };
   
   var trace2 = {
     x: years,
     y: citations,
     name: 'Citations',
     type: 'scatter',
-    mode: 'lines+markers',
+    mode: 'lines+markers+text',
+    text: citations,
+    textposition: 'top center',
     line: {width: 3, color: '#f5576c'},
     marker: {size: 8, color: '#f5576c'},
-    yaxis: 'y2',
+    yaxis: 'y',
     hovertemplate: '<b>Year %{x}</b><br>Citations: %{y}<extra></extra>'
   };
   
-  var data = [trace1, trace2];
+  var data = [trace2];
   
   var layout = {
     title: {
-      text: 'Publications and Citations by Year (All Researchers)',
+      text: 'Citations by Year (All Researchers)',
       font: {size: 18, family: 'Arial, sans-serif', color: '#222'}
     },
     xaxis: {
@@ -258,18 +220,10 @@
       gridcolor: '#e5e5e5'
     },
     yaxis: {
-      title: 'Publications',
-      titlefont: {color: '#667eea'},
-      tickfont: {color: '#667eea'},
-      side: 'left',
-      rangemode: 'tozero'
-    },
-    yaxis2: {
       title: 'Citations',
       titlefont: {color: '#f5576c'},
       tickfont: {color: '#f5576c'},
-      overlaying: 'y',
-      side: 'right',
+      side: 'left',
       rangemode: 'tozero'
     },
     plot_bgcolor: '#fafafa',
@@ -305,16 +259,10 @@
         Name ▼
       </th>
       <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; cursor: pointer; width: 10%;" onclick="sortTable(1)">
-        Papers
-      </th>
-      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; cursor: pointer; width: 10%;" onclick="sortTable(2)">
         Citations
       </th>
-      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; cursor: pointer; width: 10%;" onclick="sortTable(3)">
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; cursor: pointer; width: 10%;" onclick="sortTable(2)">
         h-index
-      </th>
-      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; cursor: pointer; width: 10%;" onclick="sortTable(4)">
-        Avg Cit/Paper
       </th>
       <th style="padding: 10px; text-align: left; border: 1px solid #dee2e6; width: 35%;">
         Research Interests
@@ -331,16 +279,10 @@
         {% endif %}
       </td>
       <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">
-        <span style="font-weight: bold; color: #667eea;">{{ item['statistics']['papers_by_year'].values()|sum }}</span>
-      </td>
-      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">
         <span style="font-weight: bold; color: #f5576c;">{{ item['statistics']['total_citations'] }}</span>
       </td>
       <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">
         <span style="font-weight: bold; color: #28a745;">{{ item['statistics']['h_index']['all_time'] }}</span>
-      </td>
-      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">
-        <span style="font-weight: bold; color: #4facfe;">{{ "%.1f"|format(item['statistics']['average_citations_per_paper']) }}</span>
       </td>
       <td style="padding: 8px; border: 1px solid #dee2e6;">
         <div style="display: flex; flex-wrap: wrap; gap: 3px; line-height: 1.8;">
@@ -484,54 +426,6 @@ function sortTable(columnIndex) {
   </div>
 </div>
 
-### Publication Timeline
-
-<div id="timeline-chart-{{ loop.index }}" style="width:100%;height:350px;margin-bottom:20px;"></div>
-
-<script>
-(function() {
-  var papersByYear = {{ item['statistics']['papers_by_year']|tojson }};
-  
-  var years = Object.keys(papersByYear).map(Number).sort();
-  var counts = years.map(function(y) { return papersByYear[String(y)]; });
-  
-  var data = [{
-    x: years,
-    y: counts,
-    type: 'bar',
-    marker: {
-      color: '#667eea',
-      line: {color: '#4a5fc1', width: 1}
-    },
-    text: counts,
-    textposition: 'outside',
-    hovertemplate: '<b>Year %{x}</b><br>%{y} publication(s)<extra></extra>'
-  }];
-  
-  var layout = {
-    title: {
-      text: 'Publications by Year',
-      font: {size: 16, family: 'Arial, sans-serif', color: '#222'}
-    },
-    xaxis: {
-      title: 'Year',
-      dtick: 1,
-      gridcolor: '#e5e5e5'
-    },
-    yaxis: {
-      title: 'Number of Publications',
-      gridcolor: '#f0f0f0',
-      rangemode: 'tozero'
-    },
-    plot_bgcolor: '#fafafa',
-    paper_bgcolor: 'white',
-    margin: {t: 50, b: 50, l: 50, r: 20},
-    height: 350
-  };
-  
-  Plotly.newPlot('timeline-chart-{{ loop.index }}', data, layout);
-})();
-</script>
 
 ### Citation Timeline
 
@@ -548,7 +442,9 @@ function sortTable(columnIndex) {
     x: years,
     y: citations,
     type: 'scatter',
-    mode: 'lines+markers',
+    mode: 'lines+markers+text',
+    text: citations,
+    textposition: 'top center',
     line: {width: 3, color: '#f5576c'},
     marker: {size: 8, color: '#f5576c'},
     fill: 'tozeroy',
