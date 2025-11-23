@@ -182,84 +182,28 @@
 })();
 </script>
 
-### Publications by Year
+### Publications and Citations by Year
 
-<div id="publications-by-year-chart" style="width:100%;height:400px;margin-bottom:30px;"></div>
+<div id="pubs-citations-by-year-chart" style="width:100%;height:450px;margin-bottom:30px;"></div>
 
 <script>
 (function() {
   var researchers = {{ researchers|tojson }};
   
-  // Aggregate publications by year across all researchers
-  var yearCounts = {};
-  
+  // Aggregate publications by year
+  var yearPubs = {};
   researchers.forEach(function(r) {
     var papersByYear = r.statistics.papers_by_year;
     Object.keys(papersByYear).forEach(function(year) {
-      if (!yearCounts[year]) {
-        yearCounts[year] = 0;
+      if (!yearPubs[year]) {
+        yearPubs[year] = 0;
       }
-      yearCounts[year] += papersByYear[year];
+      yearPubs[year] += papersByYear[year];
     });
   });
   
-  var years = Object.keys(yearCounts).map(Number).sort();
-  var counts = years.map(function(y) { return yearCounts[String(y)]; });
-  
-  var data = [{
-    x: years,
-    y: counts,
-    type: 'bar',
-    marker: {
-      color: counts,
-      colorscale: [
-        [0, '#e3f2fd'],
-        [0.5, '#4facfe'],
-        [1, '#667eea']
-      ],
-      line: {color: '#0088cc', width: 1}
-    },
-    text: counts,
-    textposition: 'outside',
-    hovertemplate: '<b>Year %{x}</b><br>%{y} publications<extra></extra>'
-  }];
-  
-  var layout = {
-    title: {
-      text: 'Publications by Year (All Researchers)',
-      font: {size: 18, family: 'Arial, sans-serif', color: '#222'}
-    },
-    xaxis: {
-      title: 'Year',
-      dtick: 1,
-      gridcolor: '#e5e5e5'
-    },
-    yaxis: {
-      title: 'Number of Publications',
-      gridcolor: '#f0f0f0',
-      rangemode: 'tozero'
-    },
-    plot_bgcolor: '#fafafa',
-    paper_bgcolor: 'white',
-    margin: {t: 60, b: 50, l: 60, r: 20},
-    height: 400
-  };
-  
-  Plotly.newPlot('publications-by-year-chart', data, layout);
-})();
-</script>
-
-### Citations by Year
-
-<div id="citations-by-year-chart" style="width:100%;height:400px;margin-bottom:30px;"></div>
-
-<script>
-(function() {
-  var researchers = {{ researchers|tojson }};
-  
-  // Aggregate citations by year across all researchers
+  // Aggregate citations by year
   var yearCitations = {};
-  
   researchers.forEach(function(r) {
     var citationsByYear = r.statistics.citations_by_year;
     citationsByYear.forEach(function(item) {
@@ -267,30 +211,45 @@
       if (!yearCitations[year]) {
         yearCitations[year] = 0;
       }
-      // Handle both 'citations' and 'cites' field names
       var citeCount = item.citations || item.cites || 0;
       yearCitations[year] += citeCount;
     });
   });
   
-  var years = Object.keys(yearCitations).map(Number).sort();
-  var citations = years.map(function(y) { return yearCitations[y]; });
+  // Get all years and sort
+  var allYears = new Set([...Object.keys(yearPubs), ...Object.keys(yearCitations)]);
+  var years = Array.from(allYears).map(Number).sort();
   
-  var data = [{
+  var publications = years.map(function(y) { return yearPubs[String(y)] || 0; });
+  var citations = years.map(function(y) { return yearCitations[y] || 0; });
+  
+  var trace1 = {
+    x: years,
+    y: publications,
+    name: 'Publications',
+    type: 'bar',
+    marker: {color: '#667eea'},
+    yaxis: 'y',
+    hovertemplate: '<b>Year %{x}</b><br>Publications: %{y}<extra></extra>'
+  };
+  
+  var trace2 = {
     x: years,
     y: citations,
+    name: 'Citations',
     type: 'scatter',
     mode: 'lines+markers',
-    line: {width: 3, color: '#667eea'},
-    marker: {size: 8, color: '#4facfe'},
-    fill: 'tozeroy',
-    fillcolor: 'rgba(102, 126, 234, 0.2)',
-    hovertemplate: '<b>Year %{x}</b><br>%{y} citations<extra></extra>'
-  }];
+    line: {width: 3, color: '#f5576c'},
+    marker: {size: 8, color: '#f5576c'},
+    yaxis: 'y2',
+    hovertemplate: '<b>Year %{x}</b><br>Citations: %{y}<extra></extra>'
+  };
+  
+  var data = [trace1, trace2];
   
   var layout = {
     title: {
-      text: 'Citations by Year (All Researchers)',
+      text: 'Publications and Citations by Year (All Researchers)',
       font: {size: 18, family: 'Arial, sans-serif', color: '#222'}
     },
     xaxis: {
@@ -299,17 +258,34 @@
       gridcolor: '#e5e5e5'
     },
     yaxis: {
-      title: 'Number of Citations',
-      gridcolor: '#f0f0f0',
+      title: 'Publications',
+      titlefont: {color: '#667eea'},
+      tickfont: {color: '#667eea'},
+      side: 'left',
+      rangemode: 'tozero'
+    },
+    yaxis2: {
+      title: 'Citations',
+      titlefont: {color: '#f5576c'},
+      tickfont: {color: '#f5576c'},
+      overlaying: 'y',
+      side: 'right',
       rangemode: 'tozero'
     },
     plot_bgcolor: '#fafafa',
     paper_bgcolor: 'white',
-    margin: {t: 60, b: 50, l: 60, r: 20},
-    height: 400
+    legend: {
+      x: 0.02,
+      y: 0.98,
+      bgcolor: 'rgba(255,255,255,0.9)',
+      bordercolor: '#ccc',
+      borderwidth: 1
+    },
+    margin: {t: 60, b: 50, l: 60, r: 80},
+    height: 450
   };
   
-  Plotly.newPlot('citations-by-year-chart', data, layout);
+  Plotly.newPlot('pubs-citations-by-year-chart', data, layout);
 })();
 </script>
 
