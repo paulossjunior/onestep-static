@@ -1,7 +1,7 @@
 {
   "campus": "Serra",
-  "total_researchers": 4,
-  "generated_at": "2025-11-23T15:14:25.677505",
+  "total_researchers": 6,
+  "generated_at": "2025-11-23T16:08:57.327137",
   "researchers": [
     {
       "researcher": {
@@ -1397,6 +1397,680 @@
           "citations": 0,
           "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:4TOpqqG69KYC",
           "citation_id": "eH4gxyUAAAAJ:4TOpqqG69KYC"
+        }
+      ]
+    },
+    {
+      "researcher": {
+        "name": "Hilario Oliveira",
+        "campus": "Serra",
+        "scholar_id": "Xp4tZ0cAAAAJ",
+        "scholar_url": "https://scholar.google.com/citations?user=Xp4tZ0cAAAAJ",
+        "affiliation": "Professor do Instituto Federal do Espírito Santo",
+        "email": "Verified email at ifes.edu.br",
+        "interests": [
+          "Processamento de Linguagem Natural",
+          "Natural Language Processing",
+          "Linguística computacional"
+        ]
+      },
+      "statistics": {
+        "total_papers": 20,
+        "total_citations": 480,
+        "average_citations_per_paper": 24.0,
+        "h_index": {
+          "all_time": "13",
+          "since_2020": "8"
+        },
+        "i10_index": {
+          "all_time": "17",
+          "since_2020": "8"
+        },
+        "papers_by_year": {
+          "2016": 3,
+          "2018": 3,
+          "2015": 2,
+          "2019": 1,
+          "2023": 1,
+          "2022": 1,
+          "2017": 1,
+          "2013": 3,
+          "2021": 1,
+          "2010": 2,
+          "2014": 1,
+          "2024": 1
+        },
+        "citations_by_year": [
+          {
+            "year": 2011,
+            "cites": 2
+          },
+          {
+            "year": 2012,
+            "cites": 2
+          },
+          {
+            "year": 2013,
+            "cites": 4
+          },
+          {
+            "year": 2014,
+            "cites": 12
+          },
+          {
+            "year": 2015,
+            "cites": 17
+          },
+          {
+            "year": 2016,
+            "cites": 17
+          },
+          {
+            "year": 2017,
+            "cites": 23
+          },
+          {
+            "year": 2018,
+            "cites": 29
+          },
+          {
+            "year": 2019,
+            "cites": 54
+          },
+          {
+            "year": 2020,
+            "cites": 34
+          },
+          {
+            "year": 2021,
+            "cites": 37
+          },
+          {
+            "year": 2022,
+            "cites": 51
+          },
+          {
+            "year": 2023,
+            "cites": 52
+          },
+          {
+            "year": 2024,
+            "cites": 73
+          },
+          {
+            "year": 2025,
+            "cites": 62
+          }
+        ]
+      },
+      "top_5_papers": [
+        {
+          "title": "Assessing shallow sentence scoring techniques and combinations for single and multi-document summarization",
+          "authors": "H Oliveira, R Ferreira, R Lima, RD Lins, F Freitas, M Riss, SJ Simske",
+          "publication": "Expert Systems with Applications 65, 68-86, 2016",
+          "year": 2016,
+          "citations": 89,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:evX43VCCuoAC",
+          "citation_id": "Xp4tZ0cAAAAJ:evX43VCCuoAC"
+        },
+        {
+          "title": "Automatic cohesive summarization with pronominal anaphora resolution",
+          "authors": "J Antunes, RD Lins, R Lima, H Oliveira, M Riss, SJ Simske",
+          "publication": "Computer Speech & Language 52, 141-164, 2018",
+          "year": 2018,
+          "citations": 35,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:WqliGbK-hY8C",
+          "citation_id": "Xp4tZ0cAAAAJ:WqliGbK-hY8C"
+        },
+        {
+          "title": "Automatic text document summarization based on machine learning",
+          "authors": "G Silva, R Ferreira, RD Lins, L Cabral, H Oliveira, SJ Simske, M Riss",
+          "publication": "Proceedings of the 2015 ACM Symposium on Document Engineering, 191-194, 2015",
+          "year": 2015,
+          "citations": 32,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:_Ybze24A_UAC",
+          "citation_id": "Xp4tZ0cAAAAJ:_Ybze24A_UAC"
+        },
+        {
+          "title": "The CNN-corpus: A large textual corpus for single-document extractive summarization",
+          "authors": "RD Lins, H Oliveira, L Cabral, J Batista, B Tenorio, R Ferreira, R Lima, ...",
+          "publication": "Proceedings of the ACM symposium on document engineering 2019, 1-10, 2019",
+          "year": 2019,
+          "citations": 31,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:tKAzc9rXhukC",
+          "citation_id": "Xp4tZ0cAAAAJ:tKAzc9rXhukC"
+        },
+        {
+          "title": "A quantitative and qualitative assessment of automatic text summarization systems",
+          "authors": "J Batista, R Ferreira, H Tomaz, R Ferreira, R Dueire Lins, S Simske, ...",
+          "publication": "Proceedings of the 2015 ACM Symposium on Document Engineering, 65-68, 2015",
+          "year": 2015,
+          "citations": 23,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:tkaPQYYpVKoC",
+          "citation_id": "Xp4tZ0cAAAAJ:tkaPQYYpVKoC"
+        }
+      ],
+      "all_papers": [
+        {
+          "title": "Assessing shallow sentence scoring techniques and combinations for single and multi-document summarization",
+          "authors": "H Oliveira, R Ferreira, R Lima, RD Lins, F Freitas, M Riss, SJ Simske",
+          "publication": "Expert Systems with Applications 65, 68-86, 2016",
+          "year": 2016,
+          "citations": 89,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:evX43VCCuoAC",
+          "citation_id": "Xp4tZ0cAAAAJ:evX43VCCuoAC"
+        },
+        {
+          "title": "Automatic cohesive summarization with pronominal anaphora resolution",
+          "authors": "J Antunes, RD Lins, R Lima, H Oliveira, M Riss, SJ Simske",
+          "publication": "Computer Speech & Language 52, 141-164, 2018",
+          "year": 2018,
+          "citations": 35,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:WqliGbK-hY8C",
+          "citation_id": "Xp4tZ0cAAAAJ:WqliGbK-hY8C"
+        },
+        {
+          "title": "Automatic text document summarization based on machine learning",
+          "authors": "G Silva, R Ferreira, RD Lins, L Cabral, H Oliveira, SJ Simske, M Riss",
+          "publication": "Proceedings of the 2015 ACM Symposium on Document Engineering, 191-194, 2015",
+          "year": 2015,
+          "citations": 32,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:_Ybze24A_UAC",
+          "citation_id": "Xp4tZ0cAAAAJ:_Ybze24A_UAC"
+        },
+        {
+          "title": "The CNN-corpus: A large textual corpus for single-document extractive summarization",
+          "authors": "RD Lins, H Oliveira, L Cabral, J Batista, B Tenorio, R Ferreira, R Lima, ...",
+          "publication": "Proceedings of the ACM symposium on document engineering 2019, 1-10, 2019",
+          "year": 2019,
+          "citations": 31,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:tKAzc9rXhukC",
+          "citation_id": "Xp4tZ0cAAAAJ:tKAzc9rXhukC"
+        },
+        {
+          "title": "A quantitative and qualitative assessment of automatic text summarization systems",
+          "authors": "J Batista, R Ferreira, H Tomaz, R Ferreira, R Dueire Lins, S Simske, ...",
+          "publication": "Proceedings of the 2015 ACM Symposium on Document Engineering, 65-68, 2015",
+          "year": 2015,
+          "citations": 23,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:tkaPQYYpVKoC",
+          "citation_id": "Xp4tZ0cAAAAJ:tkaPQYYpVKoC"
+        },
+        {
+          "title": "Towards explainable prediction of essay cohesion in portuguese and english",
+          "authors": "H Oliveira, R Ferreira Mello, BA Barreiros Rosa, M Rakovic, P Miranda, ...",
+          "publication": "LAK23: 13th international learning analytics and knowledge conference, 509-519, 2023",
+          "year": 2023,
+          "citations": 20,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:dQ2og3OwTAUC",
+          "citation_id": "Xp4tZ0cAAAAJ:dQ2og3OwTAUC"
+        },
+        {
+          "title": "Towards automated content analysis of rhetorical structure of written essays using sequential content-independent features in Portuguese",
+          "authors": "R Ferreira Mello, G Fiorentino, H Oliveira, P Miranda, M Rakovic, ...",
+          "publication": "LAK22: 12th International Learning Analytics and Knowledge Conference, 404-414, 2022",
+          "year": 2022,
+          "citations": 19,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:kzcrU_BdoSEC",
+          "citation_id": "Xp4tZ0cAAAAJ:kzcrU_BdoSEC"
+        },
+        {
+          "title": "A regression-based approach using integer linear programming for single-document summarization",
+          "authors": "H Oliveira, RD Lins, R Lima, F Freitas, SJ Simske",
+          "publication": "2017 IEEE 29th International Conference on Tools with Artificial …, 2017",
+          "year": 2017,
+          "citations": 16,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:ZfRJV9d4-WMC",
+          "citation_id": "Xp4tZ0cAAAAJ:ZfRJV9d4-WMC"
+        },
+        {
+          "title": "Ontologies supporting the distributed software development: a systematic mapping study",
+          "authors": "A Borges, S Soares, S Meira, H Tomaz, R Rocha, C Costa",
+          "publication": "Proceedings of the 17th International Conference on Evaluation and …, 2013",
+          "year": 2013,
+          "citations": 15,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:PELIpwtuRlgC",
+          "citation_id": "Xp4tZ0cAAAAJ:PELIpwtuRlgC"
+        },
+        {
+          "title": "Information extraction from the web: an ontology-based method using inductive logic programming",
+          "authors": "R Lima, B Espinasse, H Oliveira, L Pentagrossa, F Freitas",
+          "publication": "2013 IEEE 25th International Conference on Tools with Artificial …, 2013",
+          "year": 2013,
+          "citations": 14,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:PR6Y55bgFSsC",
+          "citation_id": "Xp4tZ0cAAAAJ:PR6Y55bgFSsC"
+        },
+        {
+          "title": "Towards automatic content analysis of rhetorical structure in Brazilian college entrance essays",
+          "authors": "RF Mello, G Fiorentino, P Miranda, H Oliveira, M Raković, D Gašević",
+          "publication": "International conference on artificial intelligence in education, 162-167, 2021",
+          "year": 2021,
+          "citations": 13,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:ZuybSZzF8UAC",
+          "citation_id": "Xp4tZ0cAAAAJ:ZuybSZzF8UAC"
+        },
+        {
+          "title": "A concept-based integer linear programming approach for single-document summarization",
+          "authors": "H Oliveira, R Lima, RD Lins, F Freitas, M Riss, SJ Simske",
+          "publication": "2016 5th Brazilian Conference on Intelligent Systems (BRACIS), 403-408, 2016",
+          "year": 2016,
+          "citations": 13,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:tzM49s52ZIMC",
+          "citation_id": "Xp4tZ0cAAAAJ:tzM49s52ZIMC"
+        },
+        {
+          "title": "Dr. pierre: Um chatterbot com intenção e personalidade baseado em ontologias para apoiar o ensino de psiquiatria",
+          "authors": "HTA De Oliveira, RNS Gadelha, RR de Azevedo, JBD Júnior, GA Dias, ...",
+          "publication": "Brazilian Symposium on Computers in Education (Simpósio Brasileiro de …, 2010",
+          "year": 2010,
+          "citations": 13,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:nrtMV_XWKgEC",
+          "citation_id": "Xp4tZ0cAAAAJ:nrtMV_XWKgEC"
+        },
+        {
+          "title": "An inductive logic programming-based approach for ontology population from the web",
+          "authors": "R Lima, B Espinasse, H Oliveira, R Ferreira, L Cabral, D Filho, F Freitas, ...",
+          "publication": "International Conference on Database and Expert Systems Applications, 319-326, 2013",
+          "year": 2013,
+          "citations": 11,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:-_dYPAW6P2MC",
+          "citation_id": "Xp4tZ0cAAAAJ:-_dYPAW6P2MC"
+        },
+        {
+          "title": "Os simulator: Um simulador de sistema de arquivos para apoiar o ensino/aprendizagem de sistemas operacionais",
+          "authors": "RNS Gadelha, RR de Azevedo, HTA de Oliveira, TD Neves, CC Souza, ...",
+          "publication": "Brazilian Symposium on Computers in Education (Simpósio Brasileiro de …, 2010",
+          "year": 2010,
+          "citations": 11,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:yB1At4FlUx8C",
+          "citation_id": "Xp4tZ0cAAAAJ:yB1At4FlUx8C"
+        },
+        {
+          "title": "Assessing concept weighting in integer linear programming based single-document summarization",
+          "authors": "H Oliveira, R Lima, RD Lins, F Freitas, M Riss, SJ Simske",
+          "publication": "Proceedings of the 2016 ACM Symposium on Document Engineering, 205-208, 2016",
+          "year": 2016,
+          "citations": 10,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:VL0QpB8kHFEC",
+          "citation_id": "Xp4tZ0cAAAAJ:VL0QpB8kHFEC"
+        },
+        {
+          "title": "Ontology population from the web: an inductive logic programming-based approach",
+          "authors": "R Lima, B Espinasse, H Oliveira, F Freitas",
+          "publication": "2014 11th International Conference on Information Technology: New …, 2014",
+          "year": 2014,
+          "citations": 10,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:W5xh706n7nkC",
+          "citation_id": "Xp4tZ0cAAAAJ:W5xh706n7nkC"
+        },
+        {
+          "title": "A concept-based ILP approach for multi-document summarization exploring centrality and position",
+          "authors": "H Oliveira, RD Lins, R Lima, F Freitas, SJ Simske",
+          "publication": "2018 7th Brazilian conference on intelligent systems (BRACIS), 37-42, 2018",
+          "year": 2018,
+          "citations": 9,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:LjlpjdlvIbIC",
+          "citation_id": "Xp4tZ0cAAAAJ:LjlpjdlvIbIC"
+        },
+        {
+          "title": "Assessing abstractive and extractive methods for automatic news summarization",
+          "authors": "H Oliveira, RD Lins",
+          "publication": "Proceedings of the ACM Symposium on Document Engineering 2024, 1-10, 2024",
+          "year": 2024,
+          "citations": 8,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:2KloaMYe4IUC",
+          "citation_id": "Xp4tZ0cAAAAJ:2KloaMYe4IUC"
+        },
+        {
+          "title": "Towards coherent single-document summarization: an integer linear programming-based approach",
+          "authors": "R Garcia, R Lima, B Espinasse, H Oliveira",
+          "publication": "Proceedings of the 33rd annual ACM symposium on applied computing, 712-719, 2018",
+          "year": 2018,
+          "citations": 8,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Xp4tZ0cAAAAJ&citation_for_view=Xp4tZ0cAAAAJ:hkOj_22Ku90C",
+          "citation_id": "Xp4tZ0cAAAAJ:hkOj_22Ku90C"
+        }
+      ]
+    },
+    {
+      "researcher": {
+        "name": "Daniel Cruz Cavalieri",
+        "campus": "Serra",
+        "scholar_id": "y6Smt-cAAAAJ",
+        "scholar_url": "https://scholar.google.com/citations?user=y6Smt-cAAAAJ",
+        "affiliation": "Professor EBTT, IFES - Campus Serra",
+        "email": "Verified email at ifes.edu.br",
+        "interests": [
+          "Natural Language Processing",
+          "Pattern Recognition",
+          "Machine Learning",
+          "Signal and Systems",
+          "Intelligent Systems"
+        ]
+      },
+      "statistics": {
+        "total_papers": 20,
+        "total_citations": 273,
+        "average_citations_per_paper": 13.65,
+        "h_index": {
+          "all_time": "10",
+          "since_2020": "7"
+        },
+        "i10_index": {
+          "all_time": "10",
+          "since_2020": "6"
+        },
+        "papers_by_year": {
+          "2013": 2,
+          "2019": 3,
+          "2016": 1,
+          "2008": 3,
+          "2011": 3,
+          "2024": 3,
+          "2007": 1,
+          "2018": 2,
+          "2010": 1,
+          "2015": 1
+        },
+        "citations_by_year": [
+          {
+            "year": 2009,
+            "cites": 1
+          },
+          {
+            "year": 2010,
+            "cites": 2
+          },
+          {
+            "year": 2011,
+            "cites": 3
+          },
+          {
+            "year": 2012,
+            "cites": 4
+          },
+          {
+            "year": 2013,
+            "cites": 9
+          },
+          {
+            "year": 2014,
+            "cites": 8
+          },
+          {
+            "year": 2015,
+            "cites": 28
+          },
+          {
+            "year": 2016,
+            "cites": 12
+          },
+          {
+            "year": 2017,
+            "cites": 22
+          },
+          {
+            "year": 2018,
+            "cites": 22
+          },
+          {
+            "year": 2019,
+            "cites": 25
+          },
+          {
+            "year": 2020,
+            "cites": 16
+          },
+          {
+            "year": 2021,
+            "cites": 27
+          },
+          {
+            "year": 2022,
+            "cites": 17
+          },
+          {
+            "year": 2023,
+            "cites": 11
+          },
+          {
+            "year": 2024,
+            "cites": 35
+          },
+          {
+            "year": 2025,
+            "cites": 31
+          }
+        ]
+      },
+      "top_5_papers": [
+        {
+          "title": "Towards a new modality-independent interface for a robotic wheelchair",
+          "authors": "TF Bastos-Filho, FA Cheein, SMT Müller, WC Celeste, C De La Cruz, ...",
+          "publication": "IEEE Transactions on Neural Systems and Rehabilitation Engineering 22 (3 …, 2013",
+          "year": 2013,
+          "citations": 92,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:u5HHmVD_uO8C",
+          "citation_id": "y6Smt-cAAAAJ:u5HHmVD_uO8C"
+        },
+        {
+          "title": "Multi-modal interface for communication operated by eye blinks, eye movements, head movements, blowing/sucking and brain waves",
+          "authors": "T Bastos-Filho, A Ferreira, D Cavalieri, R Silva, S Muller, E Pérez",
+          "publication": "2013 ISSNIP Biosignals and Biorobotics Conference: Biosignals and Robotics …, 2013",
+          "year": 2013,
+          "citations": 20,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:u-x6o8ySG0sC",
+          "citation_id": "y6Smt-cAAAAJ:u-x6o8ySG0sC"
+        },
+        {
+          "title": "Estimation and prediction of motor load torque applied to electrical submersible pumps",
+          "authors": "APF Machado, CZ Resende, DC Cavalieri",
+          "publication": "Control Engineering Practice 84, 284-296, 2019",
+          "year": 2019,
+          "citations": 19,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:4TOpqqG69KYC",
+          "citation_id": "y6Smt-cAAAAJ:4TOpqqG69KYC"
+        },
+        {
+          "title": "Combination of language models for word prediction: An exponential approach",
+          "authors": "DC Cavalieri, SE Palazuelos-Cagigas, TF Bastos-Filho, M Sarcinelli-Filho",
+          "publication": "IEEE/ACM Transactions on Audio, Speech, and Language Processing 24 (9), 1481 …, 2016",
+          "year": 2016,
+          "citations": 17,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:LkGwnXOMwfcC",
+          "citation_id": "y6Smt-cAAAAJ:LkGwnXOMwfcC"
+        },
+        {
+          "title": "Wearable lower limb and full-body robots",
+          "authors": "J Moreno, E Turowska, J Pons",
+          "publication": "ArantesWearable Robots: Biomechatronic Exoskeleton, 283-321, 2008",
+          "year": 2008,
+          "citations": 14,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:IjCSPb-OGe4C",
+          "citation_id": "y6Smt-cAAAAJ:IjCSPb-OGe4C"
+        }
+      ],
+      "all_papers": [
+        {
+          "title": "Towards a new modality-independent interface for a robotic wheelchair",
+          "authors": "TF Bastos-Filho, FA Cheein, SMT Müller, WC Celeste, C De La Cruz, ...",
+          "publication": "IEEE Transactions on Neural Systems and Rehabilitation Engineering 22 (3 …, 2013",
+          "year": 2013,
+          "citations": 92,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:u5HHmVD_uO8C",
+          "citation_id": "y6Smt-cAAAAJ:u5HHmVD_uO8C"
+        },
+        {
+          "title": "Multi-modal interface for communication operated by eye blinks, eye movements, head movements, blowing/sucking and brain waves",
+          "authors": "T Bastos-Filho, A Ferreira, D Cavalieri, R Silva, S Muller, E Pérez",
+          "publication": "2013 ISSNIP Biosignals and Biorobotics Conference: Biosignals and Robotics …, 2013",
+          "year": 2013,
+          "citations": 20,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:u-x6o8ySG0sC",
+          "citation_id": "y6Smt-cAAAAJ:u-x6o8ySG0sC"
+        },
+        {
+          "title": "Estimation and prediction of motor load torque applied to electrical submersible pumps",
+          "authors": "APF Machado, CZ Resende, DC Cavalieri",
+          "publication": "Control Engineering Practice 84, 284-296, 2019",
+          "year": 2019,
+          "citations": 19,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:4TOpqqG69KYC",
+          "citation_id": "y6Smt-cAAAAJ:4TOpqqG69KYC"
+        },
+        {
+          "title": "Combination of language models for word prediction: An exponential approach",
+          "authors": "DC Cavalieri, SE Palazuelos-Cagigas, TF Bastos-Filho, M Sarcinelli-Filho",
+          "publication": "IEEE/ACM Transactions on Audio, Speech, and Language Processing 24 (9), 1481 …, 2016",
+          "year": 2016,
+          "citations": 17,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:LkGwnXOMwfcC",
+          "citation_id": "y6Smt-cAAAAJ:LkGwnXOMwfcC"
+        },
+        {
+          "title": "Wearable lower limb and full-body robots",
+          "authors": "J Moreno, E Turowska, J Pons",
+          "publication": "ArantesWearable Robots: Biomechatronic Exoskeleton, 283-321, 2008",
+          "year": 2008,
+          "citations": 14,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:IjCSPb-OGe4C",
+          "citation_id": "y6Smt-cAAAAJ:IjCSPb-OGe4C"
+        },
+        {
+          "title": "Novelty detection in social media by fusing text and image into a single structure",
+          "authors": "M Amorim, FD Bortoloti, PM Ciarelli, EOT Salles, DC Cavalieri",
+          "publication": "IEEE Access 7, 132786-132802, 2019",
+          "year": 2019,
+          "citations": 13,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:blknAaTinKkC",
+          "citation_id": "y6Smt-cAAAAJ:blknAaTinKkC"
+        },
+        {
+          "title": "Controlling devices using biological signals",
+          "authors": "AS Brandão, LB Felix, DC Cavalieri, AMFLM de Sá, TF Bastos-Filho, ...",
+          "publication": "International Journal of Advanced Robotic Systems 8 (3), 30, 2011",
+          "year": 2011,
+          "citations": 13,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:MXK_kJrjxJIC",
+          "citation_id": "y6Smt-cAAAAJ:MXK_kJrjxJIC"
+        },
+        {
+          "title": "Predicting diabetic retinopathy stage using Siamese convolutional neural network",
+          "authors": "MS Santos, CT Valadao, CZ Resende, DC Cavalieri",
+          "publication": "Computer Methods in Biomechanics and Biomedical Engineering: Imaging …, 2024",
+          "year": 2024,
+          "citations": 12,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:M3NEmzRMIkIC",
+          "citation_id": "y6Smt-cAAAAJ:M3NEmzRMIkIC"
+        },
+        {
+          "title": "Efficient monitoring of longitudinal tears in conveyor belts using 2D laser scanner and statistical methods",
+          "authors": "JR Leite, DC Cavalieri, AR Prado",
+          "publication": "Measurement 227, 114225, 2024",
+          "year": 2024,
+          "citations": 11,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:JV2RwH3_ST0C",
+          "citation_id": "y6Smt-cAAAAJ:JV2RwH3_ST0C"
+        },
+        {
+          "title": "A Versatile Robotic Wheelchair Commanded by Brain Signals or Eye Blinks.",
+          "authors": "A Ferreira, DC Cavalieri, RL Silva, TF Bastos Filho, M Sarcinelli Filho",
+          "publication": "BIODEVICES (2), 62-67, 2008",
+          "year": 2008,
+          "citations": 11,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:ULOm3_A8WrAC",
+          "citation_id": "y6Smt-cAAAAJ:ULOm3_A8WrAC"
+        },
+        {
+          "title": "Improving sEMG-based hand gesture recognition using maximal overlap discrete wavelet transform and an autoencoder neural network",
+          "authors": "FHC De Andrade, FG Pereira, CZ Resende, DC Cavalieri",
+          "publication": "XXVI Brazilian Congress on Biomedical Engineering: CBEB 2018, Armação de …, 2019",
+          "year": 2019,
+          "citations": 9,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:qxL8FJ1GzNcC",
+          "citation_id": "y6Smt-cAAAAJ:qxL8FJ1GzNcC"
+        },
+        {
+          "title": "Case study: Cognitive control of a robotic wheelchair",
+          "authors": "TF Bastos, M Sarcinelli-Filho, A Ferreira, WC Celeste, RL Silva, ...",
+          "publication": "Wearable Robots: Biomechatronic Exoskeletons, 315-319, 2008",
+          "year": 2008,
+          "citations": 8,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:ufrVoPGSRksC",
+          "citation_id": "y6Smt-cAAAAJ:ufrVoPGSRksC"
+        },
+        {
+          "title": "Surface-enhanced Raman scattering combined with machine learning for rapid and sensitive detection of anti-SARS-CoV-2 IgG",
+          "authors": "TA Silva, GFS Dos Santos, AR Prado, DC Cavalieri, AG Leal Junior, ...",
+          "publication": "Biosensors 14 (11), 523, 2024",
+          "year": 2024,
+          "citations": 6,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:vV6vV6tmYwMC",
+          "citation_id": "y6Smt-cAAAAJ:vV6vV6tmYwMC"
+        },
+        {
+          "title": "A part-of-speech tag clustering for a word prediction system in portuguese language",
+          "authors": "DC Cavalieri, TF Bastos Filho, M Sarcinelli Filho, SEP Cagigas, ...",
+          "publication": "Procesamiento del lenguaje natural 47, 197-205, 2011",
+          "year": 2011,
+          "citations": 6,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:zYLM7Y9cAGgC",
+          "citation_id": "y6Smt-cAAAAJ:zYLM7Y9cAGgC"
+        },
+        {
+          "title": "Interface homem-máquina para uma cadeira de rodas baseada no movimento ocular e piscadas de olhos",
+          "authors": "DC Cavalieri",
+          "publication": "",
+          "year": 2007,
+          "citations": 5,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:5nxA0vEk-isC",
+          "citation_id": "y6Smt-cAAAAJ:5nxA0vEk-isC"
+        },
+        {
+          "title": "A hybrid model based on genetic algorithm and space-filling curve applied to optimization of vehicle routes",
+          "authors": "WR Mendes, FG Pereira, DC Cavalieri",
+          "publication": "Advances in Electrical and Computer Engineering 18 (3), 45-52, 2018",
+          "year": 2018,
+          "citations": 3,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:YOwf2qJgpHMC",
+          "citation_id": "y6Smt-cAAAAJ:YOwf2qJgpHMC"
+        },
+        {
+          "title": "Evaluation of machine learning approaches to portuguese part-of-speech prediction",
+          "authors": "DC Cavalieri, SE Palazuelos-Cagigas, TF Bastos-Filho, M Sarcinelli-Filho",
+          "publication": "Compu‐tational Processing of the Portuguese Language, 9th International …, 2010",
+          "year": 2010,
+          "citations": 3,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:Tyk-4Ss8FVUC",
+          "citation_id": "y6Smt-cAAAAJ:Tyk-4Ss8FVUC"
+        },
+        {
+          "title": "Reconhecimento facial baseado em HOG e PCA: uma comparação quanto à invariância à iluminação",
+          "authors": "JAC Panceri, LA Pinto, FG Pereira, DC Cavalieri, KS Komati",
+          "publication": "Revista Ifes Ciência 1 (1), 41-62, 2015",
+          "year": 2015,
+          "citations": 2,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:W7OEmFMy1HYC",
+          "citation_id": "y6Smt-cAAAAJ:W7OEmFMy1HYC"
+        },
+        {
+          "title": "Machine learning methods for word prediction in Brasilian Portuguese",
+          "authors": "SE Palazuelos-Cagigas, JL Martín-Sánchez, J Macias-Guarasa, ...",
+          "publication": "Everyday Technology for Independence and Care, 424-431, 2011",
+          "year": 2011,
+          "citations": 2,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:mB3voiENLucC",
+          "citation_id": "y6Smt-cAAAAJ:mB3voiENLucC"
+        },
+        {
+          "title": "Estimativa da espessura de tiras de aço em laminador de acabamento utilizando técnicas de aprendizado de máquina",
+          "authors": "TL da Silva, DC Cavalieri, FG Pereira",
+          "publication": "SEMINÁRIO DE AUTOMAÇÃO E TI 22, 2018",
+          "year": 2018,
+          "citations": 1,
+          "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=y6Smt-cAAAAJ&citation_for_view=y6Smt-cAAAAJ:dhFuZR0502QC",
+          "citation_id": "y6Smt-cAAAAJ:dhFuZR0502QC"
         }
       ]
     }
