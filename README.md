@@ -1,132 +1,31 @@
-# Research Documentation Portal - Campus Serra
+# IFES Research Data - Documentation Site
 
-A comprehensive documentation portal for research activities at IFES Campus Serra, featuring interactive visualizations, collaboration networks, and detailed project analytics.
+[![GitLab CI/CD](https://img.shields.io/badge/CI%2FCD-GitLab-orange)](https://gitlab.com)
+[![MkDocs](https://img.shields.io/badge/docs-MkDocs-blue)](https://www.mkdocs.org/)
+[![Material Theme](https://img.shields.io/badge/theme-Material-blue)](https://squidfunk.github.io/mkdocs-material/)
 
-## 🎯 Overview
+Documentation site for IFES Campus Serra research data, including publications, research lines, scholarships, and more.
 
-This project automatically generates a static documentation website from research data extracted from SIGPESQ (Sistema de Gestão de Pesquisa do IFES). It provides:
-
-- **Research Groups**: Group-centric view with collaboration networks
-- **Research Projects**: Project-centric view with timeline analytics
-- **Interactive Visualizations**: Charts, graphs, and network diagrams
-- **Collaboration Analysis**: Network metrics and partnership insights
-- **Student Engagement**: Participation patterns and highly engaged students
-
-## 🚀 Features
-
-### Data Processing
-- ✅ CSV to JSON conversion with validation
-- ✅ Automatic duplicate removal
-- ✅ Missing research group detection
-- ✅ Network statistics generation
-- ✅ Object-oriented, well-documented code
-
-### Visualizations
-- 📊 **Timeline Charts**: Projects and students over time
-- 🔗 **Network Graphs**: Collaboration relationships
-- 📈 **Bar Charts**: Student participation distribution
-- 🎯 **Status Tracking**: Ongoing vs completed projects
-- 📉 **Trend Analysis**: Funding and partnership patterns
-
-### Documentation
-- 📚 Organized by research groups and projects
-- 🔍 Searchable and filterable content
-- 📱 Responsive design
-- 🌐 Interactive charts with Plotly and vis-network
-- 📋 Expandable detailed tables
-- 🌍 Multilingual support (English and Portuguese)
-
-## 📁 Project Structure
-
-```
-.
-├── .github/
-│   └── workflows/
-│       └── deploy-pages.yml      # GitHub Actions CI/CD
-│
-├── source/                       # Source CSV files from SIGPESQ
-│   ├── research_groups/
-│   │   └── research_group.csv
-│   ├── research_project/
-│   │   └── *.csv                 # Multiple CSV files by year
-│   └── scholarships/
-│       └── *.csv                 # Scholarship data by year
-│
-├── src/                          # Python processing scripts (OOP)
-│   ├── process_research_groups.py      # Convert groups CSV to JSON
-│   ├── process_research_projects.py    # Convert projects CSV to JSON
-│   ├── process_scholarships.py         # Convert scholarships CSV to JSON
-│   ├── calculate_student_recurrence.py # Calculate student statistics
-│   ├── group_by_student.py             # Aggregate by student
-│   ├── group_by_supervisor.py          # Aggregate by supervisor
-│   ├── analyze_partnerships.py         # Analyze partnerships
-│   ├── generate_network_stats.py       # Generate collaboration networks
-│   ├── translate_docs.py               # Translate documentation
-│   ├── remove_pii_columns.py           # Remove PII from CSV
-│   ├── remove_cpf_from_json.py         # Remove CPF from JSON
-│   ├── build.sh                        # Build script
-│   └── README.md                       # Scripts documentation
-│
-├── data/                         # Generated JSON files
-│   ├── research_group.json       # Processed research groups
-│   ├── research_projects.json    # Processed research projects
-│   ├── scholarships.json         # Processed scholarships
-│   ├── students.json             # Student aggregated data
-│   ├── supervisors.json          # Supervisor aggregated data
-│   ├── partnership_analysis.json # Partnership analysis
-│   └── network_stats.json        # Collaboration network statistics
-│
-├── onestep-static/              # MkDocs documentation
-│   ├── mkdocs.yml               # MkDocs configuration
-│   ├── main.py                  # MkDocs macros (OOP)
-│   ├── overrides/               # Custom templates
-│   └── docs/
-│       ├── index.md             # Landing page (English)
-│       ├── index.pt.md          # Landing page (Portuguese)
-│       ├── research_groups.md   # Research groups (English)
-│       ├── research_groups.pt.md # Research groups (Portuguese)
-│       ├── research_projects.md # Research projects (English)
-│       ├── research_projects.pt.md # Research projects (Portuguese)
-│       ├── students.md          # Students (English)
-│       ├── students.pt.md       # Students (Portuguese)
-│       ├── supervisors.md       # Supervisors (English)
-│       ├── supervisors.pt.md    # Supervisors (Portuguese)
-│       ├── scholarship.md       # Scholarships (English)
-│       ├── scholarship.pt.md    # Scholarships (Portuguese)
-│       ├── downloads.md         # Data downloads (English)
-│       └── downloads.pt.md      # Data downloads (Portuguese)
-│
-├── docs-projeto/                # Technical documentation
-│   ├── MAKEFILE_GUIDE.md        # Makefile usage guide
-│   └── *.md                     # Other guides and references
-│
-├── Makefile                     # Build automation
-├── requirements.txt             # Python dependencies
-├── main.py                      # MkDocs entry point
-├── GUIA_RAPIDO_PT.md           # Quick start guide (Portuguese)
-├── GUIA_PUBLICACAO_GITHUB.md   # GitHub Pages deployment guide
-├── PUBLICAR_AGORA.md           # Quick publish guide
-└── README.md                    # This file
-```
-
-## 🛠️ Installation
+## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.12 or higher
-- pip (Python package manager)
 
-### Setup
+- Python 3.11+
+- Git
+- GitLab account (for deployment)
+
+### Local Development
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd onestep-static
+   git clone <your-repo-url>
+   cd <repo-name>
    ```
 
-2. **Create virtual environment** (recommended)
+2. **Create virtual environment**
    ```bash
-   python -m venv .venv
-   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
 3. **Install dependencies**
@@ -134,288 +33,298 @@ This project automatically generates a static documentation website from researc
    pip install -r requirements.txt
    ```
 
-## 📊 Usage
+4. **Serve locally**
+   ```bash
+   cd onestep-static
+   mkdocs serve
+   ```
 
-### Quick Start with Makefile
+5. **Open browser**
+   ```
+   http://127.0.0.1:8000
+   ```
 
-The project includes a comprehensive Makefile for easy management:
+## 📁 Project Structure
 
-```bash
-# Show all available commands
-make help
-
-# Install dependencies
-make install
-
-# Process all data (complete pipeline)
-make process-all
-
-# Build documentation
-make build-docs
-
-# Serve documentation locally
-make serve-docs
+```
+.
+├── data/                      # JSON data files
+│   ├── papers.json
+│   ├── research_lines.json
+│   ├── scholarships.json
+│   └── ...
+│
+├── onestep-static/           # MkDocs site
+│   ├── mkdocs.yml           # Configuration
+│   ├── main.py              # Custom macros
+│   ├── docs/                # Markdown files
+│   └── overrides/           # Theme customizations
+│
+├── .gitlab-ci.yml           # CI/CD configuration
+├── requirements.txt         # Python dependencies
+└── verify_build.sh          # Build verification script
 ```
 
-### Complete Workflow
+See [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) for detailed information.
+
+## 🔧 Building the Site
+
+### Build Locally
 
 ```bash
-# 1. Install dependencies
-make install
-
-# 2. Process all data
-make process-all
-
-# 3. Build and serve documentation
-make serve-docs
-# Open http://127.0.0.1:8000
-```
-
-### Individual Processing Steps
-
-```bash
-# Process research groups
-make process-groups
-
-# Process research projects
-make process-projects
-
-# Process scholarships
-make process-scholarships
-
-# Calculate student recurrence
-make calculate-recurrence
-
-# Aggregate data by student
-make aggregate-students
-
-# Aggregate data by supervisor
-make aggregate-supervisors
-
-# Analyze partnerships
-make analyze-partnerships
-
-# Generate network statistics
-make analyze-networks
-```
-
-### Documentation Commands
-
-```bash
-# Copy data files to docs
-make copy-data
-
-# Build static site
-make build-docs
-
-# Preview locally (with auto-reload)
-make serve-docs
-# Open http://127.0.0.1:8000
-# The site will be available in both English and Portuguese
-# Use the language selector in the top navigation bar
-
-# Translate documentation to Portuguese
-make translate-docs
-```
-
-### Utility Commands
-
-```bash
-# Check status of data files
-make status
-
-# Show project information
-make info
-
-# Clean generated files
-make clean
-
-# Clean data files (⚠️ WARNING: removes processed data)
-make clean-data
-```
-
-### Code Quality
-
-```bash
-# Format code with black
-make format
-
-# Run linter
-make lint
-
-# Type checking
-make type-check
-
-# Run tests
-make test
-```
-
-### Deploy to GitHub Pages
-
-**Automatic deployment:**
-- Push changes to `main` branch
-- GitHub Actions will automatically build and deploy
-
-**Manual deployment:**
-```bash
-# Prepare for deployment
-make deploy
-
-# Then follow the git commands shown
-git add .
-git commit -m "Update data and documentation"
-git push origin main
-```
-
-**Manual workflow trigger:**
-- Go to Actions tab in GitHub
-- Select "Deploy to GitHub Pages"
-- Click "Run workflow"
-
-### Alternative: Direct Python Commands
-
-If you prefer not to use Make:
-
-```bash
-# Process data
-python src/process_research_groups.py
-python src/process_research_projects.py
-python src/process_scholarships.py
-python src/calculate_student_recurrence.py
-python src/group_by_student.py
-python src/group_by_supervisor.py
-python src/analyze_partnerships.py
-python src/generate_network_stats.py
-
-# Build documentation
 cd onestep-static
-mkdocs build --clean --strict
-mkdocs serve
+mkdocs build
 ```
 
-## 🏗️ Architecture
+Output will be in `onestep-static/site/`
 
-### Data Flow
-
-```
-CSV Files (SIGPESQ)
-    ↓
-Python Scripts (OOP)
-    ↓
-JSON Files (Structured Data)
-    ↓
-MkDocs + Jinja2 Templates
-    ↓
-Static HTML Site
-    ↓
-GitHub Pages (Published)
-```
-
-### Key Components
-
-#### 1. Data Processing Layer
-- **Object-Oriented Design**: Classes for Person, Edge, Network, etc.
-- **Type Safety**: Comprehensive type hints
-- **Validation**: Duplicate removal, data normalization
-- **Documentation**: Full docstrings and comments
-
-#### 2. Visualization Layer
-- **Plotly**: Interactive charts and graphs
-- **vis-network**: Collaboration network diagrams
-- **Jinja2**: Dynamic content generation
-- **Responsive**: Mobile-friendly layouts
-
-#### 3. Deployment Layer
-- **GitHub Actions**: Automated CI/CD
-- **MkDocs**: Static site generation
-- **GitHub Pages**: Free hosting
-
-## 📈 Data Sources
-
-All data is extracted from **SIGPESQ** (Sistema de Gestão de Pesquisa do IFES), the official research management system of the Federal Institute of Espírito Santo.
-
-### Data Scope
-- **Campus**: Serra only
-- **Time Period**: 2014 - 2025
-- **Total Projects**: 579+
-- **Research Groups**: 14 active groups
-- **Students**: 400+ unique students
-
-## 🔧 Development
-
-### Code Quality
-
-The codebase follows best practices:
-- ✅ Object-Oriented Programming
-- ✅ Type hints throughout
-- ✅ Comprehensive documentation
-- ✅ Single Responsibility Principle
-- ✅ DRY (Don't Repeat Yourself)
-
-### Testing
+### Build with Strict Mode
 
 ```bash
-# Test data processing
-python src/process_research_groups.py
-python src/process_research_projects.py
-python src/generate_network_stats.py
-
-# Test documentation build
-mkdocs build --strict
-
-# Test locally
-mkdocs serve
+cd onestep-static
+mkdocs build --strict --verbose
 ```
 
-### Adding New Features
+This will fail on warnings and show detailed output.
 
-1. **New visualization**: Edit markdown files in `onestep-static/docs/`
-2. **New metric**: Modify Python scripts in `src/`
-3. **New data source**: Add CSV files to `source/`
-4. **New page**: Add markdown file and update `mkdocs.yml`
+### Verify Before Push
+
+Run the verification script:
+
+```bash
+bash verify_build.sh
+```
+
+This checks:
+- Python installation
+- Required files and directories
+- JSON file validity
+- MkDocs build success
+
+## 🚢 Deployment
+
+### Automatic Deployment (GitLab CI/CD)
+
+The site automatically deploys to GitLab Pages when you push to `main` or `master`:
+
+1. **Commit your changes**
+   ```bash
+   git add .
+   git commit -m "Update documentation"
+   ```
+
+2. **Push to GitLab**
+   ```bash
+   git push origin main
+   ```
+
+3. **Monitor pipeline**
+   - Go to your GitLab project
+   - Navigate to **CI/CD** → **Pipelines**
+   - Watch the build and deploy stages
+
+4. **Access your site**
+   ```
+   https://<namespace>.gitlab.io/<project-name>
+   ```
+
+### Pipeline Stages
+
+1. **Build Stage**
+   - Installs dependencies
+   - Verifies data files
+   - Builds MkDocs site
+   - Creates artifacts
+
+2. **Deploy Stage**
+   - Copies built site to `public/`
+   - Deploys to GitLab Pages
+
+See [GITLAB_CI_SETUP.md](GITLAB_CI_SETUP.md) for detailed CI/CD information.
+
+## 📊 Data Files
+
+The site loads data from JSON files in the `data/` directory:
+
+- **papers.json** - Research publications and citations
+- **research_lines.json** - Research lines with projects
+- **scholarships.json** - Scholarship information
+- **students.json** - Student data
+- **supervisors.json** - Supervisor information
+- **partnership_analysis.json** - Partnership data
+
+### Updating Data
+
+1. Update JSON files in `data/` directory
+2. Commit and push changes
+3. Site rebuilds automatically
+
+### Data Validation
+
+JSON files are validated during build. Invalid JSON will cause build failure.
+
+## 🌍 Internationalization
+
+The site supports multiple languages:
+
+- **English** (default): `filename.md`
+- **Portuguese**: `filename.pt.md`
+
+Language selector appears in the navigation bar.
+
+### Adding Translations
+
+1. Create Portuguese version: `docs/newpage.pt.md`
+2. Add to navigation in `mkdocs.yml`:
+   ```yaml
+   nav:
+     - New Page:
+       - en: newpage.md
+       - pt: newpage.pt.md
+   ```
+
+## 🎨 Customization
+
+### Theme
+
+The site uses Material for MkDocs theme. Customize in `onestep-static/mkdocs.yml`:
+
+```yaml
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.instant
+```
+
+### Custom Macros
+
+Add custom macros in `onestep-static/main.py`:
+
+```python
+def define_env(env):
+    @env.macro
+    def my_custom_macro():
+        return "Hello from macro!"
+```
+
+Use in markdown:
+```markdown
+{{ my_custom_macro() }}
+```
+
+## 📝 Adding New Pages
+
+1. **Create markdown file**
+   ```bash
+   # English version
+   touch onestep-static/docs/newpage.md
+   
+   # Portuguese version
+   touch onestep-static/docs/newpage.pt.md
+   ```
+
+2. **Add to navigation** in `mkdocs.yml`
+   ```yaml
+   nav:
+     - New Page:
+       - en: newpage.md
+       - pt: newpage.pt.md
+   ```
+
+3. **Use data macros**
+   ```markdown
+   {% set data = load_papers_data() %}
+   # My New Page
+   Total researchers: {{ data['total_researchers'] }}
+   ```
+
+## 🔍 Troubleshooting
+
+### Build Fails
+
+1. Check data files exist and are valid JSON
+2. Run `mkdocs build --strict --verbose` for details
+3. Check `main.py` for errors
+4. Review GitLab CI/CD logs
+
+### Pages Not Updating
+
+1. Clear browser cache
+2. Wait a few minutes for GitLab Pages
+3. Check pipeline completed successfully
+4. Verify `pages` job ran
+
+### Data Not Loading
+
+1. Verify file paths in `main.py`
+2. Check JSON structure
+3. Ensure files are committed to repository
 
 ## 📚 Documentation
 
-### For Users
-- **Landing Page**: Overview and navigation guide (English and Portuguese)
-- **Research Groups**: Group-centric view with networks
-- **Research Projects**: Project-centric view with analytics
-- **Students**: Student participation and collaboration
-- **Supervisors**: Supervisor profiles and statistics
-- **Scholarships**: IC scholarship data and analysis
-- **Downloads**: Access to all data files in JSON format
-- **Language Selector**: Switch between English and Portuguese
+- [Project Structure](PROJECT_STRUCTURE.md) - Detailed project structure
+- [GitLab CI/CD Setup](GITLAB_CI_SETUP.md) - CI/CD configuration guide
+- [MkDocs Documentation](https://www.mkdocs.org/) - Official MkDocs docs
+- [Material Theme](https://squidfunk.github.io/mkdocs-material/) - Theme documentation
 
-### For Developers
-- **Makefile Guide**: `docs-projeto/MAKEFILE_GUIDE.md` - Complete Makefile documentation
-- **Quick Start**: `GUIA_RAPIDO_PT.md` - Quick start guide in Portuguese
-- **Deployment**: `GUIA_PUBLICACAO_GITHUB.md` - Complete GitHub Pages guide
-- **Quick Publish**: `PUBLICAR_AGORA.md` - Fast deployment guide
-- **Scripts Documentation**: `src/README.md` - All Python scripts documented
-- **Technical Docs**: `docs-projeto/` - Detailed technical documentation
-- **Code Documentation**: Comprehensive docstrings in all Python files
+## 🛠️ Development
+
+### Requirements
+
+See `requirements.txt` for all dependencies. Key packages:
+
+- `mkdocs==1.6.1` - Static site generator
+- `mkdocs-material` - Material theme
+- `mkdocs-macros-plugin==1.5.0` - Custom macros
+- `mkdocs-static-i18n==1.2.3` - Internationalization
+- `pandas==2.3.3` - Data manipulation
+
+### Testing
+
+Run verification script before pushing:
+
+```bash
+bash verify_build.sh
+```
+
+### Code Style
+
+- Python: Follow PEP 8
+- Markdown: Use consistent formatting
+- YAML: 2-space indentation
 
 ## 🤝 Contributing
 
-### Workflow
+1. Create a feature branch
+   ```bash
+   git checkout -b feature/my-feature
+   ```
 
-1. **Fork** the repository
-2. **Create** a feature branch
-3. **Make** your changes
-4. **Test** locally
-5. **Commit** with clear messages
-6. **Push** to your fork
-7. **Create** a Pull Request
+2. Make changes and test locally
+   ```bash
+   cd onestep-static
+   mkdocs serve
+   ```
 
-### Guidelines
+3. Verify build
+   ```bash
+   bash verify_build.sh
+   ```
 
-- Follow existing code style
-- Add comments for complex logic
-- Update documentation for new features
-- Test thoroughly before submitting
-- Keep commits focused and atomic
+4. Commit and push
+   ```bash
+   git add .
+   git commit -m "Add my feature"
+   git push origin feature/my-feature
+   ```
 
-## 📝 License
+5. Create merge request on GitLab
+
+## 📄 License
 
 [Add your license information here]
 
@@ -423,20 +332,23 @@ mkdocs serve
 
 - IFES Campus Serra Research Team
 
-## 🙏 Acknowledgments
+## 📧 Support
 
-- **SIGPESQ**: Data source
-- **IFES**: Federal Institute of Espírito Santo
-- **MkDocs**: Documentation framework
-- **Plotly**: Visualization library
-- **vis-network**: Network visualization
+For issues or questions:
+- Open an issue on GitLab
+- Check documentation files
+- Review MkDocs and Material theme docs
 
-## 📞 Contact
+## 🔗 Links
 
-For questions or support, contact the research coordination at IFES Campus Serra.
+- [MkDocs](https://www.mkdocs.org/)
+- [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
+- [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/)
+- [GitLab CI/CD](https://docs.gitlab.com/ee/ci/)
 
 ---
 
-**Last Updated**: November 2025  
-**Version**: 1.0.0  
-**Status**: ✅ Active
+**Note**: Remember to make `verify_build.sh` executable:
+```bash
+chmod +x verify_build.sh
+```

@@ -1,0 +1,85 @@
+image: python:3.11-slim
+
+stages:
+  - build
+  - deploy
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+
+before_script:
+  - python -V
+  - pip install virtualenv
+  - virtualenv venv
+  - source venv/bin/activate
+
+build:
+  stage: build
+  script:
+    # Install dependencies
+    - pip install -r requirements.txt
+    
+    # Verify data files exist
+    - ls -la data/
+    
+    # Build MkDocs site from onestep-static folder
+    - cd onestep-static
+    - mkdocs build --strict --verbose
+    
+    # Verify build output
+    - ls -la site/
+  artifacts:
+    paths:
+      - onestep-static/site
+    expire_in: 1 hour
+  only:
+    - main
+    - master
+    - develop
+
+pages:
+  stage: deploy
+  dependencies:
+    - build
+  script:
+    # Create public directory for GitLab Pages
+    - mkdir -p public
+    
+    # Copy built site to public directory
+    - cp -r onestep-static/site/* public/
+    
+    # Verify deployment files
+    - ls -la public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+    - master
+  environment:
+    name: production
+    url: https://$CI_PROJECT_NAMESPACE.gitlab.io/$CI_PROJECT_NAME
+
+# Optional: Test build on merge requests
+test_build:
+  stage: build
+  script:
+    # Install dependencies
+    - pip install -r requirements.txt
+    
+    # Verify data files exist
+    - ls -la data/ || echo "Warning: data directory not found"
+    
+    # Test build from onestep-static folder
+    - cd onestep-static
+    - mkdocs build --strict --verbose
+  only:
+    - merge_requests
+  except:
+    - main
+    - master
