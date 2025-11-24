@@ -1,591 +1,551 @@
-# Publicações Científicas - Todos os Pesquisadores
+# Publicações Científicas - Campus Serra
 
-## Visão Geral Global
+<style>
+  .md-content {
+    max-width: 100% !important;
+  }
+  .md-content__inner {
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+  }
+  article {
+    max-width: 100% !important;
+  }
+  .md-typeset table:not([class]) {
+    display: table !important;
+    width: 100% !important;
+    table-layout: fixed !important;
+  }
+  #papersTable {
+    width: 100% !important;
+    table-layout: fixed !important;
+  }
+  #papersTable td {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+</style>
 
-### Estatísticas Resumidas
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
 
-| Métrica | Valor |
-|---------|-------|
-| **Total de Pesquisadores** | 4 |
-| **Total de Citações** | 1411 |
-| **Média de Citações por Artigo** | 17.64 |
+{% set data = load_papers_data() %}
+{% set researchers = data['researchers'] %}
+{% set metadata = data %}
 
+## Visão Geral
 
-### Citações por Ano
+{% set ns = namespace(total_pubs=0, all_years=[], total_years=0) %}
+{% for r in researchers %}
+  {% set pubs = r['statistics']['papers_by_year'].values()|sum %}
+  {% set ns.total_pubs = ns.total_pubs + pubs %}
+  {% for year in r['statistics']['papers_by_year'].keys() %}
+    {% if year not in ns.all_years %}
+      {% set _ = ns.all_years.append(year) %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+{% set year_range = ns.all_years|map('int')|list %}
+{% set min_year = year_range|min if year_range else 2000 %}
+{% set max_year = year_range|max if year_range else 2025 %}
+{% set years_span = max_year - min_year + 1 %}
+{% set avg_pubs_per_year = (ns.total_pubs / years_span)|round(1) %}
 
-```
-2022                 | ██████████████████████████████████████████████████ 108
-2023                 | █████████████████████████████████████████████████ 107
-2024                 | ███████████████████████████████████████████████ 102
-2021                 | █████████████████████████████████████████████ 99
-2025                 | ████████████████████████████████████████████ 97
-2020                 | █████████████████████████████████████████ 90
-2019                 | ███████████████████████████████████████ 86
-2018                 | █████████████████████████████████████ 80
-2017                 | ███████████████████████████████████ 76
-2016                 | ███████████████████████████████ 68
-2015                 | ██████████████████████████████ 65
-2011                 | ██████████████████████████ 58
-2014                 | █████████████████████████ 54
-2008                 | █████████████████████ 46
-2013                 | ████████████████████ 45
-2010                 | ███████████████████ 43
-2006                 | ███████████████████ 42
-2012                 | █████████████ 29
-2007                 | ████████████ 28
-2009                 | ███████████ 25
-2005                 | ██████████ 22
-2004                 | █████████ 21
-2003                 | ██████ 13
-2002                 | █ 4
+**Total de Pesquisadores:** {{ metadata['total_researchers'] }}  
+**Total de Citações:** {{ researchers|sum(attribute='statistics.total_citations') }}
 
-```
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 30px;">
+  <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px; text-align: center;">
+    <div style="font-size: 32px; font-weight: bold;">{{ researchers|length }}</div>
+    <div style="font-size: 14px; margin-top: 5px;">Pesquisadores</div>
+  </div>
+  <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 20px; border-radius: 8px; text-align: center;">
+    <div style="font-size: 32px; font-weight: bold;">{{ researchers|sum(attribute='statistics.total_citations') }}</div>
+    <div style="font-size: 14px; margin-top: 5px;">Total de Citações</div>
+  </div>
+</div>
 
-### Top 10 Linhas de Pesquisa (Todos os Pesquisadores)
+### Visão Geral das Áreas de Pesquisa
 
-1. **Software Engineering** (3 pesquisadores)
-2. **Applied Ontology** (2 pesquisadores)
-3. **Software Processes** (1 pesquisador)
-4. **Ontology Engineering** (1 pesquisador)
-5. **Conceptual Modeling** (1 pesquisador)
-6. **Business Process Management** (1 pesquisador)
-7. **Decision Support** (1 pesquisador)
-8. **Enterprise Architecture** (1 pesquisador)
-9. **Agile** (1 pesquisador)
-10. **Semantic Integration** (1 pesquisador)
+<div id="research-areas-chart" style="width:100%;height:450px;margin-bottom:30px;"></div>
 
-### Top 10 Tópicos de Pesquisa (Dos Títulos dos Artigos)
+<script>
+(function() {
+  var researchers = {{ researchers|tojson }};
+  
+  // Aggregate data by research interest
+  var interestData = {};
+  
+  researchers.forEach(function(r) {
+    var interests = r.researcher.interests || [];
+    var papers = r.statistics.papers_by_year;
+    var totalPapers = Object.values(papers).reduce(function(a, b) { return a + b; }, 0);
+    var citations = r.statistics.total_citations;
+    
+    interests.forEach(function(interest) {
+      if (!interestData[interest]) {
+        interestData[interest] = {
+          papers: 0,
+          citations: 0,
+          researchers: []
+        };
+      }
+      interestData[interest].papers += totalPapers;
+      interestData[interest].citations += citations;
+      interestData[interest].researchers.push(r.researcher.name);
+    });
+  });
+  
+  // Sort by citations and get top 10
+  var sortedInterests = Object.keys(interestData).sort(function(a, b) {
+    return interestData[b].citations - interestData[a].citations;
+  }).slice(0, 10);
+  
+  var interests = sortedInterests;
+  var citations = interests.map(function(i) { return interestData[i].citations; });
+  
+  var trace2 = {
+    x: interests,
+    y: citations,
+    name: 'Citações',
+    type: 'scatter',
+    mode: 'lines+markers+text',
+    text: citations,
+    textposition: 'top center',
+    line: {width: 3, color: '#f5576c'},
+    marker: {size: 10, color: '#f5576c'},
+    yaxis: 'y',
+    hovertemplate: '<b>%{x}</b><br>Citações: %{y}<extra></extra>'
+  };
+  
+  var data = [trace2];
+  
+  var layout = {
+    title: {
+      text: 'Top 10 Áreas de Pesquisa - Citações',
+      font: {size: 18, family: 'Arial, sans-serif', color: '#222'}
+    },
+    xaxis: {
+      tickangle: -45,
+      automargin: true
+    },
+    yaxis: {
+      title: 'Citações',
+      titlefont: {color: '#f5576c'},
+      tickfont: {color: '#f5576c'},
+      side: 'left',
+      rangemode: 'tozero'
+    },
+    plot_bgcolor: '#fafafa',
+    paper_bgcolor: 'white',
+    legend: {
+      x: 0.02,
+      y: 0.98,
+      bgcolor: 'rgba(255,255,255,0.9)',
+      bordercolor: '#ccc',
+      borderwidth: 1
+    },
+    margin: {t: 60, b: 120, l: 60, r: 80},
+    height: 450
+  };
+  
+  Plotly.newPlot('research-areas-chart', data, layout);
+})();
+</script>
 
-1. **ontology** (23 ocorrências)
-2. **para** (13 ocorrências)
-3. **engineering** (11 ocorrências)
-4. **modeling** (11 ocorrências)
-5. **business** (9 ocorrências)
-6. **semantic** (7 ocorrências)
-7. **integration** (7 ocorrências)
-8. **heaven** (7 ocorrências)
-9. **towards** (6 ocorrências)
-10. **enterprise** (6 ocorrências)
+### Publicações e Citações por Ano
+
+<div id="pubs-citations-by-year-chart" style="width:100%;height:450px;margin-bottom:30px;"></div>
+
+<script>
+(function() {
+  var researchers = {{ researchers|tojson }};
+  
+  // Aggregate publications by year
+  var yearPubs = {};
+  researchers.forEach(function(r) {
+    var papersByYear = r.statistics.papers_by_year;
+    Object.keys(papersByYear).forEach(function(year) {
+      if (!yearPubs[year]) {
+        yearPubs[year] = 0;
+      }
+      yearPubs[year] += papersByYear[year];
+    });
+  });
+  
+  // Aggregate citations by year
+  var yearCitations = {};
+  researchers.forEach(function(r) {
+    var citationsByYear = r.statistics.citations_by_year;
+    citationsByYear.forEach(function(item) {
+      var year = item.year;
+      if (!yearCitations[year]) {
+        yearCitations[year] = 0;
+      }
+      var citeCount = item.citations || item.cites || 0;
+      yearCitations[year] += citeCount;
+    });
+  });
+  
+  // Get all years and sort
+  var allYears = new Set([...Object.keys(yearPubs), ...Object.keys(yearCitations)]);
+  var years = Array.from(allYears).map(Number).sort();
+  
+  var citations = years.map(function(y) { return yearCitations[y] || 0; });
+  
+  var trace2 = {
+    x: years,
+    y: citations,
+    name: 'Citações',
+    type: 'scatter',
+    mode: 'lines+markers+text',
+    text: citations,
+    textposition: 'top center',
+    line: {width: 3, color: '#f5576c'},
+    marker: {size: 8, color: '#f5576c'},
+    yaxis: 'y',
+    hovertemplate: '<b>Ano %{x}</b><br>Citações: %{y}<extra></extra>'
+  };
+  
+  var data = [trace2];
+  
+  var layout = {
+    title: {
+      text: 'Citações por Ano (Todos os Pesquisadores)',
+      font: {size: 18, family: 'Arial, sans-serif', color: '#222'}
+    },
+    xaxis: {
+      title: 'Ano',
+      dtick: 1,
+      gridcolor: '#e5e5e5'
+    },
+    yaxis: {
+      title: 'Citações',
+      titlefont: {color: '#f5576c'},
+      tickfont: {color: '#f5576c'},
+      side: 'left',
+      rangemode: 'tozero'
+    },
+    plot_bgcolor: '#fafafa',
+    paper_bgcolor: 'white',
+    legend: {
+      x: 0.02,
+      y: 0.98,
+      bgcolor: 'rgba(255,255,255,0.9)',
+      bordercolor: '#ccc',
+      borderwidth: 1
+    },
+    margin: {t: 60, b: 50, l: 60, r: 80},
+    height: 450
+  };
+  
+  Plotly.newPlot('pubs-citations-by-year-chart', data, layout);
+})();
+</script>
 
 ---
 
-## Pesquisadores Individuais
+## Resumo dos Pesquisadores
 
-### Fabiano Borges Ruy
+<div style="margin-bottom: 20px;">
+  <input type="text" id="searchInput" placeholder="Buscar pesquisador ou artigo..." 
+         style="width: 100%; padding: 10px; font-size: 16px; border: 2px solid #ddd; border-radius: 4px;">
+</div>
 
-**Perfil**
+<table id="researchersTable" style="width:100%; border-collapse: collapse; margin: 20px 0; font-size: 13px; table-layout: fixed;">
+  <thead>
+    <tr style="background-color: #e9ecef;">
+      <th style="padding: 10px; text-align: left; border: 1px solid #dee2e6; cursor: pointer; width: 25%;" onclick="sortTable(0)">
+        Nome ▼
+      </th>
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; cursor: pointer; width: 10%;" onclick="sortTable(1)">
+        Citações
+      </th>
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; cursor: pointer; width: 10%;" onclick="sortTable(2)">
+        Índice h
+      </th>
+      <th style="padding: 10px; text-align: left; border: 1px solid #dee2e6; width: 35%;">
+        Interesses de Pesquisa
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in researchers|sort(attribute='researcher.name') %}
+    <tr class="researcher-row">
+      <td style="padding: 8px; border: 1px solid #dee2e6;">
+        <strong>{{ item['researcher']['name'] }}</strong>
+        {% if item['researcher']['email'] %}
+        <br><small style="color: #666;">{{ item['researcher']['email'] }}</small>
+        {% endif %}
+      </td>
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">
+        <span style="font-weight: bold; color: #f5576c;">{{ item['statistics']['total_citations'] }}</span>
+      </td>
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">
+        <span style="font-weight: bold; color: #28a745;">{{ item['statistics']['h_index']['all_time'] }}</span>
+      </td>
+      <td style="padding: 8px; border: 1px solid #dee2e6;">
+        <div style="display: flex; flex-wrap: wrap; gap: 3px; line-height: 1.8;">
+          {% for interest in item['researcher']['interests'] %}
+            <span style="background: #e3f2fd; color: #1565c0; padding: 2px 6px; border-radius: 3px; font-size: 11px; white-space: nowrap;">{{ interest }}</span>
+          {% endfor %}
+        </div>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
-- **Campus:** Serra
-- **Afiliação:** Federal Institute of Espírito Santo
-- **Email:** Verified email at ifes.edu.br
-- **Google Scholar:** [Ver Perfil](https://scholar.google.com/citations?user=StrLqxIAAAAJ)
+<script>
+// Search functionality
+document.getElementById('searchInput').addEventListener('keyup', function() {
+  var input = this.value.toLowerCase();
+  var rows = document.querySelectorAll('.researcher-row');
+  
+  rows.forEach(function(row) {
+    var text = row.textContent.toLowerCase();
+    row.style.display = text.includes(input) ? '' : 'none';
+  });
+});
 
-**Interesses de Pesquisa**
-
-Software Engineering, Software Processes, Ontology Engineering, Conceptual Modeling
-
-**Métricas**
-
-| Métrica | Todos os Tempos | Desde 2020 |
-|---------|-----------------|------------|
-| **Citações** | 721 | - |
-| **Índice h** | 14 | 8 |
-| **Índice i10** | 16 | 7 |
-
-
-**Top 5 Artigos Mais Citados**
-
-1. **ODE: Ontology-based software development environment** (2003) - 103 citações  
-   RA Falbo, ACC Natali, PG Mian, G Bertollo, FB Ruy  
-   [IX Congreso Argentino de Ciencias de la Computación, 2003](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:zYLM7Y9cAGgC)  
-
-2. **From Reference Ontologies to Ontology Patterns and Back** (2017) - 99 citações  
-   FB Ruy, G Guizzardi, RA Falbo, CC Reginato, VA Santos  
-   [Data & Knowledge Engineering 109, 41-69, 2017](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:_kc_bZDykSQC)  
-
-3. **SEON: a Software Engineering Ontology Network** (2016) - 96 citações  
-   FB Ruy, RA Falbo, MP Barcellos, SD Costa, G Guizzardi  
-   [Knowledge Engineering and Knowledge Management: 20th International …, 2016](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:hMod-77fHWUC)  
-
-4. **Using Ontologies to Add Semantics to a Software Engineering Environment** (2005) - 66 citações  
-   RA Falbo, FB Ruy, R Dal Moro  
-   [SEKE, 151-156, 2005](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:Tyk-4Ss8FVUC)  
-
-5. **Ontology Engineering by Combining Ontology Patterns** (2015) - 46 citações  
-   FB Ruy, CC Reginato, VA Santos, RA Falbo, G Guizzardi  
-   [34th International Conference on Conceptual Modeling, ER 2015, Stockholm …, 2015](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:Se3iqnhoufwC)  
-
-**Todas as Publicações (20)**
-
-- **ODE: Ontology-based software development environment** (2003) - 103 citações  
-  RA Falbo, ACC Natali, PG Mian, G Bertollo, FB Ruy  
-  IX Congreso Argentino de Ciencias de la Computación, 2003 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:zYLM7Y9cAGgC)  
-
-- **From Reference Ontologies to Ontology Patterns and Back** (2017) - 99 citações  
-  FB Ruy, G Guizzardi, RA Falbo, CC Reginato, VA Santos  
-  Data & Knowledge Engineering 109, 41-69, 2017 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:_kc_bZDykSQC)  
-
-- **SEON: a Software Engineering Ontology Network** (2016) - 96 citações  
-  FB Ruy, RA Falbo, MP Barcellos, SD Costa, G Guizzardi  
-  Knowledge Engineering and Knowledge Management: 20th International …, 2016 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:hMod-77fHWUC)  
-
-- **Using Ontologies to Add Semantics to a Software Engineering Environment** (2005) - 66 citações  
-  RA Falbo, FB Ruy, R Dal Moro  
-  SEKE, 151-156, 2005 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:Tyk-4Ss8FVUC)  
-
-- **Ontology Engineering by Combining Ontology Patterns** (2015) - 46 citações  
-  FB Ruy, CC Reginato, VA Santos, RA Falbo, G Guizzardi  
-  34th International Conference on Conceptual Modeling, ER 2015, Stockholm …, 2015 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:Se3iqnhoufwC)  
-
-- **Towards an Enterprise Ontology Pattern Language** (2014) - 40 citações  
-  RA Falbo, FB Ruy, G Guizzardi, MP Barcellos, JPA Almeida  
-  Proceedings of the 29th Annual ACM Symposium on Applied Computing, 323-330, 2014 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:ufrVoPGSRksC)  
-
-- **Ontologias e ambientes de desenvolvimento de software semânticos** (2004) - 38 citações  
-  RA Falbo, FB Ruy, J Pezzin, R Dal Moro  
-  4th Ibero-American Symposium on Software Engineering and Knowledge …, 2004 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:Y0pCki6q_DkC)  
-
-- **Learning how to manage risks using organizational knowledge** (2004) - 34 citações  
-  RA Falbo, FB Ruy, G Bertollo, DF Togneri  
-  International Workshop on Learning Software Organizations, 7-18, 2004 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:W7OEmFMy1HYC)  
-
-- **Towards semantic software engineering environments** (2002) - 33 citações  
-  RA Falbo, G Guizzardi, ACC Natali, G Bertollo, FB Ruy, PG Mian  
-  Proceedings of the 14th international conference on Software engineering and …, 2002 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:IjCSPb-OGe4C)  
-
-- **Ontology pattern languages** (2016) - 26 citações  
-  R Falbo, M Barcellos, F Ruy, G Guizzardi, R Guizzardi  
-  Ontology Engineering with Ontology Design Patterns, 133-159, 2016 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:NMxIlDl6LWMC)  
-
-- **An Ontological Analysis of the ISO/IEC 24744 Metamodel** (2014) - 26 citações  
-  FB Ruy, R de Almeida Falbo, MP Barcellos, G Guizzardi  
-  FOIS, 330-343, 2014 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:LkGwnXOMwfcC)  
-
-- **An ISO-based software process ontology pattern language and its application for harmonizing standards** (2015) - 23 citações  
-  FB Ruy, RA Falbo, MP Barcellos, G Guizzardi, GKS Quirino  
-  ACM SIGAPP Applied Computing Review 15 (2), 27-40, 2015 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:kNdYIx-mwKoC)  
-
-- **ODE–Um Ambiente de Desenvolvimento de Software Baseado em Ontologias** (2002) - 20 citações  
-  G Bertollo, FB Ruy, PG Mian, J Pezzin, M Schwambach, ACC Natali, ...  
-  Simpósio Brasileiro de Engenharia de Software (SBES), 438-443, 2002 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:YsMSGLbcyi4C)  
-
-- **Semântica em um Ambiente de Desenvolvimento de Software** (2006) - 18 citações  
-  FB RUY  
-  Dissertação de Mestrado, UFES, Vitória, ES, Brasil, 2006 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:3fE2CSJIrl8C)  
-
-- **Knowledge-based Support to Process Integration in ODE** (2004) - 14 citações  
-  FB Ruy, G Bertollo, R de Almeida Falbo  
-  Clei Electronic Journal 7 (1), 3: 1-3: 18, 2004 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:eQOLeE2rZwMC)  
-
-- **Tell me: Am i going to heaven? a diagnosis instrument of continuous software engineering practices adoption** (2021) - 12 citações  
-  PS dos Santos Júnior, M Perini Barcellos, F Borges Ruy  
-  Proceedings of the 25th International Conference on Evaluation and …, 2021 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:4JMBOYKVnBMC)  
-
-- **Software Engineering Standards Harmonization: An Ontology-Based Approach** (2017) - 8 citações  
-  FB Ruy  
-  Doctoral Thesis. Postgraduate Program in Computer Science. Federal …, 2017 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:hFOr9nPyWt4C)  
-
-- **Towards an Ontology Pattern Language for Harmonizing Software Process related ISO Standards** (2015) - 8 citações  
-  FB Ruy, RA Falbo, MP Barcellos, G Guizzardi  
-  Proceedings of the 29th Annual ACM Symposium on Applied Computing, 388-395, 2015 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:5nxA0vEk-isC)  
-
-- **Flying over brazilian organizations with zeppelin: A preliminary panoramic picture of continuous software engineering** (2022) - 6 citações  
-  PSS Júnior, MP Barcellos, FB Ruy, MS Omêna  
-  Proceedings of the XXXVI Brazilian Symposium on Software Engineering, 279-288, 2022 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:k_IJM867U9cC)  
-
-- **Abordagem para análise de múltiplas fontes de dados de evasão escolar** (2022) - 5 citações  
-  EM da Silva, FB Ruy, FW Mutz  
-  Anais do Computer on the Beach 13, 149-156, 2022 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=StrLqxIAAAAJ&citation_for_view=StrLqxIAAAAJ:iH-uZ7U-co4C)  
-
+// Sort table functionality
+function sortTable(columnIndex) {
+  var table = document.getElementById('researchersTable');
+  var tbody = table.querySelector('tbody');
+  var rows = Array.from(tbody.querySelectorAll('tr'));
+  
+  rows.sort(function(a, b) {
+    var aValue = a.cells[columnIndex].textContent.trim();
+    var bValue = b.cells[columnIndex].textContent.trim();
+    
+    // Try to parse as number
+    var aNum = parseFloat(aValue);
+    var bNum = parseFloat(bValue);
+    
+    if (!isNaN(aNum) && !isNaN(bNum)) {
+      return bNum - aNum; // Descending for numbers
+    }
+    
+    return aValue.localeCompare(bValue); // Ascending for text
+  });
+  
+  rows.forEach(function(row) {
+    tbody.appendChild(row);
+  });
+}
+</script>
 
 ---
 
-### Mateus Conrad Barcellos Da Costa
+## Top 10 Artigos Mais Citados (Todos os Pesquisadores)
 
-**Perfil**
+{% set all_papers = [] %}
+{% for item in researchers %}
+  {% for paper in item['all_papers'] %}
+    {% set _ = all_papers.append({'paper': paper, 'researcher': item['researcher']['name']}) %}
+  {% endfor %}
+{% endfor %}
 
-- **Campus:** Serra
-- **Afiliação:** Instituto Federal do Espírito Santo, Federal Institute of Espírito Santo
-- **Email:** Verified email at ifes.edu.br
-- **Google Scholar:** [Ver Perfil](https://scholar.google.com/citations?user=eH4gxyUAAAAJ)
+{% set sorted_papers = all_papers|sort(attribute='paper.citations', reverse=True) %}
+{% set top_papers = sorted_papers[:10] %}
 
-**Interesses de Pesquisa**
-
-Business Process Management, Decision Support, Software Engineering
-
-**Métricas**
-
-| Métrica | Todos os Tempos | Desde 2020 |
-|---------|-----------------|------------|
-| **Citações** | 70 | - |
-| **Índice h** | 4 | 3 |
-| **Índice i10** | 2 | 1 |
-
-
-**Top 5 Artigos Mais Citados**
-
-1. **Software frameworks for information systems integration based on web services** (2008) - 15 citações  
-   MB Costa, RF Resende, EF Nakamura, MV Segatto  
-   [Proceedings of the 2008 ACM symposium on Applied computing, 777-782, 2008](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:u5HHmVD_uO8C)  
-
-2. **Recommendation patterns for business process imperative modeling** (2017) - 12 citações  
-   MB Costa, D Tamzalit  
-   [Proceedings of the Symposium on Applied Computing, 735-742, 2017](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:YsMSGLbcyi4C)  
-
-3. **A comparative analysis of loan requests classification algorithms in a peer-to-peer lending platform** (2018) - 9 citações  
-   DS Rodrigues, ARA Brasil, MB Costa, KS Komati, LA Pinto  
-   [Proceedings of the XIV Brazilian Symposium on Information Systems, 1-8, 2018](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:0EnyYjriUFMC)  
-
-4. **Utilizaçao de aspectos no desenvolvimento de aplicaçóes baseadas em serviços web** (2004) - 5 citações  
-   MB Costa, RF Resende, P dos Santos Neto, MHF Alves  
-   [WASP'04, 76, 2004](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:u-x6o8ySG0sC)  
-
-5. **Texture Classification of Sea Turtle Shell based on Color Features: Color Histograms and Chromaticity Moments** (2018) - 4 citações  
-   WR da Paixao, TM Paixao, MCB da Costa, JO Andrade, FG Pereira, ...  
-   [N/A](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:UebtZRa9Y70C)  
-
-**Todas as Publicações (20)**
-
-- **Software frameworks for information systems integration based on web services** (2008) - 15 citações  
-  MB Costa, RF Resende, EF Nakamura, MV Segatto  
-  Proceedings of the 2008 ACM symposium on Applied computing, 777-782, 2008 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:u5HHmVD_uO8C)  
-
-- **Recommendation patterns for business process imperative modeling** (2017) - 12 citações  
-  MB Costa, D Tamzalit  
-  Proceedings of the Symposium on Applied Computing, 735-742, 2017 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:YsMSGLbcyi4C)  
-
-- **A comparative analysis of loan requests classification algorithms in a peer-to-peer lending platform** (2018) - 9 citações  
-  DS Rodrigues, ARA Brasil, MB Costa, KS Komati, LA Pinto  
-  Proceedings of the XIV Brazilian Symposium on Information Systems, 1-8, 2018 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:0EnyYjriUFMC)  
-
-- **Utilizaçao de aspectos no desenvolvimento de aplicaçóes baseadas em serviços web** (2004) - 5 citações  
-  MB Costa, RF Resende, P dos Santos Neto, MHF Alves  
-  WASP'04, 76, 2004 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:u-x6o8ySG0sC)  
-
-- **Texture Classification of Sea Turtle Shell based on Color Features: Color Histograms and Chromaticity Moments** (2018) - 4 citações  
-  WR da Paixao, TM Paixao, MCB da Costa, JO Andrade, FG Pereira, ...  
-  N/A - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:UebtZRa9Y70C)  
-
-- **Uma Abordagem para Recomendação no Apoio à Modelagem de Processos de Negócio.** (2014) - 4 citações  
-  MB Costa, TS Silva  
-  SBBD, 177-186, 2014 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:UeHWp8X0CEIC)  
-
-- **Business to business transaction modeling and WWW support** (2004) - 4 citações  
-  M Barcellos Costa, R Ferreira Resende, M Halfeld Ferrari Alves, ...  
-  International Conference on Business Process Management, 132-147, 2004 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:d1gkVwhDpl0C)  
-
-- **Ontologia de Domínio de Doação de Órgãos e Tecidos para apoio a Integração Semântica de Sistemas.** (2015) - 3 citações  
-  L Pereira, RF Calhau, PS dos Santos Júnior, MB Costa  
-  CIbSE, 222, 2015 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:zYLM7Y9cAGgC)  
-
-- **BASS: Business Application Support through Software Services.** (2007) - 3 citações  
-  MB Costa, RF Resende, MEV Segatto, EF Nakamura, N Fonseca  
-  SEKE, 523-, 2007 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:9yKSN-GCB0IC)  
-
-- **Identificação de estáticas em poços de petróleo utilizando motifs** (2023) - 2 citações  
-  DF Rossi, KS Komati, MCB da Costa  
-  Seminário Integrado de Software e Hardware (SEMISH), 308-319, 2023 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:M3ejUd6NZC8C)  
-
-- **Identificaçao de estáticas em poços de petróleo via sensor de pressao de fundo** (2021) - 2 citações  
-  DF Rossi, KS Komati, MCB da Costa  
-  Simpósio Brasileiro de Automação Inteligente-SBAI 1 (1), 2021 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:ULOm3_A8WrAC)  
-
-- **Interações automatizadas para apoio à modelagem de processos de negócio** (2021) - 2 citações  
-  FB Cabral, BC Coutinho, FZ de Castro, MB Costa  
-  Simpósio Brasileiro de Automação Inteligente-SBAI 1 (1), 2021 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:Zph67rFs4hoC)  
-
-- **Alinhamento estratégico de tecnologia da informação (TI): um estudo da prática de empresa do setor siderúrgico brasileiro** (2010) - 2 citações  
-  AS de Freitas, MB Costa  
-  N/A - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:LkGwnXOMwfcC)  
-
-- **Evaluation of automated pressure transient detection methods for efficient oil well management** (2025) - 1 citações  
-  DF Rossi, MCB da Costa, KS Komati  
-  Geoenergy Science and Engineering, 214202, 2025 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:QIV2ME_5wuYC)  
-
-- **An annotated dataset for automatic extraction of entities and restrictions from business process models** (2024) - 1 citações  
-  DS Candido, JVB Lima, H Oliveira, MB Costa  
-  Encontro Nacional de Inteligência Artificial e Computacional (ENIAC), 978-989, 2024 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:aqlVkmm33-oC)  
-
-- **Uma ferramenta para modelagem de processos de negócios com base em padrões de recomendação** (2021) - 1 citações  
-  AC Lucas, KS Komati, MCB da Costa  
-  Escola Regional de Informática de Goiás (ERI-GO), 82-95, 2021 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:YOwf2qJgpHMC)  
-
-- **Empowering Pharmaceutical Retail Storefronts: An Exploratory Study on Classification and Association Techniques** (2025) - 0 citações  
-  HT Carlos, L Lee, MB Costa  
-  27th International Conference on Enterprise Information Systems 1 (1), 326-334, 2025 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:mVmsd5A6BfQC)  
-
-- **Business Process Design Support with Automated Interviews** (2025) - 0 citações  
-  DS de Castro, M Fantinato, MB Costa  
-  27th International Conference on Enterprise Information Systems 1 (1), 734-745, 2025 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:Wp0gIr-vW9MC)  
-
-- **Unveiling Business Processes Control-Flow: Automated Extraction of Entities and Constraint Relations from Text** (2025) - 0 citações  
-  D de Santana Candido, HTA de Oliveira, MB Costa  
-  International Conference on Enterprise Information Systems (ICEIS), 2025 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:4DMP91E08xMC)  
-
-- **Automated Support for Scrum Projects Sprint Planning** (2015) - 0 citações  
-  HT de Sousa, TS Silva, PS Santos Jr, RF Calhau, MB Costa  
-  Proceedings of the annual conference on Brazilian Symposium on Information …, 2015 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eH4gxyUAAAAJ&citation_for_view=eH4gxyUAAAAJ:4TOpqqG69KYC)  
-
+<table style="width:100%; border-collapse: collapse; margin: 20px 0; font-size: 13px;">
+  <thead>
+    <tr style="background-color: #e9ecef;">
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; width: 50px;">#</th>
+      <th style="padding: 10px; text-align: left; border: 1px solid #dee2e6;">Título</th>
+      <th style="padding: 10px; text-align: left; border: 1px solid #dee2e6; width: 150px;">Pesquisador</th>
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; width: 80px;">Ano</th>
+      <th style="padding: 10px; text-align: center; border: 1px solid #dee2e6; width: 100px;">Citações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in top_papers %}
+    <tr>
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6; font-weight: bold;">{{ loop.index }}</td>
+      <td style="padding: 8px; border: 1px solid #dee2e6;">
+        <strong>{{ item['paper']['title'] }}</strong>
+        <br><small style="color: #666;">{{ item['paper']['authors'] }}</small>
+        <br><small style="color: #999;">{{ item['paper']['publication'] }}</small>
+      </td>
+      <td style="padding: 8px; border: 1px solid #dee2e6;">
+        <small>{{ item['researcher'] }}</small>
+      </td>
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">{{ item['paper']['year'] }}</td>
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6; font-weight: bold; color: #f5576c;">
+        {{ item['paper']['citations'] }}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
 ---
 
-### Paulo Sérgio Dos Santos Júnior
+{% for item in researchers|sort(attribute='researcher.name') %}
 
-**Perfil**
+## {{ item['researcher']['name'] }}
 
-- **Campus:** Serra
-- **Afiliação:** Professor of Computer Science, Federal Institute of Espirito Santo
-- **Email:** Verified email at ifes.edu.br
-- **Google Scholar:** [Ver Perfil](https://scholar.google.com/citations?user=cFAEK0wAAAAJ)
+<div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+  <p style="margin: 5px 0;"><strong>Campus:</strong> {{ item['researcher']['campus'] }}</p>
+  <p style="margin: 5px 0;"><strong>Afiliação:</strong> {{ item['researcher']['affiliation'] }}</p>
+  {% if item['researcher']['email'] %}
+  <p style="margin: 5px 0;"><strong>Email:</strong> {{ item['researcher']['email'] }}</p>
+  {% endif %}
+  <p style="margin: 5px 0;"><strong>Google Scholar:</strong> <a href="{{ item['researcher']['scholar_url'] }}" target="_blank">Ver Perfil</a></p>
+  <p style="margin: 10px 0 5px 0;"><strong>Interesses de Pesquisa:</strong></p>
+  <div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 5px 0 10px 0;">
+    {% for interest in item['researcher']['interests'] %}
+      <span style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 500;">{{ interest }}</span>
+    {% endfor %}
+  </div>
+  <p style="margin: 5px 0;">
+    <strong>Índice h:</strong> 
+    <span style="color: #28a745; font-weight: bold;">{{ item['statistics']['h_index']['all_time'] }}</span> (todos os tempos) | 
+    <span style="color: #4facfe; font-weight: bold;">{{ item['statistics']['h_index']['since_2020'] }}</span> (desde 2020)
+  </p>
+  <p style="margin: 5px 0;">
+    <strong>Índice i10:</strong> 
+    <span style="color: #667eea; font-weight: bold;">{{ item['statistics']['i10_index']['all_time'] }}</span> (todos os tempos) | 
+    <span style="color: #f5576c; font-weight: bold;">{{ item['statistics']['i10_index']['since_2020'] }}</span> (desde 2020)
+  </p>
+</div>
 
-**Interesses de Pesquisa**
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-bottom: 20px;">
+  <div style="background: #f5576c; color: white; padding: 15px; border-radius: 6px; text-align: center;">
+    <div style="font-size: 24px; font-weight: bold;">{{ item['statistics']['total_citations'] }}</div>
+    <div style="font-size: 12px;">Total de Citações</div>
+  </div>
+  <div style="background: #4facfe; color: white; padding: 15px; border-radius: 6px; text-align: center;">
+    <div style="font-size: 24px; font-weight: bold;">{{ item['statistics']['h_index']['all_time'] }}</div>
+    <div style="font-size: 12px;">Índice h (todos os tempos)</div>
+  </div>
+  <div style="background: #00f2fe; color: white; padding: 15px; border-radius: 6px; text-align: center;">
+    <div style="font-size: 24px; font-weight: bold;">{{ "%.1f"|format(item['statistics']['average_citations_per_paper']) }}</div>
+    <div style="font-size: 12px;">Média Citações/Artigo</div>
+  </div>
+</div>
 
-Enterprise Architecture, Applied Ontology, Agile, Software Engineering
 
-**Métricas**
+### Linha do Tempo de Citações
 
-| Métrica | Todos os Tempos | Desde 2020 |
-|---------|-----------------|------------|
-| **Citações** | 403 | - |
-| **Índice h** | 11 | 7 |
-| **Índice i10** | 11 | 6 |
+<div id="citations-chart-{{ loop.index }}" style="width:100%;height:350px;margin-bottom:20px;"></div>
 
+<script>
+(function() {
+  var citationsByYear = {{ item['statistics']['citations_by_year']|tojson }};
+  
+  var years = citationsByYear.map(function(item) { return item.year; });
+  var citations = citationsByYear.map(function(item) { return item.citations || item.cites || 0; });
+  
+  var data = [{
+    x: years,
+    y: citations,
+    type: 'scatter',
+    mode: 'lines+markers+text',
+    text: citations,
+    textposition: 'top center',
+    line: {width: 3, color: '#f5576c'},
+    marker: {size: 8, color: '#f5576c'},
+    fill: 'tozeroy',
+    fillcolor: 'rgba(245, 87, 108, 0.2)',
+    hovertemplate: '<b>Ano %{x}</b><br>%{y} citações<extra></extra>'
+  }];
+  
+  var layout = {
+    title: {
+      text: 'Citações por Ano',
+      font: {size: 16, family: 'Arial, sans-serif', color: '#222'}
+    },
+    xaxis: {
+      title: 'Ano',
+      dtick: 1,
+      gridcolor: '#e5e5e5'
+    },
+    yaxis: {
+      title: 'Número de Citações',
+      gridcolor: '#f0f0f0',
+      rangemode: 'tozero'
+    },
+    plot_bgcolor: '#fafafa',
+    paper_bgcolor: 'white',
+    margin: {t: 50, b: 50, l: 50, r: 20},
+    height: 350
+  };
+  
+  Plotly.newPlot('citations-chart-{{ loop.index }}', data, layout);
+})();
+</script>
 
-**Top 5 Artigos Mais Citados**
+### Top 5 Artigos Mais Citados
 
-1. **An ontology-based analysis and semantics for organizational structure modeling in the ARIS method** (2013) - 71 citações  
-   PS Santos Jr, JPA Almeida, G Guizzardi  
-   [Information Systems 38 (5), 690-708, 2013](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:UeHWp8X0CEIC)  
+<table style="width:100%; border-collapse: collapse; margin: 15px 0; font-size: 13px;">
+  <thead>
+    <tr style="background-color: #e9ecef;">
+      <th style="padding: 8px; text-align: center; border: 1px solid #dee2e6; width: 40px;">#</th>
+      <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6;">Título e Detalhes</th>
+      <th style="padding: 8px; text-align: center; border: 1px solid #dee2e6; width: 80px;">Ano</th>
+      <th style="padding: 8px; text-align: center; border: 1px solid #dee2e6; width: 100px;">Citações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for paper in item['top_5_papers'] %}
+    <tr>
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6; font-weight: bold;">{{ loop.index }}</td>
+      <td style="padding: 8px; border: 1px solid #dee2e6;">
+        <strong>{{ paper['title'] }}</strong>
+        <br><small style="color: #666;">{{ paper['authors'] }}</small>
+        <br><small style="color: #999;">{{ paper['publication'] }}</small>
+        {% if paper['link'] %}
+        <br><a href="{{ paper['link'] }}" target="_blank" style="font-size: 11px;">Ver no Google Scholar →</a>
+        {% endif %}
+      </td>
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">{{ paper['year'] }}</td>
+      <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6; font-weight: bold; color: #f5576c;">
+        {{ paper['citations'] }}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
-2. **An ontology-based semantic foundation for ARIS EPCs** (2010) - 54 citações  
-   PS Santos Jr, JPA Almeida, G Guizzardi  
-   [Proceedings of the 2010 ACM Symposium on Applied Computing, 124-130, 2010](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:u5HHmVD_uO8C)  
+### Todas as Publicações ({{ item['all_papers']|length }})
 
-3. **From a scrum reference ontology to the integration of applications for data-driven software development** (2021) - 46 citações  
-   PSS Júnior, MP Barcellos, R de Almeida Falbo, JPA Almeida  
-   [Information and Software Technology 136, 106570, 2021](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:Fu2w8maKXqMC)  
-
-4. **Applying and extending a semantic foundation for role-related concepts in enterprise modelling** (2009) - 44 citações  
-   JPA Almeida, G Guizzardi, PS Santos Jr  
-   [Enterprise Information Systems 3 (3), 253-277, 2009](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:u-x6o8ySG0sC)  
-
-5. **Semantic integration of goal and business process modeling** (2010) - 39 citações  
-   ECS Cardoso, PS Santos Jr, JPA Almeida, RSS Guizzardi, G Guizzardi  
-   [IFIP International Conference on Research and Practical Issues of Enterprise …, 2010](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:d1gkVwhDpl0C)  
-
-**Todas as Publicações (20)**
-
-- **An ontology-based analysis and semantics for organizational structure modeling in the ARIS method** (2013) - 71 citações  
-  PS Santos Jr, JPA Almeida, G Guizzardi  
-  Information Systems 38 (5), 690-708, 2013 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:UeHWp8X0CEIC)  
-
-- **An ontology-based semantic foundation for ARIS EPCs** (2010) - 54 citações  
-  PS Santos Jr, JPA Almeida, G Guizzardi  
-  Proceedings of the 2010 ACM Symposium on Applied Computing, 124-130, 2010 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:u5HHmVD_uO8C)  
-
-- **From a scrum reference ontology to the integration of applications for data-driven software development** (2021) - 46 citações  
-  PSS Júnior, MP Barcellos, R de Almeida Falbo, JPA Almeida  
-  Information and Software Technology 136, 106570, 2021 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:Fu2w8maKXqMC)  
-
-- **Applying and extending a semantic foundation for role-related concepts in enterprise modelling** (2009) - 44 citações  
-  JPA Almeida, G Guizzardi, PS Santos Jr  
-  Enterprise Information Systems 3 (3), 253-277, 2009 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:u-x6o8ySG0sC)  
-
-- **Semantic integration of goal and business process modeling** (2010) - 39 citações  
-  ECS Cardoso, PS Santos Jr, JPA Almeida, RSS Guizzardi, G Guizzardi  
-  IFIP International Conference on Research and Practical Issues of Enterprise …, 2010 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:d1gkVwhDpl0C)  
-
-- **An ontology-based semantic foundation for organizational structure modeling in the aris method** (2010) - 29 citações  
-  PS Santos Jr, JPA Almeida, G Guizzardi  
-  2010 14th IEEE International Enterprise Distributed Object Computing …, 2010 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:eQOLeE2rZwMC)  
-
-- **Uncovering the organisational modelling and business process modelling languages in the ARIS method** (2011) - 27 citações  
-  PS Santos, JPA Almeida, TL Pianissolla  
-  International Journal of Business Process Integration and Management 5 (2 …, 2011 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:9yKSN-GCB0IC)  
-
-- **A blended learning experience applying project-based learning in an interdisciplinary classroom** (2017) - 23 citações  
-  F Medeiros, P Júnior, M Bender, L Menegussi, M Curcher  
-  ICERI2017 Proceedings, 8665-8672, 2017 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:JQOojiI6XY0C)  
-
-- **Am i going to heaven? first step climbing the stairway to heaven model results from a case study in industry** (2020) - 13 citações  
-  PS Santos, MP Barcellos, RF Calhau  
-  Proceedings of the XXXIV Brazilian Symposium on Software Engineering, 309-318, 2020 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:uLbwQdceFCQC)  
-
-- **CMPAAS: A platform of services for construction and handling of concept maps** (2014) - 13 citações  
-  D Cury, WA Perin, PS Santos Jr  
-  International Conference on Concept Mapping, 6th, 107-115, 2014 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:YsMSGLbcyi4C)  
-
-- **Tell me: Am i going to heaven? a diagnosis instrument of continuous software engineering practices adoption** (2021) - 12 citações  
-  PS dos Santos Júnior, M Perini Barcellos, F Borges Ruy  
-  Proceedings of the 25th International Conference on Evaluation and …, 2021 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:W5xh706n7nkC)  
-
-- **Flying over brazilian organizations with zeppelin: A preliminary panoramic picture of continuous software engineering** (2022) - 6 citações  
-  PSS Júnior, MP Barcellos, FB Ruy, MS Omêna  
-  Proceedings of the XXXVI Brazilian Symposium on Software Engineering, 279-288, 2022 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:ZfRJV9d4-WMC)  
-
-- **Um ambiente para acompanhamento da aprendizagem baseado em mapas conceituais** (2005) - 6 citações  
-  PS Santos Jr, CS de Menezes, D Cury, RA de Nevado  
-  Brazilian Symposium on Computers in Education (Simpósio Brasileiro de …, 2005 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:1yQoGdGgb4wC)  
-
-- **Unveiling the Landscape of System Thinking Modeling Tools Use in Software Engineering** (2024) - 3 citações  
-  J de Souza Borges, TFN Lahass, AB Apolinário, PS dos Santos Júnior, ...  
-  Simpósio Brasileiro de Engenharia de Software (SBES), 47-57, 2024 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:z_wVstp3MssC)  
-
-- **Towards federated ontology-driven data integration in continuous software engineering** (2023) - 3 citações  
-  PS Santos Júnior, JPA Almeida, M Barcellos  
-  Proceedings of the XXXVII Brazilian Symposium on Software Engineering, 31-36, 2023 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:VLnqNzywnoUC)  
-
-- **Ontologia de Domínio de Doação de Órgãos e Tecidos para apoio a Integração Semântica de Sistemas.** (2015) - 3 citações  
-  L Pereira, RF Calhau, PS dos Santos Júnior, MB Costa  
-  CIbSE, 222, 2015 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:Tyk-4Ss8FVUC)  
-
-- **LEDS: Um Ambiente para Impulsionar o Aprendizado em Computação** (2014) - 3 citações  
-  R Calhau, PS Júnior, K Komati, M Monteiro, F Ruy, V Nunes  
-  Workshop sobre Educação em Computação (WEI), 199-208, 2014 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:W7OEmFMy1HYC)  
-
-- **Uma interpretação para os elementos de EPCs com base em uma ontologia de fundamentação** (2009) - 3 citações  
-  PS Santos Jr, JPA Almeida, G Guizzardi  
-  3rd Workshop on Business Process Modeling Management (WBPM), 15th Brazilian …, 2009 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:qjMakFHDy7sC)  
-
-- **Escavando as linguagens de modelagem organizacional e modelagem de processos de negócio do ARIS method** (2008) - 3 citações  
-  PS Santos Jr, JPA Almeida  
-  Companion Proceedings of the XIV Brazilian Symposium on Multimedia and the …, 2008 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:2osOgNQ5qMEC)  
-
-- **Help! i need somebody. a mapping study about expert identification in software development** (2023) - 2 citações  
-  C Braga, P Santos Jr, M Barcellos  
-  Proceedings of the XXXVII Brazilian Symposium on Software Engineering, 154-163, 2023 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=cFAEK0wAAAAJ&citation_for_view=cFAEK0wAAAAJ:uJ-U7cs_P_0C)  
-
+<details style="margin-bottom: 20px;">
+  <summary style="cursor: pointer; padding: 10px; background: #e9ecef; border-radius: 4px; font-weight: bold;">
+    📋 Ver Lista Completa de Publicações
+  </summary>
+  <div style="margin-top: 10px;">
+    <table style="width:100%; border-collapse: collapse; font-size: 13px;">
+      <thead>
+        <tr style="background-color: #f8f9fa;">
+          <th style="padding: 8px; text-align: left; border: 1px solid #dee2e6;">Título e Detalhes</th>
+          <th style="padding: 8px; text-align: center; border: 1px solid #dee2e6; width: 80px;">Ano</th>
+          <th style="padding: 8px; text-align: center; border: 1px solid #dee2e6; width: 100px;">Citações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for paper in item['all_papers']|sort(attribute='citations', reverse=True) %}
+        <tr>
+          <td style="padding: 8px; border: 1px solid #dee2e6;">
+            <strong>{{ paper['title'] }}</strong>
+            <br><small style="color: #666;">{{ paper['authors'] }}</small>
+            <br><small style="color: #999;">{{ paper['publication'] }}</small>
+            {% if paper['link'] %}
+            <br><a href="{{ paper['link'] }}" target="_blank" style="font-size: 11px;">Ver no Google Scholar →</a>
+            {% endif %}
+          </td>
+          <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6;">{{ paper['year'] }}</td>
+          <td style="padding: 8px; text-align: center; border: 1px solid #dee2e6; font-weight: bold; color: #f5576c;">
+            {{ paper['citations'] }}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</details>
 
 ---
 
-### Rodrigo Fernandes Calhau
-
-**Perfil**
-
-- **Campus:** Serra
-- **Afiliação:** Federal Institute of Espírito Santo
-- **Email:** Verified email at ifes.edu.br
-- **Google Scholar:** [Ver Perfil](https://scholar.google.com/citations?user=mrBLyX0AAAAJ)
-
-**Interesses de Pesquisa**
-
-Applied Ontology, Semantic Integration, Capability Modeling, System Modeling
-
-**Métricas**
-
-| Métrica | Todos os Tempos | Desde 2020 |
-|---------|-----------------|------------|
-| **Citações** | 217 | - |
-| **Índice h** | 9 | 7 |
-| **Índice i10** | 8 | 6 |
-
-
-**Top 5 Artigos Mais Citados**
-
-1. **An ontology-based approach for semantic integration** (2010) - 41 citações  
-   RF Calhau, R de Almeida Falbo  
-   [2010 14th IEEE International Enterprise Distributed Object Computing …, 2010](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:IjCSPb-OGe4C)  
-
-2. **A configuration management task ontology for semantic integration** (2012) - 28 citações  
-   RF Calhau, R de Almeida Falbo  
-   [Proceedings of the 27th Annual ACM Symposium on Applied Computing, 348-353, 2012](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:UeHWp8X0CEIC)  
-
-3. **Towards Ontology-based Competence Modeling in Enterprise Architecture** (2021) - 25 citações  
-   RF Calhau, CLB Azevedo, JPA Almeida  
-   [2021 20th IEEE International Enterprise Distributed Object Computing Conference, 2021](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:TFP_iSt0sucC)  
-
-4. **Modeling competences in enterprise architecture: From knowledge, skills, and attitudes to organizational capabilities** (2024) - 24 citações  
-   RF Calhau, JPA Almeida, S Kokkula, G Guizzardi  
-   [Software and Systems Modeling 23 (3), 559-598, 2024](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:J_g5lzvAfSwC)  
-
-5. **An approach for managing and semantically enriching the publication of Linked Open Governmental Data** (2011) - 17 citações  
-   K de Faria Cordeiro, FF de Faria, B de Oliveira Pereira, A Freitas, ...  
-   [Proceedings of the 3rd workshop in applied computing for electronic …, 2011](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:zYLM7Y9cAGgC)  
-
-**Todas as Publicações (20)**
-
-- **An ontology-based approach for semantic integration** (2010) - 41 citações  
-  RF Calhau, R de Almeida Falbo  
-  2010 14th IEEE International Enterprise Distributed Object Computing …, 2010 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:IjCSPb-OGe4C)  
-
-- **A configuration management task ontology for semantic integration** (2012) - 28 citações  
-  RF Calhau, R de Almeida Falbo  
-  Proceedings of the 27th Annual ACM Symposium on Applied Computing, 348-353, 2012 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:UeHWp8X0CEIC)  
-
-- **Towards Ontology-based Competence Modeling in Enterprise Architecture** (2021) - 25 citações  
-  RF Calhau, CLB Azevedo, JPA Almeida  
-  2021 20th IEEE International Enterprise Distributed Object Computing Conference, 2021 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:TFP_iSt0sucC)  
-
-- **Modeling competences in enterprise architecture: From knowledge, skills, and attitudes to organizational capabilities** (2024) - 24 citações  
-  RF Calhau, JPA Almeida, S Kokkula, G Guizzardi  
-  Software and Systems Modeling 23 (3), 559-598, 2024 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:J_g5lzvAfSwC)  
-
-- **An approach for managing and semantically enriching the publication of Linked Open Governmental Data** (2011) - 17 citações  
-  K de Faria Cordeiro, FF de Faria, B de Oliveira Pereira, A Freitas, ...  
-  Proceedings of the 3rd workshop in applied computing for electronic …, 2011 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:zYLM7Y9cAGgC)  
-
-- **A system core ontology for capability emergence modeling** (2023) - 14 citações  
-  RF Calhau, T Prince Sales, Í Oliveira, S Kokkula, L Ferreira Pires, ...  
-  International Conference on Enterprise Design, Operations, and Computing, 3-20, 2023 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:hMod-77fHWUC)  
-
-- **Am i going to heaven? first step climbing the stairway to heaven model results from a case study in industry** (2020) - 13 citações  
-  PS Santos, MP Barcellos, RF Calhau  
-  Proceedings of the XXXIV Brazilian Symposium on Software Engineering, 309-318, 2020 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:iH-uZ7U-co4C)  
-
-- **Zooming in on competences in ontology-based enterprise architecture modeling** (2022) - 11 citações  
-  RF Calhau, JPA Almeida  
-  Enterprise Design, Operations, and Computing. EDOC 2022 Workshops: IDAMS …, 2022 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:M3NEmzRMIkIC)  
-
-- **Modeling competence framework elements with an ontology-based approach** (2023) - 9 citações  
-  RF Calhau, S Kokkula, D Cameron, G Guizzardi, JPA Almeida  
-  2023 IEEE 25th Conference on Business Informatics (CBI), 1-10, 2023 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:JV2RwH3_ST0C)  
-
-- **Uma Abordagem Baseada em Ontologias para a Integração Semântica de Sistemas** (2011) - 9 citações  
-  RF Calhau  
-  Master Thesis, Federal University of Espírito Santo, 2011 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:Tyk-4Ss8FVUC)  
-
-- **Toward a phishing attack ontology** (2023) - 6 citações  
-  Í Oliveira, RF Calhau, G Guizzardi  
-  42nd International Conference on Conceptual Modeling, ER 2023, 2023 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:NMxIlDl6LWMC)  
-
-- **Ontological foundations of resilience** (2024) - 4 citações  
-  PP F. Barcelos, RF Calhau, Í Oliveira, T Prince Sales, F Gailly, G Poels, ...  
-  International Conference on Conceptual Modeling, 396-416, 2024 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:vV6vV6tmYwMC)  
-
-- **Ontologia de Domínio de Doação de Órgãos e Tecidos para apoio a Integração Semântica de Sistemas.** (2015) - 3 citações  
-  L Pereira, RF Calhau, PS dos Santos Júnior, MB Costa  
-  CIbSE, 222, 2015 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:YsMSGLbcyi4C)  
-
-- **LEDS: Um Ambiente para Impulsionar o Aprendizado em Computação** (2014) - 3 citações  
-  R Calhau, PS Júnior, K Komati, M Monteiro, F Ruy, V Nunes  
-  Workshop sobre Educação em Computação (WEI), 199-208, 2014 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:WF5omc3nYNoC)  
-
-- **Core-O: A Competence Reference Ontology for Professional and Learning Ecosystems** (2024) - 2 citações  
-  RF Calhau, JPA Almeida, TP Sales, PPF Barcelos, G Guizzardi  
-  14TH INTERNATIONAL CONFERENCE ON FORMAL ONTOLOGY IN INFORMATION SYSTEMS …, 2024 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:lSLTfruPkqcC)  
-
-- **First step climbing the Stairway to Heaven Model-Results from a Case Study in Industry** (2022) - 2 citações  
-  PS dos Santos Júnior, MP Barcellos, RF Calhau  
-  Journal of Software Engineering Research and Development 10, 5: 1-5: 18, 2022 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:k_IJM867U9cC)  
-
-- **Web-based Notification System for an Organ Transplant Process** (2013) - 2 citações  
-  CTM Uka, R Erlacher, TZR Santos, KS Komati, PS Santos Jr, RF Calhau  
-  International Workshop on ADVANCEs in ICT Infrastructures and Services …, 2013 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:Y0pCki6q_DkC)  
-
-- **Uso de Gerência de Conhecimento para Apoiar a Rastreabilidade e a Avaliação de Impacto de Alterações** (2008) - 2 citações  
-  RF Calhau, L de Oliveira Arantes, R de Almeida Falbo  
-  Simpósio Brasileiro de Engenharia de Software (SBES), 236-251, 2008 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:W7OEmFMy1HYC)  
-
-- **Advancing the Domain of Strategy Planning and Implementation through Enterprise Architecture: A Research Agenda for Capability-Based Management** (2025) - 1 citações  
-  J Van Riel, G Poels, G Koutsopoulos, RF Calhau, I Bider, E Perjons, ...  
-  Communications of the Association for Information Systems 56 (1), 3, 2025 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:g5m5HwL7SMYC)  
-
-- **Towards a conceptual model for FAIR metadata schemas** (2024) - 1 citações  
-  FM Soares, LF Pires, LOBS Santos, RF Calhau, BCMS Maculan, K Coyle, ...  
-  Companion Proceedings, 2024 - [Ver](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=mrBLyX0AAAAJ&citation_for_view=mrBLyX0AAAAJ:M05iB0D1s5AC)  
-
-
----
-
-*Última atualização: 2025-11-23 13:02:21*
-*Fonte dos dados: 2025-11-23T13:02:10*
+{% endfor %}
