@@ -1,0 +1,22 @@
+docs: Reorganizar documentação em pasta docs-projeto
+
+- Move 38 arquivos de documentação para docs-projeto/
+- Cria README.md e INDEX.md na pasta de documentação
+- Atualiza links no README principal
+- Adiciona REORGANIZACAO.md com detalhes da mudança
+- Mantém arquivos essenciais na raiz (.gitlab-ci.yml, requirements.txt, etc)
+
+Benefícios:
+- Raiz do projeto mais limpa e organizada
+- Documentação centralizada e fácil de encontrar
+- Melhor manutenibilidade
+- Estrutura lógica por categorias
+
+Arquivos movidos incluem:
+- Guias de CI/CD (GITLAB_CI_SETUP.md, etc)
+- Troubleshooting (MKDOCS_WARNINGS_GUIDE.md, etc)
+- Estrutura e deploy (PROJECT_STRUCTURE.md, etc)
+- Guias e tutoriais (GUIA_RAPIDO_PT.md, etc)
+- E mais 30+ documentos
+
+Ver docs-projeto/INDEX.md para lista completa.

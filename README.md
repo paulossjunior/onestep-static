@@ -266,8 +266,16 @@ Use in markdown:
 
 ## 📚 Documentation
 
-- [Project Structure](PROJECT_STRUCTURE.md) - Detailed project structure
-- [GitLab CI/CD Setup](GITLAB_CI_SETUP.md) - CI/CD configuration guide
+### Project Documentation
+All project documentation is organized in the [`docs-projeto/`](docs-projeto/) folder:
+
+- **[docs-projeto/README.md](docs-projeto/README.md)** - Documentation index
+- **[Project Structure](docs-projeto/PROJECT_STRUCTURE.md)** - Detailed project structure
+- **[GitLab CI/CD Setup](docs-projeto/GITLAB_CI_SETUP.md)** - CI/CD configuration guide
+- **[Quick Reference](docs-projeto/QUICK_REFERENCE.md)** - Command reference
+- **[Deployment Checklist](docs-projeto/DEPLOYMENT_CHECKLIST.md)** - Pre-deployment checklist
+
+### External Documentation
 - [MkDocs Documentation](https://www.mkdocs.org/) - Official MkDocs docs
 - [Material Theme](https://squidfunk.github.io/mkdocs-material/) - Theme documentation
 
