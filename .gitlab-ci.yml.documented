@@ -1,23 +1,32 @@
+# GitLab CI/CD Configuration for MkDocs Site
+# This file defines the pipeline for building and deploying the documentation site
+
+# Base Docker image with Python 3.11
 image: python:3.11-slim
 
+# Pipeline stages
 stages:
   - build
   - deploy
 
+# Environment variables
 variables:
   PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
 
+# Cache configuration to speed up builds
 cache:
   paths:
     - .cache/pip
     - venv/
 
+# Commands to run before each job
 before_script:
   - python -V
   - pip install virtualenv
   - virtualenv venv
   - source venv/bin/activate
 
+# Build job - runs on main, master, and develop branches
 build:
   stage: build
   script:
@@ -35,6 +44,7 @@ build:
     - master
     - develop
 
+# Deploy job - deploys to GitLab Pages (only on main/master)
 pages:
   stage: deploy
   dependencies:
@@ -53,6 +63,7 @@ pages:
     name: production
     url: https://$CI_PROJECT_NAMESPACE.gitlab.io/$CI_PROJECT_NAME
 
+# Test build job - runs on merge requests to verify build works
 test_build:
   stage: build
   script:
