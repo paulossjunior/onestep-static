@@ -33,53 +33,53 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      # - name: Checkout repository
+      #   uses: actions/checkout@v4
       
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-          cache: 'pip'
+      # - name: Setup Python
+      #   uses: actions/setup-python@v5
+      #   with:
+      #     python-version: '3.12'
+      #     cache: 'pip'
       
-      - name: Install dependencies
-        run: make install
+      # - name: Install dependencies
+      #   run: make install
       
-      - name: Show project status
-        run: make status
+      # - name: Show project status
+      #   run: make status
       
-      - name: Process research groups
-        run: make process-groups
+      # - name: Process research groups
+      #   run: make process-groups
       
-      - name: Process research projects
-        run: make process-projects
+      # - name: Process research projects
+      #   run: make process-projects
       
-      - name: Process scholarships
-        run: make process-scholarships
+      # - name: Process scholarships
+      #   run: make process-scholarships
       
-      - name: Calculate student recurrence
-        run: make calculate-recurrence
+      # - name: Calculate student recurrence
+      #   run: make calculate-recurrence
       
-      - name: Aggregate data by student
-        run: make aggregate-students
+      # - name: Aggregate data by student
+      #   run: make aggregate-students
       
-      - name: Aggregate data by supervisor
-        run: make aggregate-supervisors
+      # - name: Aggregate data by supervisor
+      #   run: make aggregate-supervisors
       
-      - name: Aggregate data by research line
-        run: make aggregate-research-lines
+      # - name: Aggregate data by research line
+      #   run: make aggregate-research-lines
       
-      - name: Analyze partnerships
-        run: make analyze-partnerships
+      # - name: Analyze partnerships
+      #   run: make analyze-partnerships
       
-      - name: Generate network statistics
-        run: make analyze-networks
+      # - name: Generate network statistics
+      #   run: make analyze-networks
       
-      - name: Aggregate by research line
-        run: make aggregate-research-lines
+      # - name: Aggregate by research line
+      #   run: make aggregate-research-lines
       
-      - name: Copy data files to docs
-        run: make copy-data
+      # - name: Copy data files to docs
+      #   run: make copy-data
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
